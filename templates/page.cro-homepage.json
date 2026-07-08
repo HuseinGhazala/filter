@@ -1,0 +1,1515 @@
+{
+  "sections": {
+    "scrolling_text_banner_j36DeC": {
+      "type": "scrolling-text-banner",
+      "blocks": {
+        "heading_wbYpV8": {
+          "type": "heading",
+          "settings": {
+            "heading": "Loved by thousands of women",
+            "size_heading": 280,
+            "size_heading_mobile": 150
+          }
+        },
+        "ui_spacer_rcHkwm": {
+          "type": "ui_spacer",
+          "settings": {
+            "spacer_desktop_height": 80,
+            "spacer_mobile_height": 48
+          }
+        },
+        "button_bxUqDR": {
+          "type": "button",
+          "settings": {
+            "button_select": "link",
+            "button_label": "explore glow collection",
+            "disable_on_mobile": false,
+            "button_link": "",
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_wbYpV8",
+        "ui_spacer_rcHkwm",
+        "button_bxUqDR"
+      ],
+      "name": "Scrolling text banner",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Scrolling text banner</h2>",
+        "full-width-enabled": true,
+        "animation_speed": 2,
+        "spacing": 28,
+        "enable_dot_separator": true,
+        "dot_size": "small",
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 840,
+        "mobile_fixed_height": 460,
+        "desktop_image": "",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "color-heading": "#ffffff",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "#ffffff",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "metric_banner_mcdGQE": {
+      "type": "metric-banner",
+      "blocks": {
+        "text_tzQ3zK": {
+          "type": "text",
+          "settings": {
+            "numbers_heading": "+10000",
+            "size_number_heading": 150,
+            "size_number_heading_mobile": 90,
+            "heading_richtext": "<h2>Happy Womens</h2>",
+            "size_text_heading": 80,
+            "size_text_heading_mobile": 90,
+            "text": "<p>Join thousands of women </p><p>who love our skincare rituals</p>"
+          }
+        },
+        "text_CH6BpE": {
+          "type": "text",
+          "settings": {
+            "numbers_heading": "99%",
+            "size_number_heading": 150,
+            "size_number_heading_mobile": 90,
+            "heading_richtext": "<p>Natural ingredients</p>",
+            "size_text_heading": 80,
+            "size_text_heading_mobile": 90,
+            "text": "<p>Carefully sourced botanicals</p><p>from trusted growers</p>"
+          }
+        },
+        "text_XQtUtC": {
+          "type": "text",
+          "settings": {
+            "numbers_heading": "+15",
+            "size_number_heading": 150,
+            "size_number_heading_mobile": 90,
+            "heading_richtext": "<p>Years of expertise</p>",
+            "size_text_heading": 80,
+            "size_text_heading_mobile": 90,
+            "text": "<p>Years perfecting formulas that truly work</p>"
+          }
+        },
+        "text_bABkGn": {
+          "type": "text",
+          "settings": {
+            "numbers_heading": "0",
+            "size_number_heading": 150,
+            "size_number_heading_mobile": 90,
+            "heading_richtext": "<p>Compromises</p>",
+            "size_text_heading": 80,
+            "size_text_heading_mobile": 90,
+            "text": "<p>No harsh chemicals,</p><p>no compromises on your skin</p><p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_tzQ3zK",
+        "text_CH6BpE",
+        "text_XQtUtC",
+        "text_bABkGn"
+      ],
+      "name": "t:sections.metrics_banner.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Metrics banner</h2>",
+        "layout": "left",
+        "columns_desktop": "4",
+        "layout_mobile": "slider",
+        "autoplay": false,
+        "change_slider_time": 3,
+        "alignment_mobile": "center",
+        "margin-top": 88,
+        "margin-bottom": 84,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_U9rDXa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_pr88tp": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "New collections inspired by nature",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_gradient": ""
+          }
+        },
+        "button_VwCUJD": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_select": "link",
+            "button_label": "Follow us",
+            "button_link": "",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_pr88tp",
+        "button_VwCUJD"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "background_color": "#f6f6f6",
+        "background_gradient": "",
+        "margin-top": 20,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "multicolumn_KjgbUW": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_aLhDCP": {
+          "type": "column",
+          "settings": {
+            "heading": "Natural. Nourished. Hydrated.",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Intense lip hydration, all day long. Our plant-powered lip balms melt in, lock in moisture, and leave your lips soft, smooth, and ready for anything.</p>",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "link",
+            "button_label": "Shop lip care",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "",
+            "mobile_image": "",
+            "out-background-color": "#e9cabc",
+            "out-text-color": "#151515"
+          }
+        },
+        "column_EYGRNf": {
+          "type": "column",
+          "settings": {
+            "heading": "Into the Wild",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Rich body serums and intoxicating scents inspired by the heart of the nature. Deeply nourishing, beautifully exotic - for skin that feels as alive as nature itself.</p>",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "link",
+            "button_label": "Explore the collection",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "",
+            "mobile_image": "",
+            "out-background-color": "#f7f2e9",
+            "out-text-color": "#151515"
+          }
+        },
+        "column_PXFXU6": {
+          "type": "column",
+          "settings": {
+            "heading": "Skin Rebuilt",
+            "heading_disable_on_mobile": false,
+            "text": "<p>Our most-loved formulas - the ones women come back to, again and again. From barrier-restoring serums to deep repair treatments, this is where real skin transformation begins.</p>",
+            "text_disable_on_mobile": false,
+            "text_style": "body",
+            "button_select": "link",
+            "button_label": "Explore bestsellers",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "desktop_image": "",
+            "mobile_image": "",
+            "out-background-color": "#e6e6e6",
+          }
+        }
+      },
+      "block_order": [
+        "column_aLhDCP",
+        "column_EYGRNf",
+        "column_PXFXU6"
+      ],
+      "name": "t:sections.multicolumn.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Multicolumn</h2>",
+        "enable_stack_products": false,
+        "full-width-enabled": true,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "number_of_column_desktop": 3,
+        "spacing_desktop": "8",
+        "number_of_column_mobile": "1",
+        "spacing_mobile": "16",
+        "image_ratio": "adapt",
+        "column_alignment": "left",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "collection_navigator_h3V38G": {
+      "type": "collection-navigator",
+      "blocks": {
+        "collection_GRn8bE": {
+          "type": "collection",
+          "settings": {
+            "tab_label": "hydrolipid barrier",
+            "collection": "",
+            "product_list": []
+          }
+        },
+        "collection_W7pTyy": {
+          "type": "collection",
+          "settings": {
+            "tab_label": "Glow unlocked",
+            "collection": "",
+            "product_list": []
+          }
+        },
+        "collection_BfxHBR": {
+          "type": "collection",
+          "settings": {
+            "tab_label": "Body & evening ritual",
+            "collection": "",
+            "product_list": []
+          }
+        }
+      },
+      "block_order": [
+        "collection_GRn8bE",
+        "collection_W7pTyy",
+        "collection_BfxHBR"
+      ],
+      "name": "t:sections.collection-navigator.presets.name",
+      "settings": {
+        "heading_richtext": "<p>Beauty essentials</p>",
+        "enable_full_width": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "enable_progress_bar": true,
+        "progress_button_select": "none",
+        "products_to_show_desktop": 3,
+        "columns_desktop": "3",
+        "spacing_desktop": "8",
+        "products_to_show_mobile": 4,
+        "columns_mobile": "2",
+        "spacing_mobile": "12",
+        "text_alignment": "left",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": true,
+        "show_vendor": true,
+        "enable_vendor_link": true,
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "below_product",
+        "background_color": "#f6f6f6",
+        "margin-top": 60,
+        "margin-bottom": 80,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_with_text_PyfkyA": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_C6hQfD": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Tell you story",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "heading_CfMNEe": {
+          "type": "heading",
+          "settings": {
+            "heading": "#1 Bestseller 2026",
+            "disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 120
+          }
+        },
+        "text_BPDYP6": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bakuchiol for smoother, firmer, happier skin</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "ui_spacer_KLNyHw": {
+          "type": "ui_spacer",
+          "settings": {
+            "spacer_desktop_height": 16,
+            "spacer_mobile_height": 8
+          }
+        },
+        "button_NzfgYa": {
+          "type": "button",
+          "settings": {
+            "button_select": "link",
+            "button_label": "Discover",
+            "button_link": "",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_C6hQfD",
+        "heading_CfMNEe",
+        "text_BPDYP6",
+        "ui_spacer_KLNyHw",
+        "button_NzfgYa"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "",
+        "heading_richtext": "<h2>Image with text</h2>",
+        "layout": "image_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": true,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 640,
+        "mobile_fixed_height": 460,
+        "section-color-overlay-opacity": 100,
+        "color-overlay": "#f5edfb",
+        "color-overlay-opacity": 100,
+        "desktop_image": "",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "brands_6t6GDr": {
+      "type": "brands",
+      "blocks": {
+        "image_f9tF3E": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_xGMEXA": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_QJanr4": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_xY9Me8": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_iR8Rhq": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_R3Hrh7": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_dNbrgD": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_4K9yxx": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_XfyaCX": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_tnWagk": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_DHGwFk": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_f9tF3E",
+        "image_xGMEXA",
+        "image_QJanr4",
+        "image_xY9Me8",
+        "image_iR8Rhq",
+        "image_R3Hrh7",
+        "image_dNbrgD",
+        "image_4K9yxx",
+        "image_XfyaCX",
+        "image_tnWagk",
+        "image_DHGwFk"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "animation": "marquee",
+        "animation_speed": "100",
+        "margin-top": 20,
+        "margin-bottom": 0,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 8,
+        "margin-bottom-mobile": 12
+      }
+    },
+    "image_with_text_jz7xbH": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_LFxhgX": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Tell you story",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "heading_PcgFyh": {
+          "type": "heading",
+          "settings": {
+            "heading": "This is new era of skincare",
+            "disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 120
+          }
+        },
+        "text_tXirAC": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Effective skincare, rooted in nature. Plant-powered formulas that nourish, balance, and protect - nothing more, nothing less...</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "ui_spacer_QCzVzq": {
+          "type": "ui_spacer",
+          "settings": {
+            "spacer_desktop_height": 16,
+            "spacer_mobile_height": 8
+          }
+        },
+        "button_LkqQNh": {
+          "type": "button",
+          "settings": {
+            "button_select": "link",
+            "button_label": "Discover",
+            "button_link": "",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_LFxhgX",
+        "heading_PcgFyh",
+        "text_tXirAC",
+        "ui_spacer_QCzVzq",
+        "button_LkqQNh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "",
+        "heading_richtext": "<h2>Image with text</h2>",
+        "layout": "image_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": true,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 640,
+        "mobile_fixed_height": 460,
+        "section-color-overlay-opacity": 100,
+        "color-overlay": "#e2eef1",
+        "color-overlay-opacity": 100,
+        "desktop_image": "",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "blur_banner_nUGpUc": {
+      "type": "blur-banner",
+      "blocks": {
+        "blur_banner_top_content": {
+          "type": "blur-banner-top-content",
+          "static": true,
+          "settings": {
+            "full_width_enabled": false,
+            "sticky_content_desktop": false,
+            "desktop_text_vertical_position": "flex-end",
+            "desktop_text_horizontal_position": "flex-start",
+            "sticky_content_mobile": true,
+            "mobile_text_vertical_position": "flex-end",
+            "mobile_text_horizontal_position": "center",
+            "color_body_text": "#ffffff",
+            "margin-top": 40,
+            "margin-bottom": 20
+          },
+          "blocks": {
+            "heading_DKXktR": {
+              "type": "heading",
+              "settings": {
+                "heading": "<h2>Product that actually </h2><h2>does the magic</h2>",
+                "heading_alignment_desktop": "start",
+                "size_heading": 240,
+                "max_width": 0,
+                "heading_alignment_mobile": "inherit",
+                "size_heading_mobile": 120,
+                "disable_on_mobile": false
+              },
+              "blocks": {}
+            },
+            "subheading_mbCcbQ": {
+              "type": "subheading",
+              "disabled": true,
+              "settings": {
+                "subheading": "",
+                "subheading_disable_on_mobile": false,
+                "subheading_advanced_settings": false,
+                "text_style": "subtitle",
+                "text_uppercase": false,
+                "letter_spacing": 1,
+                "size_text_desktop": 100,
+                "size_text_mobile": 100
+              },
+              "blocks": {}
+            },
+            "text_YAM6N9": {
+              "type": "text",
+              "settings": {
+                "text": "<p>No empty promises! Just plant-powered ingredients that actually work</p>",
+                "text_alignment": "inherit",
+                "max_width": 0,
+                "text_alignment_mobile": "inherit",
+                "disable_on_mobile": false,
+                "margin_top": 0,
+                "margin_bottom": 0
+              },
+              "blocks": {}
+            },
+            "button_bPVg84": {
+              "type": "button",
+              "settings": {
+                "enable_full_width_on_mobile": false,
+                "button_select": "secondary",
+                "button_label": "Get it now",
+                "disable_on_mobile": false,
+                "button_link": "",
+                "button_link_in_new_window": false,
+                "second_button_select": "primary",
+                "second_button_label": "Button label",
+                "second_disable_on_mobile": false,
+                "second_button_link": "",
+                "second_button_link_in_new_window": false
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "heading_DKXktR",
+            "subheading_mbCcbQ",
+            "text_YAM6N9",
+            "button_bPVg84"
+          ]
+        },
+        "blur_banner_bottom_content": {
+          "type": "blur-banner-bottom-content",
+          "static": true,
+          "settings": {
+            "full_width_enabled": false,
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "min_content_height_desktop": 40,
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center",
+            "min_content_height_mobile": 40,
+            "margin-top": 0,
+            "margin-bottom": 40
+          },
+          "blocks": {
+            "blur_banner_cards_container_t3UYGG": {
+              "type": "blur-banner-cards-container",
+              "settings": {
+                "image_ratio": "square",
+                "columns_desktop": "3",
+                "gap_desktop": 20,
+                "columns_tablet": "2",
+                "gap_tablet": 20,
+                "columns_mobile": "1",
+                "gap_mobile": 20,
+                "color_body_text": "#ffffff",
+                "background_card_color": "#000000",
+                "background_card_opacity": 25,
+                "margin_top": 60,
+                "margin_bottom": 40
+              },
+              "blocks": {
+                "blur_banner_card_YAxyVM": {
+                  "type": "blur-banner-card",
+                  "settings": {
+                    "image": "",
+                    "heading": "+78% more skin glow - achieved",
+                    "size_heading": 100,
+                    "size_heading_mobile": 100,
+                    "description": "<p>97% of 112 women noticed visible improvement within 3 weeks.*<em>*based on consumer testing</em></p>",
+                    "background_opacity": 100,
+                    "button_select": "primary",
+                    "button_label": "Button label",
+                    "button_link": ""
+                  },
+                  "blocks": {}
+                },
+                "blur_banner_card_48HUDq": {
+                  "type": "blur-banner-card",
+                  "settings": {
+                    "image": "",
+                    "heading": "Barrier restored overnight",
+                    "size_heading": 100,
+                    "size_heading_mobile": 100,
+                    "description": "<p>89% of women reported stronger, less reactive skin after just 2 weeks of evening use.<em>*based on consumer testing</em></p>",
+                    "background_opacity": 100,
+                    "button_select": "primary",
+                    "button_label": "Button label",
+                    "button_link": ""
+                  },
+                  "blocks": {}
+                },
+                "blur_banner_card_wXKD3c": {
+                  "type": "blur-banner-card",
+                  "settings": {
+                    "image": "",
+                    "heading": "24h hydration that shows",
+                    "size_heading": 100,
+                    "size_heading_mobile": 100,
+                    "description": "<p>Skin visibly plumper, smoother, and more radiant - from the very first application.<em>*based on consumer testing</em></p>",
+                    "background_opacity": 100,
+                    "button_select": "primary",
+                    "button_label": "Button label",
+                    "button_link": ""
+                  },
+                  "blocks": {}
+                }
+              },
+              "block_order": [
+                "blur_banner_card_YAxyVM",
+                "blur_banner_card_48HUDq",
+                "blur_banner_card_wXKD3c"
+              ]
+            }
+          },
+          "block_order": [
+            "blur_banner_cards_container_t3UYGG"
+          ]
+        }
+      },
+      "name": "t:sections.blur_banner.name",
+      "settings": {
+        "heading_richtext": "",
+        "enable_blur_bottom_content": true,
+        "desktop_image": "",
+        "mobile_image": "",
+        "blur_overlay_color": "#000000",
+        "blur_overlay_opacity": 10,
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "lcp_optimize": false
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "#151515",
+        "color-overlay-opacity": 100,
+        "margin-top": 60,
+        "margin-bottom": 60,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_hV8TjA": {
+      "type": "rich-text",
+      "blocks": {
+        "icon_with_text_jg3edc": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon": "",
+            "select_icon": "bag",
+            "icon_alignment": "inherit",
+            "icon_alignment_mobile": "inherit",
+            "align_icon_top": false,
+            "icon_advanced_settings": true,
+            "icon_height_desktop": 16,
+            "icon_height": 13,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "text": "<p>Rated 5 stars by our customers</p>",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "gap": 8,
+            "margin_top": 8,
+            "margin_bottom": 8,
+            "margin_left_desktop": 0,
+            "margin_left": 0
+          }
+        },
+        "heading_ddXRRK": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": true,
+            "heading": "100% Natural Ingredients",
+            "heading_richtext": "<p>Loved by your skin. Trusted by many.</p>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_gradient": "linear-gradient(283deg, rgba(227, 205, 174, 1) 6%, rgba(221, 172, 106, 1) 78%)"
+          }
+        }
+      },
+      "block_order": [
+        "icon_with_text_jg3edc",
+        "heading_ddXRRK"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "background_gradient": "",
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "testimonial_marquee_9W4yJt": {
+      "type": "testimonial-marquee",
+      "blocks": {
+        "image_8UAFQR": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "My skin has never looked this good",
+            "text": "<p>I've tried countless serums and nothing came close. After two weeks my skin is visibly plumper, the texture is smoother and my partner actually noticed the difference. This is my forever product.</p>",
+            "author": "<em>- Sophie M., verified customer</em>",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_ENFMWA": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Finally a cream that doesn't break me out",
+            "text": "<p>As someone with reactive, sensitive skin I was so skeptical. But this cream is genuinely different - it absorbs instantly, doesn't clog my pores and my skin feels balanced all day. I repurchased three times already.</p>",
+            "author": "- <em>Isabella K., verified customer</em>",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_ercjzL": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Obsessed doesn't even cover it",
+            "text": "<p>I use this body scrub every shower and my skin is softer than it's ever been. The scent is incredible and it doesn't leave that greasy film other scrubs do. My friends keep asking what I'm using.</p>",
+            "author": "- <em>Zoe R., verified customer</em>",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_J444Rp": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Dry skin? What dry skin?",
+            "text": "<p>I've struggled with dry patches on my legs and arms for years. This balm sorted it within days - not weeks. I apply it after my shower and my skin stays hydrated until the next morning. Absolutely worth every penny.</p>",
+            "author": "- <em>Amelia T., verified customer</em>",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_BXFPnH": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "The glow-up I didn't expect",
+            "text": "<p>I bought the serum and cream together and honestly I wasn't expecting much. Three weeks later my skin is glowing, my dark spots have faded and I've stopped wearing foundation to work. People keep telling me I look well-rested. I tell them it's the skincare.</p>",
+            "author": "- <em>Charlotte W., verified customer</em>",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_8UAFQR",
+        "image_ENFMWA",
+        "image_ercjzL",
+        "image_J444Rp",
+        "image_BXFPnH"
+      ],
+      "name": "Testimonial: Marquee",
+      "settings": {
+        "heading_richtext": "",
+        "text_style": "body",
+        "disable_auto_scroll": true,
+        "animation_direction": "left",
+        "animation_speed": "150",
+        "card_width_desktop": 475,
+        "number_of_column_desktop": 3.2,
+        "gap_desk": 24,
+        "testimonial_text_size_desktop": 100,
+        "text_alignment_desktop": "left",
+        "card_width_mobile": 280,
+        "number_of_column_mobile": 1.2,
+        "gap": 16,
+        "testimonial_text_size": 100,
+        "text_alignment_mobile": "left",
+        "margin-top": 0,
+        "margin-bottom": 60,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_et3rHF": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GqVNXp": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "#Beauty is our mission",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_gradient": ""
+          }
+        },
+        "button_wJB6yh": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_select": "link",
+            "button_label": "Follow us",
+            "button_link": "",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_GqVNXp",
+        "button_wJB6yh"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "background_color": "#f6f6f6",
+        "background_gradient": "",
+        "margin-top": 20,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_with_text_6KHnim": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_qXpD6c": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Tell you story",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "heading_Wj9BAB": {
+          "type": "heading",
+          "settings": {
+            "heading": "Body Hydration",
+            "disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 120
+          }
+        },
+        "text_BeeVFg": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Effective body care, from inside and outside </p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "ui_spacer_ny9jpF": {
+          "type": "ui_spacer",
+          "settings": {
+            "spacer_desktop_height": 16,
+            "spacer_mobile_height": 8
+          }
+        },
+        "button_6DzFKp": {
+          "type": "button",
+          "settings": {
+            "button_select": "link",
+            "button_label": "Discover",
+            "button_link": "",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_qXpD6c",
+        "heading_Wj9BAB",
+        "text_BeeVFg",
+        "ui_spacer_ny9jpF",
+        "button_6DzFKp"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "",
+        "heading_richtext": "<h2>Image with text</h2>",
+        "layout": "image_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": true,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 640,
+        "mobile_fixed_height": 460,
+        "section-color-overlay-opacity": 100,
+        "color-overlay": "#f4e9da",
+        "color-overlay-opacity": 100,
+        "desktop_image": "",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_with_text_f8qkAe": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_Y4PV6e": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Tell you story",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "heading_Q3zgMG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Rose Ritual, refresh & reset",
+            "disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 120
+          }
+        },
+        "text_irebbc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Rose water and botanicals to wake up your skin</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "ui_spacer_GGJ7iQ": {
+          "type": "ui_spacer",
+          "settings": {
+            "spacer_desktop_height": 12,
+            "spacer_mobile_height": 8
+          }
+        },
+        "button_hUTWRh": {
+          "type": "button",
+          "settings": {
+            "button_select": "link",
+            "button_label": "Discover",
+            "button_link": "",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "subheading_Y4PV6e",
+        "heading_Q3zgMG",
+        "text_irebbc",
+        "ui_spacer_GGJ7iQ",
+        "button_hUTWRh"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "",
+        "heading_richtext": "<h2>Image with text</h2>",
+        "layout": "text_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": true,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 640,
+        "mobile_fixed_height": 460,
+        "section-color-overlay-opacity": 100,
+        "color-overlay": "#f5e3e1",
+        "color-overlay-opacity": 100,
+        "desktop_image": "",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "contact_form_with_image_43dMAy": {
+      "type": "contact-form-with-image",
+      "blocks": {
+        "heading_9TNLjf": {
+          "type": "heading",
+          "settings": {
+            "heading": "Need support?",
+            "heading_disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 120
+          }
+        },
+        "paragraph_KqqUjf": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Let us know! Book 1:1 consultation for FREE and unlock Your natural beauty.</p>",
+            "text_disable_on_mobile": false
+          }
+        },
+        "email_form_Khzp3r": {
+          "type": "email_form",
+          "settings": {
+            "button_label": "Send",
+            "button_select": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "heading_9TNLjf",
+        "paragraph_KqqUjf",
+        "email_form_Khzp3r"
+      ],
+      "name": "t:sections.contact-form-with-image.presets.name",
+      "settings": {
+        "full-width-enabled": true,
+        "layout": "image_first",
+        "image": "",
+        "image_height": "adapt_to_image",
+        "desktop_fixed_height": 640,
+        "mobile_fixed_height": 460,
+        "background_color": "#f6f6f6",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_b9ffTq": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_GxXqqM": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "#Beauty Community!",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_gradient": ""
+          }
+        },
+        "button_qNwB93": {
+          "type": "button",
+          "settings": {
+            "button_select": "link",
+            "button_label": "Follow us",
+            "button_link": "",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_GxXqqM",
+        "button_qNwB93"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "background_gradient": "",
+        "margin-top": 36,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "marquee_images_7qJAL4": {
+      "type": "marquee-images",
+      "blocks": {
+        "image_mFFLTB": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_V9JEy4": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_JfURhr": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_QBFjfN": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_x3QkQz": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_wX7typ": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        },
+        "image_aqJ8My": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_mFFLTB",
+        "image_V9JEy4",
+        "image_JfURhr",
+        "image_QBFjfN",
+        "image_x3QkQz",
+        "image_wX7typ",
+        "image_aqJ8My"
+      ],
+      "name": "t:sections.marquee_images.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "animation_direction": "left",
+        "animation_speed": "150",
+        "desktop_fixed_height": 320,
+        "gap_desk": 4,
+        "mobile_fixed_height": 200,
+        "gap": 4,
+        "margin-top": 0,
+        "margin-bottom": 4,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "newsletter_W94JC4": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_8CLBAV": {
+          "type": "heading",
+          "settings": {
+            "heading": "Join! Beauty starts here",
+            "heading_disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 120
+          }
+        },
+        "paragraph_bXg6Bf": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Subscribe for 20% off your first order, plus rituals, tips, and early access to new launches</p>",
+            "text_disable_on_mobile": false
+          }
+        },
+        "email_form_ewiWPt": {
+          "type": "email_form",
+          "settings": {
+            "button_select": "primary",
+            "button_label": "",
+            "show_consent_checkbox": false,
+            "consent_checkbox_label": "<p>I want to sign up for the Newsletter (information about promotions, discounts, premieres, contests).</p>",
+            "consent_validation_message": "Please check this box to proceed."
+          }
+        }
+      },
+      "block_order": [
+        "heading_8CLBAV",
+        "paragraph_bXg6Bf",
+        "email_form_ewiWPt"
+      ],
+      "settings": {
+        "color-body-text": "#151515",
+        "background_color": "#f4e9da",
+        "margin-top": 100,
+        "margin-bottom": 100,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "features_banner_XPQAUq": {
+      "type": "features-banner",
+      "blocks": {
+        "image_pVi9j9": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "select_icon": "plant",
+            "heading": "Vegan",
+            "text": "<p>Our entire collection is vegan and cruelty free.</p>",
+            "link": ""
+          }
+        },
+        "image_3WMHYy": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "select_icon": "truck",
+            "heading": "Free Shipping",
+            "text": "<p>Doorstep delivery to most of the US.</p>",
+            "link": ""
+          }
+        },
+        "image_9PXHBT": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "select_icon": "leaf",
+            "heading": "Natural",
+            "text": "<p>We only use the finest natural ingredients.</p>",
+            "link": ""
+          }
+        },
+        "image_c3FHTU": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "",
+            "select_icon": "recycle",
+            "heading": "Recyclable",
+            "text": "<p>All packaging is recyclable and eco conscious.</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_pVi9j9",
+        "image_3WMHYy",
+        "image_9PXHBT",
+        "image_c3FHTU"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "size_heading_mobile": 90,
+        "size_heading": 90,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 80,
+        "icon_layout": "left",
+        "columns_desktop": "4",
+        "icon_layout_mobile": "grid",
+        "margin-top": 100,
+        "margin-bottom": 100,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    }
+  },
+  "order": [
+    "scrolling_text_banner_j36DeC",
+    "metric_banner_mcdGQE",
+    "rich_text_U9rDXa",
+    "multicolumn_KjgbUW",
+    "collection_navigator_h3V38G",
+    "image_with_text_PyfkyA",
+    "brands_6t6GDr",
+    "image_with_text_jz7xbH",
+    "blur_banner_nUGpUc",
+    "main",
+    "rich_text_hV8TjA",
+    "testimonial_marquee_9W4yJt",
+    "rich_text_et3rHF",
+    "image_with_text_6KHnim",
+    "image_with_text_f8qkAe",
+    "contact_form_with_image_43dMAy",
+    "rich_text_b9ffTq",
+    "marquee_images_7qJAL4",
+    "newsletter_W94JC4",
+    "features_banner_XPQAUq"
+  ]
+}

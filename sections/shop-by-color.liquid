@@ -1,0 +1,236 @@
+{{ 'section-shop-by-color.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+<div class="shop-by-color section-{{ section.id }}-padding">
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 class="shop-by-color__title {{ section.settings.heading_size }}">{{ section.settings.title | escape }}</h2>
+    {%- endif -%}
+
+    {%- assign target_collection = section.settings.collection | default: collections['all'] -%}
+    {%- assign product_option_filter = false -%}
+    {%- assign category_metafield_filter = false -%}
+    
+    {%- comment -%} Try to find a Color filter from the collection (Requires Search & Discovery app) {%- endcomment -%}
+    {%- for filter in target_collection.filters -%}
+      {%- assign downcase_label = filter.label | downcase -%}
+      {%- if downcase_label == 'color' or downcase_label == 'colour' or downcase_label == 'اللون' or filter.presentation == 'swatch' -%}
+        {%- if filter.param_name contains 'filter.v.option' -%}
+          {%- assign product_option_filter = filter -%}
+        {%- elsif filter.param_name contains 'filter.p.m' -%}
+          {%- assign category_metafield_filter = filter -%}
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    <div class="shop-by-color__slider-wrapper">
+      <ul class="shop-by-color__list" role="list">
+        {%- assign rendered_colors = "" -%}
+        {%- assign filters_found = false -%}
+        {%- assign active_filter_type = section.settings.filter_type | default: 'both' -%}
+
+        {%- if active_filter_type == 'product_option' or active_filter_type == 'both' -%}
+          {%- if product_option_filter -%}
+            {%- assign filters_found = true -%}
+            {%- for value in product_option_filter.values -%}
+              {%- assign value_string = value.label | downcase | append: "|||" -%}
+              {%- unless rendered_colors contains value_string -%}
+                {%- assign param_part = value.url_to_add | split: '?' | last -%}
+                {%- assign collection_url = target_collection.url | default: '/collections/all' -%}
+                <li class="shop-by-color__item scroll-snap-align">
+                  <a href="{{ collection_url }}?{{ param_part }}" class="shop-by-color__link" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                    {%- if value.swatch.image or value.swatch.color -%}
+                      <span class="swatch swatch--circle" style="
+                        {%- if value.swatch.image -%}
+                          background-image: url('{{ value.swatch.image | image_url: width: 200 }}'); background-size: cover; background-position: center;
+                        {%- elsif value.swatch.color -%}
+                          background-color: {{ value.swatch.color }};
+                        {%- endif -%}
+                        width: 44px; height: 44px; display: block; border-radius: 50%; border: 1px solid rgba(var(--color-foreground, 0,0,0), 0.1);
+                      "></span>
+                    {%- else -%}
+                      <span class="swatch swatch--circle" style="background-color: {{ value.label | downcase | replace: ' ', '' }}; width: 44px; height: 44px; display: block; border-radius: 50%; border: 1px solid rgba(var(--color-foreground, 0,0,0), 0.1);"></span>
+                    {%- endif -%}
+                    <span class="shop-by-color__text" style="font-size: 1.2rem; color: rgb(var(--color-foreground));">{{ value.label | escape }}</span>
+                  </a>
+                </li>
+                {%- assign rendered_colors = rendered_colors | append: value_string -%}
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if active_filter_type == 'category_metafield' or active_filter_type == 'both' -%}
+          {%- if category_metafield_filter -%}
+            {%- assign filters_found = true -%}
+            {%- for value in category_metafield_filter.values -%}
+              {%- assign value_string = value.label | downcase | append: "|||" -%}
+              {%- unless rendered_colors contains value_string -%}
+                {%- assign param_part = value.url_to_add | split: '?' | last -%}
+                {%- assign collection_url = target_collection.url | default: '/collections/all' -%}
+                <li class="shop-by-color__item scroll-snap-align">
+                  <a href="{{ collection_url }}?{{ param_part }}" class="shop-by-color__link" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                    {%- if value.swatch.image or value.swatch.color -%}
+                      <span class="swatch swatch--circle" style="
+                        {%- if value.swatch.image -%}
+                          background-image: url('{{ value.swatch.image | image_url: width: 200 }}'); background-size: cover; background-position: center;
+                        {%- elsif value.swatch.color -%}
+                          background-color: {{ value.swatch.color }};
+                        {%- endif -%}
+                        width: 44px; height: 44px; display: block; border-radius: 50%; border: 1px solid rgba(var(--color-foreground, 0,0,0), 0.1);
+                      "></span>
+                    {%- else -%}
+                      <span class="swatch swatch--circle" style="background-color: {{ value.label | downcase | replace: ' ', '' }}; width: 44px; height: 44px; display: block; border-radius: 50%; border: 1px solid rgba(var(--color-foreground, 0,0,0), 0.1);"></span>
+                    {%- endif -%}
+                    <span class="shop-by-color__text" style="font-size: 1.2rem; color: rgb(var(--color-foreground));">{{ value.label | escape }}</span>
+                  </a>
+                </li>
+                {%- assign rendered_colors = rendered_colors | append: value_string -%}
+              {%- endunless -%}
+            {%- endfor -%}
+          {%- endif -%}
+        {%- endif -%}
+
+        {%- if filters_found == false -%}
+          {%- comment -%} Fallback: Loop through first 50 products if filters aren't configured {%- endcomment -%}
+          {%- assign color_list = "" -%}
+          {%- for product in target_collection.products limit: 50 -%}
+            {%- for option in product.options_with_values -%}
+              {%- assign downcase_name = option.name | downcase -%}
+              {%- if downcase_name == 'color' or downcase_name == 'colour' or downcase_name == 'اللون' -%}
+                {%- for value in option.values -%}
+                  {%- assign value_string = value | append: "|||" -%}
+                  {%- unless color_list contains value_string -%}
+                    {%- assign collection_url = target_collection.url | default: '/collections/all' -%}
+                    <li class="shop-by-color__item scroll-snap-align">
+                      <a href="{{ collection_url }}?filter.v.option.{{ option.name | downcase | url_encode }}={{ value | url_encode }}" class="shop-by-color__link" style="text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;">
+                        {%- if value.swatch.image or value.swatch.color -%}
+                          <span class="swatch swatch--circle" style="
+                            {%- if value.swatch.image -%}
+                              background-image: url('{{ value.swatch.image | image_url: width: 200 }}'); background-size: cover; background-position: center;
+                            {%- elsif value.swatch.color -%}
+                              background-color: {{ value.swatch.color }};
+                            {%- endif -%}
+                            width: 44px; height: 44px; display: block; border-radius: 50%; border: 1px solid rgba(var(--color-foreground, 0,0,0), 0.1);
+                          "></span>
+                        {%- else -%}
+                          <span class="swatch swatch--circle" style="background-color: {{ value | downcase | replace: ' ', '' }}; width: 44px; height: 44px; display: block; border-radius: 50%; border: 1px solid rgba(var(--color-foreground, 0,0,0), 0.1);"></span>
+                        {%- endif -%}
+                        <span class="shop-by-color__text" style="font-size: 1.2rem; color: rgb(var(--color-foreground));">{{ value | escape }}</span>
+                      </a>
+                    </li>
+                    {%- assign color_list = color_list | append: value_string -%}
+                  {%- endunless -%}
+                {%- endfor -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endfor -%}
+          
+          {%- if color_list == "" -%}
+            <p style="text-align:center; width:100%; opacity: 0.7;">لا توجد ألوان (No colors found). تأكد من إعداد فلاتر الألوان في تطبيق Search & Discovery أو إضافة ألوان لمنتجاتك.</p>
+          {%- endif -%}
+        {%- endif -%}
+      </ul>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Shop by Color2",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Shop by Color2  ",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "filter_type",
+      "label": "Filter Type to Use",
+      "options": [
+        {
+          "value": "product_option",
+          "label": "Product Option (filter.v.option)"
+        },
+        {
+          "value": "category_metafield",
+          "label": "Category Metafield (filter.p.m)"
+        },
+        {
+          "value": "both",
+          "label": "Both (Merge them)"
+        }
+      ],
+      "default": "product_option"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Small"
+        },
+        {
+          "value": "h1",
+          "label": "Medium"
+        },
+        {
+          "value": "h0",
+          "label": "Large"
+        }
+      ],
+      "default": "h1",
+      "label": "Heading Size"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Source Collection",
+      "info": "Leave empty to use 'All' collection. The section will automatically extract color variants from this collection."
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop by Color"
+    }
+  ]
+}
+{% endschema %}
