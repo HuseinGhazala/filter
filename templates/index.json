@@ -344,19 +344,88 @@
         "show_description": true,
         "highlight_first_words": true,
         "description": "<p>اكتشفي أطقم سكراب واسعة وساترة، بتصاميم عملية وخامات مريحة تمنحك مظهرًا مهنيًا طوال ساعات الدوام.</p>",
-        "description_style": "body",
-        "products_to_show": 8,
         "Preview": "3",
         "image_ratio": "portrait",
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add_button": false,
         "quick_add_mode": "hover_desktop",
-        "show_view_all": true,
-        "link": "",
-        "view_all_style": "solid",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "testimonial_marquee_VHcPTa": {
+      "type": "testimonial-marquee",
+      "blocks": {
+        "image_epCTzj": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "راحة لا مثيل لها",
+            "text": "<p>“الصراحة ما توقعت يكون مريح لهالدرجة، خصوصًا إني جربت كثير قبل وما ارتحت فيها. لكن هذا أول سكراب أحسه مرتب وعملي فعلًا، وحتى بعد ساعات الدوام الطويلة ما حسيت إنه ضايقني.”</p>",
+            "author": "د.منار حامد",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_AQxXcQ": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "مقاسات مناسبة للكل",
+            "text": "<p>“كنت محتارة بالمقاس بالبداية وخايفة يطلع ضيق أو قصير، لكن يوم لبسته انبسطت جدًا من التناسب والخامة. حسيت إنه معمول فعلًا للبنات اللي دوامهم طويل”</p>",
+            "author": "د.علا أحمد",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_tRtexi": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "خامة تتحمل يومك الطويل",
+            "text": "<p>“أكثر شيء شدّني فيه إن شكله مرتب بدون ما يكون رسمي زيادة أو متعب باللبس. الخامة خفيفة والحركة فيه سهلة جدًا، وفعليًا فرق معي كثير خصوصًا بعد ساعات الدوام الطويلة.”</p>",
+            "author": "د.سلمى القحطاني",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_epCTzj",
+        "image_AQxXcQ",
+        "image_tRtexi"
+      ],
+      "name": "Testimonial: Marquee",
+      "settings": {
+        "heading_richtext": "<p>تقييماتكم التي نفتخر بها</p>",
+        "text_style": "body",
+        "disable_auto_scroll": false,
+        "animation_direction": "left",
+        "animation_speed": "150",
+        "card_width_desktop": 375,
+        "number_of_column_desktop": 2.4,
+        "gap_desk": 16,
+        "testimonial_text_size_desktop": 100,
+        "text_alignment_desktop": "right",
+        "card_width_mobile": 280,
+        "number_of_column_mobile": 1.2,
+        "gap": 12,
+        "testimonial_text_size": 100,
+        "text_alignment_mobile": "right",
+        "color-body-text": "{{ settings.colors.primary }}",
+        "background_color": "",
+        "testimonial_background_color": "#FDFAF5",
+        "card_heading_color": "{{ settings.colors.primary }}",
+        "card_author_color": "{{ settings.colors.primary }}",
+        "margin-top": 20,
+        "margin-bottom": 40,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
       }
     },
     "background_video_UHjiyi": {
@@ -419,6 +488,7 @@
     "rich_text_jVraEH",
     "main_banner_DWiP3x",
     "color_category_CfH83j",
+    "testimonial_marquee_VHcPTa",
     "background_video_UHjiyi"
   ]
 }
