@@ -24,15 +24,30 @@
       {%- else -%}
         width: 70%;
         /* Centers the 70% box if alignment is center */
-        margin: 0 {% if section.settings.text_alignment == 'center' %}auto{% else %}0{% endif %} 22px {% if section.settings.text_alignment == 'center' %}auto{% else %}0{% endif %};
+        margin: 0 {% if section.settings.text_alignment == 'center' %}auto{% else %}0{% endif %} 16px {% if section.settings.text_alignment == 'center' %}auto{% else %}0{% endif %};
       {%- endif -%}
     }
 
     @media screen and (max-width: 749px) {
       .banner-{{ section.id }} {
-        height: {{ section.settings.mobile_height }}px;
-        align-items: {{ section.settings.mobile_vertical_alignment }} !important;
+        {%- if section.settings.stack_content_mobile -%}
+          --mobile-img-height: {{ section.settings.mobile_height }}px;
+          background-color: {{ section.settings.mobile_content_bg }};
+        {%- else -%}
+          height: {{ section.settings.mobile_height }}px;
+          align-items: {{ section.settings.mobile_vertical_alignment }} !important;
+        {%- endif -%}
       }
+
+      {%- if section.settings.stack_content_mobile -%}
+        .banner-{{ section.id }} .banner-content {
+          color: {{ section.settings.mobile_content_color }} !important;
+        }
+        .banner-{{ section.id }} .banner-title {
+          color: {{ section.settings.mobile_content_color }} !important;
+        }
+      {%- endif -%}
+
       .section-{{ section.id }}-padding {
         padding-top: {{ section.settings.padding_top | times: 0.75 | round }}px;
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round }}px;
@@ -50,7 +65,7 @@
 {%- endstyle -%}
 
 <div class="section-{{ section.id }}-padding">
-  <div class="custom-hero-banner banner-{{ section.id }} text-align-{{ section.settings.text_alignment }}">
+  <div class="custom-hero-banner banner-{{ section.id }} text-align-{{ section.settings.text_alignment }} {% if section.settings.stack_content_mobile %}banner-stacked-mobile{% endif %}">
     {%- if section.settings.background_type == 'image' -%}
       {%- if section.settings.image_desktop != blank -%}
         {{
@@ -94,7 +109,9 @@
       {%- endif -%}
 
       {%- if section.settings.btn_text != blank and section.settings.btn_url != blank -%}
-        <a href="{{ section.settings.btn_url }}" class="banner-btn">{{ section.settings.btn_text }}</a>
+        <a href="{{ section.settings.btn_url }}" class="banner-btn {% if section.settings.remove_btn_background %}banner-btn-transparent{% endif %}">
+          {{ section.settings.btn_text }}
+        </a>
       {%- endif -%}
     </div>
   </div>
@@ -159,8 +176,31 @@
       "max": 600,
       "step": 50,
       "unit": "px",
-      "label": "Mobile Banner Height",
+      "label": "Mobile Banner Height / Mobile Image Height",
       "default": 400
+    },
+    {
+      "type": "header",
+      "content": "Mobile Stacking Control"
+    },
+    {
+      "type": "checkbox",
+      "id": "stack_content_mobile",
+      "label": "Stack Content Below Image on Mobile",
+      "info": "When enabled, content will be placed below the image and vertical alignment will be disabled.",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "mobile_content_bg",
+      "label": "Mobile Content Background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "mobile_content_color",
+      "label": "Mobile Content Text Color",
+      "default": "#121212"
     },
     {
       "type": "header",
@@ -176,7 +216,7 @@
       "type": "checkbox",
       "id": "subtitle_full_width",
       "label": "Make subtitle full width (100%)",
-      "info": "If unchecked, subtitle width will be limited  for a cleaner look.",
+      "info": "If unchecked, subtitle width will be limited for a cleaner look.",
       "default": false
     },
     {
@@ -184,6 +224,16 @@
       "id": "sub_title",
       "label": "Subtitle",
       "default": "Designed for comfort, durability, and all-day professional wear."
+    },
+    {
+      "type": "header",
+      "content": "Button Style"
+    },
+    {
+      "type": "checkbox",
+      "id": "remove_btn_background",
+      "label": " Remove Button Background",
+      "default": false
     },
     {
       "type": "header",
@@ -294,4 +344,3 @@
   ]
 }
 {% endschema %}
-
