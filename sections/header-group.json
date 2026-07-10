@@ -29,7 +29,7 @@
         "announcement_YnK6g6"
       ],
       "settings": {
-        "marquee": false,
+        "marquee": true,
         "animation_speed": "150",
         "checkbox_close_announcement": true,
         "color-body-text": "#151515",
