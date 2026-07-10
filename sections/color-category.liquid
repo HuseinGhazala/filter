@@ -3,20 +3,11 @@
 <script type="module" src="{{ 'slider.js' | asset_url }}" defer="defer"></script>
 
 {%- unless settings.quick_add == 'none' -%}
-  {{ 'quick-add.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- endunless -%}
 
-{%- if settings.quick_add == 'standard' -%}
-  <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
 
-{%- if settings.quick_add == 'bulk' -%}
-  <script src="{{ 'quick-add-bulk.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
-  <script src="{{ 'quick-order-list.js' | asset_url }}" defer="defer"></script>
-{%- endif -%}
+
 
 {%- style -%}
   .section-{{ section.id }}-padding {
@@ -36,7 +27,7 @@
   assign max_columns_to_show = per_page
 -%}
 
-<div class="collection-tabs-colors collection-tabs--{{ section.id }} section-{{ section.id }}-padding" dir="rtl">
+<div class="collection-tabs-colors collection-tabs--{{ section.id }} page-width wt-slider__container--featured section-{{ section.id }}-padding" dir="rtl">
   <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
     {%- if section.settings.show_title -%}
       <h2
@@ -52,7 +43,7 @@
 
     {%- if section.settings.show_description and section.settings.description != blank -%}
       <div
-        class="collection__description {{ section.settings.description_style }} rte"
+        class="collection__description  rte"
         style="text-align: {{ section.settings.text_alignment }};"
         {% if settings.enable_animations_on_scroll %}
           data-sal="fade-up" data-sal-duration="800" data-sal-delay="150" data-sal-easing="ease-out" data-sal-repeat="true"
@@ -134,12 +125,7 @@
       <div class="collection-tabs__panels">
         {%- if section.settings.collection != blank -%}
           {%- for collection in section.settings.collection -%}
-            {%- liquid
-              assign products_to_display = collection.all_products_count
-              if collection.all_products_count > section.settings.products_to_show
-                assign products_to_display = section.settings.products_to_show
-              endif
-            -%}
+            
             <div
               id="CollectionTab-{{ section.id }}-{{ forloop.index }}"
               class="collection-tabs__content {% if forloop.first %}collection-tabs__content--active{% else %}collection-tabs__content--hidden{% endif %}"
@@ -152,8 +138,8 @@
                     {% assign skip_card_product_styles = false %}
                     {%- if collection.products.size > 0 -%}
                       {% assign lazy_load = false %}
-                      {% paginate collection.products by section.settings.products_to_show %}
-                        {%- for product in collection.products limit: section.settings.products_to_show -%}
+                      
+                        {%- for product in collection.products  -%}
                           {% if lazy_load == false and forloop.index > max_columns_to_show %}
                             {% assign lazy_load = true %}
                           {% endif %}
@@ -193,7 +179,7 @@
                           </div>
                           {%- assign skip_card_product_styles = true -%}
                         {%- endfor -%}
-                      {% endpaginate %}
+                      
                     {%- else -%}
                       {%- for i in (1..4) -%}
                         <div data-swiper-slide class="swiper-slide wt-slider__slide">
@@ -219,14 +205,6 @@
                       {%- endfor -%}
                     {%- endif -%}
                   </div>
-
-                  <div class="swiper-button-next wt-slider__nav-btn wt-slider__nav-next wt-slider__nav-next--featured">
-                    {% render 'icons', id: 'arrow-right' %}
-                  </div>
-                  <div class="swiper-button-prev wt-slider__nav-btn wt-slider__nav-prev wt-slider__nav-prev--featured">
-                    {% render 'icons', id: 'arrow-left' %}
-                  </div>
-                  <div class="swiper-pagination wt-slider__pagination"></div>
                 </div>
                 <script data-swiper-configuration type="text/json">
                   {
@@ -245,17 +223,6 @@
                   }
                 </script>
               </slideshow-section>
-              {%- if section.settings.show_view_all -%}
-                <div class="center collection__view-all collection__view-all--mobile{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                  <a
-                    href="{{ collection.url | default: section.settings.link }}"
-                    class="url-col {% if section.settings.view_all_style == 'link' %}link underlined-link{% else %}button btn-solid{% endif %}"
-                    aria-label="{{ collection.title | escape }}"
-                  >
-                    {{ 'sections.featured_collection.view_all' | t }}
-                  </a>
-                </div>
-              {%- endif -%}
             </div>
           {%- endfor -%}
         {%- else -%}
@@ -283,7 +250,7 @@
                 <div class="swiper-button-prev wt-slider__nav-btn wt-slider__nav-prev wt-slider__nav-prev--featured">
                   {% render 'icons', id: 'arrow-left' %}
                 </div>
-                <div class="swiper-pagination wt-slider__pagination"></div>
+              
               </div>
               <script data-swiper-configuration type="text/json">
                 {
@@ -451,6 +418,7 @@
 .collection-tabs-colors .collection__title.title { margin: 0 0 0.8rem;
 font-size: 32px;
 font-weight: 500;
+color : var(--color-headings-text);
 }
 .collection-tabs-colors .collection__description { margin-bottom: 1.4rem;
 font-size: 24px;
@@ -529,7 +497,8 @@ font-weight: 400; }
   gap: 2rem;
   align-items: center;
 }
-.collection-tabs-colors .collection-tabs__feature { grid-area: feature; }
+.collection-tabs-colors .collection-tabs__feature { grid-area: feature;
+height: 100% }
 .collection-tabs-colors .collection-tabs__panels { grid-area: main; min-width: 0; }
 
 .collection-tabs-colors .collection-tabs__feature img,
@@ -538,6 +507,7 @@ font-weight: 400; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 /* --- Panels visibility --- */
@@ -568,7 +538,9 @@ font-weight: 400; }
 @media screen and (max-width: 989px) {
   .collection-tabs-colors .collection-tabs__layout {
     grid-template-columns: 1fr;
-    grid-template-areas: "main" "feature";
+   grid-template-areas: 
+        "feature"
+        "main";
     gap: 1.5rem;
   }
   .collection-tabs-colors .collection-tabs__feature img { max-height: 42rem; }
@@ -576,13 +548,17 @@ font-weight: 400; }
 
 @media screen and (max-width: 749px) {
   .collection-tabs-colors .collection-tabs__tab {
-    width: 2.2rem;
-    height: 2.2rem;
+    width: 3.2rem;
+    height: 3.2rem;
     min-width: 2.2rem;
   }
   /* To hide the big image on mobile, enable the line below: */
   /* .collection-tabs-colors .collection-tabs__feature { display: none; } */
 }
+.collection-tabs-colors .swiper-pagination .swiper-pagination-bullet--svg-animation {
+  display: none !important;
+}
+
 {% endstylesheet %}
 
 {% schema %}
@@ -654,29 +630,8 @@ font-weight: 400; }
       "visible_if": "{{ section.settings.show_description == true }}"
     },
     {
-      "type": "select",
-      "id": "description_style",
-      "label": "Description style",
-      "options": [
-        { "value": "body", "label": "Body" },
-        { "value": "subtitle", "label": "Subtitle" },
-        { "value": "uppercase", "label": "Uppercase" }
-      ],
-      "default": "body",
-      "visible_if": "{{ section.settings.show_description == true }}"
-    },
-    {
       "type": "header",
       "content": "Products"
-    },
-    {
-      "type": "range",
-      "id": "products_to_show",
-      "min": 2,
-      "max": 12,
-      "step": 1,
-      "label": "Max products per color",
-      "default": 8
     },
     {
       "type": "select",
@@ -735,34 +690,6 @@ font-weight: 400; }
       ],
       "default": "hover_desktop",
       "visible_if": "{{ section.settings.enable_quick_add_button }}"
-    },
-    {
-      "type": "header",
-      "content": "View all"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_view_all",
-      "default": true,
-      "label": "Show 'View all' button",
-      "info": "Links to each collection automatically."
-    },
-    {
-      "type": "url",
-      "id": "link",
-      "label": "Fallback link",
-      "visible_if": "{{ section.settings.show_view_all == true }}"
-    },
-    {
-      "type": "select",
-      "id": "view_all_style",
-      "label": "Button style",
-      "options": [
-        { "value": "link", "label": "Link" },
-        { "value": "solid", "label": "Solid button" }
-      ],
-      "visible_if": "{{ section.settings.show_view_all == true }}",
-      "default": "solid"
     },
     {
       "type": "header",
