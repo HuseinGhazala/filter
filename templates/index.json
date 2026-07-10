@@ -81,9 +81,13 @@
         "video_url": "",
         "desktop_height": 650,
         "mobile_height": 400,
+        "stack_content_mobile": false,
+        "mobile_content_bg": "#ffffff",
+        "mobile_content_color": "#121212",
         "main_title": "سكربات طبية فضفاضة",
         "subtitle_full_width": true,
         "sub_title": "قصّات ساترة، ألوان تناسب بيئة العمل، وخامات تتحمّل الاستخدام اليومي.",
+        "remove_btn_background": false,
         "heading_scale_desktop": 50,
         "sub_heading_scale_desktop": 28,
         "heading_scale_mobile": 32,
@@ -345,6 +349,35 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
+    },
+    "main_banner_DWiP3x": {
+      "type": "main_banner",
+      "name": "Custom Hero Banner",
+      "settings": {
+        "background_type": "image",
+        "image_desktop": "shopify://shop_images/Group_101.png",
+        "image_mobile": "shopify://shop_images/0a46f89d85537d7105305796b250cb85ddbf5686.png",
+        "video_url": "",
+        "desktop_height": 500,
+        "mobile_height": 400,
+        "stack_content_mobile": true,
+        "mobile_content_bg": "#ffffff",
+        "mobile_content_color": "#121212",
+        "main_title": "ألوان معتمدة تناسب القطاع الصحي السعودي",
+        "subtitle_full_width": false,
+        "sub_title": "تشكيلة ألوان مهنية متوافقة مع اعتماد الصحة القابضة، لتمنحكِ مظهرًا موحّدًا وأنيقًا طوال اليوم.",
+        "remove_btn_background": true,
+        "heading_scale_desktop": 24,
+        "sub_heading_scale_desktop": 20,
+        "heading_scale_mobile": 20,
+        "sub_heading_scale_mobile": 14,
+        "btn_text": "اكتشفي الآن",
+        "btn_url": "",
+        "text_alignment": "flex-end",
+        "mobile_vertical_alignment": "center",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -353,6 +386,7 @@
     "features_banner_7zpBwP",
     "lookbook_aMkb9Q",
     "rich_text_jVraEH",
-    "background_video_UHjiyi"
+    "background_video_UHjiyi",
+    "main_banner_DWiP3x"
   ]
 }
