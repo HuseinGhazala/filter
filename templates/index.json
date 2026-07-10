@@ -345,10 +345,10 @@
         "highlight_first_words": true,
         "description": "<p>اكتشفي أطقم سكراب واسعة وساترة، بتصاميم عملية وخامات مريحة تمنحك مظهرًا مهنيًا طوال ساعات الدوام.</p>",
         "Preview": "3",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "show_vendor": false,
         "show_rating": false,
-        "enable_quick_add_button": false,
+        "enable_quick_add_button": true,
         "quick_add_mode": "hover_desktop",
         "padding_top": 36,
         "padding_bottom": 36
