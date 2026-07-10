@@ -141,11 +141,85 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "features_banner_7zpBwP": {
+      "type": "features-banner",
+      "blocks": {
+        "image_EyjGTW": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/26f0fc425039fe480cd26fab8dc388044f281cf3.png",
+            "select_icon": "bag",
+            "heading": "مصممة بأيادٍ سعودية",
+            "text": "<p>صُممت لتناسب ذوقك و احتياجك للستر والراحة</p>",
+            "link": ""
+          }
+        },
+        "image_jifwM9": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/a06015d099906c5e282efbdc38dba66ead81a213.png",
+            "select_icon": "bag",
+            "heading": "خامات مرنة للدوام الطويل",
+            "text": "<p>أقمشة ناعمة ومريحة تتحمل ساعات العمل الطويلة</p>",
+            "link": ""
+          }
+        },
+        "image_VtCTma": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/3127a580a116077752ff77516bdd7d5f308ca22b.png",
+            "select_icon": "bag",
+            "heading": "قَصّات ساترة وفضفاضة",
+            "text": "<p>قصّات فضفاضة تمنحك راحة وثقة طوال اليوم<br/></p>",
+            "link": ""
+          }
+        },
+        "image_Baj9fw": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/8a24a7b77ae4aa5f7437c938c3e544df63a5d049.png",
+            "select_icon": "bag",
+            "heading": "شحن مجاني فوق 450 ريال",
+            "text": "<p>قصّات فضفاضة تمنحك راحة وثقة طوال اليوم<br/></p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_EyjGTW",
+        "image_jifwM9",
+        "image_VtCTma",
+        "image_Baj9fw"
+      ],
+      "name": "t:sections.features-banner.settings.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Features banner</h2>",
+        "size_heading_mobile": 80,
+        "size_heading": 80,
+        "icon_width_mobile": 36,
+        "icon_width_desktop": 100,
+        "icon_layout": "center",
+        "columns_desktop": "4",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "",
+        "color_background_icon": "",
+        "color_body_text": "{{ settings.colors.primary }}",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
     }
   },
   "order": [
     "1649160937e2665513",
     "collection_color_list_97U3xP",
-    "main_banner_8gayyA"
+    "main_banner_8gayyA",
+    "features_banner_7zpBwP"
   ]
 }
