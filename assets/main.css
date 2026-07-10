@@ -806,6 +806,16 @@ button[disabled],
   --btn-hover-fill: var(--color-button-secondary-background-hover);
   transition: color 0.3s ease-in, border-color 0.3s ease-in-out;
 }
+
+[data-button-animations=fill_on_hover] .hero__button--secondary:not(.hero__button--link){
+    --btn-hover-fill: var(--color-button-primary-background);
+  transition: color 0.3s ease-in, border-color 0.3s ease-in-out;
+}
+ [data-button-animations=fill_on_hover] .hero__button--secondary:not(.hero__button--link):hover{
+  background: var(--color-button-primary-background);
+      border-color: transparent;
+
+ }
 @media (hover: hover) {
   [data-button-animations=fill_on_hover] .hero__button--secondary:not(.hero__button--link):hover,
   [data-button-animations=fill_on_hover] .wt-newsletter__send--secondary:hover,
@@ -817,7 +827,14 @@ button[disabled],
     background: var(--color-button-secondary-background);
     border-color: transparent;
   }
+
+     [data-button-animations=fill_on_hover] .hero__button--secondary:not(.hero__button--link):hover
+{
+    background: var(--color-button-primary-background) !important;
+
+} 
 }
+
 @media (hover: hover) {
   [data-button-animations=fill_on_hover] .wt-product__add-to-cart_form .js-add-to-cart:hover {
     background: var(--color-button-primary-background);
@@ -1514,6 +1531,7 @@ button[disabled],
   justify-content: flex-start;
   align-items: flex-end;
   flex-grow: 1;
+  display: none;
 }
 @media (min-width: 1200px) {
   .card__quick-add-container--hidden {
@@ -14188,5 +14206,32 @@ main#root > .wt-featured-nav {
 .rte .shopify_subscriptions_app_policy {
   margin-top: 0.5em;
 }
-
+.btn-cart.form__send__button{
+  width: 100%;
+}
+.btn-cart{
+  width: fit-content;
+  background: var(--color-button-primary-background);
+    color: var(--color-button-primary-text);
+    border-color: var(--color-button-secondary-border);
+    border: none;
+    border-radius: 0px;
+    padding: 8px;
+    border-radius: 4px;
+    width: fit-content;
+    clip-path: unset !important;
+}
+[data-button-animations=fill_on_hover] .hero__button:not(.hero__button--link):after{
+  background-color: transparent;
+}
 /*# sourceMappingURL=main.css.map */
+@media (max-width: 1199px) {
+  .card__quick-add-container--desktop{
+   opacity: 1;
+   transform: translateY(0%);
+   -webkit-transform: translateY(0%);
+   -moz-transform: translateY(0%);
+   -ms-transform: translateY(0%);
+   -o-transform: translateY(0%);
+}
+}
