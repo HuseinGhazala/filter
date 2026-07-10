@@ -327,85 +327,104 @@
       data-mobile="true"
     {% endif %}
   >
-    <div class="hero__overlay__content hero__overlay__content--{{ desktop_text_horizontal_position }} hero__overlay__content--mobile--{{ mobile_text_horizontal_position }} rte">
-      {% if blocks %}
-        {% render 'simple-block', prefix: 'hero', blocks: blocks, rich_text_with_image: rich_text_with_image %}
+    {% if show_bottom %}
+      <div class="wt-show_bottom" >
+          <h3 class="subheading_bottom" >
+            {{subheading_bottom}}
+          </h3>
+        {% if logo != blank %}
+           <div class="wt-grid-logo">
+              {{
+                logo
+                | image_url: width: 80, format: 'webp', quality: 80
+                | image_tag:
+                  alt: product.title,
+                  loading: img_loading
+              }}
+        </div>
+        {% endif %} 
+        </div>
       {% else %}
-        {% if review_star_rating != blank %}
-          <div class="hero__star-rating">
-            {% if review_star_rating == '80' %}
-              {% render 'rating-stars', percent: review_star_rating, icon_class: 'wt-test__icon' %}
-            {% endif %}
-            {% if review_star_rating == '90' %}
-              {% render 'rating-stars', percent: review_star_rating, icon_class: 'wt-test__icon' %}
-            {% endif %}
-            {% if review_star_rating == '100' %}
-              {% render 'rating-stars', percent: review_star_rating, icon_class: 'wt-test__icon' %}
-            {% endif %}
-          </div>
+      <div class="hero__overlay__content hero__overlay__content--{{ desktop_text_horizontal_position }} hero__overlay__content--mobile--{{ mobile_text_horizontal_position }} rte">
+        {% if blocks %}
+          {% render 'simple-block', prefix: 'hero', blocks: blocks, rich_text_with_image: rich_text_with_image %}
+        {% else %}
+          {% if review_star_rating != blank %}
+            <div class="hero__star-rating">
+              {% if review_star_rating == '80' %}
+                {% render 'rating-stars', percent: review_star_rating, icon_class: 'wt-test__icon' %}
+              {% endif %}
+              {% if review_star_rating == '90' %}
+                {% render 'rating-stars', percent: review_star_rating, icon_class: 'wt-test__icon' %}
+              {% endif %}
+              {% if review_star_rating == '100' %}
+                {% render 'rating-stars', percent: review_star_rating, icon_class: 'wt-test__icon' %}
+              {% endif %}
+            </div>
+          {% endif %}
+  
+          {% if subheading != blank %}
+            <div class="hero__subheading {% if subheading_disable_on_mobile %}hero__subheading--mobile{% endif %}">
+              {{ subheading }}
+            </div>
+          {% endif %}
+  
+          {% if heading_h1 != blank %}
+            <h1 class="hero__title {% if heading_disable_on_mobile %}hero__title--mobile{% endif %}">
+              {{ heading_h1 }}
+            </h1>
+          {% endif %}
+  
+          {% if heading != blank %}
+            <h2 class="hero__title {% if heading_disable_on_mobile %}hero__title--mobile{% endif %}">
+              {{ heading | newline_to_br }}
+            </h2>
+          {% endif %}
+  
+          {% if text != blank and show_collection_description != false %}
+            <div class="hero__text hero__richtext rte {% if text_disable_on_mobile %}hero__text--mobile{% endif %}">
+              {{ text }}
+            </div>
+          {% endif %}
+          {% if author != blank %}
+            <div class="hero__subheading {% if subheading_disable_on_mobile %}hero__subheading--mobile{% endif %}">
+              {{ author | newline_to_br }}
+            </div>
+          {% endif %}
+          {% if button_label != blank or second_button_label != blank %}
+            <div class="hero__button--gap">
+              {% if button_label != blank %}
+                <a
+                  href="{{ button_link }}"
+                  {% if button_link_in_new_window %}
+                    target="_blank" rel="noreferrer noopener"
+                  {% endif %}
+                  tabindex="0"
+                  aria-label="{{ button_label }}"
+                  class="hero__button {% if button_disable_on_mobile %}hero__button--mobile {% endif %} hero__button--primary {% if button_select != 'primary' %} hero__button--secondary{% endif %}{% if button_select == 'link' %} hero__button--link{% endif %}"
+                >
+                  <span>{{ button_label }}</span>
+                </a>
+              {% endif %}
+  
+              {% if second_button_label != blank %}
+                <a
+                  href="{{ second_button_link }}"
+                  {% if button_link_in_new_window %}
+                    target="_blank" rel="noreferrer noopener"
+                  {% endif %}
+                  tabindex="0"
+                  aria-label="{{ second_button_label }}"
+                  class="hero__button {% if button_disable_on_mobile_second %}hero__button--mobile {% endif %} hero__button--primary {% if second_button_select != 'primary' %} hero__button--secondary{% endif %}{% if second_button_select == 'link' %} hero__button--link{% endif %}"
+                >
+                  <span>{{ second_button_label }}</span>
+                </a>
+              {% endif %}
+            </div>
+          {% endif %}
         {% endif %}
-
-        {% if subheading != blank %}
-          <div class="hero__subheading {% if subheading_disable_on_mobile %}hero__subheading--mobile{% endif %}">
-            {{ subheading }}
-          </div>
-        {% endif %}
-
-        {% if heading_h1 != blank %}
-          <h1 class="hero__title {% if heading_disable_on_mobile %}hero__title--mobile{% endif %}">
-            {{ heading_h1 }}
-          </h1>
-        {% endif %}
-
-        {% if heading != blank %}
-          <h2 class="hero__title {% if heading_disable_on_mobile %}hero__title--mobile{% endif %}">
-            {{ heading | newline_to_br }}
-          </h2>
-        {% endif %}
-
-        {% if text != blank and show_collection_description != false %}
-          <div class="hero__text hero__richtext rte {% if text_disable_on_mobile %}hero__text--mobile{% endif %}">
-            {{ text }}
-          </div>
-        {% endif %}
-        {% if author != blank %}
-          <div class="hero__subheading {% if subheading_disable_on_mobile %}hero__subheading--mobile{% endif %}">
-            {{ author | newline_to_br }}
-          </div>
-        {% endif %}
-        {% if button_label != blank or second_button_label != blank %}
-          <div class="hero__button--gap">
-            {% if button_label != blank %}
-              <a
-                href="{{ button_link }}"
-                {% if button_link_in_new_window %}
-                  target="_blank" rel="noreferrer noopener"
-                {% endif %}
-                tabindex="0"
-                aria-label="{{ button_label }}"
-                class="hero__button {% if button_disable_on_mobile %}hero__button--mobile {% endif %} hero__button--primary {% if button_select != 'primary' %} hero__button--secondary{% endif %}{% if button_select == 'link' %} hero__button--link{% endif %}"
-              >
-                <span>{{ button_label }}</span>
-              </a>
-            {% endif %}
-
-            {% if second_button_label != blank %}
-              <a
-                href="{{ second_button_link }}"
-                {% if button_link_in_new_window %}
-                  target="_blank" rel="noreferrer noopener"
-                {% endif %}
-                tabindex="0"
-                aria-label="{{ second_button_label }}"
-                class="hero__button {% if button_disable_on_mobile_second %}hero__button--mobile {% endif %} hero__button--primary {% if second_button_select != 'primary' %} hero__button--secondary{% endif %}{% if second_button_select == 'link' %} hero__button--link{% endif %}"
-              >
-                <span>{{ second_button_label }}</span>
-              </a>
-            {% endif %}
-          </div>
-        {% endif %}
-      {% endif %}
-    </div>
+      </div>
+    {% endif %}
   </{{ overlay_tag }}>
   {% endif %}
 </div>
