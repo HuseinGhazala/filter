@@ -8,6 +8,53 @@ if (!customElements.get("color-swatch")) {
 
       connectedCallback() {
         this.initialize();
+
+    // If the page has filter.v.option.<option>=<value> in the URL, auto-select matching color swatches
+    (function activateFilterFromUrl() {
+      if (typeof window === 'undefined') return;
+
+      const params = new URLSearchParams(window.location.search);
+      const filters = [];
+      for (const [key, value] of params.entries()) {
+        const m = key.match(/^filter\.v\.option\.(.+)$/);
+        if (m && value) {
+          filters.push({ option: m[1], value: decodeURIComponent(value) });
+        }
+      }
+
+      if (filters.length === 0) return;
+
+      const normalize = (v) => String(v || '').trim().toLowerCase();
+
+      const tryActivate = (attemptsLeft = 12) => {
+        const swatchElems = Array.from(document.querySelectorAll('color-swatch'));
+        if (swatchElems.length === 0 && attemptsLeft > 0) {
+          setTimeout(() => tryActivate(attemptsLeft - 1), 80);
+          return;
+        }
+
+        swatchElems.forEach((card) => {
+          filters.forEach(({ value }) => {
+            const targetColor = normalize(value);
+            const buttons = Array.from(card.querySelectorAll('.color-swatcher[data-color]'));
+            const match = buttons.find((b) => normalize(b.dataset.color) === targetColor);
+            if (match) {
+              const wrapper = match.closest('.color-swatcher--wrapper') || match;
+              if (!wrapper.classList.contains('active')) wrapper.click();
+            }
+          });
+        });
+
+        if (attemptsLeft > 0) setTimeout(() => tryActivate(attemptsLeft - 1), 120);
+      };
+
+      // Run once after DOMContent loaded to allow custom elements to connect
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => tryActivate());
+      } else {
+        tryActivate();
+      }
+    })();
       }
 
       initialize() {
@@ -305,3 +352,4 @@ if (!customElements.get("color-swatch")) {
     },
   );
 }
+
