@@ -79,10 +79,73 @@
         "padding_top": 36,
         "padding_bottom": 36
       }
+    },
+    "collection_color_list_97U3xP": {
+      "type": "collection-color-list",
+      "blocks": {
+        "collection_block_9VbbJA": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "ازرق"
+          }
+        },
+        "collection_block_CkiAtt": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "اسود"
+          }
+        },
+        "collection_block_rALKyh": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "عودي"
+          }
+        },
+        "collection_block_CamXB3": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "كحلي"
+          }
+        },
+        "collection_block_Tdbci8": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "اسود"
+          }
+        },
+        "collection_block_Q6ztiE": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "عودي"
+          }
+        },
+        "collection_block_yRfE8d": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "كحلي"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_9VbbJA",
+        "collection_block_CkiAtt",
+        "collection_block_rALKyh",
+        "collection_block_CamXB3",
+        "collection_block_Tdbci8",
+        "collection_block_Q6ztiE",
+        "collection_block_yRfE8d"
+      ],
+      "name": "Color Collections",
+      "settings": {
+        "title": "تسوقي حسب اللون",
+        "padding_top": 20,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "1649160937e2665513",
-    "main_banner_8gayyA"
+    "main_banner_8gayyA",
+    "collection_color_list_97U3xP"
   ]
 }
