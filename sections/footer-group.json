@@ -56,7 +56,7 @@
         "show-scroll-effect": false,
         "show-social-media-icons": true,
         "show_country_selector": true,
-        "show_country_selector_label": true,
+        "show_country_selector_label": false,
         "show_country_selector_flag": true,
         "show_language_selector": true,
         "enable_follow_on_shop": true,
