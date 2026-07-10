@@ -118,6 +118,18 @@
         {% endif %}
       }
   {%- endfor -%}
+  .rich-textt .hero__text{
+    width: 60%;
+    font-size: 24px;
+    font-weight: 500;
+  }
+  @media (max-width: 768px) {
+    .rich-textt .hero__text{
+      width: 100%;
+      font-size: 16px;
+      font-weight: 300;
+    }
+  }
 </style>
 
 {% if section.settings['full-width-enabled'] %}
@@ -128,7 +140,7 @@
 
 <div
   data-section-id="{{ section.id }}"
-  class="rich-text {% if section.settings.compact_size == true %} rich-text--compact{% endif %}"
+  class="rich-text rich-textt {% if section.settings.compact_size == true %} rich-text--compact{% endif %}"
 >
   <div class="{{ width_line }}">
     {% assign classname = '' %}
