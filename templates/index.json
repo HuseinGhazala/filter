@@ -378,6 +378,38 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
+    },
+    "color_category_CfH83j": {
+      "type": "color-category",
+      "name": "Product Categories",
+      "settings": {
+        "collection": [
+          "ازرق",
+          "اسود",
+          "عودي",
+          "كحلي"
+        ],
+        "feature_image": "shopify://shop_images/1692d522534e23d43d7a0191df3ce3bfea848236-removebg-preview.png",
+        "text_alignment": "right",
+        "show_title": true,
+        "title": "تسوقي الأطقم الكاملة",
+        "show_description": true,
+        "highlight_first_words": true,
+        "description": "<p>اكتشفي أطقم سكراب واسعة وساترة، بتصاميم عملية وخامات مريحة تمنحك مظهرًا مهنيًا طوال ساعات الدوام.</p>",
+        "description_style": "body",
+        "products_to_show": 8,
+        "Preview": "3",
+        "image_ratio": "portrait",
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add_button": false,
+        "quick_add_mode": "hover_desktop",
+        "show_view_all": true,
+        "link": "",
+        "view_all_style": "solid",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
@@ -387,6 +419,7 @@
     "lookbook_aMkb9Q",
     "rich_text_jVraEH",
     "main_banner_DWiP3x",
-    "background_video_UHjiyi"
+    "background_video_UHjiyi",
+    "color_category_CfH83j"
   ]
 }
