@@ -221,7 +221,7 @@
         "heading": "كل ما تحتاجينه للدوام",
         "heading_richtext": "<h2>Lookbook</h2>",
         "heading_alignment": "right",
-        "show_icons": true,
+        "show_icons": false,
         "heading_disable_on_mobile": false,
         "full-width-enabled": false,
         "column_gap_desk": 16,
@@ -231,52 +231,6 @@
         "color-overlay-opacity": 100,
         "margin-top": 20,
         "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
-    "1649160937e2665513": {
-      "type": "newsletter",
-      "blocks": {
-        "164916093728eec38a-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Get 20% off your first order",
-            "heading_disable_on_mobile": false,
-            "size_heading": 200,
-            "size_heading_mobile": 180
-          }
-        },
-        "164916093728eec38a-1": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "<p>Join our email list for exclusive offers and the latest news.</p>",
-            "text_disable_on_mobile": false
-          }
-        },
-        "164916093728eec38a-2": {
-          "type": "email_form",
-          "settings": {
-            "button_select": "primary",
-            "button_label": "",
-            "show_consent_checkbox": false,
-            "consent_checkbox_label": "<p>I want to sign up for the Newsletter (information about promotions, discounts, premieres, contests).</p>",
-            "consent_validation_message": "Please check this box to proceed."
-          }
-        }
-      },
-      "block_order": [
-        "164916093728eec38a-0",
-        "164916093728eec38a-1",
-        "164916093728eec38a-2"
-      ],
-      "disabled": true,
-      "settings": {
-        "color-body-text": "#151515",
-        "background_color": "#edf5f4",
-        "margin-top": 100,
-        "margin-bottom": 100,
         "show_mobile_spacing": false,
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
@@ -347,7 +301,6 @@
     "main_banner_8gayyA",
     "features_banner_7zpBwP",
     "lookbook_Eb8JAY",
-    "1649160937e2665513",
     "rich_text_jVraEH"
   ]
 }
