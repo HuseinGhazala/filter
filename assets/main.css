@@ -4204,12 +4204,17 @@ body .wt-grid-view-with-drawer__container[data-swiper] {
     max-width: var(--site-max-width-big);
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 325px) {
   .wt-keys__list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .wt-keys__item--center{
+    flex-direction: column;
+    text-align: center;
+  }
 }
+
 @media (min-width: 900px) {
   .wt-keys__list {
     grid-template-columns: repeat(var(--desktop-cols, 3), 1fr);
@@ -11789,12 +11794,12 @@ recipient-form .form__message svg path:nth-child(2n) {
 }
 .wt-lookbook__list {
   list-style: none;
-  column-count: 2;
+  column-count: 4;
   column-gap: var(--lookbook-gap, calc(var(--gap, 8px) * 1));
 }
 @media (min-width: 1200px) {
   .wt-lookbook__list {
-    column-count: 3;
+    column-count: 4;
     column-gap: var(--lookbook-gap-desk, calc(var(--gap, 8px) * 2));
   }
 }
@@ -11808,6 +11813,7 @@ recipient-form .form__message svg path:nth-child(2n) {
   .wt-lookbook__item {
     padding-bottom: var(--lookbook-gap-desk);
   }
+ 
 }
 .wt-lookbook__item--placeholder {
   background-color: #efefef;
@@ -11820,10 +11826,23 @@ recipient-form .form__message svg path:nth-child(2n) {
   width: 100%;
   height: 100%;
   border-radius: var(--border-radius);
+  object-fit: cover;
+  object-position: top !important;
 }
 .wt-lookbook__link {
+  height: 400px;
   right: calc(var(--gap, 8px) * 1);
   top: calc(var(--gap, 8px) * 1);
+}
+@media (max-width: 768px) {
+  .wt-lookbook__link {
+    height: 250px;
+  }
+  .wt-lookbook__list {
+  list-style: none;
+  column-count: 2;
+  column-gap: var(--lookbook-gap, calc(var(--gap, 8px) * 1));
+}
 }
 .wt-lookbook__button {
   background: var(--color-button-secondary-background);
