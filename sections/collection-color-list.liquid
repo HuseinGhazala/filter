@@ -1,0 +1,200 @@
+<div class="color-collections-section page-width wt-slider__container--featured " id="section-{{ section.id }}">
+  {% if section.settings.title != blank %}
+    <div class="section-header text-right">
+      <h2 class="color-collections-title">{{ section.settings.title | escape }}</h2>
+    </div>
+  {% endif %}
+
+  <div class="color-collections-grid">
+    {% for block in section.blocks %}
+      {%- assign collection = collections[block.settings.collection] -%}
+
+      {% if collection != blank %}
+        {%- capture filter_param -%}
+          ?filter.v.option.color={{ collection.title | url_encode }}
+        {%- endcapture -%}
+
+        <a href="{{ collection.url }}{{ filter_param }}" class="color-collection-card" {{ block.shopify_attributes }}>
+          <div class="card-image-wrapper">
+            {% if collection.image != blank %}
+              <img
+                src="{{ collection.image | img_url: '400x400', crop: 'center' }}"
+                alt="{{ collection.title | escape }}"
+                loading="lazy"
+                width="400"
+                height="400"
+              >
+            {% else %}
+              <img
+                src="{{ collection.products.first.featured_image | img_url: '400x400', crop: 'center' }}"
+                alt="{{ collection.title | escape }}"
+                loading="lazy"
+                width="400"
+                height="400"
+              >
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+            {% endif %}
+          </div>
+          <h3 class="card-title">{{ collection.title }}</h3>
+        </a>
+      {%- else -%}
+        <div class="color-collection-card dummy-card">
+          <div class="card-image-wrapper">
+            {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+          </div>
+          <h3 class="card-title">اسم الكوليكشن</h3>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% style %}
+  #section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  .section-header.text-right {
+    text-align: right;
+    margin-bottom: 25px;
+  }
+
+  .color-collections-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-headings-text);
+    margin: 0;
+  }
+
+  .color-collections-grid {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 10px;
+  }
+
+  .color-collections-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .color-collection-card {
+    flex: 0 0 calc(14.28% - 14px);
+    min-width: 140px;
+    text-decoration: none;
+    text-align: center;
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .color-collection-card {
+      flex: 0 0 calc(20% - 13px);
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .color-collection-card {
+      flex: 0 0 calc(40% - 10px);
+      min-width: 130px;
+    }
+  }
+
+  .card-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+  }
+
+  .card-image-wrapper img,
+  .card-image-wrapper svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .color-collection-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+  }
+
+  .color-collection-card .card-title {
+    font-size: 16px;
+    color: var(--color-body-text);
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-weight: 500;
+    text-align: center;
+  }
+{% endstyle %}
+
+{% schema %}
+{
+  "name": "Color Collections",
+  "max_blocks": 7,
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Main Heading",
+      "default": "Shop by Color"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_block",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Color Collections",
+      "blocks": [
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" }
+      ]
+    }
+  ]
+}
+{% endschema %}
