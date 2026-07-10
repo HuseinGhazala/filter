@@ -216,20 +216,6 @@
       </div>
     {% endif %}
 
-    {% if section.settings.show_country_selector or section.settings.show_language_selector %}
-      <div
-        class="wt-header__localization__triggers"
-        data-text-transform="{{ settings.type_navigation_font_uppercase }}"
-      >
-        {% if section.settings.show_country_selector -%}
-          {%- render 'localization-btn-local',
-            show_country_code: section.settings.show_country_selector_label,
-            show_country_flag: section.settings.show_country_selector_flag
-          -%}
-        {%- endif %}
-        {% if section.settings.show_language_selector %}{% render 'localization-btn-lang' %}{% endif %}
-      </div>
-    {% endif %}
 
     <div class="wt-header__aside {% if section.settings.show_search == false %}wt-header__aside--no-search{% endif %}">
       {%- if section.settings.layout != 'option_1' -%}
@@ -435,6 +421,7 @@
       </search-drawer>
     {% endif %}
     </div>
+    
 
     {%- if section.settings.layout == 'option_1' and section.settings.sticky_header -%}
       <a
@@ -596,6 +583,7 @@
       {% endif %}
     </div>
 
+
     <ul class="wt-header__panel wt-header__panel--no-labels">
       {%- if section.settings.layout == 'option_1' and section.settings.show_search -%}
         <li class="wt-header__panel__item wt-header__panel__item--search">
@@ -650,6 +638,21 @@
         </a>
       </li>
     </ul>
+        {% if section.settings.show_country_selector or section.settings.show_language_selector %}
+      <div
+        class="wt-header__localization__triggers"
+        data-text-transform="{{ settings.type_navigation_font_uppercase }}"
+      >
+        {% if section.settings.show_country_selector -%}
+          {%- render 'localization-btn-local',
+            show_country_code: section.settings.show_country_selector_label,
+            show_country_flag: section.settings.show_country_selector_flag
+          -%}
+        {%- endif %}
+        {% if section.settings.show_language_selector %}{% render 'localization-btn-lang' %}{% endif %}
+      </div>
+    {% endif %}
+
     {% if section.settings.show_line_separator %}
       <div class="wt-header__spacer"></div>
     {% endif %}
