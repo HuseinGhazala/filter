@@ -47,6 +47,28 @@
       {% endfor %}
 
   }
+
+   .wt-lookbook__section .headline__title, 
+    .wt-lookbook__container .headline {
+      text-align: {{ section.settings.heading_alignment }};
+      font-weight: 500;
+      font-size: 32px;
+  color: var(--color-custom-text, var(--color-headings-text, var(--color-text)));
+    }
+    .wt-lookbook__section .heading-image{
+      text-align: {{ section.settings.heading_alignment }};
+      font-weight: 400;
+      font-size: 24px;
+        color: var(--color-custom-text, var(--color-headings-text, var(--color-text)));
+
+    }
+    @media screen and (max-width: 749px) {
+      .wt-lookbook__section .headline__title, 
+      .wt-lookbook__container .headline {
+        font-size: 18px;
+      }
+    }
+
 </style>
 
 {% if section.settings['full-width-enabled'] %}
@@ -85,14 +107,7 @@
         {% endif %}
           
           <div class="wt-icon wt-lookbook__link">
-             {% if block.settings.link and section.settings.show_icons %}
-            <button
-            class="wt-lookbook__button wt-lookbook__button--primary {% if block.settings.button_select != 'primary' %} wt-lookbook__button--secondary{% endif %}"
-            aria-label="{{ 'aria-label.lookbook-button' | t }}" 
-          >
-                {% render 'icons', id: 'plus' %}
-          </button>
-        {% endif %}
+            
             {% case block.type %}
             {% when 'image' %}
               {% assign alt_text = block.settings.desktop_image.alt | escape | default: ""%}
@@ -107,6 +122,13 @@
                     alt: alt_text,
                     class: 'wt-lookbook__image'
                 }}
+
+                 {% if block.settings.heading_image != blank %}
+              <div class=" heading-image {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %} ">
+                  {{  block.settings.heading_image }}
+              </div>
+            {% endif %}
+
               {% else %}
                 {{ 'collection-apparel-1' | placeholder_svg_tag: 'wt-lookbook__item--placeholder' }}
               {% endif %}
@@ -161,6 +183,26 @@
       "label": "t:sections.logo-banner.settings.content.headline.label",
       "default": "<h2>Lookbook</h2>",
       "visible_if": "{{ section.settings.advanced_heading == true }}"
+    },
+    {
+      "type": "select",
+      "id": "heading_alignment",
+      "label": "Heading alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
     },
     {
       "type": "checkbox",
@@ -297,6 +339,13 @@
           "label": "t:sections.settings.settings.image.label"
         },
         {
+          "type": "textarea",
+          "id": "heading_image",
+          "label": "t:sections.settings.settings.heading.label",
+          "default": "Lookbook",
+          "visible_if": "{{ section.settings.advanced_heading == false }}"
+        },
+        {
           "type": "select",
           "id": "button_select",
           "options": [
@@ -361,6 +410,9 @@
           "type": "image"
         },
         {
+          "type": "image"
+        },
+         {
           "type": "image"
         },
         {
