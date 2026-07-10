@@ -226,7 +226,7 @@
         "full-width-enabled": false,
         "column_gap_desk": 16,
         "column_gap": 8,
-        "color-body-text": "#11173D",
+        "color-body-text": "#11173d",
         "color-overlay": "",
         "color-overlay-opacity": 100,
         "margin-top": 20,
@@ -281,6 +281,65 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
+    },
+    "rich_text_jVraEH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qYiy73": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "تعرفي أكثر على فلسفتنا في الراحة والأناقة اليومية",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_jJKi98": {
+          "type": "text",
+          "settings": {
+            "text": "<p>نصمم سكرابات بخامات مختارة بعناية وتفاصيل عملية تمنحك إحساسًا بالراحة والثقة والأناقة في كل لحظة من دوامك، لتعيشي تجربة تجمع بين الستر، النعومة، والجودة، بتصميم واسع يناسب طوال يومك ويخليك مرتاحة وواثقة وين ما كنتِ</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "button_VdQpXd": {
+          "type": "button",
+          "settings": {
+            "button_select": "primary",
+            "button_label": "ماذا عنا",
+            "button_link": "/",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_qYiy73",
+        "text_jJKi98",
+        "button_VdQpXd"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
     }
   },
   "order": [
@@ -288,6 +347,7 @@
     "main_banner_8gayyA",
     "features_banner_7zpBwP",
     "lookbook_Eb8JAY",
-    "1649160937e2665513"
+    "1649160937e2665513",
+    "rich_text_jVraEH"
   ]
 }
