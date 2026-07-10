@@ -14,6 +14,31 @@
       --font-text-scale-desk: {{ section.settings.size_text_desktop | divided_by: 100.0 }};
       --font-text-scale: {{ section.settings.size_text_mobile | divided_by: 100.0 }};
   }
+  
+  /* الحاوية المحيطة بالصورة */
+  .wt-announcement__image-wrapper {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 8px; /* مسافة بسيطة تفصل الديف عن النص */
+    width: var(--img-width, 20px);
+    height: var(--img-height, 20px);
+    overflow: hidden; /* لقص أي أجزاء زائدة من الصورة */
+  }
+
+  /* تنسيق الصورة لتأخذ حجم الديف بالكامل */
+  .wt-announcement__image {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover; /* تملأ الديف بالكامل دون أن تتشوه */
+  }
+  
+  /* لضمان محاذاة النص والصور عمودياً بشكل صحيح */
+  .wt-announcement__text, .wt-announcement__body a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
 
 <script src="{{ 'announcement-bar.js' | asset_url }}" defer="defer"></script>
@@ -68,14 +93,38 @@
               aria-label="{{ 'sections.header.announcement' | t }}"
               {{ block.shopify_attributes }}
             >
-              {%- if block.settings.text != blank -%}
+              {%- if block.settings.text != blank or block.settings.icon_image != blank -%}
                 {%- if block.settings.link != blank -%}
                   <a
                     href="{{ block.settings.link }}"
                     tabindex="{% if section.settings.marquee %}-1{% else %}0{% endif %}"
                   >
                 {%- endif -%}
+
+                {%- if block.settings.icon_image != blank -%}
+                  <div class="wt-announcement__image-wrapper" style="--img-width: {{ block.settings.image_width }}px; --img-height: {{ block.settings.image_height }}px;">
+                    <img src="{{ block.settings.icon_image | image_url: width: 150 }}" 
+                         class="wt-announcement__image" 
+                         alt="{{ block.settings.icon_image.alt | default: 'icon' }}"
+                         width="{{ block.settings.icon_image.width }}"
+                         height="{{ block.settings.icon_image.height }}"
+                         loading="lazy" />
+                  </div>
+                {%- endif -%}
+
                 {{ block.settings.text | escape }}
+
+                {%- if block.settings.icon_image != blank -%}
+                  <div class="wt-announcement__image-wrapper" style="--img-width: {{ block.settings.image_width }}px; --img-height: {{ block.settings.image_height }}px;">
+                    <img src="{{ block.settings.icon_image | image_url: width: 150 }}" 
+                         class="wt-announcement__image" 
+                         alt="{{ block.settings.icon_image.alt | default: 'icon' }}"
+                         width="{{ block.settings.icon_image.width }}"
+                         height="{{ block.settings.icon_image.height }}"
+                         loading="lazy" />
+                  </div>
+                {%- endif -%}
+
                 {%- if block.settings.link != blank -%}
                   {% render 'icons', id: 'arrow-right' %}
                   </a>
@@ -100,11 +149,35 @@
                   aria-label="{{ 'sections.header.announcement' | t }}"
                   {{ block.shopify_attributes }}
                 >
-                  {%- if block.settings.text != blank -%}
+                  {%- if block.settings.text != blank or block.settings.icon_image != blank -%}
                     {%- if block.settings.link != blank -%}
                       <a href="{{ block.settings.link }}" tabindex="-1">
                     {%- endif -%}
+
+                    {%- if block.settings.icon_image != blank -%}
+                      <div class="wt-announcement__image-wrapper" style="--img-width: {{ block.settings.image_width }}px; --img-height: {{ block.settings.image_height }}px;">
+                        <img src="{{ block.settings.icon_image | image_url: width: 150 }}" 
+                             class="wt-announcement__image" 
+                             alt="{{ block.settings.icon_image.alt | default: 'icon' }}"
+                             width="{{ block.settings.icon_image.width }}"
+                             height="{{ block.settings.icon_image.height }}"
+                             loading="lazy" />
+                      </div>
+                    {%- endif -%}
+
                     {{ block.settings.text | escape }}
+
+                    {%- if block.settings.icon_image != blank -%}
+                      <div class="wt-announcement__image-wrapper" style="--img-width: {{ block.settings.image_width }}px; --img-height: {{ block.settings.image_height }}px;">
+                        <img src="{{ block.settings.icon_image | image_url: width: 150 }}" 
+                             class="wt-announcement__image" 
+                             alt="{{ block.settings.icon_image.alt | default: 'icon' }}"
+                             width="{{ block.settings.icon_image.width }}"
+                             height="{{ block.settings.icon_image.height }}"
+                             loading="lazy" />
+                      </div>
+                    {%- endif -%}
+
                     {%- if block.settings.link != blank -%}
                       {% render 'icons', id: 'arrow-right' %}
                       </a>
@@ -117,15 +190,7 @@
       </div>
     {% endif %}
   </div>
-  {% if section.settings.checkbox_close_announcement == true %}
-    <button
-      aria-label="{{ 'aria-label.announcement-bar' | t }}"
-      class="wt-announcement__close"
-      tabindex="0"
-    >
-      {% render 'icons', id: 'close', icon_id: 'wt-announcement__close', icon_class: 'wt-announcement__close__icon' %}
-    </button>
-  {% endif %}
+
 </announcement-bar>
 
 {% if section.settings.marquee != true %}
@@ -149,7 +214,7 @@
     function initializeAnimation(speed) {
       if (window.innerWidth < 900) {
         document.querySelectorAll('.wt-announcement__container').forEach((element) => {
-          if (element.dataset.announcements - count > 1) element.classList.add('wt-announcement__container--animated');
+          if (Number(element.dataset.announcementsCount) > 1) element.classList.add('wt-announcement__container--animated');
         });
       }
       document
@@ -289,6 +354,35 @@
           "type": "url",
           "id": "link",
           "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+        {
+          "type": "header",
+          "content": "Icon / Image Settings"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Announcement Icon"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 10,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Image Width",
+          "default": 20
+        },
+        {
+          "type": "range",
+          "id": "image_height",
+          "min": 10,
+          "max": 60,
+          "step": 2,
+          "unit": "px",
+          "label": "Image Height",
+          "default": 20
         }
       ]
     }
