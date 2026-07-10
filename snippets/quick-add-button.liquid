@@ -3,7 +3,7 @@
     <button
       aria-label="{{ 'products.product.choose_option' | t }} {{ product.title }}"
       type="button"
-      class="wt-button--full-width hero__button hero__button--secondary form__send__button wt-contact__form__send--{{ block.settings.button_select }}"
+      class="wt-button--full-width hero__button hero__button--secondary btn-cart form__send__button wt-contact__form__send--{{ block.settings.button_select }}"
       name="commit"
       data-product-url="{{ card_product.url }}"
       tabindex="0"
@@ -62,14 +62,18 @@
           id="ProductSubmitButton-{{ section.id }}"
           type="submit"
           name="add"
-          class="wt-button--full-width hero__button hero__button--secondary"
+          class="wt-button--full-width hero__button hero__button--secondary btn-cart"
           {% if card_product.selected_or_first_available_variant.available == false %}
             disabled
           {% endif %}
         >
           <span>
             {%- if card_product.selected_or_first_available_variant.available -%}
-              {{ 'products.product.add_to_cart' | t }}
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 6.30005V20.5001C3 20.7653 3.10536 21.0196 3.29289 21.2072C3.48043 21.3947 3.73478 21.5001 4 21.5001H20C20.2652 21.5001 20.5196 21.3947 20.7071 21.2072C20.8946 21.0196 21 20.7653 21 20.5001V6.30005H3Z" stroke="#F0F0F7" stroke-linejoin="round"/>
+<path d="M21 6.3L18.1665 2.5H5.8335L3 6.3M15.7775 9.6C15.7775 11.699 14.0865 13.4 12 13.4C9.9135 13.4 8.222 11.699 8.222 9.6" stroke="#F0F0F7" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+
             {%- else -%}
               {{ 'products.product.sold_out' | t }}
             {%- endif -%}
