@@ -240,6 +240,87 @@
         "margin-bottom-mobile": 20
       }
     },
+    "featured_collections_tabs_AkkCQ3": {
+      "type": "featured-collections-tabs",
+      "blocks": {
+        "collection_tab_DFDGxV": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "ازرق",
+            "products": [
+              "طقم-سكراب-نسائي-سماوي-مريح",
+              "طقم-سكراب-نسائي-عودي-مريح",
+              "طقم-سكراب-نسائي-فضفاض-مريح"
+            ],
+            "products_to_show": 8,
+            "tab_label": "الأكثر طلبًا"
+          }
+        },
+        "collection_tab_gMLJQX": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "عودي",
+            "products": [
+              "طقم-سكراب-نسائي-سماوي-مريح",
+              "طقم-سكراب-نسائي-عودي-مريح",
+              "طقم-سكراب-نسائي-فضفاض-مريح"
+            ],
+            "products_to_show": 8,
+            "tab_label": "جديد الموسم"
+          }
+        },
+        "collection_tab_Mm8DAF": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "اسود",
+            "products": [
+              "طقم-سكراب-نسائي-سماوي-مريح",
+              "طقم-سكراب-نسائي-عودي-مريح",
+              "طقم-سكراب-نسائي-فضفاض-مريح"
+            ],
+            "products_to_show": 8,
+            "tab_label": "لإحساس أدفأ"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_DFDGxV",
+        "collection_tab_gMLJQX",
+        "collection_tab_Mm8DAF"
+      ],
+      "name": "t:sections.featured-collections-tab.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Featured Collections: Tabs",
+        "heading_richtext": "<h2>Featured Collections: Tabs</h2>",
+        "disable_on_mobile": false,
+        "enable_stack_products": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "number_of_column_desktop": 4,
+        "spacing_desktop": "16",
+        "make_products_full_width": false,
+        "tabs_alignment": "center",
+        "number_of_column_mobile": 2.1,
+        "spacing_mobile": "16",
+        "text_alignment": "left",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "enable_vendor_link": false,
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "hover_desktop",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
     "rich_text_jVraEH": {
       "type": "rich-text",
       "blocks": {
@@ -716,87 +797,6 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
-    },
-    "featured_collections_tabs_AkkCQ3": {
-      "type": "featured-collections-tabs",
-      "blocks": {
-        "collection_tab_DFDGxV": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "ازرق",
-            "products": [
-              "طقم-سكراب-نسائي-سماوي-مريح",
-              "طقم-سكراب-نسائي-عودي-مريح",
-              "طقم-سكراب-نسائي-فضفاض-مريح"
-            ],
-            "products_to_show": 8,
-            "tab_label": "الأكثر طلبًا"
-          }
-        },
-        "collection_tab_gMLJQX": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "عودي",
-            "products": [
-              "طقم-سكراب-نسائي-سماوي-مريح",
-              "طقم-سكراب-نسائي-عودي-مريح",
-              "طقم-سكراب-نسائي-فضفاض-مريح"
-            ],
-            "products_to_show": 8,
-            "tab_label": "جديد الموسم"
-          }
-        },
-        "collection_tab_Mm8DAF": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "اسود",
-            "products": [
-              "طقم-سكراب-نسائي-سماوي-مريح",
-              "طقم-سكراب-نسائي-عودي-مريح",
-              "طقم-سكراب-نسائي-فضفاض-مريح"
-            ],
-            "products_to_show": 8,
-            "tab_label": "لإحساس أدفأ"
-          }
-        }
-      },
-      "block_order": [
-        "collection_tab_DFDGxV",
-        "collection_tab_gMLJQX",
-        "collection_tab_Mm8DAF"
-      ],
-      "name": "t:sections.featured-collections-tab.presets.name",
-      "settings": {
-        "advanced_heading": false,
-        "title": "Featured Collections: Tabs",
-        "heading_richtext": "<h2>Featured Collections: Tabs</h2>",
-        "disable_on_mobile": false,
-        "enable_stack_products": false,
-        "show_view_all": true,
-        "button_select": "primary",
-        "number_of_column_desktop": 4,
-        "spacing_desktop": "16",
-        "make_products_full_width": false,
-        "tabs_alignment": "center",
-        "number_of_column_mobile": 2.1,
-        "spacing_mobile": "16",
-        "text_alignment": "left",
-        "image_ratio": "square",
-        "show_video": false,
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "enable_vendor_link": false,
-        "show_product_rating": false,
-        "enable_quick_add_button": true,
-        "quick_add_mode": "hover_desktop",
-        "color-body-text": "",
-        "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
     }
   },
   "order": [
@@ -804,13 +804,13 @@
     "main_banner_8gayyA",
     "features_banner_7zpBwP",
     "lookbook_aMkb9Q",
+    "featured_collections_tabs_AkkCQ3",
     "rich_text_jVraEH",
     "main_banner_DWiP3x",
     "color_category_CfH83j",
     "testimonial_marquee_VHcPTa",
     "background_video_UHjiyi",
     "grid_view_mKkY8d",
-    "marquee_images_Bp3tmm",
-    "featured_collections_tabs_AkkCQ3"
+    "marquee_images_Bp3tmm"
   ]
 }
