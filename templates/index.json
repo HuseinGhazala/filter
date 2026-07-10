@@ -556,8 +556,9 @@
         "image_pnCLct": {
           "type": "image",
           "settings": {
-            "show_bottom": false,
-            "subheading_bottom": "",
+            "show_bottom": true,
+            "subheading_bottom": "مرونة تتحرك معك",
+            "logo": "shopify://shop_images/image_316.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
@@ -577,11 +578,13 @@
             "button_disable_on_mobile": false,
             "button_link": "",
             "button_link_in_new_window": false,
-            "color-body-text": "",
+            "color-body-text": "{{ settings.colors.background }}",
             "color-overlay": "",
             "color-overlay-opacity": 0,
+            "desktop_image": "shopify://shop_images/9182c18621cf28d1a86543590c3825112bdea07d.png",
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/9182c18621cf28d1a86543590c3825112bdea07d.png",
             "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "center"
           }
@@ -589,8 +592,9 @@
         "image_6W9Ed3": {
           "type": "image",
           "settings": {
-            "show_bottom": false,
-            "subheading_bottom": "",
+            "show_bottom": true,
+            "subheading_bottom": "تغطية تمنحك ثقة",
+            "logo": "shopify://shop_images/image_318.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
@@ -610,11 +614,13 @@
             "button_disable_on_mobile": false,
             "button_link": "",
             "button_link_in_new_window": false,
-            "color-body-text": "",
+            "color-body-text": "{{ settings.colors.background }}",
             "color-overlay": "",
             "color-overlay-opacity": 0,
+            "desktop_image": "shopify://shop_images/63656f5a8c1c9b64c815d87d6e95d54e19ea2b47.png",
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
+            "mobile_image": "shopify://shop_images/63656f5a8c1c9b64c815d87d6e95d54e19ea2b47.png",
             "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "center"
           }
