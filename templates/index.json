@@ -294,6 +294,57 @@
         "margin-bottom-mobile": 20,
         "compact_size": false
       }
+    },
+    "background_video_UHjiyi": {
+      "type": "background-video",
+      "blocks": {
+        "button_DmkNrJ": {
+          "type": "button",
+          "settings": {
+            "button_select": "primary",
+            "button_label": "Button label",
+            "disable_on_mobile": false,
+            "button_link": "",
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_DmkNrJ"
+      ],
+      "name": "t:sections.background-video.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Video hero</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "video_hosted": "shopify://files/videos/5fd16bf9d6bf49daa3117e19907acac0hd-720p-16mbps-53423753_WOcMKolK.mp4",
+        "autoplay": true,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "original_ratio": "fixed_height",
+        "desktop_fixed_height": 580,
+        "mobile_fixed_height": 460,
+        "color-body-heading": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "color-body-text": "",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
     }
   },
   "order": [
@@ -301,6 +352,7 @@
     "main_banner_8gayyA",
     "features_banner_7zpBwP",
     "lookbook_aMkb9Q",
-    "rich_text_jVraEH"
+    "rich_text_jVraEH",
+    "background_video_UHjiyi"
   ]
 }
