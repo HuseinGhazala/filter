@@ -185,6 +185,11 @@
                 }}
               {% endif %}
               <div class="wt-footer__text rte">{{ block.settings.text }}</div>
+                {% if section.settings['show-social-media-icons'] %}
+            <div class="wt-footer__aside-block wt-footer__aside-block--social">
+              {% render 'social-links' %}
+            </div>
+          {% endif %}
             </section>
 
           {%- when 'newsletter' -%}
@@ -269,32 +274,7 @@
 
   <div class="wt-footer__aside">
     <div class="wt-footer__aside__wrapper">
-      {% if section.settings.show_country_selector
-        or section.settings.show_language_selector
-        or section.settings['show-social-media-icons']
-      %}
-        <div class="wt-footer__aside-block__wrapper">
-          {% if section.settings.show_country_selector or section.settings.show_language_selector %}
-            <div
-              class="wt-footer__localization__triggers"
-            >
-              {% if section.settings.show_country_selector -%}
-                {%- render 'localization-btn-local',
-                  show_country_code: section.settings.show_country_selector_label,
-                  show_country_flag: section.settings.show_country_selector_flag
-                -%}
-              {%- endif %}
-              {% if section.settings.show_language_selector %}{% render 'localization-btn-lang' %}{% endif %}
-            </div>
-          {% endif %}
-
-          {% if section.settings['show-social-media-icons'] %}
-            <div class="wt-footer__aside-block wt-footer__aside-block--social">
-              {% render 'social-links' %}
-            </div>
-          {% endif %}
-        </div>
-      {% endif %}
+      <div class="mobile-hidden" ></div>
 
       {% if section.settings['show-payments-icons'] %}
         <div class="wt-footer__aside-block wt-footer__aside-block--payment{% if section.settings.payment_icons_monochrome %} wt-footer__aside-block--payment-monochrome{% endif %}">
@@ -313,12 +293,41 @@
         </div>
       {%- endif -%}
     </div>
+    <div class="wt-footer__bottom__wrapper" >
+        {% if section.settings.show_country_selector
+        or section.settings.show_language_selector
+        or section.settings['show-social-media-icons']
+      %}
+        <div class="wt-footer__aside-block__wrapper">
+          {% if section.settings.show_country_selector or section.settings.show_language_selector %}
+            <div
+              class="wt-footer__localization__triggers"
+            >
+              {% if section.settings.show_country_selector -%}
+                {%- render 'localization-btn-local',
+                  show_country_code: section.settings.show_country_selector_label,
+                  show_country_flag: section.settings.show_country_selector_flag
+                -%}
+              {%- endif %}
+               {% if section.settings.show_country_selector and section.settings.show_language_selector -%}
+              <span>
+                |
+              </span>
+               {% endif %}
+              {% if section.settings.show_language_selector %}
+                {% render 'localization-btn-lang' %}{% endif %}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+      {% if section.settings['show-copyright'] %}
+        <p class="wt-footer__aside__copy">
+          {{ section.settings.text }}
+        </p>
+      {% endif %}
+      <div></div>
 
-    {% if section.settings['show-copyright'] %}
-      <p class="wt-footer__aside__copy">
-        {{ section.settings.text }}
-      </p>
-    {% endif %}
+    </div>
   </div>
 
   {% if section.settings['big-logo'] != null %}
