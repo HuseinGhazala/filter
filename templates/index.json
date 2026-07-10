@@ -650,6 +650,72 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
+    },
+    "marquee_images_Bp3tmm": {
+      "type": "marquee-images",
+      "blocks": {
+        "image_nyGcnX": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/27b828f7d99daf9a9354b78ce2b17ae5b6c11bd7.png",
+            "link": ""
+          }
+        },
+        "image_tHNJxT": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/fc0946f26d0918785b45a8c9f17a69a75ab0a483.png",
+            "link": ""
+          }
+        },
+        "image_gHtwap": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/eee21fba5de9c8a32f0f47989618534e61142bf1.png",
+            "link": ""
+          }
+        },
+        "image_mCAWTf": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/ceadef54121cdd87825b29ff3a78833cd5ee9f4b.png",
+            "link": ""
+          }
+        },
+        "image_U8XDEe": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/5add90cf64b40c362b78b737f9afe69d9025a54e.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_nyGcnX",
+        "image_tHNJxT",
+        "image_gHtwap",
+        "image_mCAWTf",
+        "image_U8XDEe"
+      ],
+      "name": "t:sections.marquee_images.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "السكراب كما سترتدينه",
+        "heading_richtext": "<h2>Marquee images</h2>",
+        "animation_direction": "right",
+        "animation_speed": "100",
+        "desktop_fixed_height": 320,
+        "gap_desk": 24,
+        "mobile_fixed_height": 220,
+        "gap": 24,
+        "color-body-text": "{{ settings.colors.primary }}",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 40,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
     }
   },
   "order": [
@@ -662,6 +728,7 @@
     "color_category_CfH83j",
     "testimonial_marquee_VHcPTa",
     "background_video_UHjiyi",
-    "grid_view_mKkY8d"
+    "grid_view_mKkY8d",
+    "marquee_images_Bp3tmm"
   ]
 }
