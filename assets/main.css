@@ -14208,6 +14208,7 @@ main#root > .wt-featured-nav {
 }
 .btn-cart.form__send__button{
   width: 100%;
+  padding-block: 10px;
 }
 .btn-cart{
   width: fit-content;
@@ -14226,6 +14227,9 @@ main#root > .wt-featured-nav {
 }
 /*# sourceMappingURL=main.css.map */
 @media (max-width: 1199px) {
+  .btn-cart{
+    padding: 4px;
+  }
   .card__quick-add-container--desktop{
    opacity: 1;
    transform: translateY(0%);
