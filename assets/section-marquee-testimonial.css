@@ -56,7 +56,7 @@
   align-items: center;
   gap: 10px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
 }
 .wt-testimonials-marquee__author-text {
   font-size: calc(var(--font-base-size) * 0.8);
