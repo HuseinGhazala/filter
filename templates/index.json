@@ -169,73 +169,6 @@
         "margin-bottom-mobile": 20
       }
     },
-    "lookbook_Eb8JAY": {
-      "type": "lookbook",
-      "blocks": {
-        "image_L98Qmn": {
-          "type": "image",
-          "settings": {
-            "desktop_image": "shopify://shop_images/c660dd998d5d7d98d31a32ef27673fd0f430a2e4.png",
-            "heading_image": "أطقم واسعة",
-            "button_select": "primary",
-            "link": "shopify://collections/ازرق"
-          }
-        },
-        "image_cUWxr9": {
-          "type": "image",
-          "settings": {
-            "desktop_image": "shopify://shop_images/69c1bd89854ef992978849085563d85ce1c85c02.png",
-            "heading_image": "توبات ساترة",
-            "button_select": "primary",
-            "link": "shopify://collections/عودي"
-          }
-        },
-        "image_CzhPwx": {
-          "type": "image",
-          "settings": {
-            "desktop_image": "shopify://shop_images/9b59d1e66f880611c9d7fba2d0462c29fcd6cc53.png",
-            "heading_image": "جاكيتات سكراب",
-            "button_select": "primary",
-            "link": "shopify://products/طقم-سكراب-نسائي-فضفاض-مريح"
-          }
-        },
-        "image_PrmXHT": {
-          "type": "image",
-          "settings": {
-            "desktop_image": "shopify://shop_images/829d3b52de5c2df1ee2c5c5aebfd2a34f6f3d92f.png",
-            "heading_image": "بنطلونات سكراب",
-            "button_select": "primary",
-            "link": "shopify://collections/كحلي"
-          }
-        }
-      },
-      "block_order": [
-        "image_L98Qmn",
-        "image_cUWxr9",
-        "image_CzhPwx",
-        "image_PrmXHT"
-      ],
-      "name": "t:sections.lookbook.presets.name",
-      "settings": {
-        "advanced_heading": false,
-        "heading": "كل ما تحتاجينه للدوام",
-        "heading_richtext": "<h2>Lookbook</h2>",
-        "heading_alignment": "right",
-        "show_icons": false,
-        "heading_disable_on_mobile": false,
-        "full-width-enabled": false,
-        "column_gap_desk": 16,
-        "column_gap": 8,
-        "color-body-text": "#11173d",
-        "color-overlay": "",
-        "color-overlay-opacity": 100,
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
     "rich_text_jVraEH": {
       "type": "rich-text",
       "blocks": {
@@ -294,13 +227,76 @@
         "margin-bottom-mobile": 20,
         "compact_size": false
       }
+    },
+    "lookbook_aMkb9Q": {
+      "type": "lookbook",
+      "blocks": {
+        "image_9yVPPH": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Lookbook",
+            "button_select": "primary",
+            "link": ""
+          }
+        },
+        "image_6VmNgY": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Lookbook",
+            "button_select": "primary",
+            "link": ""
+          }
+        },
+        "image_WAyMUt": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Lookbook",
+            "button_select": "primary",
+            "link": ""
+          }
+        },
+        "image_PreHmG": {
+          "type": "image",
+          "settings": {
+            "heading_image": "Lookbook",
+            "button_select": "primary",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_9yVPPH",
+        "image_6VmNgY",
+        "image_WAyMUt",
+        "image_PreHmG"
+      ],
+      "name": "t:sections.lookbook.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "Lookbook",
+        "heading_richtext": "<h2>Lookbook</h2>",
+        "heading_alignment": "center",
+        "show_icons": true,
+        "heading_disable_on_mobile": false,
+        "full-width-enabled": false,
+        "column_gap_desk": 16,
+        "column_gap": 8,
+        "color-body-text": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
     }
   },
   "order": [
     "collection_color_list_97U3xP",
     "main_banner_8gayyA",
     "features_banner_7zpBwP",
-    "lookbook_Eb8JAY",
-    "rich_text_jVraEH"
+    "rich_text_jVraEH",
+    "lookbook_aMkb9Q"
   ]
 }
