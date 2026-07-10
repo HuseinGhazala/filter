@@ -1,0 +1,297 @@
+{{ 'main_banner.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+
+    .banner-{{ section.id }} {
+      height: {{ section.settings.desktop_height }}px;
+    }
+
+    /* Dynamic Large Screen Title & Subtitle Sizing */
+    .banner-{{ section.id }} .banner-title {
+      font-size: {{ section.settings.heading_scale_desktop }}px;
+      line-height: 1;
+    }
+    
+    .banner-{{ section.id }} .banner-subtitle {
+      font-size: {{ section.settings.sub_heading_scale_desktop }}px;
+      /* Dynamic Width Option */
+      {%- if section.settings.subtitle_full_width -%}
+        width: 100%;
+      {%- else -%}
+        width: 70%;
+        /* Centers the 70% box if alignment is center */
+        margin: 0 {% if section.settings.text_alignment == 'center' %}auto{% else %}0{% endif %} 22px {% if section.settings.text_alignment == 'center' %}auto{% else %}0{% endif %};
+      {%- endif -%}
+    }
+
+    @media screen and (max-width: 749px) {
+      .banner-{{ section.id }} {
+        height: {{ section.settings.mobile_height }}px;
+        align-items: {{ section.settings.mobile_vertical_alignment }} !important;
+      }
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top | times: 0.75 | round }}px;
+        padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round }}px;
+      }
+      
+      /* Dynamic Mobile Title & Subtitle Sizing */
+      .banner-{{ section.id }} .banner-title {
+        font-size: {{ section.settings.heading_scale_mobile }}px;
+      }
+      .banner-{{ section.id }} .banner-subtitle {
+        font-size: {{ section.settings.sub_heading_scale_mobile }}px;
+        width: 100%;
+      }
+    }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding">
+  <div class="custom-hero-banner banner-{{ section.id }} text-align-{{ section.settings.text_alignment }}">
+    {%- if section.settings.background_type == 'image' -%}
+      {%- if section.settings.image_desktop != blank -%}
+        {{
+          section.settings.image_desktop
+          | image_url: width: 2000
+          | image_tag: class: 'banner-bg desktop-only', loading: 'lazy', alt: section.settings.main_title
+        }}
+      {%- endif -%}
+
+      {%- if section.settings.image_mobile != blank -%}
+        {{
+          section.settings.image_mobile
+          | image_url: width: 800
+          | image_tag: class: 'banner-bg mobile-only', loading: 'lazy', alt: section.settings.main_title
+        }}
+      {%- else -%}
+        {%- if section.settings.image_desktop != blank -%}
+          {{
+            section.settings.image_desktop
+            | image_url: width: 800
+            | image_tag: class: 'banner-bg mobile-only', loading: 'lazy', alt: section.settings.main_title
+          }}
+        {%- endif -%}
+      {%- endif -%}
+
+    {%- elsif section.settings.background_type == 'video' and section.settings.video_url != blank -%}
+      <video class="banner-bg" autoplay muted loop playsinline>
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    {%- endif -%}
+
+    <div class="banner-overlay"></div>
+
+    <div class="banner-content page-width">
+      {%- if section.settings.main_title != blank -%}
+        <h2 class="banner-title">{{ section.settings.main_title }}</h2>
+      {%- endif -%}
+
+      {%- if section.settings.sub_title != blank -%}
+        <div class="banner-subtitle">{{ section.settings.sub_title }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.btn_text != blank and section.settings.btn_url != blank -%}
+        <a href="{{ section.settings.btn_url }}" class="banner-btn">{{ section.settings.btn_text }}</a>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Custom Hero Banner",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "Background Type",
+      "options": [
+        { "value": "image", "label": "Image" },
+        { "value": "video", "label": "MP4 Video" }
+      ],
+      "default": "image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_desktop",
+      "label": "Desktop Image",
+      "info": "Recommended dimensions: 2000px width for best quality.",
+      "visible_if": "{{ section.settings.background_type == 'image' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile Image (Optional)",
+      "visible_if": "{{ section.settings.background_type == 'image' }}"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Direct MP4 Video URL (from Store Files)",
+      "info": "Upload your video to Shopify Files and use the direct URL here.",
+      "visible_if": "{{ section.settings.background_type == 'video' }}"
+    },
+    {
+      "type": "header",
+      "content": "Banner Dimensions"
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "min": 300,
+      "max": 800,
+      "step": 50,
+      "unit": "px",
+      "label": "Desktop Banner Height",
+      "default": 500
+    },
+    {
+      "type": "range",
+      "id": "mobile_height",
+      "min": 250,
+      "max": 600,
+      "step": 50,
+      "unit": "px",
+      "label": "Mobile Banner Height",
+      "default": 400
+    },
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main Title",
+      "default": "Modest Medical Scrubs"
+    },
+    {
+      "type": "checkbox",
+      "id": "subtitle_full_width",
+      "label": "Make subtitle full width (100%)",
+      "info": "If unchecked, subtitle width will be limited  for a cleaner look.",
+      "default": false
+    },
+    {
+      "type": "textarea",
+      "id": "sub_title",
+      "label": "Subtitle",
+      "default": "Designed for comfort, durability, and all-day professional wear."
+    },
+    {
+      "type": "header",
+      "content": "Typography Scales"
+    },
+    {
+      "type": "range",
+      "id": "heading_scale_desktop",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Main Title Scale (Desktop)",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "sub_heading_scale_desktop",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Subtitle Scale (Desktop)",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "heading_scale_mobile",
+      "min": 18,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Main Title Scale (Mobile)",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "sub_heading_scale_mobile",
+      "min": 14,
+      "max": 32,
+      "step": 2,
+      "unit": "px",
+      "label": "Subtitle Scale (Mobile)",
+      "default": 18
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button Text",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button URL"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Horizontal Text Alignment",
+      "options": [
+        { "value": "flex-start", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "mobile_vertical_alignment",
+      "label": "Mobile Vertical Alignment",
+      "options": [
+        { "value": "flex-start", "label": "Top" },
+        { "value": "center", "label": "Center" },
+        { "value": "flex-end", "label": "Bottom" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Distance from the top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Distance from the bottom",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Hero Banner"
+    }
+  ]
+}
+{% endschema %}
+
