@@ -31,6 +31,8 @@
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
 
     {%- if settings.favicon != blank -%}
       <link rel="icon" type="image/png" sizes="32x32" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
@@ -75,6 +77,9 @@
     <script src="{{ 'animations.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'drawer-select.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'model_element.js' | asset_url }}" defer="defer"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
 
     {%- if template == 'product' -%}
       <script type="module" src="{{ 'gallery.js' | asset_url }}" defer="defer"></script>
@@ -314,6 +319,30 @@
         </button>
       </div>
     </div>
+
+    <script defer>
+  function initProductCardsSwiper() {
+    document.querySelectorAll('.card-product-swiper').forEach(el => {
+      if (el.classList.contains('swiper-initialized')) return;
+      new Swiper(el, {
+        speed: 350,
+        loop: false,
+        simulateTouch: true,
+        grabCursor: true,
+        watchSlidesProgress: true,
+        touchStartPreventDefault: false,
+        pagination: { el: el.querySelector('.card-slider-dots'), clickable: true },
+        on: {
+          touchMove: function() { el.querySelectorAll('.card-main-link').forEach(link => { link.style.pointerEvents = 'none'; }); },
+          touchEnd: function() { setTimeout(() => { el.querySelectorAll('.card-main-link').forEach(link => { link.style.pointerEvents = 'auto'; }); }, 50); }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initProductCardsSwiper); } else { initProductCardsSwiper(); }
+  const observer = new MutationObserver(() => { initProductCardsSwiper(); });
+  observer.observe(document.body, { childList: true, subtree: true });
+</script>
     {% if request.design_mode %}
       <script src="{{ 'parallax.js' | asset_url }}" defer="defer"></script>
       <script src="{{ 'page-header-logo-banner.js' | asset_url }}" defer="defer"></script>
