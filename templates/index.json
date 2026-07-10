@@ -284,7 +284,7 @@
         "section_width": "regular",
         "desktop_text_horizontal_position": "center",
         "full-width-enabled": false,
-        "color-body-text": "",
+        "color-body-text": "{{ settings.colors.primary }}",
         "background_color": "",
         "background_gradient": "",
         "margin-top": 20,
