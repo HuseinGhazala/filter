@@ -1,1 +1,133 @@
-{"type":"header","name":"Header Group","sections":{"announcement-bar":{"type":"announcement-bar","blocks":{"announcement_pHd987":{"type":"announcement","settings":{"text":"Free Shipping Over $50! Returns are always on us.","link":""}},"announcement_YnK6g6":{"type":"announcement","settings":{"text":"Free Shipping Over $50! Returns are always on us.","link":""}}},"block_order":["announcement_pHd987","announcement_YnK6g6"],"settings":{"marquee":true,"animation_speed":"150","checkbox_close_announcement":true,"color-body-text":"#151515","background_color":"#e3f2e6","size_text_desktop":100,"size_text_mobile":100}},"header":{"type":"page-header","blocks":{"menu_highlight_fhzmc7":{"type":"menu_highlight","settings":{"menu_items":"Theme Features","highlight_color":"#962c23","highlight_icon":""}},"column_W3ihtQ":{"type":"column","settings":{"title":"Bestseller","promo_section_width":4,"stack_view":false,"image_ratio":"adapt","desktop_image_1":"","heading_1":"","text_1":"Firming face serum Orange","link_1":"","desktop_image_2":"","heading_2":"","text_2":"Moisturizing hand lotion","link_2":"","desktop_image_3":"","heading_3":"","text_3":"Floral face moisturized","link_3":"","desktop_image_4":"","heading_4":"","text_4":"Body salt scrub 300g","link_4":"","desktop_image_5":"","heading_5":"","text_5":"Nourishing hand balm","link_5":"","heading_6":"","text_6":"","link_6":""}}},"block_order":["menu_highlight_fhzmc7","column_W3ihtQ"],"settings":{"layout":"option_4","sticky_header":true,"sticky_header_always":false,"header_bg_opacity":100,"header_bg_blur":0,"header_always_blurred":false,"show_line_separator":true,"show_shadow":false,"logo":"","large_screen_logo_width":120,"mobile_screen_logo_width":90,"menu":"main-menu","mobile_footer_menu":"main-menu","customer_account_menu":"main-menu","teaser_menu":"main-menu","teaser_menu_limit":3,"transparent_header_color":"#ffffff","show_country_selector":true,"show_country_selector_label":false,"show_country_selector_flag":true,"show_language_selector":false,"drawer_title":"Shop by","enable_submenu_link_in_drawer":false,"show_search":true,"show_search_without_button":false,"typing_search":"Find a product...","suggestions_title":"Top Sellers","search_suggest_layout":"menu","suggestions_menu":"main-menu","suggest_products":[],"suggest_products_title":"","suggest_collections":[],"suggest_collections_title":"","suggest_pages_menu":"","suggest_pages_menu_title":"","suggest_search_terms":"","suggest_search_terms_title":"","show_suggest_on_no_results":true}},"page_header_logo_banner_DJLpfi":{"type":"page-header-logo-banner","settings":{"logo_image":"","additional_text":"","button_style":"link","button_label":"Where skincare Begins","button_disable_on_mobile":false,"button_link":"","button_link_in_new_window":false,"color-body-text":"#ffffff","color-overlay":"#000000","color-overlay-opacity":0}},"notification_popup_LER4nx":{"type":"notification-popup","blocks":{"heading_GMQ7CY":{"type":"heading","settings":{"heading":"Subscribe to our emails","heading_disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}},"paragraph_RW4bNP":{"type":"paragraph","settings":{"paragraph":"<p>Be the first to know about new collections and exclusive offers.<\/p>","text_disable_on_mobile":false}},"email_form_XwetR3":{"type":"email_form","settings":{"button_select":"primary","button_label":""}}},"block_order":["heading_GMQ7CY","paragraph_RW4bNP","email_form_XwetR3"],"disabled":true,"name":"t:sections.notification_popup.name","settings":{"max_width":450,"delay":0,"show_border":false,"show_shadow":true,"desktop_vertical_position":"center","desktop_horizontal_position":"center"}}},"order":["announcement-bar","header","page_header_logo_banner_DJLpfi","notification_popup_LER4nx"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header Group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "blocks": {
+        "announcement_pHd987": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping Over $50! Returns are always on us.",
+            "link": ""
+          }
+        },
+        "announcement_YnK6g6": {
+          "type": "announcement",
+          "settings": {
+            "text": "Free Shipping Over $50! Returns are always on us.",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_pHd987",
+        "announcement_YnK6g6"
+      ],
+      "settings": {
+        "marquee": true,
+        "animation_speed": "150",
+        "checkbox_close_announcement": true,
+        "color-body-text": "#151515",
+        "background_color": "#e3f2e6",
+        "size_text_desktop": 100,
+        "size_text_mobile": 100
+      }
+    },
+    "header": {
+      "type": "page-header",
+      "blocks": {
+        "menu_highlight_fhzmc7": {
+          "type": "menu_highlight",
+          "settings": {
+            "menu_items": "Theme Features",
+            "highlight_color": "#962c23"
+          }
+        },
+        "column_W3ihtQ": {
+          "type": "column",
+          "settings": {
+            "title": "Bestseller",
+            "promo_section_width": 4,
+            "stack_view": false,
+            "image_ratio": "adapt",
+            "heading_1": "",
+            "text_1": "Firming face serum Orange",
+            "link_1": "",
+            "heading_2": "",
+            "text_2": "Moisturizing hand lotion",
+            "link_2": "",
+            "heading_3": "",
+            "text_3": "Floral face moisturized",
+            "link_3": "",
+            "heading_4": "",
+            "text_4": "Body salt scrub 300g",
+            "link_4": "",
+            "heading_5": "",
+            "text_5": "Nourishing hand balm",
+            "link_5": "",
+            "heading_6": "",
+            "text_6": "",
+            "link_6": ""
+          }
+        }
+      },
+      "block_order": [
+        "menu_highlight_fhzmc7",
+        "column_W3ihtQ"
+      ],
+      "settings": {
+        "layout": "option_3",
+        "sticky_header": true,
+        "sticky_header_always": false,
+        "header_bg_opacity": 100,
+        "header_bg_blur": 0,
+        "header_always_blurred": false,
+        "show_line_separator": true,
+        "show_shadow": false,
+        "large_screen_logo_width": 120,
+        "mobile_screen_logo_width": 90,
+        "menu": "main-menu",
+        "mobile_footer_menu": "main-menu",
+        "customer_account_menu": "main-menu",
+        "teaser_menu": "main-menu",
+        "teaser_menu_limit": 3,
+        "transparent_header_color": "#ffffff",
+        "show_country_selector": true,
+        "show_country_selector_label": false,
+        "show_country_selector_flag": true,
+        "show_language_selector": false,
+        "drawer_title": "Shop by",
+        "enable_submenu_link_in_drawer": false,
+        "show_search": true,
+        "show_search_without_button": false,
+        "typing_search": "Find a product...",
+        "suggestions_title": "Top Sellers",
+        "search_suggest_layout": "menu",
+        "suggestions_menu": "main-menu",
+        "suggest_products": [],
+        "suggest_products_title": "",
+        "suggest_collections": [],
+        "suggest_collections_title": "",
+        "suggest_pages_menu": "",
+        "suggest_pages_menu_title": "",
+        "suggest_search_terms": "",
+        "suggest_search_terms_title": "",
+        "show_suggest_on_no_results": true
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}
