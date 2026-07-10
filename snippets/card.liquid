@@ -39,7 +39,7 @@
   class="{{ color_swatch_class }}"
   {% if settings.enable_product_variations %}
     data-product-variations
-    data-current-variant-handle="{{ card_product.handle }}"
+    data-current-variant-handle="{{ card_product.selected_or_first_available_variant.handle | default: card_product.handle }}"
   {% endif %}
   {% if are_filters_active %}
     data-active-filters
