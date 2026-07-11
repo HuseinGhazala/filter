@@ -1025,6 +1025,101 @@ class ModalOpener extends HTMLElement {
 }
 customElements.define("modal-opener", ModalOpener);
 
+function getQuickViewModalVariants(modal) {
+  const script = modal.querySelector("script[type='application/json']");
+  if (!script) return [];
+  try {
+    return JSON.parse(script.textContent || "[]");
+  } catch (error) {
+    console.error("Quick view variant JSON parse error", error);
+    return [];
+  }
+}
+
+function getSelectedQuickViewOptions(modal) {
+  const selected = {};
+  modal.querySelectorAll("input.quick-view-modal__variant-input:checked").forEach((input) => {
+    const optionIndex = Number(input.dataset.optionIndex);
+    if (!Number.isNaN(optionIndex)) {
+      selected[optionIndex] = input.value;
+    }
+  });
+  return selected;
+}
+
+function findQuickViewVariant(modal, selectedOptions) {
+  const variants = getQuickViewModalVariants(modal);
+  if (!variants.length) return null;
+
+  const selectedIndexes = Object.keys(selectedOptions).map(Number);
+  const optionInputs = modal.querySelectorAll("input.quick-view-modal__variant-input[data-option-index]");
+  const allOptionIndexes = new Set(Array.from(optionInputs, (input) => Number(input.dataset.optionIndex)));
+
+  if (selectedIndexes.length !== allOptionIndexes.size) return null;
+
+  return variants.find((variant) => {
+    return selectedIndexes.every((idx) => variant.options[idx] === selectedOptions[idx]);
+  });
+}
+
+function updateQuickViewSelectedVariant(modal) {
+  const selectedOptions = getSelectedQuickViewOptions(modal);
+  const variant = findQuickViewVariant(modal, selectedOptions);
+  const form = modal.querySelector("form.quick-view-modal__form");
+  const variantInput = form?.querySelector('input[name="id"]');
+
+  if (variant && variantInput) {
+    variantInput.value = variant.id;
+  }
+}
+
+function syncQuickViewSelectedStyles(modal) {
+  modal.querySelectorAll("input.quick-view-modal__variant-input").forEach((input) => {
+    const label = modal.querySelector(`label[for="${input.id}"]`);
+    if (!label) return;
+    label.classList.toggle("selected", input.checked);
+  });
+}
+
+document.addEventListener("click", (event) => {
+  const swatch = event.target.closest(".quick-view-modal__color-swatch");
+  if (!swatch) return;
+
+  const modal = swatch.closest("modal-dialog");
+  if (!modal) return;
+
+  modal.querySelectorAll('.quick-view-modal__color-swatch[aria-selected="true"]').forEach((button) => {
+    if (button !== swatch) button.setAttribute("aria-selected", "false");
+  });
+  swatch.setAttribute("aria-selected", "true");
+
+  const optionIndex = Number(swatch.dataset.optionIndex);
+  const optionName = swatch.dataset.optionName;
+  if (!Number.isNaN(optionIndex)) {
+    const matchingInput = modal.querySelector(
+      `input.quick-view-modal__variant-input[data-option-index="${optionIndex}"][value="${CSS.escape(swatch.dataset.color)}"]`,
+    );
+    if (matchingInput) {
+      matchingInput.checked = true;
+      matchingInput.dispatchEvent(new Event("change", { bubbles: true }));
+      return;
+    }
+  }
+
+  updateQuickViewSelectedVariant(modal);
+});
+
+document.addEventListener("change", (event) => {
+  const input = event.target.closest("input.quick-view-modal__variant-input");
+  if (!input) return;
+
+  const modal = input.closest("modal-dialog");
+  if (!modal) return;
+
+  syncQuickViewSelectedStyles(modal);
+  updateQuickViewSelectedVariant(modal);
+});
+
 class CartNotification extends HTMLElement {
   constructor() {
     super();
@@ -1207,4 +1302,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
