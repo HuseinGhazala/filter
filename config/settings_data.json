@@ -74,6 +74,7 @@
     "type_button_font_size_desk": 14,
     "show_view_cart": false,
     "cart_show_savings": true,
+    "cart_show_payment_badge": true,
     "cart_features_enable_estimate_shipping": true,
     "cart_features_enable_discount_code": true,
     "cart_show_additional_service": false,
