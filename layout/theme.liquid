@@ -216,6 +216,8 @@
   {% endif %}
 
   <body class="template-{{ template_name }} nav-drawer-big mobile-nav" {% if settings.animations_pictures %}data-animate-picures-onhover{% endif %} data-button-animations="{{ settings.button_animations }}">
+          {% render 'loadertheme' %} 
+
     <a href="#root" class="skip-to-content-link">{{ 'accessibility.skip_to_text' | t }}</a>
     {% if settings.sticky_header %}<div class="sticky-header__threshold"></div>{% endif %}
     {% sections 'header-group' %}
