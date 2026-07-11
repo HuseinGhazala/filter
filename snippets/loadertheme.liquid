@@ -1,0 +1,75 @@
+<div id="page-loader" class="blur-loader">
+  <div class="spinner-hilal"></div>
+</div>
+
+<style>
+  .blur-loader {
+    position: fixed;
+    inset: 0;
+    background: #0000006e;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
+    pointer-events: auto;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);  
+
+  }
+
+  .blur-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+
+  .spinner-hilal {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      display: inline-block;
+      border-left: 3px solid var(--color-headings-text);
+      border-right: 3px solid transparent;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .blur-loader {
+      display: none !important;
+    }
+  }
+</style>
+
+<script>
+  function hideLoader() {
+    const loader = document.getElementById('page-loader');
+    if (loader) {
+      if (loader.parentNode) {
+        loader.parentNode.removeChild(loader);
+      }
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', hideLoader);
+  window.addEventListener('load', hideLoader);
+  document.addEventListener('shopify:section:load', hideLoader);
+</script>
