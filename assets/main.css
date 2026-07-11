@@ -380,9 +380,9 @@
     display: block;
   }
 }
-.wt-footer__aside-block--payment-monochrome .icon {
+/* .wt-footer__aside-block--payment-monochrome .icon {
   filter: grayscale(100%);
-}
+} */
 @media (min-width: 900px) {
   .wt-footer__aside-block--shipping {
     justify-content: flex-end;
