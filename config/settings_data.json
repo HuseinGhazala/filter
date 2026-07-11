@@ -110,7 +110,7 @@
     "social_pinterest_link": "https://pl.pinterest.com/shopify/",
     "social_instagram_link": "https://www.instagram.com/shopify",
     "enable_color_swatch": true,
-    "enable_color_swatch_in_filters": false,
+    "enable_color_swatch_in_filters": true,
     "swatches_config": "Cranberry: Cranberry.png\nCoffee and orange: Coffee.jpg\nMelon:Melon.png",
     "custom-badge-1-text": "#151515",
     "custom-badge-1-background": "#e3f2e6",
