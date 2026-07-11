@@ -1,30 +1,30 @@
 <style>
-  [data-section-id="{{ section.id }}"]
-    {
+  [data-section-id="{{ section.id }}"] {
+    {% if section.settings.margin-top %}
+      --section-gap-top: {{ section.settings.margin-top }}px;
+    {% endif %}
 
-        {% if section.settings.margin-top %}
-            --section-gap-top: {{ section.settings.margin-top }}px;
-        {% endif %}
+    {% if section.settings.margin-bottom %}
+      --section-gap-bottom: {{ section.settings.margin-bottom }}px;
+    {% endif %}
 
-        {% if section.settings.margin-bottom %}
-            --section-gap-bottom: {{ section.settings.margin-bottom }}px;
-        {% endif %}
+    {%- if section.settings.show_mobile_spacing -%}
+      --section-gap-top-mobile: {{ section.settings.margin-top-mobile }}px;
+    {%- endif -%}
 
-      {%- if section.settings.show_mobile_spacing -%}
-          --section-gap-top-mobile: {{ section.settings.margin-top-mobile }}px;
-      {%- endif -%}
-
-      {%- if section.settings.show_mobile_spacing -%}
-          --section-gap-bottom-mobile: {{ section.settings.margin-bottom-mobile }}px;
-      {%- endif -%}
-
-    }
+    {%- if section.settings.show_mobile_spacing -%}
+      --section-gap-bottom-mobile: {{ section.settings.margin-bottom-mobile }}px;
+    {%- endif -%}
+  }
 </style>
+
 <div data-section-id="{{ section.id }}">
   <cart-items class="cart-page">
     <form action="{{ routes.cart_url }}" class="cart__contents critical-hidden" method="post" id="cart">
       <div class="wt-cart__wrapper cart-page" id="main-cart-items" data-id="{{ section.id }}">
+        
         <div class="wt-cart js-contents">
+          <!-- الهيدر الخاص بالسلة -->
           <header class="wt-cart__header {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
             {%- if cart != empty -%}
               <div class="wt-cart__header__action">
@@ -36,12 +36,6 @@
                 </h2>
               </div>
 
-              {%- comment -%}
-                Free-shipping + discount-progress bars wrapped together so the
-                cart-page desktop layout (≥900px) can place them as one column
-                on the right of the cart title. On mobile they stack below the
-                title as before — the cart drawer doesn't use this wrapper.
-              {%- endcomment -%}
               {%- if settings.enable_free_shipping_bar or settings.enable_discount_progress_bar -%}
                 <div class="wt-cart__header__progress">
                   {% if settings.enable_free_shipping_bar %}
@@ -58,7 +52,10 @@
               {% render 'cart-empty' %}
             {%- endif -%}
           </header>
+          <div class="wt-cart__body-wrapper">
 
+            
+          <!-- قائمة المنتجات -->
           {%- if cart != empty -%}
             <div class="wt-cart__body {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
               <ul class="wt-cart__list">
@@ -68,16 +65,131 @@
               </ul>
             </div>
           {%- endif -%}
+               {%- if cart != empty -%}
+          <div class="wt-cart__footer-container" id="main-cart-footer" data-id="{{ section.id }}">
+            <div class="wt-cart__footer">
+              {% render 'cart-additional-features', context: 'page' %}
+
+              <div class="wt-cart__subtitle">
+                {%- if settings.cart_show_additional_service -%}
+                  {%- render 'cart-checkbox' -%}
+                {%- endif -%}
+              </div>
+
+              <div class="wt-cart__subtitle__tax">
+                {%- if cart.taxes_included and shop.shipping_policy.body != blank -%}
+                  {{ 'sections.cart.taxes_included_and_shipping_policy_html' | t: link: shop.shipping_policy.url, tabindex: 0 }}
+                {%- elsif cart.taxes_included -%}
+                  {{ 'sections.cart.taxes_included_but_shipping_at_checkout' | t }}
+                {%- elsif shop.shipping_policy.body != blank -%}
+                  {{ 'sections.cart.taxes_and_shipping_policy_at_checkout_html' | t: link: shop.shipping_policy.url, tabindex: 0 }}
+                {%- else -%}
+                  {{ 'sections.cart.taxes_and_shipping_at_checkout' | t }}
+                {%- endif -%}
+              </div>
+
+              <div class="wt-cart__footer__body">
+                {% for block in section.blocks %}
+                  {%- case block.type -%}
+                    {%- when '@app' -%}
+                      {% render block %}
+                    {%- when 'custom_liquid' -%}
+                      {{ block.settings.custom_liquid }}
+                    {%- when 'subtotal' -%}
+                      <div class="js-contentss">
+                        <div class="wt-cart__subtotal" {{ block.shopify_attributes }}>
+                          <div class="wt-cart__subtotal__label">
+                            <span class="text">{{ 'sections.cart.subtotal' | t }}</span>
+                          </div>
+                          <div class="wt-cart__subtotal__value">
+                            {{ cart.total_price | money_with_currency }}
+                          </div>
+                          {%- if settings.cart_show_savings and cart.total_discount > 0 -%}
+                            {%- assign savings_formatted = cart.total_discount | money -%}
+                            {%- assign savings_label = settings.cart_savings_label | replace: '||savings||', savings_formatted -%}
+                            <div class="wt-cart__savings">
+                              <span class="wt-cart__savings__label">{{ savings_label }}</span>
+                              <span class="wt-cart__savings__original">{{ cart.original_total_price | money }}</span>
+                            </div>
+                          {%- endif -%}
+                        </div>
+                        {%- if cart.cart_level_discount_applications.size > 0 -%}
+                          <div>
+                            <ul class="discounts list-unstyled" role="list" aria-label="{{ 'customer.order.discount' | t }}">
+                              {%- for discount in cart.cart_level_discount_applications -%}
+                                <li class="discounts__discount discounts__discount--position">
+                                  {%- render 'icon-discount' -%}
+                                  {{ discount.title }}
+                                  (-{{ discount.total_allocated_amount | money }})
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    {%- when 'buttons' -%}
+                      <div class="wt-cart__actions" {{ block.shopify_attributes }}>
+                        <noscript>
+                          <button aria-label="{{ 'sections.cart.update' | t }}" type="submit" class="cart__update-button button button--secondary" form="cart">
+                            {{ 'sections.cart.update' | t }}
+                          </button>
+                        </noscript>
+
+                        <button aria-label="{{ 'sections.cart.checkout' | t }}" type="submit" class="wt-cart__cta cart__checkout" name="checkout" {% if cart == empty %} disabled {% endif %} form="cart">
+                          {% if settings.enable-lock-icon %}
+                            {% render 'icon-lock' %}
+                          {% endif %}
+                          {{ 'sections.cart.checkout' | t }}
+                        </button>
+
+                        <a href="{{ routes.all_products_collection_url }}" class="wt-button wt-button--secondary wt-button--full-width wt-cart__back-link">
+                          {{ 'general.continue_shopping' | t }}
+                        </a>
+                      </div>
+
+                      {%- if additional_checkout_buttons -%}
+                        <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
+                          {{ content_for_additional_checkout_buttons }}
+                        </div>
+                      {%- endif -%}
+                  {%- endcase -%}
+                {% endfor %}
+
+                {%- assign trust_badges = section.blocks | where: "type", "trust_badge" -%}
+                {%- if trust_badges.size > 0 -%}
+                  <div class="cart-trust-badges" style="display: flex; justify-content: space-around; gap: 15px; margin: 20px 0; flex-wrap: wrap; text-align: center;">
+                    {%- for block in trust_badges -%}
+                      <div class="trust-badge-item" style="flex: 1; min-width: 120px; max-width: 200px;" {{ block.shopify_attributes }}>
+                        {%- if block.settings.image != blank -%}
+                          <div class="trust-badge-image" style="margin-bottom: 10px;">
+                            <img src="{{ block.settings.image | image_url: width: 150 }}" alt="{{ block.settings.title }}" style="max-width: 80px; height: auto; object-fit: contain;" loading="lazy">
+                          </div>
+                        {%- endif -%}
+                        {%- if block.settings.title != blank -%}
+                          <h4 style="margin: 0 0 5px 0; font-size: 16px; font-weight: bold; color: var(--color-text);">{{ block.settings.title }}</h4>
+                        {%- endif -%}
+                        {%- if block.settings.subtext != blank -%}
+                          <p style="margin: 0; font-size: 13px; color: var(--color-text); opacity: 0.8;">{{ block.settings.subtext }}</p>
+                        {%- endif -%}
+                      </div>
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
+
+                {%- render 'cart-payment-badge' -%} 
+                <div id="cart-errors"></div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
         </div>
+
+   
+          </div>
+
       </div>
       <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
-      <p
-        class="visually-hidden"
-        id="shopping-cart-line-item-status"
-        aria-live="polite"
-        aria-hidden="true"
-        role="status"
-      >
+      <p class="visually-hidden" id="shopping-cart-line-item-status" aria-live="polite" aria-hidden="true" role="status">
         {{ 'accessibility.loading' | t }}
       </p>
     </form>
@@ -86,8 +198,9 @@
 
 {% schema %}
 {
-  "name": "t:sections.main-cart-items.name",
+  "name": "Main Cart",
   "tag": "section",
+  "class": "cart__footer-wrapper",
   "settings": [
     {
       "type": "checkbox",
@@ -117,8 +230,7 @@
       "unit": "px",
       "step": 4,
       "default": 0,
-      "label": "t:sections.settings.settings.distance-bottom.label",
-      "info": "t:sections.settings.settings.distance-bottom.info"
+      "label": "t:sections.settings.settings.distance-bottom.label"
     },
     {
       "type": "checkbox",
@@ -133,8 +245,7 @@
       "step": 2,
       "default": 20,
       "unit": "px",
-      "label": "t:sections.settings.settings.distance-top-mobile.label",
-      "visible_if": "{{ section.settings.show_mobile_spacing }}"
+      "label": "t:sections.settings.settings.distance-top-mobile.label"
     },
     {
       "type": "range",
@@ -144,8 +255,56 @@
       "step": 2,
       "default": 20,
       "unit": "px",
-      "label": "t:sections.settings.settings.distance-bottom-mobile.label",
-      "visible_if": "{{ section.settings.show_mobile_spacing }}"
+      "label": "t:sections.settings.settings.distance-bottom-mobile.label"
+    }
+  ],
+"blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "custom_liquid",
+      "name": "Custom Liquid",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Custom Liquid Code"
+        }
+      ]
+    },
+    {
+      "type": "subtotal",
+      "name": "Subtotal",
+      "limit": 1
+    },
+    {
+      "type": "buttons",
+      "name": "Checkout Buttons",
+      "limit": 1
+    },
+    {
+      "type": "trust_badge",
+      "name": " featured Collection",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": " choose image",
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Main Title",
+          "default": "شحن مجاني "
+        },
+        {
+          "type": "text",
+          "id": "subtext",
+          "label": "  Sub Text",
+          "default": "لكل طلب فوق 450 ريال"
+        }
+      ]
     }
   ],
   "disabled_on": {
