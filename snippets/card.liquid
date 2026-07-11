@@ -49,7 +49,19 @@
 >
   <div class="card__container" style="--aspect-ratio: {{ aspect_ratio }};">
     <div class="card__picture-container" style="position: relative;">
-      
+      <div class="popup-model-btn">
+        <modal-opener
+          class="quick-view-opener no-js-hidden"
+          data-modal="#QuickViewModal-{{ product.id }}"
+        >
+          <button
+            type="button"
+            class="quick-view-button"
+          >
+            {% render 'icons', id: 'eye' %}
+          </button>
+        </modal-opener>
+      </div>
       <div class="swiper card-product-swiper" style="width: 100%; height: 100%; position: relative; overflow: hidden;">
         <div class="card__loader hidden"></div>
         
@@ -224,6 +236,7 @@
       </div>
     {% endif %}
   </div>
+  {% render 'quick-view-modal', product: product %}
 </color-swatch>
 
 
