@@ -71,6 +71,145 @@
     data-i18n-discount-error="{{ 'sections.cart.features.discount_error' | t | escape }}"
   >
     <div class="wt-cart-features__triggers">
+
+         {%- if show_discount -%}
+        {%- if ctx == 'page' -%}
+          {%- comment -%} 1. شكل مفرود على سطر واحد لصفحة السلة (Page) {%- endcomment -%}
+          <div class="wt-cart-discount-custom-inline" data-feature-item="discount">
+            {%- if discount_codes_list != '' -%}
+              <ul class="wt-cart-features__discount-list">
+                {%- for discount_app in cart.discount_applications -%}
+                  {%- if discount_app.type == 'discount_code' -%}
+                    <li class="wt-cart-features__discount-item">
+                      <span class="wt-cart-features__discount-code">
+                        {{- discount_app.title -}}
+                        {%- if discount_app.total_allocated_amount > 0 -%}
+                          <span class="wt-cart-features__discount-savings">
+                            (-{{ discount_app.total_allocated_amount | money }})
+                          </span>
+                        {%- endif -%}
+                      </span>
+                      <button
+                        type="button"
+                        class="wt-cart-features__discount-remove"
+                        data-discount-remove-code="{{ discount_app.title | escape }}"
+                        aria-label="{{ 'sections.cart.remove_title' | t: title: discount_app.title }}"
+                      >
+                        {%- render 'icons', id: 'close' -%}
+                        {%- render 'button-loading-indicator', hidden: false -%}
+                      </button>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+            
+            <div class="discount-inline-wrapper">
+              <input
+                type="text"
+                class="wt-cart-features__input discount-custom-input"
+                id="CartFeatures-DiscountCode-{{ ctx }}"
+                data-discount-input
+                placeholder="{{ 'sections.cart.features.discount_placeholder' | t }}"
+                autocomplete="off"
+              >
+              <button type="button" class="wt-button wt-button--primary discount-custom-btn" data-discount-apply>
+                {{ 'sections.cart.features.apply' | t }}
+              </button>
+            </div>
+            <div class="wt-cart-features__result" data-discount-result role="status" aria-live="polite"></div>
+          </div>
+
+        {%- else -%}
+          {%- comment -%} 2. الشكل الطبيعي والأصلي لدرج السلة الجانبي (Drawer) {%- endcomment -%}
+          <div class="wt-cart-features__item" data-feature-item="discount">
+            <button
+              type="button"
+              id="CartFeaturesTrigger-discount-{{ ctx }}"
+              class="wt-cart-features__trigger"
+              data-feature="discount"
+              aria-expanded="false"
+              aria-controls="CartFeaturesDrawer-discount-{{ ctx }}"
+              aria-haspopup="dialog"
+            >
+              {%- if show_icons -%}
+                <span class="wt-cart-features__icon" aria-hidden="true">
+                  {% render 'icons', id: 'price_tag' %}
+                </span>
+              {%- endif -%}
+              <span class="wt-cart-features__label">{{ 'sections.cart.discount_code' | t }}</span>
+            </button>
+
+            <div
+              class="wt-cart-features__drawer"
+              id="CartFeaturesDrawer-discount-{{ ctx }}"
+              data-drawer="discount"
+              role="dialog"
+              aria-modal="true"
+              aria-label="{{ 'sections.cart.discount_code' | t }}"
+            >
+              <header class="wt-cart-features__drawer-header">
+                <h3 class="wt-cart-features__drawer-title">{{ 'sections.cart.discount_code' | t }}</h3>
+                <button
+                  type="button"
+                  class="wt-cart-features__drawer-close"
+                  data-close
+                  aria-label="{{ 'accessibility.close' | t }}"
+                >
+                  {% render 'icons', id: 'close' %}
+                </button>
+              </header>
+              <div class="wt-cart-features__drawer-body">
+                {%- if discount_codes_list != '' -%}
+                  <ul class="wt-cart-features__discount-list">
+                    {%- for discount_app in cart.discount_applications -%}
+                      {%- if discount_app.type == 'discount_code' -%}
+                        <li class="wt-cart-features__discount-item">
+                          <span class="wt-cart-features__discount-code">
+                            {{- discount_app.title -}}
+                            {%- if discount_app.total_allocated_amount > 0 -%}
+                              <span class="wt-cart-features__discount-savings">
+                                (-{{ discount_app.total_allocated_amount | money }})
+                              </span>
+                            {%- endif -%}
+                          </span>
+                          <button
+                            type="button"
+                            class="wt-cart-features__discount-remove"
+                            data-discount-remove-code="{{ discount_app.title | escape }}"
+                            aria-label="{{ 'sections.cart.remove_title' | t: title: discount_app.title }}"
+                          >
+                            {%- render 'icons', id: 'close' -%}
+                            {%- render 'button-loading-indicator', hidden: false -%}
+                          </button>
+                        </li>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </ul>
+                {%- endif -%}
+                <label class="wt-cart-features__field" for="CartFeatures-DiscountCode-{{ ctx }}">
+                  <input
+                    type="text"
+                    class="wt-cart-features__input"
+                    id="CartFeatures-DiscountCode-{{ ctx }}"
+                    data-discount-input
+                    placeholder="{{ 'sections.cart.features.discount_placeholder' | t }}"
+                    autocomplete="off"
+                  >
+                </label>
+                <div class="wt-cart-features__result" data-discount-result role="status" aria-live="polite"></div>
+                <div class="wt-cart-features__actions">
+                  <button type="button" class="wt-button wt-button--primary" data-discount-apply>
+                    {{ 'sections.cart.features.apply' | t }}
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+    {%- endif -%}
+
+
       {%- if show_note -%}
         <div class="wt-cart-features__item" data-feature-item="note">
           <button
@@ -140,105 +279,7 @@
         </div>
       {%- endif -%}
 
-      {%- if show_discount -%}
-        <div class="wt-cart-features__item" data-feature-item="discount">
-          <button
-            type="button"
-            id="CartFeaturesTrigger-discount-{{ ctx }}"
-            class="wt-cart-features__trigger"
-            data-feature="discount"
-            aria-expanded="false"
-            aria-controls="CartFeaturesDrawer-discount-{{ ctx }}"
-            {% if ctx == 'drawer' %}aria-haspopup="dialog"{% endif %}
-          >
-            {%- if show_icons -%}
-              <span class="wt-cart-features__icon" aria-hidden="true">
-                {% render 'icons', id: 'price_tag' %}
-              </span>
-            {%- endif -%}
-            <span class="wt-cart-features__label">{{ 'sections.cart.discount_code' | t }}</span>
-            {%- if ctx == 'page' -%}
-              <span class="wt-cart-features__indicator wt-cart-features__indicator--plus" aria-hidden="true">
-                {% render 'icons', id: 'plus' %}
-              </span>
-              <span class="wt-cart-features__indicator wt-cart-features__indicator--minus" aria-hidden="true">
-                {% render 'icons', id: 'minus' %}
-              </span>
-            {%- endif -%}
-          </button>
 
-          <div
-            class="wt-cart-features__drawer"
-            id="CartFeaturesDrawer-discount-{{ ctx }}"
-            data-drawer="discount"
-            {%- if ctx == 'drawer' -%}
-              role="dialog"
-              aria-modal="true"
-              aria-label="{{ 'sections.cart.discount_code' | t }}"
-            {%- else -%}
-              role="region"
-              aria-labelledby="CartFeaturesTrigger-discount-{{ ctx }}"
-            {%- endif -%}
-          >
-            <header class="wt-cart-features__drawer-header">
-              <h3 class="wt-cart-features__drawer-title">{{ 'sections.cart.discount_code' | t }}</h3>
-              <button
-                type="button"
-                class="wt-cart-features__drawer-close"
-                data-close
-                aria-label="{{ 'accessibility.close' | t }}"
-              >
-                {% render 'icons', id: 'close' %}
-              </button>
-            </header>
-            <div class="wt-cart-features__drawer-body">
-              {%- if discount_codes_list != '' -%}
-                <ul class="wt-cart-features__discount-list">
-                  {%- for discount_app in cart.discount_applications -%}
-                    {%- if discount_app.type == 'discount_code' -%}
-                      <li class="wt-cart-features__discount-item">
-                        <span class="wt-cart-features__discount-code">
-                          {{- discount_app.title -}}
-                          {%- if discount_app.total_allocated_amount > 0 -%}
-                            <span class="wt-cart-features__discount-savings">
-                              (-{{ discount_app.total_allocated_amount | money }})
-                            </span>
-                          {%- endif -%}
-                        </span>
-                        <button
-                          type="button"
-                          class="wt-cart-features__discount-remove"
-                          data-discount-remove-code="{{ discount_app.title | escape }}"
-                          aria-label="{{ 'sections.cart.remove_title' | t: title: discount_app.title }}"
-                        >
-                          {%- render 'icons', id: 'close' -%}
-                          {%- render 'button-loading-indicator', hidden: false -%}
-                        </button>
-                      </li>
-                    {%- endif -%}
-                  {%- endfor -%}
-                </ul>
-              {%- endif -%}
-              <label class="wt-cart-features__field" for="CartFeatures-DiscountCode-{{ ctx }}">
-                <input
-                  type="text"
-                  class="wt-cart-features__input"
-                  id="CartFeatures-DiscountCode-{{ ctx }}"
-                  data-discount-input
-                  placeholder="{{ 'sections.cart.features.discount_placeholder' | t }}"
-                  autocomplete="off"
-                >
-              </label>
-              <div class="wt-cart-features__result" data-discount-result role="status" aria-live="polite"></div>
-              <div class="wt-cart-features__actions">
-                <button type="button" class="wt-cart-features__action wt-button wt-button--primary" data-discount-apply>
-                  {{ 'sections.cart.features.apply' | t }}
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      {%- endif -%}
 
       {%- if show_shipping -%}
         <div class="wt-cart-features__item" data-feature-item="shipping">
@@ -330,3 +371,52 @@
     <div class="wt-cart-features__overlay" data-overlay></div>
   </cart-additional-features>
 {%- endif -%}
+<style>
+.discount-inline-wrapper {
+  display: flex;
+  gap: 12px; 
+  align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+.discount-custom-input {
+  flex: 1; 
+  height: 48px;
+  border: 1px solid var(--color-button-primary-background); 
+  border-radius: 6px;
+  padding: 0 16px;
+  font-size: 15px;
+  background-color: var(--color-button-primary-text);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.discount-custom-btn {
+  height: 48px;
+  padding: 0 24px;
+  background-color: var(--color-button-primary-background);
+  color: var(--color-button-primary-text);
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  min-width: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discount-custom-btn:hover {
+  background-color: var(--color-button-primary-background); /* تأثير خفيف عند تمرير الماوس */
+}
+
+/* تنسيق رسائل الخطأ لتظهر بشكل مرتب بالأسفل */
+.wt-cart-features__result {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: right;
+}
+  </style>
