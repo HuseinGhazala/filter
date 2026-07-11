@@ -513,7 +513,7 @@
   flex-wrap: wrap;
   gap: 0;
   width: min-content;
-  justify-content: end;
+  justify-content: start;
 }
 .wt-cart__item__amount .cart-item__discounted-prices s,
 .wt-cart__item__amount .cart-item__discounted-prices span {
