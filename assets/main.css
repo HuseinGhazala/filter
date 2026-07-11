@@ -1778,7 +1778,7 @@ body.no-focus-visible .card__container:has(a:focus-visible), body.no-focus-visib
 .card__badges {
   position: absolute;
   top: calc(var(--gap, 8px) * 1);
-  left: calc(var(--gap, 8px) * 1);
+  right: calc(var(--gap, 8px) * 1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1789,7 +1789,7 @@ body.no-focus-visible .card__container:has(a:focus-visible), body.no-focus-visib
 @media (min-width: 900px) {
   .card__badges {
     top: 12px;
-    left: 12px;
+    right: 12px;
   }
 }
 @media (min-width: 1200px) {
