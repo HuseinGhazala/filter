@@ -274,7 +274,55 @@
 
   <div class="wt-footer__aside">
     <div class="wt-footer__aside__wrapper">
-      <div class="mobile-hidden" ></div>
+    
+      <div class="footer-custom-badges" style="display: flex; gap: 25px; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; direction: rtl;">
+        
+        {%- comment -%} العنصر الأول: شهادة التوثيق {%- endcomment -%}
+        {%- if section.settings.badge_show_1 -%}
+          <div class="footer-badge-item" style="display: flex; align-items: center; gap: 10px; text-align: right;">
+            <div class="badge-texts" style="display: flex; flex-direction: column; justify-content: center;">
+              <span class="badge-title" style="font-size: 13px; font-weight: 500; color: var(--color-background); line-height: 1.2; opacity: 0.9;">{{ section.settings.badge_title_1 }}</span>
+              <span class="badge-subtext" style="font-size: 13px; font-weight: bold; color: var(--color-background); line-height: 1.2; margin-top: 2px;">{{ section.settings.badge_subtext_1 }}</span>
+            </div>
+            {%- if section.settings.badge_img_1 != blank -%}
+              <div class="badge-img-wrap" style="display: flex; align-items: center;">
+                <img width="120" height="42" src="{{ section.settings.badge_img_1 | image_url: width: 120 }}" alt="" style="max-height: 42px; width: auto; object-fit: contain;" loading="lazy">
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {%- comment -%} العنصر الثاني: السجل التجاري {%- endcomment -%}
+        {%- if section.settings.badge_show_2 -%}
+          <div class="footer-badge-item" style="display: flex; align-items: center; gap: 10px; text-align: right;">
+            <div class="badge-texts" style="display: flex; flex-direction: column; justify-content: center;">
+              <span class="badge-title" style="font-size: 13px; font-weight: 500; color: var(--color-background); line-height: 1.2; opacity: 0.9;">{{ section.settings.badge_title_2 }}</span>
+              <span class="badge-subtext" style="font-size: 13px; font-weight: bold; color: var(--color-background); line-height: 1.2; margin-top: 2px;">{{ section.settings.badge_subtext_2 }}</span>
+            </div>
+            {%- if section.settings.badge_img_2 != blank -%}
+              <div class="badge-img-wrap" style="display: flex; align-items: center;">
+                <img width="120" height="42" src="{{ section.settings.badge_img_2 | image_url: width: 120 }}" alt="" style="max-height: 42px; width: auto; object-fit: contain;" loading="lazy">
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+        {%- comment -%} العنصر الثالث: الرقم الضريبي {%- endcomment -%}
+        {%- if section.settings.badge_show_3 -%}
+          <div class="footer-badge-item" style="display: flex; align-items: center; gap: 10px; text-align: right;">
+            <div class="badge-texts" style="display: flex; flex-direction: column; justify-content: center;">
+              <span class="badge-title" style="font-size: 13px; font-weight: 500; color: var(--color-background); line-height: 1.2; opacity: 0.9;">{{ section.settings.badge_title_3 }}</span>
+              <span class="badge-subtext" style="font-size: 13px; font-weight: bold; color: var(--color-background); line-height: 1.2; margin-top: 2px;">{{ section.settings.badge_subtext_3 }}</span>
+            </div>
+            {%- if section.settings.badge_img_3 != blank -%}
+              <div class="badge-img-wrap" style="display: flex; align-items: center;">
+                <img width="120" height="42" src="{{ section.settings.badge_img_3 | image_url: width: 120 }}" alt="" style="max-height: 42px; width: auto; object-fit: contain;" loading="lazy">
+              </div>
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+
+      </div>
 
       {% if section.settings['show-payments-icons'] %}
         <div class="wt-footer__aside-block wt-footer__aside-block--payment{% if section.settings.payment_icons_monochrome %} wt-footer__aside-block--payment-monochrome{% endif %}">
@@ -355,6 +403,79 @@
   "tag": "section",
   "max_blocks": 5,
   "settings": [
+    {
+      "type": "header",
+      "content": "Verification Badges (Salla Style)"
+    },
+    {
+      "type": "checkbox",
+      "id": "badge_show_1",
+      "label": "Show Badge 1",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_img_1",
+      "label": "Badge 1 Image"
+    },
+    {
+      "type": "text",
+      "id": "badge_title_1",
+      "label": "Badge 1 Title",
+      "default": "توثيق التجارة الإلكترونية"
+    },
+    {
+      "type": "text",
+      "id": "badge_subtext_1",
+      "label": "Badge 1 Value",
+      "default": "موثق في منصة الأعمال"
+    },
+    {
+      "type": "checkbox",
+      "id": "badge_show_2",
+      "label": "Show Badge 2",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_img_2",
+      "label": "Badge 2 Image"
+    },
+    {
+      "type": "text",
+      "id": "badge_title_2",
+      "label": "Badge 2 Title",
+      "default": "الرقم الضريبي"
+    },
+    {
+      "type": "text",
+      "id": "badge_subtext_2",
+      "label": "Badge 2 Value",
+      "default": "310756505900003"
+    },
+    {
+      "type": "checkbox",
+      "id": "badge_show_3",
+      "label": "Show Badge 3",
+      "default": true
+    },
+    {
+      "type": "image_picker",
+      "id": "badge_img_3",
+      "label": "Badge 3 Image"
+    },
+    {
+      "type": "text",
+      "id": "badge_title_3",
+      "label": "Badge 3 Title",
+      "default": "السجل التجاري"
+    },
+    {
+      "type": "text",
+      "id": "badge_subtext_3",
+      "label": "Badge 3 Value",
+      "default": "1010654321"
+    },
     {
       "type": "header",
       "content": "Layout"
@@ -675,6 +796,7 @@
         }
       ]
     }
+   
   ],
   "default": {
     "blocks": [
