@@ -557,6 +557,7 @@
         "heading_9WVPE8",
         "text_Dra7CK"
       ],
+      "disabled": true,
       "settings": {
         "advanced_heading": false,
         "title": "",
@@ -629,6 +630,7 @@
         "icon_with_text_Yw4Gcj",
         "heading_KgezxV"
       ],
+      "disabled": true,
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "section_width": "regular",
@@ -652,9 +654,10 @@
           "type": "image",
           "settings": {
             "icon_select": "100",
-            "heading": "Glow like never before",
-            "text": "<p>“I noticed a visible difference in my skin after just a few days. It feels smoother, more hydrated, and has that natural glow I was looking for.”</p>",
-            "author": "— Emma R., verified customer",
+            "heading": "راحة لا مثيل لها",
+            "text": "<p>“الصراحة ما توقعت يكون مريح لهالدرجة، خصوصًا إني جربت كثير قبل وما ارتحت فيها. لكن هذا أول سكراب أحسه مرتب وعملي فعلًا، وحتى بعد ساعات الدوام الطويلة ما حسيت إنه ضايقني.”<br/><br/></p>",
+            "author": "د.منار حامد",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -663,9 +666,10 @@
           "type": "image",
           "settings": {
             "icon_select": "100",
-            "heading": "My new daily essential",
-            "text": "<p>“This product has become a staple in my routine. It absorbs beautifully and layers perfectly with the rest of my skincare.”</p>",
-            "author": "— Olivia M., verified customer",
+            "heading": "مقاسات مناسبة للكل",
+            "text": "<p>“كنت محتارة بالمقاس بالبداية وخايفة يطلع ضيق أو قصير، لكن يوم لبسته انبسطت جدًا من التناسب والخامة. حسيت إنه معمول فعلًا للبنات اللي دوامهم طويل”<br/><br/></p>",
+            "author": "د.علا أحمد",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -674,9 +678,10 @@
           "type": "image",
           "settings": {
             "icon_select": "100",
-            "heading": "Hydration that lasts",
-            "text": "<p>“My skin stays soft and nourished all day. It’s lightweight but incredibly effective — exactly what I needed.”</p>",
-            "author": "— Sophia L., verified customer",
+            "heading": "خامة تتحمل يومك الطويل",
+            "text": "<p>“أكثر شيء شدّني فيه إن شكله مرتب بدون ما يكون رسمي زيادة أو متعب باللبس. الخامة خفيفة والحركة فيه سهلة جدًا، وفعليًا فرق معي كثير خصوصًا بعد ساعات الدوام الطويلة.”<br/><br/></p>",
+            "author": "د.سلمى القحطاني",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -698,7 +703,7 @@
         "number_of_column_desktop": 2,
         "gap_desk": 20,
         "testimonial_text_size_desktop": 100,
-        "text_alignment_desktop": "left",
+        "text_alignment_desktop": "right",
         "card_width_mobile": 280,
         "number_of_column_mobile": 1.1,
         "gap": 12,
