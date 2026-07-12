@@ -524,7 +524,7 @@
         "color-body-heading": "",
         "color-overlay": "",
         "color-overlay-opacity": 100,
-        "color-body-text": "",
+        "color-body-text": "#11173D",
         "margin-top": 20,
         "margin-bottom": 60,
         "show_mobile_spacing": false,
