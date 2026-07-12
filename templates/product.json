@@ -694,7 +694,7 @@
       ],
       "name": "Testimonial: Marquee",
       "settings": {
-        "heading_richtext": "",
+        "heading_richtext": "<p>تقييماتكم اللي نفتخر فيها</p>",
         "text_style": "body",
         "disable_auto_scroll": true,
         "animation_direction": "left",
@@ -708,7 +708,7 @@
         "number_of_column_mobile": 1.1,
         "gap": 12,
         "testimonial_text_size": 100,
-        "text_alignment_mobile": "left",
+        "text_alignment_mobile": "right",
         "color-body-text": "",
         "background_color": "#ffffff",
         "testimonial_background_color": "#fdfaf5",
@@ -716,6 +716,72 @@
         "card_author_color": "",
         "margin-top": 0,
         "margin-bottom": 100,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "collapsible_menu_NTLwXP": {
+      "type": "collapsible_menu",
+      "blocks": {
+        "collapsible_tab_BHRFnT": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "هل الخامة مناسبة للعمل لساعات طويلة؟ وهل توفر راحة وتهوية طوال اليوم؟",
+            "content": "<p><strong>نعم، بكل تأكيد.</strong> تم اختيار الأقمشة بعناية فائقة لتناسب الاستخدام اليومي الشاق والعمل لساعات طويلة. الخامات تتميز بمرونة عالية وخفة في الوزن، بالإضافة إلى جزيئات نسيج تسمح بـ <strong>التهوية الكاملة وتمرير الهواء</strong> لمنع التعرق والشعور بالحرارة، مما يضمن لكِ الراحة والانتعاش طوال اليوم.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_mg8QdP": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "هل الأقمشة تحتاج كوي وهل تحافظ على مظهرها المرتب بعد الغسيل والارتداء؟؟",
+            "content": "<p><strong>لا تحتاج إلى كوي مستمر.</strong> الأقمشة مصنوعة من خامات مقاومة للتجعد والانكماش بفضل تقنية نسيج متطورة، مما يضمن لكِ الحفاظ على مظهر مرتب، أنيق، وانسيابي حتى بعد ساعات طويلة من الارتداء أو بعد الغسيل المتكرر. كل ما تحتاجينه هو تعليقها مباشرة بعد الغسيل لتبقى جاهزة للارتداء فوراً دون أي عناء.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        },
+        "collapsible_tab_miUEad": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "هل المقاسات مطابقة للحجم الحقيقي وكيف يمكنني اختيار المقاس المناسب لي؟",
+            "content": "<p><strong>نعم، مقاساتنا مطابقة تماماً للمقاسات العالمية القياسية (True to size).</strong> وننصحكِ دائماً باختيار مقاسكِ المعتاد الذي ترتدينه في أغلب ملابسكِ.وذا كنتِ محتارة بين مقاسين أو ترغبين في دقة متناهية، يمكنكِ الإطلاع على <strong>\"جدول المقاسات\"</strong> المتواجد في صفحة المنتج، والذي يوضح بالـ (سم) مقاسات الصدر، الخصر، والطول لتسهيل الاختيار الأمثل لكِ.</p>",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "open_by_default": false
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_tab_BHRFnT",
+        "collapsible_tab_mg8QdP",
+        "collapsible_tab_miUEad"
+      ],
+      "name": "t:sections.collapsible_menu.presets.name",
+      "settings": {
+        "color-body-text": "{{ settings.colors.primary }}",
+        "background_color": "",
+        "compact-size-enabled": true,
+        "margin-top": 20,
+        "margin-bottom": 20,
         "show_mobile_spacing": false,
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
@@ -876,6 +942,7 @@
         "product_AYNM9a",
         "product_TwBDzA"
       ],
+      "disabled": true,
       "settings": {
         "advanced_heading": false,
         "heading": "Recommended by our Customers",
@@ -1027,72 +1094,6 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
-    },
-    "collapsible_menu_NTLwXP": {
-      "type": "collapsible_menu",
-      "blocks": {
-        "collapsible_tab_BHRFnT": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "هل الخامة مناسبة للعمل لساعات طويلة؟ وهل توفر راحة وتهوية طوال اليوم؟",
-            "content": "<p><strong>نعم، بكل تأكيد.</strong> تم اختيار الأقمشة بعناية فائقة لتناسب الاستخدام اليومي الشاق والعمل لساعات طويلة. الخامات تتميز بمرونة عالية وخفة في الوزن، بالإضافة إلى جزيئات نسيج تسمح بـ <strong>التهوية الكاملة وتمرير الهواء</strong> لمنع التعرق والشعور بالحرارة، مما يضمن لكِ الراحة والانتعاش طوال اليوم.</p>",
-            "page": "",
-            "icon": "none",
-            "icon_advanced_settings": false,
-            "icon_height_desktop": 28,
-            "icon_height": 27,
-            "icon_margin_desktop": 0,
-            "icon_margin": 0,
-            "open_by_default": false
-          }
-        },
-        "collapsible_tab_mg8QdP": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "هل الأقمشة تحتاج كوي وهل تحافظ على مظهرها المرتب بعد الغسيل والارتداء؟؟",
-            "content": "<p><strong>لا تحتاج إلى كوي مستمر.</strong> الأقمشة مصنوعة من خامات مقاومة للتجعد والانكماش بفضل تقنية نسيج متطورة، مما يضمن لكِ الحفاظ على مظهر مرتب، أنيق، وانسيابي حتى بعد ساعات طويلة من الارتداء أو بعد الغسيل المتكرر. كل ما تحتاجينه هو تعليقها مباشرة بعد الغسيل لتبقى جاهزة للارتداء فوراً دون أي عناء.</p>",
-            "page": "",
-            "icon": "none",
-            "icon_advanced_settings": false,
-            "icon_height_desktop": 28,
-            "icon_height": 27,
-            "icon_margin_desktop": 0,
-            "icon_margin": 0,
-            "open_by_default": false
-          }
-        },
-        "collapsible_tab_miUEad": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "هل المقاسات مطابقة للحجم الحقيقي وكيف يمكنني اختيار المقاس المناسب لي؟",
-            "content": "<p><strong>نعم، مقاساتنا مطابقة تماماً للمقاسات العالمية القياسية (True to size).</strong> وننصحكِ دائماً باختيار مقاسكِ المعتاد الذي ترتدينه في أغلب ملابسكِ.وذا كنتِ محتارة بين مقاسين أو ترغبين في دقة متناهية، يمكنكِ الإطلاع على <strong>\"جدول المقاسات\"</strong> المتواجد في صفحة المنتج، والذي يوضح بالـ (سم) مقاسات الصدر، الخصر، والطول لتسهيل الاختيار الأمثل لكِ.</p>",
-            "page": "",
-            "icon": "none",
-            "icon_advanced_settings": false,
-            "icon_height_desktop": 28,
-            "icon_height": 27,
-            "icon_margin_desktop": 0,
-            "icon_margin": 0,
-            "open_by_default": false
-          }
-        }
-      },
-      "block_order": [
-        "collapsible_tab_BHRFnT",
-        "collapsible_tab_mg8QdP",
-        "collapsible_tab_miUEad"
-      ],
-      "name": "t:sections.collapsible_menu.presets.name",
-      "settings": {
-        "color-body-text": "{{ settings.colors.primary }}",
-        "background_color": "",
-        "compact-size-enabled": true,
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
     }
   },
   "order": [
@@ -1103,11 +1104,11 @@
     "before_and_after_AFCUre",
     "rich_text_JQdA3g",
     "testimonial_marquee_HMVjcJ",
+    "collapsible_menu_NTLwXP",
     "image_with_text_jUtNrr",
     "video_reels_dqWnMm",
     "separator_LcU8ix",
     "features_banner_4mRcTR",
-    "newsletter_dznx9H",
-    "collapsible_menu_NTLwXP"
+    "newsletter_dznx9H"
   ]
 }
