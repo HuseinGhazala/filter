@@ -48,6 +48,12 @@
   class="wt-collapse__section__inner"
   data-section-id="{{ section.id }}"
 >
+
+  <div>
+
+      {% render 'headline-richtext', heading: section.settings.heading_richtext %}
+
+  </div>
   <div
     class="wt-collapse__wrapper wt-collapse-menu{% if section.settings.compact-size-enabled == true %}  wt-collapse__wrapper--compact{% endif %} rte"
   >
@@ -115,6 +121,12 @@
       "type": "header",
       "content": "t:sections.global.colors",
       "info": "t:sections.global.colors-info"
+    },
+    {
+      "type": "richtext",
+      "id": "heading_richtext",
+      "label": "t:sections.testimonials_marquee.settings.heading_richtext.label",
+      "default": "<h2>FAQ</h2>"
     },
     {
       "type": "color",
