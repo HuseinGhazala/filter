@@ -524,7 +524,7 @@
         "color-body-heading": "",
         "color-overlay": "",
         "color-overlay-opacity": 100,
-        "color-body-text": "#11173D",
+        "color-body-text": "#11173d",
         "margin-top": 20,
         "margin-bottom": 60,
         "show_mobile_spacing": false,
@@ -777,6 +777,7 @@
       ],
       "name": "t:sections.collapsible_menu.presets.name",
       "settings": {
+        "heading_richtext": "<p>الأسئلة الشائعة<br/><br/></p>",
         "color-body-text": "{{ settings.colors.primary }}",
         "background_color": "",
         "compact-size-enabled": true,
