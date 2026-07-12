@@ -815,6 +815,7 @@
         "icon_with_text_YXQY4V",
         "icon_with_text_VUzaNh"
       ],
+      "disabled": true,
       "settings": {
         "advanced_heading": false,
         "title": "",
@@ -965,6 +966,7 @@
         "image_Pb3dUB",
         "image_zPkyUB"
       ],
+      "disabled": true,
       "settings": {
         "advanced_heading": false,
         "heading": "",
@@ -1022,6 +1024,7 @@
         "paragraph_afW3hE",
         "email_form_gr8qVy"
       ],
+      "disabled": true,
       "settings": {
         "color-body-text": "",
         "background_color": "#edf5f4",
