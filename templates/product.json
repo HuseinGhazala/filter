@@ -1,1 +1,1045 @@
-{"sections":{"breadcrumbs":{"type":"main-breadcrumbs","settings":{"full-width-enabled":true,"margin-top":12,"margin-bottom":12,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"main":{"type":"main-product","blocks":{"title":{"type":"title","settings":{"enable_vendor_link":false,"size_text":180,"size_text_mobile":160}},"rating":{"type":"rating","disabled":true,"settings":{}},"feature_tags_44iTGm":{"type":"feature_tags","settings":{"metafield":"","limit":4,"text_color":"#717171","border_color":"#ececec"}},"e23830b4-3ca6-452f-a7d1-cb245a3e9282":{"type":"bulletpoints","settings":{"metafield":"","default_text":"","enable_custom_icon":false,"bullet_icon_select":"check","icon_height_desktop":16,"icon_height":16,"icon_margin_desktop":4,"icon_margin":4}},"separator_Qt7zAY":{"type":"separator","settings":{"show-separator-line":false,"color-background":"#000000","margin-top":8,"margin-bottom":8}},"price":{"type":"price","settings":{"show_tax_included":true,"show_shipping_policy":true,"size_text":120,"size_text_mobile":140}},"variant_picker":{"type":"variant_picker","settings":{"picker_type":"button","hide_unavailable_options":false,"color_swatch_names":"","variant_picture_swatch_names":"","thumb_size":60,"radius":"default","border_radius":0,"dropdown_swatch_names":"","margin-top":8,"margin-bottom":8,"size_icon":"check_mark","size_link":"","variant_name":"","size_content":"","metafield":"","enable-striped-rows":true}},"buy_buttons":{"type":"buy_buttons","settings":{"show_dynamic_checkout":false,"show_gift_card_recipient":true,"show_qty_selector":true,"full_width_add_to_cart":false,"custom_add_to_cart_label":""}},"promo_67ttgj":{"type":"promo","settings":{"content":"<p>🎟️ Use code \"Beauty\" for 10% OFF!<\/p>","text_alignment":"center","color-body-text":"#a04848","background_color":"#f6f2ea"}},"separator_xMAHGH":{"type":"separator","settings":{"show-separator-line":false,"color-background":"#000000","margin-top":8,"margin-bottom":8}},"feature_icons_6jdFLm":{"type":"feature_icons","settings":{"layout_select":"row-left","show_icons_label":false,"icon_1_select":"none","icon_1_image":"","icon_1_text":"","icon_2_select":"none","icon_2_image":"","icon_2_text":"","icon_3_select":"none","icon_3_image":"","icon_3_text":"","icon_4_select":"none","icon_4_image":"","icon_4_text":"","metafield":"","items_per_row_desktop":2,"icon_size_desktop":74,"size_text":100,"show_advanced_settings_desktop":true,"icons_container_gap_desktop":32,"icon_container_width_desktop":80,"icon_margin_top_desktop":0,"icon_margin_bottom_desktop":0,"items_per_row":2,"icon_size_mobile":60,"size_text_mobile":100,"show_advanced_settings_mobile":false,"icons_container_gap_mobile":0,"icon_container_width_mobile":0,"icon_margin_top_mobile":0,"icon_margin_bottom_mobile":0}},"separator_DwMham":{"type":"separator","settings":{"show-separator-line":false,"color-background":"#000000","margin-top":8,"margin-bottom":8}},"00841757-ace4-48f5-8edb-08c8c579a24f":{"type":"separator","settings":{"show-separator-line":true,"color-background":"#e0dedb","margin-top":0,"margin-bottom":0}},"description":{"type":"description","settings":{"display":"collapsible","is_open":false,"icon":"none","icon_advanced_settings":false,"icon_height_desktop":28,"icon_height":27,"icon_margin_desktop":0,"icon_margin":0}},"a8e9c281-a34c-4fe4-94a1-ea9a3880dc33":{"type":"separator","settings":{"show-separator-line":true,"color-background":"#e0dedb","margin-top":0,"margin-bottom":0}},"collapsible_drawer_tUk8Ar":{"type":"collapsible_drawer","settings":{"heading":"How to use","metafield_variables":"","page":"","icon":"none","icon_advanced_settings":false,"icon_height_desktop":28,"icon_height":27,"icon_margin_desktop":0,"icon_margin":0}},"2ce0b4b1-3440-40cd-92c2-15d46e61dfca":{"type":"separator","settings":{"show-separator-line":true,"color-background":"#e0dedb","margin-top":0,"margin-bottom":0}},"5fed6e0f-fb7e-4874-8ba9-3321623fc828":{"type":"collapsible_tab","settings":{"heading":"Ingredients ","metafield_variables":"","page":"","open_by_default":false,"icon":"none","icon_advanced_settings":false,"icon_height_desktop":28,"icon_height":27,"icon_margin_desktop":0,"icon_margin":0}},"separator_jY8GV3":{"type":"separator","settings":{"show-separator-line":true,"color-background":"#e0dedb","margin-top":0,"margin-bottom":0}},"video_reels_fUDDgA":{"type":"video_reels","settings":{"heading":"Complete your beauty ritual","show_play_pause":true,"show_unmute":true,"auto_advanced":false,"enable_quick_add":true,"hide_brand":false,"video_reels_1_product":"","video_reels_2_product":"","video_reels_3_product":"","video_reels_4_product":"","video_reels_5_product":"","video_reels_6_product":""}},"separator_BNyJGF":{"type":"separator","settings":{"show-separator-line":false,"color-background":"#e0dedb","margin-top":16,"margin-bottom":8}},"78809992-2318-4893-9402-6cfd49f50b6a":{"type":"separator","settings":{"show-separator-line":true,"color-background":"#e0dedb","margin-top":0,"margin-bottom":0}},"d162f900-ee92-4311-b27d-d5f312fa73f2":{"type":"collapsible_tab","settings":{"heading":"Delivery  and  return policy","content":"<p>Our team will ship your order within 5 business days. The time it takes to receive your order depends on the shipping method chosen at checkout. <\/p><p><br\/><\/p><p>We hope you to love it, but if you need to make a return, breathe easy. Returns are always free and can be done in person or by mail. <\/p>","metafield_variables":"","page":"","open_by_default":false,"icon":"none","icon_advanced_settings":false,"icon_height_desktop":28,"icon_height":27,"icon_margin_desktop":0,"icon_margin":0}},"separator_M9U6NC":{"type":"separator","settings":{"show-separator-line":true,"color-background":"#e0dedb","margin-top":0,"margin-bottom":0}},"upsell_Fzh866":{"type":"upsell","settings":{"heading":"Frequently paired with","product_upsell":[],"show_vendor":true,"image-ratio":"original","button_select":"link"}}},"block_order":["title","rating","feature_tags_44iTGm","e23830b4-3ca6-452f-a7d1-cb245a3e9282","separator_Qt7zAY","price","variant_picker","buy_buttons","promo_67ttgj","separator_xMAHGH","feature_icons_6jdFLm","separator_DwMham","00841757-ace4-48f5-8edb-08c8c579a24f","description","a8e9c281-a34c-4fe4-94a1-ea9a3880dc33","collapsible_drawer_tUk8Ar","2ce0b4b1-3440-40cd-92c2-15d46e61dfca","5fed6e0f-fb7e-4874-8ba9-3321623fc828","separator_jY8GV3","video_reels_fUDDgA","separator_BNyJGF","78809992-2318-4893-9402-6cfd49f50b6a","d162f900-ee92-4311-b27d-d5f312fa73f2","separator_M9U6NC","upsell_Fzh866"],"custom_css":[],"settings":{"enable_sticky_buy_button":true,"sticky_button_visibility":"desktop","sticky_button_type":"sticky","sticky_button_select":"primary","sticky_bg_opacity":100,"sticky_bg_blur":0,"sticky_shadow":true,"sticky_button_show_image":"yes","sticky_button_product_info":"title_and_price","full-width-enabled":false,"desktop-media-size":"normal","desktop-layout":"carousel-vertical","desktop-image-ratio":"square","enable_video_looping":false,"video_controls":false,"video_custom_play_controls":false,"video_custom_mute_controls":false,"enable-preselected-variant":true,"enable-image-zoom":true,"mobile-image":"small","show-thumbnails-mobile":false,"pdp_nav_icon_bg_color":"#ffffff","pdp_nav_icon_bg_opacity":80,"margin-top":4,"margin-bottom":28,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"background_video_axipNV":{"type":"background-video","blocks":{"text_EeTEnd":{"type":"text","settings":{"text":"<p>Created In Harmony with Nature<\/p>","text_style":"body","disable_on_mobile":false}},"heading_6nnq9e":{"type":"heading","settings":{"heading":"100% Natural Ingredients","disable_on_mobile":false,"size_heading":260,"size_heading_mobile":160}}},"block_order":["text_EeTEnd","heading_6nnq9e"],"name":"t:sections.background-video.presets.name","settings":{"advanced_heading":false,"heading":"","heading_richtext":"<h2>Your headline here<\/h2>","full-width-enabled":true,"container_max_width":0,"autoplay":true,"video_controls":false,"video_custom_play_controls":true,"video_custom_mute_controls":false,"video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","original_ratio":"fixed_height","desktop_fixed_height":500,"mobile_fixed_height":320,"color-body-heading":"#ffffff","color-overlay-opacity":100,"color-body-text":"#ffffff","desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_vertical_position":"center","mobile_text_horizontal_position":"center","margin-top":0,"margin-bottom":4,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"benefits_product_fbMnEC":{"type":"benefits-product","blocks":{"benefit_NHJhhT":{"type":"benefit","settings":{"image":"","item_heading":"Vegan","text":"<p>Our entire collection is vegan and cruelty free.<\/p>"}},"benefit_WpTbd9":{"type":"benefit","settings":{"image":"","item_heading":"Ocean Bound Plastic","text":"<p>Support a Sustainable Future with our Environmentally Conscious Goods.<\/p>"}},"benefit_TxDR8i":{"type":"benefit","settings":{"image":"","item_heading":"Recyclable","text":"<p>All packaging is recyclable and eco conscious.<\/p>"}},"benefit_rRagEV":{"type":"benefit","settings":{"image":"","item_heading":"Natural","text":"<p>We only use the finest natural ingredients.<\/p>"}},"benefit_iY6k6j":{"type":"benefit","settings":{"image":"","item_heading":"Parabens Free","text":"<p>Our products do not contain harmful substances.<\/p>"}},"benefit_EE4gW8":{"type":"benefit","settings":{"image":"","item_heading":"Best Quality","text":"<p>Explore the Unmatched Quality of Products.<\/p>"}}},"block_order":["benefit_NHJhhT","benefit_WpTbd9","benefit_TxDR8i","benefit_rRagEV","benefit_iY6k6j","benefit_EE4gW8"],"name":"t:sections.benefits_product.name","settings":{"advanced_heading":false,"heading":"Product Benefits","heading_richtext":"<h2>Your headline here<\/h2>","full-width-enabled":false,"desktop_image":"","section_height_mode":"fixed_height","desktop_section_height":74,"desktop_section_max_height":920,"desktop_width":60,"desktop_max_width":680,"button_label":"","button_link":"","quick_buy_product":"","button_select":"primary","size_heading":110,"size_heading_mobile":120,"color-overlay-opacity":100,"margin-top":20,"margin-bottom":60,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"before_and_after_AFCUre":{"type":"before-and-after","blocks":{"heading_9WVPE8":{"type":"heading","settings":{"heading":"We know you are unique.","disable_on_mobile":false,"size_heading":160,"size_heading_mobile":140}},"text_Dra7CK":{"type":"text","settings":{"text":"<p>Take care of your complexion to make it healthy and radiant. In the range of facial care products you will find creams, scrubs, masks, toners, gels and much more.<\/p>","text_style":"body","disable_on_mobile":false}}},"block_order":["heading_9WVPE8","text_Dra7CK"],"settings":{"advanced_heading":false,"title":"","heading_richtext":"<h2>Your headline here<\/h2>","layout":"image_first","before_image":"","after_image":"","desktop-percentage-image-width":58,"full-width-enabled":true,"slide_height":"adapt_to_first_image","desktop_fixed_height":320,"mobile_fixed_height":460,"enable_badges":true,"before_badge":"Before","after_badge":"After","section-color-overlay-opacity":100,"color-overlay":"#f7efe3","color-overlay-opacity":100,"desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_horizontal_position":"center","margin-top":0,"margin-bottom":0,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"rich_text_JQdA3g":{"type":"rich-text","blocks":{"icon_with_text_Yw4Gcj":{"type":"icon_with_text","settings":{"icon":"","select_icon":"bag","icon_alignment":"inherit","icon_alignment_mobile":"inherit","align_icon_top":false,"icon_advanced_settings":true,"icon_height_desktop":16,"icon_height":13,"icon_margin_desktop":0,"icon_margin":0,"text":"<p>Rated 5 stars by our customers<\/p>","size_heading":100,"size_heading_mobile":100,"gap":8,"margin_top":8,"margin_bottom":8,"margin_left_desktop":0,"margin_left":0}},"heading_KgezxV":{"type":"heading","settings":{"advanced_heading":true,"heading":"100% Natural Ingredients","heading_richtext":"<p>Loved by your skin. Trusted by many.<\/p>","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100,"heading_richtext_gradient":"linear-gradient(283deg, rgba(227, 205, 174, 1) 6%, rgba(221, 172, 106, 1) 78%)"}}},"block_order":["icon_with_text_Yw4Gcj","heading_KgezxV"],"name":"t:sections.rich-text.presets.name","settings":{"section_width":"regular","desktop_text_horizontal_position":"center","full-width-enabled":false,"background_gradient":"","margin-top":60,"margin-bottom":0,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"testimonial_marquee_HMVjcJ":{"type":"testimonial-marquee","blocks":{"image_yBMXhN":{"type":"image","settings":{"icon_select":"100","heading":"Glow like never before","text":"<p>“I noticed a visible difference in my skin after just a few days. It feels smoother, more hydrated, and has that natural glow I was looking for.”<\/p>","author":"— Emma R., verified customer","author_image":"","icon_image_height_desk":50,"icon_image_height":40}},"image_nRRCVH":{"type":"image","settings":{"icon_select":"100","heading":"My new daily essential","text":"<p>“This product has become a staple in my routine. It absorbs beautifully and layers perfectly with the rest of my skincare.”<\/p>","author":"— Olivia M., verified customer","author_image":"","icon_image_height_desk":50,"icon_image_height":40}},"image_9hH3ei":{"type":"image","settings":{"icon_select":"100","heading":"Hydration that lasts","text":"<p>“My skin stays soft and nourished all day. It’s lightweight but incredibly effective — exactly what I needed.”<\/p>","author":"— Sophia L., verified customer","author_image":"","icon_image_height_desk":50,"icon_image_height":40}}},"block_order":["image_yBMXhN","image_nRRCVH","image_9hH3ei"],"name":"Testimonial: Marquee","settings":{"heading_richtext":"","text_style":"body","disable_auto_scroll":true,"animation_direction":"left","animation_speed":"150","card_width_desktop":450,"number_of_column_desktop":2,"gap_desk":20,"testimonial_text_size_desktop":100,"text_alignment_desktop":"left","card_width_mobile":280,"number_of_column_mobile":1.1,"gap":12,"testimonial_text_size":100,"text_alignment_mobile":"left","background_color":"#ffffff","testimonial_background_color":"#fdfaf5","margin-top":0,"margin-bottom":100,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"image_with_text_jUtNrr":{"type":"image-with-text","blocks":{"heading_FHi67Q":{"type":"heading","settings":{"heading":"About Herbivore","disable_on_mobile":false,"size_heading":140,"size_heading_mobile":100}},"text_fYrpVb":{"type":"text","settings":{"text":"<p>Herbivore believes in the power of nature to bring tangible results you can see and feel. We make our products, ingredients, and packaging as gentle on the planet as they are on our bodies.<\/p><p><\/p>","text_style":"body","disable_on_mobile":false}},"icon_with_text_hzRQdx":{"type":"icon_with_text","settings":{"icon":"","select_icon":"leaf","icon_alignment":"inherit","icon_alignment_mobile":"flex-start","align_icon_top":false,"icon_advanced_settings":true,"icon_height_desktop":42,"icon_height":42,"icon_margin_desktop":0,"icon_margin":0,"text":"<p>Nature in Everyday Rituals<\/p>","size_heading":100,"size_heading_mobile":100,"gap":8,"margin_top":4,"margin_bottom":8,"margin_left_desktop":0,"margin_left":0}},"icon_with_text_YXQY4V":{"type":"icon_with_text","settings":{"icon":"","select_icon":"eye","icon_alignment":"inherit","icon_alignment_mobile":"flex-start","align_icon_top":false,"icon_advanced_settings":true,"icon_height_desktop":42,"icon_height":42,"icon_margin_desktop":0,"icon_margin":0,"text":"<p>Natural Skincare Effectiveness<\/p>","size_heading":100,"size_heading_mobile":100,"gap":8,"margin_top":8,"margin_bottom":8,"margin_left_desktop":0,"margin_left":0}},"icon_with_text_VUzaNh":{"type":"icon_with_text","settings":{"icon":"","select_icon":"plant","icon_alignment":"inherit","icon_alignment_mobile":"flex-start","align_icon_top":false,"icon_advanced_settings":true,"icon_height_desktop":42,"icon_height":42,"icon_margin_desktop":0,"icon_margin":0,"text":"<p>Harmony for Skin & Senses<\/p>","size_heading":100,"size_heading_mobile":100,"gap":8,"margin_top":8,"margin_bottom":8,"margin_left_desktop":0,"margin_left":0}}},"block_order":["heading_FHi67Q","text_fYrpVb","icon_with_text_hzRQdx","icon_with_text_YXQY4V","icon_with_text_VUzaNh"],"settings":{"advanced_heading":false,"title":"","heading_richtext":"<h2>Your headline here<\/h2>","layout":"text_first","desktop-percentage-image-width":50,"full-width-enabled":true,"slide_height":"adapt_to_first_image","desktop_fixed_height":320,"mobile_fixed_height":460,"section-color-overlay-opacity":100,"color-body-text":"#000000","color-overlay":"#d7f5e4","color-overlay-opacity":65,"desktop_image":"","desktop_text_vertical_position":"center","desktop_text_horizontal_position":"left","mobile_text_horizontal_position":"center","margin-top":0,"margin-bottom":0,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"video_reels_dqWnMm":{"type":"video-reels","blocks":{"product_bi68pi":{"type":"product","settings":{"featured_product":""}},"product_pUBFTB":{"type":"product","settings":{"featured_product":""}},"product_PaaDXj":{"type":"product","settings":{"featured_product":""}},"product_AYNM9a":{"type":"product","settings":{"featured_product":""}},"product_TwBDzA":{"type":"product","settings":{"featured_product":""}}},"block_order":["product_bi68pi","product_pUBFTB","product_PaaDXj","product_AYNM9a","product_TwBDzA"],"settings":{"advanced_heading":false,"heading":"Recommended by our Customers","heading_richtext":"<h2>Your headline here<\/h2>","quick-add-enabled":true,"hide-brand-name":false,"video_button":true,"margin-top":40,"margin-bottom":68,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"separator_LcU8ix":{"type":"separator","name":"t:sections.separator.presets.name","settings":{"advanced_heading":false,"heading":"","heading_richtext":"<h2>Separator<\/h2>","size_heading":100,"size_heading_mobile":100,"show-separator-line":true,"full-width-line":true,"color-background":"#e7e7e7","margin-top":0,"margin-bottom":0,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"features_banner_4mRcTR":{"type":"features-banner","blocks":{"image_PPkUHy":{"type":"image","settings":{"desktop_image":"","select_icon":"plant","heading":"Vegan","text":"<p>Our entire collection is vegan and cruelty free.<\/p>","link":""}},"image_tGpfAy":{"type":"image","settings":{"desktop_image":"","select_icon":"truck","heading":"Fast & Free Shipping","text":"<p>Doorstep delivery to most of the US.<\/p>","link":""}},"image_Pb3dUB":{"type":"image","settings":{"desktop_image":"","select_icon":"leaf","heading":"Natural","text":"<p>We only use the finest natural ingredients.<\/p>","link":""}},"image_zPkyUB":{"type":"image","settings":{"desktop_image":"","select_icon":"recycle","heading":"Recyclable","text":"<p>All packaging is recyclable and eco conscious.<\/p>","link":""}}},"block_order":["image_PPkUHy","image_tGpfAy","image_Pb3dUB","image_zPkyUB"],"settings":{"advanced_heading":false,"heading":"","heading_richtext":"<h2>Your headline here<\/h2>","size_heading_mobile":80,"size_heading":70,"icon_width_mobile":52,"icon_width_desktop":64,"icon_layout":"center","columns_desktop":"4","icon_layout_mobile":"grid","margin-top":48,"margin-bottom":64,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"newsletter_dznx9H":{"type":"newsletter","blocks":{"heading_mnJyLx":{"type":"heading","settings":{"heading":"Get 20% off your first order","heading_disable_on_mobile":false,"size_heading":200,"size_heading_mobile":100}},"paragraph_afW3hE":{"type":"paragraph","settings":{"paragraph":"<p>Be the first to know about new collections and exclusive offers.<\/p>","text_disable_on_mobile":false}},"email_form_gr8qVy":{"type":"email_form","settings":{"button_select":"primary","button_label":"","show_consent_checkbox":false,"consent_checkbox_label":"<p>I want to sign up for the Newsletter (information about promotions, discounts, premieres, contests).<\/p>","consent_validation_message":"Please check this box to proceed."}}},"block_order":["heading_mnJyLx","paragraph_afW3hE","email_form_gr8qVy"],"settings":{"background_color":"#edf5f4","margin-top":100,"margin-bottom":100,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}}},"order":["breadcrumbs","main","background_video_axipNV","benefits_product_fbMnEC","before_and_after_AFCUre","rich_text_JQdA3g","testimonial_marquee_HMVjcJ","image_with_text_jUtNrr","video_reels_dqWnMm","separator_LcU8ix","features_banner_4mRcTR","newsletter_dznx9H"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "main-breadcrumbs",
+      "settings": {
+        "full-width-enabled": true,
+        "text_color": "",
+        "background_color": "",
+        "margin-top": 12,
+        "margin-bottom": 12,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "brand": "",
+            "enable_vendor_link": false,
+            "size_text": 180,
+            "size_text_mobile": 160
+          }
+        },
+        "rating": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {}
+        },
+        "feature_tags_44iTGm": {
+          "type": "feature_tags",
+          "settings": {
+            "metafield": "",
+            "limit": 4,
+            "text_color": "#717171",
+            "border_color": "#ececec"
+          }
+        },
+        "e23830b4-3ca6-452f-a7d1-cb245a3e9282": {
+          "type": "bulletpoints",
+          "settings": {
+            "metafield": "",
+            "default_text": "",
+            "enable_custom_icon": false,
+            "bullet_icon_select": "check",
+            "icon_height_desktop": 16,
+            "icon_height": 16,
+            "icon_margin_desktop": 4,
+            "icon_margin": 4
+          }
+        },
+        "separator_Qt7zAY": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#000000",
+            "margin-top": 8,
+            "margin-bottom": 8
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_tax_included": true,
+            "show_shipping_policy": true,
+            "size_text": 120,
+            "size_text_mobile": 140
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "hide_unavailable_options": false,
+            "unavailable_style": "line_through",
+            "color_swatch_names": "",
+            "variant_picture_swatch_names": "",
+            "thumb_size": 60,
+            "radius": "default",
+            "border_radius": 0,
+            "dropdown_swatch_names": "",
+            "margin-top": 8,
+            "margin-bottom": 8,
+            "size_icon": "check_mark",
+            "size_link": "",
+            "variant_name": "",
+            "size_content": "",
+            "metafield": "",
+            "enable-striped-rows": true
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": true,
+            "show_qty_selector": true,
+            "full_width_add_to_cart": false,
+            "custom_add_to_cart_label": "",
+            "text_color": "",
+            "background_color": "",
+            "text_color_hover": "",
+            "background_color_hover": ""
+          }
+        },
+        "promo_67ttgj": {
+          "type": "promo",
+          "settings": {
+            "content": "<p>🎟️ Use code \"Beauty\" for 10% OFF!</p>",
+            "text_alignment": "center",
+            "color-body-text": "#a04848",
+            "background_color": "#f6f2ea"
+          }
+        },
+        "separator_xMAHGH": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#000000",
+            "margin-top": 8,
+            "margin-bottom": 8
+          }
+        },
+        "feature_icons_6jdFLm": {
+          "type": "feature_icons",
+          "settings": {
+            "layout_select": "row-left",
+            "show_icons_label": false,
+            "icon_1_select": "none",
+            "icon_1_text": "",
+            "icon_2_select": "none",
+            "icon_2_text": "",
+            "icon_3_select": "none",
+            "icon_3_text": "",
+            "icon_4_select": "none",
+            "icon_4_text": "",
+            "metafield": "",
+            "items_per_row_desktop": 2,
+            "icon_size_desktop": 74,
+            "size_text": 100,
+            "show_advanced_settings_desktop": true,
+            "icons_container_gap_desktop": 32,
+            "icon_container_width_desktop": 80,
+            "icon_margin_top_desktop": 0,
+            "icon_margin_bottom_desktop": 0,
+            "items_per_row": 2,
+            "icon_size_mobile": 60,
+            "size_text_mobile": 100,
+            "show_advanced_settings_mobile": false,
+            "icons_container_gap_mobile": 0,
+            "icon_container_width_mobile": 0,
+            "icon_margin_top_mobile": 0,
+            "icon_margin_bottom_mobile": 0
+          }
+        },
+        "separator_DwMham": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#000000",
+            "margin-top": 8,
+            "margin-bottom": 8
+          }
+        },
+        "00841757-ace4-48f5-8edb-08c8c579a24f": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#e0dedb",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "display": "collapsible",
+            "is_open": false,
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0
+          }
+        },
+        "a8e9c281-a34c-4fe4-94a1-ea9a3880dc33": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#e0dedb",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "collapsible_drawer_tUk8Ar": {
+          "type": "collapsible_drawer",
+          "settings": {
+            "heading": "How to use",
+            "content": "",
+            "metafield_variables": "",
+            "page": "",
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0
+          }
+        },
+        "2ce0b4b1-3440-40cd-92c2-15d46e61dfca": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#e0dedb",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "5fed6e0f-fb7e-4874-8ba9-3321623fc828": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Ingredients ",
+            "content": "",
+            "metafield_variables": "",
+            "page": "",
+            "open_by_default": false,
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0
+          }
+        },
+        "separator_jY8GV3": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#e0dedb",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "video_reels_fUDDgA": {
+          "type": "video_reels",
+          "settings": {
+            "heading": "Complete your beauty ritual",
+            "show_play_pause": true,
+            "show_unmute": true,
+            "auto_advanced": false,
+            "enable_quick_add": true,
+            "hide_brand": false,
+            "video_reels_1_product": "",
+            "video_reels_2_product": "",
+            "video_reels_3_product": "",
+            "video_reels_4_product": "",
+            "video_reels_5_product": "",
+            "video_reels_6_product": ""
+          }
+        },
+        "separator_BNyJGF": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": false,
+            "color-background": "#e0dedb",
+            "margin-top": 16,
+            "margin-bottom": 8
+          }
+        },
+        "78809992-2318-4893-9402-6cfd49f50b6a": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#e0dedb",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "d162f900-ee92-4311-b27d-d5f312fa73f2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Delivery  and  return policy",
+            "content": "<p>Our team will ship your order within 5 business days. The time it takes to receive your order depends on the shipping method chosen at checkout. </p><p><br/></p><p>We hope you to love it, but if you need to make a return, breathe easy. Returns are always free and can be done in person or by mail. </p>",
+            "metafield_variables": "",
+            "page": "",
+            "open_by_default": false,
+            "icon": "none",
+            "icon_advanced_settings": false,
+            "icon_height_desktop": 28,
+            "icon_height": 27,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0
+          }
+        },
+        "separator_M9U6NC": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#e0dedb",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "upsell_Fzh866": {
+          "type": "upsell",
+          "settings": {
+            "heading": "Frequently paired with",
+            "product_upsell": [],
+            "show_vendor": true,
+            "image-ratio": "original",
+            "button_select": "link"
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "rating",
+        "feature_tags_44iTGm",
+        "e23830b4-3ca6-452f-a7d1-cb245a3e9282",
+        "separator_Qt7zAY",
+        "price",
+        "variant_picker",
+        "buy_buttons",
+        "promo_67ttgj",
+        "separator_xMAHGH",
+        "feature_icons_6jdFLm",
+        "separator_DwMham",
+        "00841757-ace4-48f5-8edb-08c8c579a24f",
+        "description",
+        "a8e9c281-a34c-4fe4-94a1-ea9a3880dc33",
+        "collapsible_drawer_tUk8Ar",
+        "2ce0b4b1-3440-40cd-92c2-15d46e61dfca",
+        "5fed6e0f-fb7e-4874-8ba9-3321623fc828",
+        "separator_jY8GV3",
+        "video_reels_fUDDgA",
+        "separator_BNyJGF",
+        "78809992-2318-4893-9402-6cfd49f50b6a",
+        "d162f900-ee92-4311-b27d-d5f312fa73f2",
+        "separator_M9U6NC",
+        "upsell_Fzh866"
+      ],
+      "custom_css": [],
+      "settings": {
+        "enable_sticky_buy_button": true,
+        "sticky_button_visibility": "desktop",
+        "sticky_button_type": "sticky",
+        "sticky_button_select": "primary",
+        "sticky_bg_opacity": 100,
+        "sticky_bg_blur": 0,
+        "sticky_shadow": true,
+        "sticky_button_show_image": "yes",
+        "sticky_button_product_info": "title_and_price",
+        "full-width-enabled": false,
+        "desktop-media-size": "normal",
+        "desktop-layout": "carousel-vertical",
+        "desktop-image-ratio": "square",
+        "enable_video_looping": false,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "enable-preselected-variant": true,
+        "enable-image-zoom": true,
+        "mobile-image": "small",
+        "show-thumbnails-mobile": false,
+        "text_color": "",
+        "background_color": "",
+        "pdp_nav_icon_bg_color": "#ffffff",
+        "pdp_nav_icon_bg_opacity": 80,
+        "pdp_nav_icon_color": "",
+        "margin-top": 4,
+        "margin-bottom": 28,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "background_video_axipNV": {
+      "type": "background-video",
+      "blocks": {
+        "text_EeTEnd": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Created In Harmony with Nature</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "heading_6nnq9e": {
+          "type": "heading",
+          "settings": {
+            "heading": "100% Natural Ingredients",
+            "disable_on_mobile": false,
+            "size_heading": 260,
+            "size_heading_mobile": 160
+          }
+        }
+      },
+      "block_order": [
+        "text_EeTEnd",
+        "heading_6nnq9e"
+      ],
+      "disabled": true,
+      "name": "t:sections.background-video.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "autoplay": true,
+        "video_controls": false,
+        "video_custom_play_controls": true,
+        "video_custom_mute_controls": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "original_ratio": "fixed_height",
+        "desktop_fixed_height": 500,
+        "mobile_fixed_height": 320,
+        "color-body-heading": "#ffffff",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "color-body-text": "#ffffff",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 4,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "benefits_product_fbMnEC": {
+      "type": "benefits-product",
+      "blocks": {
+        "benefit_NHJhhT": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/carbon_close-filled.png",
+            "item_heading": "قد يبين تفاصيل الجسم",
+            "text": ""
+          }
+        },
+        "benefit_WpTbd9": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Vector_1.png",
+            "item_heading": "ساتر مع الحركة لا يبين تفاصيل الجسم",
+            "text": ""
+          }
+        },
+        "benefit_TxDR8i": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/carbon_close-filled.png",
+            "item_heading": "قد يحتاج تيشيرت داخلي",
+            "text": ""
+          }
+        },
+        "benefit_rRagEV": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Vector_1.png",
+            "item_heading": "لا يشف لا يحتاج تيشيرت داخلي",
+            "text": ""
+          }
+        },
+        "benefit_iY6k6j": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/carbon_close-filled.png",
+            "item_heading": "مقاس غير مريح",
+            "text": ""
+          }
+        },
+        "benefit_EE4gW8": {
+          "type": "benefit",
+          "settings": {
+            "image": "shopify://shop_images/Vector_1.png",
+            "item_heading": "مقاسات مريحة و مضبوطة",
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "benefit_NHJhhT",
+        "benefit_WpTbd9",
+        "benefit_TxDR8i",
+        "benefit_rRagEV",
+        "benefit_iY6k6j",
+        "benefit_EE4gW8"
+      ],
+      "name": "t:sections.benefits_product.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "full-width-enabled": false,
+        "desktop_image": "shopify://shop_images/image_343.png",
+        "section_height_mode": "fixed_height",
+        "desktop_section_height": 74,
+        "desktop_section_max_height": 920,
+        "desktop_width": 60,
+        "desktop_max_width": 680,
+        "button_label": "",
+        "button_link": "",
+        "quick_buy_product": "",
+        "button_select": "primary",
+        "size_heading": 110,
+        "size_heading_mobile": 120,
+        "color-body-heading": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "color-body-text": "",
+        "margin-top": 20,
+        "margin-bottom": 60,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "before_and_after_AFCUre": {
+      "type": "before-and-after",
+      "blocks": {
+        "heading_9WVPE8": {
+          "type": "heading",
+          "settings": {
+            "heading": "We know you are unique.",
+            "disable_on_mobile": false,
+            "size_heading": 160,
+            "size_heading_mobile": 140
+          }
+        },
+        "text_Dra7CK": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Take care of your complexion to make it healthy and radiant. In the range of facial care products you will find creams, scrubs, masks, toners, gels and much more.</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_9WVPE8",
+        "text_Dra7CK"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "title": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "layout": "image_first",
+        "desktop-percentage-image-width": 58,
+        "full-width-enabled": true,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "enable_badges": true,
+        "before_badge": "Before",
+        "after_badge": "After",
+        "section-color-body-text": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "",
+        "color-overlay": "#f7efe3",
+        "color-overlay-opacity": 100,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "rich_text_JQdA3g": {
+      "type": "rich-text",
+      "blocks": {
+        "icon_with_text_Yw4Gcj": {
+          "type": "icon_with_text",
+          "settings": {
+            "select_icon": "bag",
+            "icon_alignment": "inherit",
+            "icon_alignment_mobile": "inherit",
+            "align_icon_top": false,
+            "icon_advanced_settings": true,
+            "icon_height_desktop": 16,
+            "icon_height": 13,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "text": "<p>Rated 5 stars by our customers</p>",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "gap": 8,
+            "margin_top": 8,
+            "margin_bottom": 8,
+            "margin_left_desktop": 0,
+            "margin_left": 0
+          }
+        },
+        "heading_KgezxV": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": true,
+            "heading": "100% Natural Ingredients",
+            "heading_richtext": "<p>Loved by your skin. Trusted by many.</p>",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": "linear-gradient(283deg, rgba(227, 205, 174, 1) 6%, rgba(221, 172, 106, 1) 78%)"
+          }
+        }
+      },
+      "block_order": [
+        "icon_with_text_Yw4Gcj",
+        "heading_KgezxV"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": false,
+        "color-body-text": "",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 60,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "compact_size": false
+      }
+    },
+    "testimonial_marquee_HMVjcJ": {
+      "type": "testimonial-marquee",
+      "blocks": {
+        "image_yBMXhN": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Glow like never before",
+            "text": "<p>“I noticed a visible difference in my skin after just a few days. It feels smoother, more hydrated, and has that natural glow I was looking for.”</p>",
+            "author": "— Emma R., verified customer",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_nRRCVH": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "My new daily essential",
+            "text": "<p>“This product has become a staple in my routine. It absorbs beautifully and layers perfectly with the rest of my skincare.”</p>",
+            "author": "— Olivia M., verified customer",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_9hH3ei": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Hydration that lasts",
+            "text": "<p>“My skin stays soft and nourished all day. It’s lightweight but incredibly effective — exactly what I needed.”</p>",
+            "author": "— Sophia L., verified customer",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_yBMXhN",
+        "image_nRRCVH",
+        "image_9hH3ei"
+      ],
+      "name": "Testimonial: Marquee",
+      "settings": {
+        "heading_richtext": "",
+        "text_style": "body",
+        "disable_auto_scroll": true,
+        "animation_direction": "left",
+        "animation_speed": "150",
+        "card_width_desktop": 450,
+        "number_of_column_desktop": 2,
+        "gap_desk": 20,
+        "testimonial_text_size_desktop": 100,
+        "text_alignment_desktop": "left",
+        "card_width_mobile": 280,
+        "number_of_column_mobile": 1.1,
+        "gap": 12,
+        "testimonial_text_size": 100,
+        "text_alignment_mobile": "left",
+        "color-body-text": "",
+        "background_color": "#ffffff",
+        "testimonial_background_color": "#fdfaf5",
+        "card_heading_color": "",
+        "card_author_color": "",
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_with_text_jUtNrr": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_FHi67Q": {
+          "type": "heading",
+          "settings": {
+            "heading": "About Herbivore",
+            "disable_on_mobile": false,
+            "size_heading": 140,
+            "size_heading_mobile": 100
+          }
+        },
+        "text_fYrpVb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Herbivore believes in the power of nature to bring tangible results you can see and feel. We make our products, ingredients, and packaging as gentle on the planet as they are on our bodies.</p><p></p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "icon_with_text_hzRQdx": {
+          "type": "icon_with_text",
+          "settings": {
+            "select_icon": "leaf",
+            "icon_alignment": "inherit",
+            "icon_alignment_mobile": "flex-start",
+            "align_icon_top": false,
+            "icon_advanced_settings": true,
+            "icon_height_desktop": 42,
+            "icon_height": 42,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "text": "<p>Nature in Everyday Rituals</p>",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "gap": 8,
+            "margin_top": 4,
+            "margin_bottom": 8,
+            "margin_left_desktop": 0,
+            "margin_left": 0
+          }
+        },
+        "icon_with_text_YXQY4V": {
+          "type": "icon_with_text",
+          "settings": {
+            "select_icon": "eye",
+            "icon_alignment": "inherit",
+            "icon_alignment_mobile": "flex-start",
+            "align_icon_top": false,
+            "icon_advanced_settings": true,
+            "icon_height_desktop": 42,
+            "icon_height": 42,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "text": "<p>Natural Skincare Effectiveness</p>",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "gap": 8,
+            "margin_top": 8,
+            "margin_bottom": 8,
+            "margin_left_desktop": 0,
+            "margin_left": 0
+          }
+        },
+        "icon_with_text_VUzaNh": {
+          "type": "icon_with_text",
+          "settings": {
+            "select_icon": "plant",
+            "icon_alignment": "inherit",
+            "icon_alignment_mobile": "flex-start",
+            "align_icon_top": false,
+            "icon_advanced_settings": true,
+            "icon_height_desktop": 42,
+            "icon_height": 42,
+            "icon_margin_desktop": 0,
+            "icon_margin": 0,
+            "text": "<p>Harmony for Skin & Senses</p>",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "gap": 8,
+            "margin_top": 8,
+            "margin_bottom": 8,
+            "margin_left_desktop": 0,
+            "margin_left": 0
+          }
+        }
+      },
+      "block_order": [
+        "heading_FHi67Q",
+        "text_fYrpVb",
+        "icon_with_text_hzRQdx",
+        "icon_with_text_YXQY4V",
+        "icon_with_text_VUzaNh"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "title": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "layout": "text_first",
+        "desktop-percentage-image-width": 50,
+        "full-width-enabled": true,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "section-color-body-text": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "#000000",
+        "color-overlay": "#d7f5e4",
+        "color-overlay-opacity": 65,
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "video_reels_dqWnMm": {
+      "type": "video-reels",
+      "blocks": {
+        "product_bi68pi": {
+          "type": "product",
+          "settings": {
+            "featured_product": ""
+          }
+        },
+        "product_pUBFTB": {
+          "type": "product",
+          "settings": {
+            "featured_product": ""
+          }
+        },
+        "product_PaaDXj": {
+          "type": "product",
+          "settings": {
+            "featured_product": ""
+          }
+        },
+        "product_AYNM9a": {
+          "type": "product",
+          "settings": {
+            "featured_product": ""
+          }
+        },
+        "product_TwBDzA": {
+          "type": "product",
+          "settings": {
+            "featured_product": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_bi68pi",
+        "product_pUBFTB",
+        "product_PaaDXj",
+        "product_AYNM9a",
+        "product_TwBDzA"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "Recommended by our Customers",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "quick-add-enabled": true,
+        "hide-brand-name": false,
+        "video_button": true,
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 40,
+        "margin-bottom": 68,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "separator_LcU8ix": {
+      "type": "separator",
+      "name": "t:sections.separator.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Separator</h2>",
+        "size_heading": 100,
+        "size_heading_mobile": 100,
+        "show-separator-line": true,
+        "full-width-line": true,
+        "color-background": "#e7e7e7",
+        "color-body-text": "",
+        "color-section-background": "",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "features_banner_4mRcTR": {
+      "type": "features-banner",
+      "blocks": {
+        "image_PPkUHy": {
+          "type": "image",
+          "settings": {
+            "select_icon": "plant",
+            "heading": "Vegan",
+            "text": "<p>Our entire collection is vegan and cruelty free.</p>",
+            "link": ""
+          }
+        },
+        "image_tGpfAy": {
+          "type": "image",
+          "settings": {
+            "select_icon": "truck",
+            "heading": "Fast & Free Shipping",
+            "text": "<p>Doorstep delivery to most of the US.</p>",
+            "link": ""
+          }
+        },
+        "image_Pb3dUB": {
+          "type": "image",
+          "settings": {
+            "select_icon": "leaf",
+            "heading": "Natural",
+            "text": "<p>We only use the finest natural ingredients.</p>",
+            "link": ""
+          }
+        },
+        "image_zPkyUB": {
+          "type": "image",
+          "settings": {
+            "select_icon": "recycle",
+            "heading": "Recyclable",
+            "text": "<p>All packaging is recyclable and eco conscious.</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_PPkUHy",
+        "image_tGpfAy",
+        "image_Pb3dUB",
+        "image_zPkyUB"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "size_heading_mobile": 80,
+        "size_heading": 70,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 64,
+        "icon_layout": "center",
+        "columns_desktop": "4",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "",
+        "color_background_icon": "",
+        "color_body_text": "",
+        "background_color": "",
+        "margin-top": 48,
+        "margin-bottom": 64,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "newsletter_dznx9H": {
+      "type": "newsletter",
+      "blocks": {
+        "heading_mnJyLx": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get 20% off your first order",
+            "heading_disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 100
+          }
+        },
+        "paragraph_afW3hE": {
+          "type": "paragraph",
+          "settings": {
+            "paragraph": "<p>Be the first to know about new collections and exclusive offers.</p>",
+            "text_disable_on_mobile": false
+          }
+        },
+        "email_form_gr8qVy": {
+          "type": "email_form",
+          "settings": {
+            "button_select": "primary",
+            "button_label": "",
+            "show_consent_checkbox": false,
+            "consent_checkbox_label": "<p>I want to sign up for the Newsletter (information about promotions, discounts, premieres, contests).</p>",
+            "consent_validation_message": "Please check this box to proceed."
+          }
+        }
+      },
+      "block_order": [
+        "heading_mnJyLx",
+        "paragraph_afW3hE",
+        "email_form_gr8qVy"
+      ],
+      "settings": {
+        "color-body-text": "",
+        "background_color": "#edf5f4",
+        "margin-top": 100,
+        "margin-bottom": 100,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "main",
+    "background_video_axipNV",
+    "benefits_product_fbMnEC",
+    "before_and_after_AFCUre",
+    "rich_text_JQdA3g",
+    "testimonial_marquee_HMVjcJ",
+    "image_with_text_jUtNrr",
+    "video_reels_dqWnMm",
+    "separator_LcU8ix",
+    "features_banner_4mRcTR",
+    "newsletter_dznx9H"
+  ]
+}
