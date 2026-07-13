@@ -1010,5 +1010,130 @@
       "gift_card_disabled": "بطاقة الهدايا معطلة",
       "gift_card_expired": "البطاقة هدية منتهية الصلاحية"
     }
+  },
+  "customer_accounts": {
+    "address_form": {
+      "cancel": "إلغاء",
+      "cancel_accessibility_label": "إلغاء تحرير العنوان {{address}}",
+      "creation_success_notification": "تمت إضافة العنوان",
+      "default_address": "هذا هو عنواني الافتراضي",
+      "default_address_creation_success_notification": "تمت إضافة العنوان الافتراضي",
+      "default_address_update_success_notification": "تم تحديث العنوان الافتراضي",
+      "loading_add_form_accessibility_message": "جاري تحميل نموذج العنوان الجديد",
+      "loading_edit_form_accessibility_message": "جارٍ تحميل نموذج تعديل العنوان",
+      "loading_form_accessibility_message": "تحميل نموذج العنوان",
+      "loading_finished_accessibility_message": "تم تحميل نموذج العنوان",
+      "save": "حفظ",
+      "save_accessibility_label": "حفظ العنوان {{address}}",
+      "section_title_accessibility_label": "أضف العنوان",
+      "update_success_notification": "تم تحديث العنوان"
+    },
+    "account_menu": {
+      "signed_out_state": {
+        "sheet_title": "تسجيل الدخول أو إنشاء حساب",
+        "section_divider": "طرق إضافية لتسجيل الدخول",
+        "alternate_divider": "أو",
+        "use_email_button": "استخدم البريد الإلكتروني بدلاً من ذلك",
+        "email_field_label": "بريد إلكتروني",
+        "orders_button": "الطلبات",
+        "profile_button": "الملف الشخصي",
+        "shop_login_button": "تسجيل الدخول باستخدام Shop",
+        "continue_with_google": "المتابعة باستخدام Google",
+        "continue_with_facebook": "المتابعة باستخدام فيسبوك"
+      },
+      "signed_in_state": {
+        "greeting_with_name": "مرحباً، {{first_name}}",
+        "greeting_without_name": "حساب",
+        "orders_button": "الطلبات",
+        "profile_button": "الملف الشخصي"
+      },
+      "location_picker": {
+        "sheet_title": "المواقع",
+        "search_field_placeholder": "بحث"
+      },
+      "aria_labels": {
+        "close_menu": "إغلاق القائمة",
+        "back_to_main_menu": "العودة إلى القائمة الرئيسية من {{title}}",
+        "open_submenu": "{{title}}، يفتح قائمة فرعية",
+        "loading_menu": "قائمة التحميل",
+        "account": "حساب",
+        "sign_in_with_email": "تسجيل الدخول بالبريد الإلكتروني",
+        "sign_in": "تسجيل الدخول"
+      }
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "اسم الشركة",
+        "company_card_section_accessibility_label": "شركة"
+      },
+      "locations": {
+        "contact_contact": "جهات الاتصال",
+        "contact_email": "بريد إلكتروني",
+        "contact_list_title": "الناس",
+        "contact_name": "الاسم",
+        "contact_permissions": "الأذونات",
+        "contact_phone_number": "رقم الهاتف",
+        "location_picker_label": "اسم الموقع",
+        "location_picker_accessibility_label": "اسم الموقع: {{locationName}}",
+        "net_payment_terms_description": "{{name}}: الدفعات مستحقة خلال {{numberOfDays}} يومًا",
+        "deposit_percentage": "{{percentage}} عربون",
+        "own_role_contact_name": "أنت",
+        "pagination": {
+          "load_more": "أظهر المزيد",
+          "load_more_accessibility_label": "إظهار المزيد من المواقع"
+        },
+        "payment_details_title": "تفاصيل الدفع",
+        "payment_terms": "شروط الدفع",
+        "permissions_label": "أذوناتك",
+        "permissions_title": "الأذونات",
+        "section_title": "الموقع",
+        "shipping_address_required": "أضف عنوان شحن لهذا الموقع لبدء تقديم الطلبات",
+        "staff_and_permissions_title": "الموظفون والصلاحيات",
+        "tax_details_title": "تفاصيل الضريبة",
+        "tax_id": "الرقم الضريبي",
+        "tax_exemptions": "إعفاءات ضريبية",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} أخرى",
+        "multiple_tax_exemptions_and": "و",
+        "tax_exemptions_modal_close": "إغلاق",
+        "taxes_none": "لا يوجد",
+        "tax_exemption_not_applicable": "غير متوفر",
+        "tax_exemptions_modal_button_accessibility_label": "عرض جميع الإعفاءات الضريبية"
+      },
+      "location_selection": {
+        "continue_to_store": "استمر في التخزين",
+        "description": "إذا كانت لديك سلع في سلة التسوق بالفعل، فقد يؤثر تغيير المواقع على أسعار سلة التسوق وكمياتها.",
+        "description_switch_later": "يمكنك التبديل لاحقًا في أي وقت",
+        "error_loading_locations": "حدثت مشكلة في تحميل المواقع. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.",
+        "list_accessibility_label": "قائمة المواقع",
+        "list_item_without_address_accessibility_label": "{{name}}: لا يوجد عنوان",
+        "list_loading_accessibility_message": "جارٍ تحميل قائمة المواقع",
+        "list_loading_finished_accessibility_message": "تم تحميل قائمة المواقع",
+        "loading_store_accessibility_message": "ذاهب إلى المتجر",
+        "no_location_title": "للطلبات الشخصية فقط",
+        "no_location_description": "لم يعد لديك إذن بوضع طلبات لـ {{company}}. لا يزال بإمكانك وضع طلبات شخصية.",
+        "no_locations_found": "لم يتم العثور على مواقع",
+        "search": "البحث عن المواقع",
+        "search_location_title": "حدد موقعًا",
+        "selection_cancel_button": "إلغاء",
+        "selection_confirmation_button": "اختر موقعًا",
+        "selection_continue_button": "استمر/استمروا",
+        "title": "ما هو الموقع الذي تشتري لأجله؟",
+        "title_choose_location": "اختر موقعًا",
+        "clear_search": "مسح البحث",
+        "try_new_search": "جرّب بحثًا جديدًا"
+      },
+      "addresses": {
+        "add_billing_address_button": "إضافة عنوان الفوترة",
+        "add_billing_address_section_accessibility_label": "إضافة عنوان الفوترة",
+        "add_shipping_address_button": "أضف عنوان الشحن",
+        "add_shipping_address_section_accessibility_label": "أضف عنوان الشحن",
+        "billing_address_card_title": "عنوان الفواتير",
+        "no_billing_address_banner": "لم تتم إضافة عنوان فوترة",
+        "cancel_adding_billing_address_accessibility_label": "إلغاء إضافة عنوان الفواتير",
+        "cancel_adding_shipping_address_accessibility_label": "إلغاء إضافة عنوان الشحن",
+        "save_new_billing_address_accessibility_label": "حفظ عنوان الفواتير",
+        "save_new_shipping_address_accessibility_label": "حفظ عنوان الشحن"
+      }
+    }
   }
 }
