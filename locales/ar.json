@@ -2066,7 +2066,13 @@
         "all_stores_far_away": {
           "description": "حدد موقعًا أو %{ship_to_address_link}",
           "ship_to_address_link": "الشحن إلى العنوان",
-          "change_location_link": "تغيير موقعك"
+          "change_location_link": "تغيير موقعك",
+          "title": "أقرب المواقع تبعد أكثر من %{distance}",
+          "title_with_item": {
+            "one": "أقرب موقع يتوفر به المنتج على بُعد أكثر من %{distance} من %{location}",
+            "other": "الموقع الأقرب الذي يحتوي على طلبك يبعد أكثر من %{distance} عن %{location}"
+          },
+          "title_with_specific_location": "أقرب موقع يتوفر به العنصر الذي طلبته يبعد أكثر من %{distance} عن %{location}"
         },
         "selected_pickup_option_no_longer_available": {
           "title": "موقعك الذي حددته سابقًا لم يعد متوفرًا",
@@ -2106,7 +2112,12 @@
         "search_button": "البحث عن المتاجر",
         "location_address_search_label": "العنوان",
         "cancel": "إلغاء",
-        "your_location": "موقعك"
+        "your_location": "موقعك",
+        "toggle_more_locations": {
+          "one": "موقع آخر",
+          "other": "%{count} مواقع إضافية"
+        },
+        "toggle_multiple_locations": "%{count}+ مواقع أخرى"
       },
       "split_delivery": {
         "accessibility": {
@@ -3238,20 +3249,23 @@
         "transaction_status": {
           "error": "خطأ",
           "success": "نجاح",
-          "pending": "قيد الانتظار"
+          "pending": "قيد الانتظار",
+          "failure": "فشل"
         },
         "cancel_reason": {
           "other": "أخرى",
           "declined": "تم رفض الدفع",
           "fraud": "طلب احتيالي",
           "inventory": "العناصر غير متوفرة",
-          "staff": "خطأ من الموظفين"
+          "staff": "خطأ من الموظفين",
+          "customer": "غيّر العميل الطلب/ألغاه"
         },
         "fulfillment_status": {
           "unfulfilled": "لم يتم الوفاء به",
           "fulfilled": "محققة",
           "complete": "اكتمل",
-          "partial": "جزئي"
+          "partial": "جزئي",
+          "restocked": "أعيد تخزينها"
         },
         "not_available": "هذا الطلب غير متاح",
         "cash_on_delivery": "الدفع عند الاستلام"
