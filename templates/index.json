@@ -66,7 +66,7 @@
       ],
       "name": "Color Collections",
       "settings": {
-        "title": "تسوقي حسب اللون",
+        "title": "Custom color",
         "padding_top": 20,
         "padding_bottom": 36
       }
@@ -108,8 +108,8 @@
           "settings": {
             "desktop_image": "shopify://shop_images/26f0fc425039fe480cd26fab8dc388044f281cf3.png",
             "select_icon": "bag",
-            "heading": "مصممة بأيادٍ سعودية",
-            "text": "<p>صُممت لتناسب ذوقك و احتياجك للستر والراحة</p>",
+            "heading": "Designed by Saudi hands",
+            "text": "<p>Designed to suit your taste and your need for modesty and comfort.</p>",
             "link": ""
           }
         },
@@ -118,8 +118,8 @@
           "settings": {
             "desktop_image": "shopify://shop_images/a06015d099906c5e282efbdc38dba66ead81a213.png",
             "select_icon": "bag",
-            "heading": "خامات مرنة للدوام الطويل",
-            "text": "<p>أقمشة ناعمة ومريحة تتحمل ساعات العمل الطويلة</p>",
+            "heading": "Durable, flexible materials",
+            "text": "<p>Soft, comfortable fabrics that withstand long hours of work.</p>",
             "link": ""
           }
         },
@@ -128,8 +128,8 @@
           "settings": {
             "desktop_image": "shopify://shop_images/3127a580a116077752ff77516bdd7d5f308ca22b.png",
             "select_icon": "bag",
-            "heading": "قَصّات ساترة وفضفاضة",
-            "text": "<p>قصّات فضفاضة تمنحك راحة وثقة طوال اليوم<br/></p>",
+            "heading": "Modest, loose-fitting cuts",
+            "text": "<p>Loose cuts that offer you comfort and confidence all day long.</p>",
             "link": ""
           }
         },
@@ -138,8 +138,8 @@
           "settings": {
             "desktop_image": "shopify://shop_images/8a24a7b77ae4aa5f7437c938c3e544df63a5d049.png",
             "select_icon": "bag",
-            "heading": "شحن مجاني فوق 450 ريال",
-            "text": "<p>قصّات فضفاضة تمنحك راحة وثقة طوال اليوم<br/></p>",
+            "heading": "Free shipping on orders over 450 Riyals.",
+            "text": "<p>Free shipping on orders over 450 Riyals.</p>",
             "link": ""
           }
         }
@@ -180,7 +180,7 @@
           "type": "image",
           "settings": {
             "desktop_image": "shopify://shop_images/9b59d1e66f880611c9d7fba2d0462c29fcd6cc53.png",
-            "heading_image": "جاكيتات سكراب",
+            "heading_image": "Free shipping",
             "button_select": "primary",
             "link": ""
           }
@@ -189,7 +189,7 @@
           "type": "image",
           "settings": {
             "desktop_image": "shopify://shop_images/829d3b52de5c2df1ee2c5c5aebfd2a34f6f3d92f.png",
-            "heading_image": "بنطلونات سكراب",
+            "heading_image": "Free shipping",
             "button_select": "primary",
             "link": ""
           }
@@ -198,7 +198,7 @@
           "type": "image",
           "settings": {
             "desktop_image": "shopify://shop_images/69c1bd89854ef992978849085563d85ce1c85c02.png",
-            "heading_image": "توبات ساترة",
+            "heading_image": "Free shipping",
             "button_select": "primary",
             "link": ""
           }
@@ -207,7 +207,7 @@
           "type": "image",
           "settings": {
             "desktop_image": "shopify://shop_images/c660dd998d5d7d98d31a32ef27673fd0f430a2e4.png",
-            "heading_image": "أطقم واسعة",
+            "heading_image": "Free shipping",
             "button_select": "primary",
             "link": ""
           }
@@ -222,7 +222,7 @@
       "name": "t:sections.lookbook.presets.name",
       "settings": {
         "advanced_heading": false,
-        "heading": "كل ما تحتاجينه للدوام",
+        "heading": "Free shipping on orders over 450 Riyals.",
         "heading_richtext": "<h2>Lookbook</h2>",
         "heading_alignment": "right",
         "show_icons": true,
@@ -328,7 +328,7 @@
           "type": "heading",
           "settings": {
             "advanced_heading": false,
-            "heading": "تعرفي أكثر على فلسفتنا في الراحة والأناقة اليومية",
+            "heading": "Free shipping on orders over 450 Riyals.",
             "heading_richtext": "<h2>Your headline here</h2>",
             "disable_on_mobile": false,
             "size_heading": 200,
@@ -340,7 +340,7 @@
         "text_jJKi98": {
           "type": "text",
           "settings": {
-            "text": "<p>نصمم سكرابات بخامات مختارة بعناية وتفاصيل عملية تمنحك إحساسًا بالراحة والثقة والأناقة في كل لحظة من دوامك، لتعيشي تجربة تجمع بين الستر، النعومة، والجودة، بتصميم واسع يناسب طوال يومك ويخليك مرتاحة وواثقة وين ما كنتِ</p>",
+            "text": "<p>We design scrubs using carefully selected fabrics and practical details that give you a sense of comfort, confidence, and elegance throughout your shift. Experience a blend of modest coverage, softness, and quality, with a relaxed fit designed to keep you comfortable and confident all day long, wherever you are.</p>",
             "text_style": "body",
             "disable_on_mobile": false
           }
@@ -349,7 +349,7 @@
           "type": "button",
           "settings": {
             "button_select": "primary",
-            "button_label": "ماذا عنا",
+            "button_label": "About Us",
             "button_link": "/",
             "disable_on_mobile": false,
             "second_button_select": "primary",
@@ -393,15 +393,15 @@
         "stack_content_mobile": true,
         "mobile_content_bg": "#ffffff",
         "mobile_content_color": "#121212",
-        "main_title": "ألوان معتمدة تناسب القطاع الصحي السعودي",
+        "main_title": "About Us",
         "subtitle_full_width": false,
-        "sub_title": "تشكيلة ألوان مهنية متوافقة مع اعتماد الصحة القابضة، لتمنحكِ مظهرًا موحّدًا وأنيقًا طوال اليوم.",
+        "sub_title": "About Us",
         "remove_btn_background": true,
         "heading_scale_desktop": 28,
         "sub_heading_scale_desktop": 24,
         "heading_scale_mobile": 20,
         "sub_heading_scale_mobile": 14,
-        "btn_text": "اكتشفي الآن",
+        "btn_text": "About Us",
         "btn_url": "shopify://collections/كحلي",
         "text_alignment": "flex-end",
         "mobile_vertical_alignment": "center",
@@ -421,10 +421,10 @@
         "feature_image": "shopify://shop_images/1692d522534e23d43d7a0191df3ce3bfea848236-removebg-preview.png",
         "text_alignment": "right",
         "show_title": true,
-        "title": "تسوقي الأطقم الكاملة",
+        "title": "Discover loose-fittin",
         "show_description": true,
         "highlight_first_words": true,
-        "description": "<p>اكتشفي أطقم سكراب واسعة وساترة، بتصاميم عملية وخامات مريحة تمنحك مظهرًا مهنيًا طوال ساعات الدوام.</p>",
+        "description": "<p>Discover loose-fitting, modest scrub sets featuring practical designs and comfortable fabrics that give you a professional look throughout your shift.</p>",
         "Preview": "3",
         "image_ratio": "portrait",
         "show_vendor": false,
@@ -442,33 +442,45 @@
           "type": "image",
           "settings": {
             "icon_select": "100",
-            "heading": "راحة لا مثيل لها",
-            "text": "<p>“الصراحة ما توقعت يكون مريح لهالدرجة، خصوصًا إني جربت كثير قبل وما ارتحت فيها. لكن هذا أول سكراب أحسه مرتب وعملي فعلًا، وحتى بعد ساعات الدوام الطويلة ما حسيت إنه ضايقني.”</p>",
-            "author": "د.منار حامد",
+            "heading": "Dr. Manar Hamed",
+            "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
+            "author": "Dr. Manar Hamed",
             "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
         },
-        "image_AQxXcQ": {
+        "image_8PwHgF": {
           "type": "image",
           "settings": {
             "icon_select": "100",
-            "heading": "مقاسات مناسبة للكل",
-            "text": "<p>“كنت محتارة بالمقاس بالبداية وخايفة يطلع ضيق أو قصير، لكن يوم لبسته انبسطت جدًا من التناسب والخامة. حسيت إنه معمول فعلًا للبنات اللي دوامهم طويل”</p>",
-            "author": "د.علا أحمد",
+            "heading": "Dr. Manar Hamed",
+            "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
+            "author": "Dr. Manar Hamed",
             "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
         },
-        "image_tRtexi": {
+        "image_enAA6b": {
           "type": "image",
           "settings": {
             "icon_select": "100",
-            "heading": "خامة تتحمل يومك الطويل",
-            "text": "<p>“أكثر شيء شدّني فيه إن شكله مرتب بدون ما يكون رسمي زيادة أو متعب باللبس. الخامة خفيفة والحركة فيه سهلة جدًا، وفعليًا فرق معي كثير خصوصًا بعد ساعات الدوام الطويلة.”</p>",
-            "author": "د.سلمى القحطاني",
+            "heading": "Dr. Manar Hamed",
+            "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
+            "author": "Dr. Manar Hamed",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_LVji7Q": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Dr. Manar Hamed",
+            "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
+            "author": "Dr. Manar Hamed",
             "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
@@ -477,8 +489,9 @@
       },
       "block_order": [
         "image_epCTzj",
-        "image_AQxXcQ",
-        "image_tRtexi"
+        "image_8PwHgF",
+        "image_enAA6b",
+        "image_LVji7Q"
       ],
       "name": "Testimonial: Marquee",
       "settings": {
@@ -567,7 +580,7 @@
           "type": "image",
           "settings": {
             "show_bottom": true,
-            "subheading_bottom": "تهوية ذكية, تمنحك الانتعاش",
+            "subheading_bottom": "Smart ventilation that keeps you refreshed.",
             "logo": "shopify://shop_images/image_314.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
@@ -603,7 +616,7 @@
           "type": "image",
           "settings": {
             "show_bottom": true,
-            "subheading_bottom": "لا تصفط, يظل مرتبا",
+            "subheading_bottom": "Smart ventilation that keeps you refreshed.",
             "logo": "shopify://shop_images/Vector.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
@@ -638,7 +651,7 @@
           "type": "image",
           "settings": {
             "show_bottom": true,
-            "subheading_bottom": "مرونة تتحرك معك",
+            "subheading_bottom": "Smart ventilation that keeps you refreshed.",
             "logo": "shopify://shop_images/image_316.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
@@ -674,7 +687,7 @@
           "type": "image",
           "settings": {
             "show_bottom": true,
-            "subheading_bottom": "تغطية تمنحك ثقة",
+            "subheading_bottom": "Smart ventilation that keeps you refreshed.",
             "logo": "shopify://shop_images/image_318.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
@@ -716,7 +729,7 @@
       "name": "t:sections.grid-view.settings.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "راحة محسوبة في كل تفصيلة",
+        "title": "Dr. Manar Hamed",
         "heading_richtext": "<h2>Grid view</h2>",
         "swipe_on_mobile": false,
         "full-width-enabled": false,
@@ -781,7 +794,7 @@
       "name": "t:sections.marquee_images.name",
       "settings": {
         "advanced_heading": false,
-        "heading": "السكراب كما سترتدينه",
+        "heading": "The scrubs, just as you'll wear them.",
         "heading_richtext": "<h2>Marquee images</h2>",
         "animation_direction": "right",
         "animation_speed": "100",
