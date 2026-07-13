@@ -919,7 +919,8 @@
         "contact_us_lowercase": "اتصل بنا",
         "let_us_know": "أعلمنا",
         "fulfillment": {
-          "description_label": "الوصف"
+          "description_label": "الوصف",
+          "product_image_label": "صورة المنتج"
         },
         "missing_shipping_address_banner": {
           "contact_us": "اتصل بنا"
@@ -938,7 +939,10 @@
           "title": "فواتير ضريبة القيمة المضافة"
         },
         "login": "تسجيل الدخول",
-        "order_updates_submit_subscription": "إرسال"
+        "order_updates_submit_subscription": "إرسال",
+        "failure": "لم يتم التسليم",
+        "track_shipment": "تتبع الشحنة",
+        "other_options": "خيارات أخرى"
       },
       "order_summary": {
         "apply_discount_button_label": "تقديم",
@@ -1137,7 +1141,8 @@
         "settlement_currency_note_wallet": "يقوم %{shop_name} بمعالجة الدفعات بالعملة %{processing_currency}. لقد تسوّقت بالعملة %{original_currency} ودفعت باستخدام %{wallet} باليوان الصيني. تحقق من تطبيق %{wallet_app} الخاص بك للاطلاع على المبلغ النهائي.",
         "settlement_currency_note_wallet_no_conversion": "لقد دفعت باستخدام %{wallet} باليوان الصيني. تحقق من تطبيق %{wallet_app} الخاص بك للاطلاع على المبلغ النهائي.",
         "discount_order_stacking": {
-          "other": "خصومات الطلبات"
+          "other": "خصومات الطلبات",
+          "one": "خصم على الطلب"
         },
         "from_shop_heading": "من %{shop_name}",
         "from_other_stores_heading": "من متاجر أخرى",
@@ -1147,7 +1152,8 @@
         "gift_card_applied": "تم تطبيق بطاقة الهدايا",
         "title": "ملخص الطلب",
         "number_items": {
-          "one": "%{count} بند"
+          "one": "%{count} بند",
+          "other": "%{count} بند"
         },
         "more_items_modal": {
           "clear_search": "مسح البحث",
@@ -1273,7 +1279,8 @@
         "credit_card_name_invalid": "أدخل اسمك تمامًا كما هو مكتوب على بطاقتك",
         "credit_card_name_billing_invalid": "أدخل اسمك في عنوان الفاتورة أولاً",
         "credit_card_number_invalid": "أدخل رقم بطاقة صحيحًا",
-        "credit_card_expiry_invalid": "أدخل تاريخ انتهاء صلاحية صالح"
+        "credit_card_expiry_invalid": "أدخل تاريخ انتهاء صلاحية صالح",
+        "email_blank": "أدخل بريدًا إلكترونيًا"
       },
       "vaulted": {
         "change_button": "تغيير"
@@ -1521,7 +1528,11 @@
         "delete": "حذف",
         "split_shipping_shipping_label": "الأسلوب",
         "split_shipping_option_fastest": "الأسرع",
-        "split_shipping_option_custom": "مخصص"
+        "split_shipping_option_custom": "مخصص",
+        "local_delivery": "توصيل محلي",
+        "address_update": "تحديث العنوان",
+        "address_delete": "حذف العنوان",
+        "address_default": "تعيين كإعداد افتراضي"
       },
       "payment": {
         "add_credit_card_modal": {
@@ -1818,7 +1829,8 @@
         "title": "الدفع",
         "credit_card_vaulting_sign_in_banner_button_label": "تسجيل الدخول",
         "grabpay_label": "غراب باي",
-        "alipay_label": "أليباي"
+        "alipay_label": "أليباي",
+        "gift_card_code_label": "رمز بطاقة الهدايا"
       },
       "local_pickup": {
         "all_stores_far_away": {
@@ -1863,7 +1875,8 @@
         "no_stores_found": "لم يتم العثور على أي متاجر",
         "search_button": "البحث عن المتاجر",
         "location_address_search_label": "العنوان",
-        "cancel": "إلغاء"
+        "cancel": "إلغاء",
+        "your_location": "موقعك"
       },
       "split_delivery": {
         "accessibility": {
@@ -2228,7 +2241,11 @@
         "autocomplete_close": "إغلاق الاقتراحات",
         "continue_to_review": "مراجعة الطلب",
         "pay_now_button_label": "ادفع الآن",
-        "qr_code": "رمز الاستجابة السريعة"
+        "qr_code": "رمز الاستجابة السريعة",
+        "skip_to_content": "تجاوز إلى المحتوى",
+        "complete_purchase_button_label": "اكتمل الطلب",
+        "finalize_order_accessibility_label": "تأكيد الطلب",
+        "back_to_cart": "العودة إلى عربة التسوق"
       },
       "failed_payment": {
         "payment_not_processed_title": "تعذر إتمام عملية الدفع الخاصة بك",
@@ -2339,7 +2356,10 @@
         "postal_code_placeholder": "الرمز البريدي",
         "phone_rollup_accessibility_label": "خيارات الهاتف",
         "emirate_label": "إمارة",
-        "emirate_placeholder": "إمارة"
+        "emirate_placeholder": "إمارة",
+        "state_and_territory_label": "الولاية/الإقليم",
+        "state_and_territory_placeholder": "الولاية/الإقليم",
+        "change_location_link_label": "تغيير الموقع"
       },
       "delivery_options": {
         "free_total_label": "مجاني",
@@ -2348,7 +2368,11 @@
         "pick_up_locations": "مواقع الالتقاء",
         "pickup_point_map_title": "خريطة نقطة الاستلام",
         "none_method_definition": "لا يوجد شحن",
-        "pick_up": "التقاط"
+        "pick_up": "التقاط",
+        "ship_to_address": "عنوان الشحن",
+        "pick_up_from_store": "الاستلام من المتجر",
+        "retail_method_definition": "شحن التجزئة",
+        "digital_product": "منتج رقمي"
       },
       "stock": {
         "price_column_header": "السعر",
@@ -2374,7 +2398,16 @@
         },
         "status_column_header": "الحالة",
         "reduced_label": "مُخفَّض",
-        "remove": "إزالة"
+        "remove": "إزالة",
+        "return_to_store_label": "العودة إلى المتجر",
+        "item_label": {
+          "one": "{{count}} عنصر",
+          "other": "{{count}} عناصر"
+        },
+        "quantity_update": {
+          "page_title": "تحديث الكمية",
+          "title": "تحديث الكمية"
+        }
       },
       "localized_fields": {
         "additional_information": {
@@ -2399,7 +2432,9 @@
           "tax_credential_pt": "الرقم الضريبي/رقم تعريف دافع الضريبة (NIF/IVA)",
           "shipping_credential_pt": "الرقم الضريبي/رقم تعريف دافع الضريبة (NIF/IVA)",
           "tax_credential_es": "وثيقة الهوية الوطنية/رقم تعريف دافع الضرائب",
-          "shipping_credential_es": "وثيقة الهوية الوطنية/رقم تعريف دافع الضرائب"
+          "shipping_credential_es": "وثيقة الهوية الوطنية/رقم تعريف دافع الضرائب",
+          "tax_email_it": "PEC (اختياري)",
+          "tax_credential_type_mx": "النظام الضريبي"
         }
       },
       "alternative_payment_method_banner": {
@@ -2429,17 +2464,20 @@
       "subscriptions": {
         "recurring_total_intervals": {
           "day": {
-            "one": "يوم"
+            "one": "يوم",
+            "other": "%{count} أيام"
           },
           "week": {
-            "one": "أسبوع"
+            "one": "أسبوع",
+            "other": "%{count} أسابيع"
           },
           "month": {
             "one": "شهر",
             "other": "%{count} أشهر"
           },
           "year": {
-            "one": "عام"
+            "one": "عام",
+            "other": "%{count} سنوات"
           }
         }
       },
@@ -2447,6 +2485,11 @@
         "title": "طابور",
         "too_many_attempts": {
           "message": "محاولات كثيرة جداً"
+        },
+        "inventory": {
+          "sold_out": {
+            "link": "العودة إلى المتجر"
+          }
         }
       },
       "pickup_point": {
@@ -2460,7 +2503,11 @@
         "title": "نقطة الاستلام",
         "location_is_currently_closed": "مغلق",
         "search_button": "بحث",
-        "address_label": "العنوان"
+        "address_label": "العنوان",
+        "business_hours": "ساعات العمل",
+        "paginator": {
+          "previous_accessibility_label": "الصفحة السابقة"
+        }
       },
       "notice_banner": {
         "all_violations_email_link": "بريد إلكتروني",
@@ -2480,7 +2527,8 @@
             "payment": "الدفع",
             "billing": "الفواتير"
           }
-        }
+        },
+        "return_to_cart_link_text": "العودة إلى عربة التسوق"
       },
       "units": {
         "milligram": "ملغم",
@@ -2507,7 +2555,8 @@
         "have_an_account_label": "هل لديك حساب؟",
         "not_user_label": "ألست %{first_name}؟",
         "sign_in_link_label": "تسجيل الدخول",
-        "rollup_label": "حساب"
+        "rollup_label": "حساب",
+        "rollup_accessibility_label": "خيارات الحساب"
       },
       "processing": {
         "page_title": "جاري معالجة الطلب",
@@ -2550,6 +2599,23 @@
         "legal_notice": {
           "legal_text": "مراجعة"
         }
+      },
+      "remote_merchandise_only": {
+        "return_to_store_label": "العودة إلى المتجر",
+        "detail_item_label": {
+          "one": "{{count}} عنصر",
+          "other": "{{count}} عناصر"
+        }
+      },
+      "review_address_modal": {
+        "title": "عنوان المراجعة",
+        "return_to_cart": "العودة إلى عربة التسوق"
+      },
+      "offsite_payment_failed": {
+        "payment_not_processed_title": "فشلت عملية الدفع"
+      },
+      "too_many_requests": {
+        "return_to_cart": "العودة إلى عربة التسوق"
       }
     },
     "pagination": {
@@ -2748,7 +2814,8 @@
         "generic_error": "خطأ في سلة التسوق",
         "cart_too_large": "السلة كبيرة جدًا.",
         "link_expired": "الرابط منتهي الصلاحية",
-        "changed": "تم تغيير سلة التسوق"
+        "changed": "تم تغيير سلة التسوق",
+        "not_found": "العربة غير موجودة"
       },
       "tags": {
         "remove_products": "إزالة العلامة %{tag}"
@@ -2787,7 +2854,11 @@
       "checkpoint": "نقطة تفتيش",
       "shopping_cart": "عربة التسوق الخاصة بك",
       "collections": "المجموعات",
-      "search": "بحث"
+      "search": "بحث",
+      "create_account": "إنشاء حساب",
+      "reset_account": "إعادة تعيين الحساب",
+      "order": "اطلب %{name}",
+      "not_found": "404 غير موجود"
     },
     "search": {
       "sorting": {
@@ -3437,7 +3508,8 @@
             "adjustment": "تعديل",
             "payment_returned": "تم إرجاع الدفعة",
             "tax_finalization": "تسوية ضريبية",
-            "order_refund": "استرداد طلب"
+            "order_refund": "استرداد طلب",
+            "order_payment": "الدفع مقابل الطلب"
           },
           "pagination": {
             "load_more_label": "أظهر المزيد"
@@ -3456,7 +3528,11 @@
         "display_name": "الحساب المصرفي"
       },
       "credit_card_title": "بطاقة ائتمان",
-      "delete_payment_method_button": "حذف"
+      "delete_payment_method_button": "حذف",
+      "digital_wallet_title": "المحفظة الرقمية",
+      "pay_pal": {
+        "loading_accessibility_message": "جارٍ تحميل PayPal"
+      }
     },
     "payment_method_brands": {
       "visa": "تأشيرة",
@@ -3521,6 +3597,9 @@
       },
       "load_orders_error": {
         "retry_button": "إعادة المحاولة"
+      },
+      "resend_link": {
+        "generic": "طلب فاشل"
       }
     },
     "navigation_and_structure": {
@@ -3547,7 +3626,10 @@
         "cancel": "إلغاء",
         "delete": "حذف"
       },
-      "search": "بحث"
+      "search": "بحث",
+      "subscriptions_link_label": "الاشتراكات",
+      "logout_overlay_label": "تسجيل الخروج...",
+      "switch_country": "تغيير البلد"
     },
     "account_information": {
       "profile_card": {
@@ -3558,7 +3640,8 @@
         "edit_accessibility_label": "تعديل الملف الشخصي",
         "save_accessibility_label": "حفظ الملف الشخصي",
         "cancel": "إلغاء",
-        "email": "بريد إلكتروني"
+        "email": "بريد إلكتروني",
+        "no_name_provided_accessibility_label": "لم يتم إضافة اسم"
       },
       "verify_current_email_modal": {
         "verify_button": "التالي",
@@ -3570,7 +3653,8 @@
       "people": {
         "pagination": {
           "load_more_accessibility_label": "أظهر المزيد من الأشخاص",
-          "load_more": "أظهر المزيد"
+          "load_more": "أظهر المزيد",
+          "loading_accessibility_label": "جارٍ تحميل الأشخاص"
         }
       },
       "marketing_preferences": {
@@ -3613,27 +3697,35 @@
             "due_today": "مستحق اليوم",
             "due_on_fulfillment": "مستحق عند الاستيفاء",
             "due": "تاريخ الاستحقاق {{date}}",
-            "payment_not_due": "ليس بعد استحقاقه"
+            "payment_not_due": "ليس بعد استحقاقه",
+            "pay_to_confirm": "ادفع للتأكيد"
           },
           "gallery_view": {
             "overdue": "الدفع متأخر",
             "due_today": "تاريخ الاستحقاق للدفع اليوم",
-            "due_without_date": "الدفع مستحق"
+            "due_without_date": "الدفع مستحق",
+            "pay_to_confirm": "ادفع للتأكيد"
           }
         },
         "sort_title": "فرز",
         "items": {
-          "other": "{{count}} عناصر"
+          "other": "{{count}} عناصر",
+          "one": "{{count}} عنصر"
         },
         "sort": {
           "date": {
             "newest": "الأحدث للأقدم",
             "oldest": "من الأقدم إلى الأحدث"
+          },
+          "location": {
+            "ascending": "الموقع (أ-ي)",
+            "descending": "الموقع (تنازلي)"
           }
         },
         "location_filter_picker": {
           "current_location": "الموقع الحالي",
-          "switch_view": "تبديل طريقة العرض"
+          "switch_view": "تبديل طريقة العرض",
+          "all_location": "كافة المواقع"
         },
         "orders_title": "تم التأكيد",
         "filter": {
@@ -3645,9 +3737,11 @@
             "last_30_days": "آخر 30 يومًا",
             "last_90_days": "آخر 90 يومًا",
             "today": "اليوم",
-            "custom": "مخصص"
+            "custom": "مخصص",
+            "last_365_days": "آخر 12 شهرًا"
           },
-          "apply": "تقديم"
+          "apply": "تقديم",
+          "clear_section": "مسح المقطع"
         },
         "view_order": "عرض الطلب",
         "delivered": "تم التسليم {{date}}",
@@ -3662,7 +3756,11 @@
           "order": "أمر",
           "total": "الإجمالي"
         },
-        "filter_title": "عامل تصفية"
+        "filter_title": "عامل تصفية",
+        "empty_state_redesign_subtitle": "هل أنت مستعد للتسوق؟",
+        "empty_state_title": "لا توجد طلبات بعد",
+        "estimated_shortform": "تأسست عام {{date}}",
+        "order_number": "اطلب {{name}}"
       },
       "list_title_pending_orders_accessibility_label": "الطلبات: معلقة",
       "order_status": {
@@ -3726,16 +3824,25 @@
           "details_modal": {
             "title": "التسليم مدعوم بـ",
             "delivery_guarantee_label": "ضمان التوصيل"
+          },
+          "claim_shop_cash_cta": {
+            "download_shop_app_label": "تنزيل المتجر"
           }
         },
         "arrives": "تصل {{date}}",
-        "predicted_by_shop": "توقعه شوب"
+        "predicted_by_shop": "توقعه شوب",
+        "track_shipment": "تتبع الشحنة",
+        "request_return": "طلب إرجاع",
+        "delivery_exception_failed_title": "لم يتم التسليم",
+        "delivery_exception_returning_to_sender_title": "لم يتم التسليم",
+        "delivery_exception_shop_promise_delivered_late_title": "تم التسليم متأخرًا"
       },
       "buy_again": "اشترِ مرة أخرى",
       "list_title_confirmed_orders_accessibility_label": "الطلبات: مؤكدة",
       "status_mark_as_delivered": "تم التسليم",
       "list_title": "الطلبات",
-      "manage": "إدارة"
+      "manage": "إدارة",
+      "list_layout_accessibility_label": "خيارات التخطيط"
     },
     "order_details": {
       "view_controls": {
@@ -3761,7 +3868,8 @@
           "manual": "دليل"
         },
         "shop_pay_installments": {
-          "summary": "أقساط المتجر"
+          "summary": "أقساط المتجر",
+          "view_schedule": "عرض الجدول الزمني"
         }
       },
       "shipping": {
@@ -3770,7 +3878,8 @@
         "address": "عنوان الشحن",
         "address_map_marker": "عنوان الشحن",
         "one_time": "شحن لمرة واحدة",
-        "method_short": "الأسلوب"
+        "method_short": "الأسلوب",
+        "free_shipping_discount": "شحن مجاني"
       },
       "tip": "نصيحة",
       "vat_invoices": {
@@ -3779,7 +3888,8 @@
       },
       "billing_address": "عنوان الفواتير",
       "discount_order_stacking": {
-        "other": "خصومات الطلبات"
+        "other": "خصومات الطلبات",
+        "one": "خصم على الطلب"
       },
       "image_gallery": {
         "next": "عرض العناصر التالية"
@@ -3792,10 +3902,12 @@
       },
       "pagination": {
         "load_more_accessibility_label": "إظهار المزيد من العناصر",
-        "load_more": "أظهر المزيد"
+        "load_more": "أظهر المزيد",
+        "loading_accessibility_label": "جارٍ تحميل العناصر"
       },
       "fees": {
-        "return_shipping_fee": "إرجاع الشحنة"
+        "return_shipping_fee": "إرجاع الشحنة",
+        "restocking_fee": "رسوم إعادة تخزين"
       },
       "hide_items": "إخفاء العناصر",
       "remaining_amount": "المتبقي",
@@ -3809,7 +3921,9 @@
       "returns": {
         "tracking_number": "رقم التتبع:",
         "expand_events_label": "عرض التفاصيل",
-        "hide_events_label": "إخفاء التفاصيل"
+        "hide_events_label": "إخفاء التفاصيل",
+        "return_and_refund_modal_header": "سياسة الاسترجاع",
+        "exchange_header": "تبادل العناصر"
       },
       "adjusted_payment": "دفعة معدلة",
       "shipment_timeline": {
@@ -3817,7 +3931,8 @@
         "hide_events_label": "إخفاء التفاصيل"
       },
       "login_card": {
-        "link_expired": "الرابط منتهي الصلاحية"
+        "link_expired": "الرابط منتهي الصلاحية",
+        "resend_link": "أرسل رابطًا جديدًا"
       },
       "marketing_resend_email": "أعد إرسال البريد الإلكتروني",
       "summary_list_title_accessibility_label": "اطلب عناصر",
@@ -3829,7 +3944,15 @@
       },
       "taxes": "الضرائب",
       "duties": "الواجبات",
-      "total": "الإجمالي"
+      "total": "الإجمالي",
+      "order_details": "تفاصيل الطلب",
+      "price_before_discount_accessibility_label": "السعر الأصلي",
+      "total_savings": "إجمالي المدخرات",
+      "summary_title": "ملخص الطلب",
+      "title": "اطلب {{name}}",
+      "cash_rounding": "تقريب نقدي",
+      "adjusted_total": "المجموع المعدّل",
+      "due_on_receipt": "تستحق الدفع فور الاستلام"
     },
     "addresses": {
       "add_button_text": "أضِف",
@@ -3856,7 +3979,8 @@
       },
       "save_new_address_accessibility_label": "حفظ العنوان",
       "cancel_deletion_button": "إلغاء",
-      "delete_button": "حذف"
+      "delete_button": "حذف",
+      "delete_confirmation_button": "حذف العنوان"
     },
     "date": {
       "humanize": {
