@@ -3919,21 +3919,39 @@
         "description": "حدثت مشكلة أثناء تحديث عنوانك. حاول تحديث هذه الصفحة أو تحقق من اتصالك بالإنترنت."
       },
       "order_not_found": {
-        "title": "الطلب غير موجود"
+        "title": "الطلب غير موجود",
+        "description": "هذا الطلب غير موجود أو ليس لديك صلاحية لعرضه."
       },
       "retry_action_label": "حاول مرة أخرى",
       "load_address_form_error": {
-        "refresh_button": "تحديث الصفحة"
+        "refresh_button": "تحديث الصفحة",
+        "title": "تعذر تحميل نموذج العنوان",
+        "description": "تعذر تحميل نموذج العنوان."
       },
       "load_extension_error": {
         "refresh_button": "تحديث الصفحة",
         "title": "خطأ"
       },
       "load_orders_error": {
-        "retry_button": "إعادة المحاولة"
+        "retry_button": "إعادة المحاولة",
+        "title": "تعذر تحميل الطلبات",
+        "description": "أعد المحاولة أو عُد لاحقاً."
       },
       "resend_link": {
         "generic": "طلب فاشل"
+      },
+      "load_paypal_error": {
+        "description": "حدثت مشكلة في تحميل PayPal. يرجى إعادة المحاولة."
+      },
+      "logout_everywhere": {
+        "description": "حدث خطأ أثناء تسجيل الخروج. يُرجى المحاولة مرة أخرى."
+      },
+      "no_access_to_locations": {
+        "description": "لا تملك صلاحية الوصول إلى أي مواقع."
+      },
+      "not_found": {
+        "description": "تحقق من عنوان URL أو حاول مرة أخرى خلال بضع دقائق.",
+        "title": "حدثت مشكلة أثناء تحميل هذه الصفحة"
       }
     },
     "navigation_and_structure": {
