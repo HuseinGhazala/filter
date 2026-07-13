@@ -4032,13 +4032,16 @@
             "due_on_fulfillment": "مستحق عند الاستيفاء",
             "due": "تاريخ الاستحقاق {{date}}",
             "payment_not_due": "ليس بعد استحقاقه",
-            "pay_to_confirm": "ادفع للتأكيد"
+            "pay_to_confirm": "ادفع للتأكيد",
+            "overdue": "متأخر"
           },
           "gallery_view": {
             "overdue": "الدفع متأخر",
             "due_today": "تاريخ الاستحقاق للدفع اليوم",
             "due_without_date": "الدفع مستحق",
-            "pay_to_confirm": "ادفع للتأكيد"
+            "pay_to_confirm": "ادفع للتأكيد",
+            "due_on_fulfillment": "الدفع مستحق عند الإنجاز",
+            "payment_not_due": "الدفع غير مستحق بعد"
           }
         },
         "sort_title": "فرز",
@@ -4054,6 +4057,14 @@
           "location": {
             "ascending": "الموقع (أ-ي)",
             "descending": "الموقع (تنازلي)"
+          },
+          "order_number": {
+            "ascending": "رقم الطلب (من الأدنى للأعلى)",
+            "descending": "رقم الطلب (من الأعلى إلى الأقل)"
+          },
+          "order_total": {
+            "ascending": "إجمالي الطلب (من الأدنى للأعلى)",
+            "descending": "إجمالي الطلب (من الأعلى إلى الأقل)"
           }
         },
         "location_filter_picker": {
@@ -4072,10 +4083,12 @@
             "last_90_days": "آخر 90 يومًا",
             "today": "اليوم",
             "custom": "مخصص",
-            "last_365_days": "آخر 12 شهرًا"
+            "last_365_days": "آخر 12 شهرًا",
+            "end_date": "تاريخ الانتهاء"
           },
           "apply": "تقديم",
-          "clear_section": "مسح المقطع"
+          "clear_section": "مسح المقطع",
+          "date_section_accessibility_label": "تصفية حسب {{sectionTitle}}"
         },
         "view_order": "عرض الطلب",
         "delivered": "تم التسليم {{date}}",
@@ -4094,7 +4107,14 @@
         "empty_state_redesign_subtitle": "هل أنت مستعد للتسوق؟",
         "empty_state_title": "لا توجد طلبات بعد",
         "estimated_shortform": "تأسست عام {{date}}",
-        "order_number": "اطلب {{name}}"
+        "order_number": "اطلب {{name}}",
+        "sort_by": "الترتيب حسب: {{option}}",
+        "sort_options_accessibility_label": "خيارات الفرز للطلبات المؤكدة",
+        "sort_hide_options_accessibility_label": "إخفاء خيارات الفرز للأوامر المؤكدة.",
+        "sort_show_options_accessibility_label": "إظهار خيارات الفرز للطلبات المؤكدة.",
+        "sort_currently_sorted_by_accessibility_label": "مرتب حاليًا حسب: {{option}}",
+        "show_order_actions_accessibility_label": "عرض إجراءات الطلب للطلب {{name}}",
+        "view_order_accessibility_label": "عرض الطلب {{orderName}}"
       },
       "list_title_pending_orders_accessibility_label": "الطلبات: معلقة",
       "order_status": {
@@ -4169,7 +4189,50 @@
         "request_return": "طلب إرجاع",
         "delivery_exception_failed_title": "لم يتم التسليم",
         "delivery_exception_returning_to_sender_title": "لم يتم التسليم",
-        "delivery_exception_shop_promise_delivered_late_title": "تم التسليم متأخرًا"
+        "delivery_exception_shop_promise_delivered_late_title": "تم التسليم متأخرًا",
+        "attempted_to_deliver_label": "حاول التسليم",
+        "preparing_for_shipping_label": "جارٍ التحضير للشحن",
+        "ready_for_pickup_description": "هذه العناصر جاهزة للاستلام. يرجى إحضار تأكيد الطلب عند الاستلام.",
+        "ready_for_pickup_location": "طلبك جاهز للاستلام من الموقع",
+        "canceled_label": "ملغي",
+        "canceled_title": "تم إلغاء طلبك",
+        "come_back": "ارجع إلى هذه الصفحة للحصول على تحديثات حول حالة شحنتك.",
+        "company_tracking_number": "{{company}} رقم التتبع:",
+        "confirmed_title": "تم تأكيد طلبك",
+        "confirmed_description_pickup": "نحن نجهز هذه المنتجات للاستلام.",
+        "confirmed_description_shipping": "نحن نجهز هذه المواد للشحن.",
+        "confirmed_description_digital": "ستتلقى بريدًا إلكترونيًا عندما يصبح طلبك جاهزًا.",
+        "confirmed_description_gift_card_text": "ستتلقى رسالة نصية عندما يصبح طلبك جاهزًا.",
+        "complete_label": "اكتمل",
+        "delivered_description_gift_card": {
+          "one": "تم إرسال بطاقة الهدايا بالبريد الإلكتروني.",
+          "other": "أرسلت بطاقات الهدايا عبر البريد الإلكتروني."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "تم إرسال بطاقة الهدايا عبر رسالة نصية.",
+          "other": "تم إرسال بطاقات الهدايا عبر الرسائل النصية."
+        },
+        "gift_resend_failure": {
+          "one": "حدثت مشكلة في إعادة إرسال بطاقة الهدية الخاصة بك. يُرجى المحاولة مرة أخرى أو الاتصال بنا.",
+          "other": "حدثت مشكلة في إعادة إرسال بطاقات الهدايا الخاصة بك. حاول مرة أخرى أو اتصل بنا."
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "سيتم إرسال بطاقة الهدايا في رسالة بريد إلكتروني منفصلة.",
+          "other": "سيتم إرسال كل بطاقة هدية في بريد إلكتروني منفصل."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "سيتم إرسال بطاقة الهدايا في رسالة نصية منفصلة.",
+          "other": "ستُرسل كل بطاقة هدية في رسالة نصية منفصلة."
+        },
+        "expected_by": "من المتوقع حلولها بحلول {{date}}",
+        "was_expected_by": "كان متوقعًا بحلول {{date}}",
+        "buy_with_prime_logo_accessibility_label": "شعار الشراء عبر أمازون برايم",
+        "in_review_title": "طلبك قيد المراجعة",
+        "last_updated": "آخر تحديث {{date}}",
+        "multiple_statuses_label": "حالات طلب متعددة",
+        "no_tracking_number": "لا يوجد رقم تتبع لهذه الشحنة.",
+        "submitted_description": "مراجعة تفاصيل الطلب والدفع.",
+        "there_was_a_problem_label": "حدثت مشكلة"
       },
       "buy_again": "اشترِ مرة أخرى",
       "list_title_confirmed_orders_accessibility_label": "الطلبات: مؤكدة",
