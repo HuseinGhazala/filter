@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "homepage": "الرئيسية",
   "all": "الكل",
@@ -587,5 +596,249 @@
   },
   "cross_sell": {
     "empty_msg": "لا توجد منتجات متاحة للعرض. هذه الكتلة لن تكون مرئية للعملاء على واجهة المتجر."
+  },
+  "shopify": {
+    "checkout": {
+      "taxes": {
+        "vat_number": {
+          "status": {
+            "invalid_format": {
+              "lt": "أرقام التعريف الضريبي الليتوانية تحتوي على LT و 9-12 رمزًا/حرفًا",
+              "lu": "تتكون أرقام ضريبة القيمة المضافة في لوكسمبورغ من LU و 8 أحرف.",
+              "mt": "تحتوي أرقام تعريف ضريبة القيمة المضافة في مالطا على MT و8 أحرف.",
+              "nl": "أرقام تعريف ضريبة القيمة المضافة في هولندا تحتوي على NL و 12 حرفًا",
+              "pl": "أرقام تعريف ضريبة القيمة المضافة البولندية (VAT) تتكون من PL و10 أحرف",
+              "pt": "تحتوي أرقام ضريبة القيمة المضافة في البرتغال على PT و9 أحرف",
+              "ro": "أرقام التعريف الضريبي الرومانية (VAT) تتكون من \"RO\" و 10 أحرف",
+              "sk": "تحتوي أرقام التعريف الضريبي في سلوفاكيا على \"SK\" و10 أحرف.",
+              "si": "أرقام التعريف الضريبي في سلوفينيا تتكون من SI و8 أحرف.",
+              "es": "أرقام تعريف ضريبة القيمة المضافة في إسبانيا تتكون من ES و9 رموز",
+              "se": "تحتوي أرقام التعريف الضريبي في السويد على SE و12 حرفًا",
+              "gb": "تتكون أرقام ضريبة القيمة المضافة في المملكة المتحدة من GB أو XI و5-12 حرفًا"
+            },
+            "invalid_number": {
+              "at": "أدخل رقم ضريبة القيمة المضافة النمساوي الصحيح",
+              "be": "أدخل رقم ضريبة القيمة المضافة البلجيكي صالحًا",
+              "bg": "أدخل رقم ضريبة قيمة مضافة بلغارياً صحيحاً",
+              "hr": "أدخل رقم ضريبة القيمة المضافة الكرواتي الصالح",
+              "cy": "أدخل رقم ضريبة القيمة المضافة القبرصي الصحيح",
+              "cz": "أدخل رقم ضريبة قيمة مضافة تشيكي صحيح",
+              "dk": "أدخل رقم ضريبة قيمة مضافة دنماركيًا صحيحًا",
+              "ee": "أدخل رقم تعريف ضريبي إستوني صالح",
+              "fi": "أدخل رقم ضريبة قيمة مضافة فنلنديًا صحيحًا",
+              "fr": "أدخل رقم ضريبة القيمة المضافة الفرنسي الصحيح",
+              "de": "أدخل رقمًا ضريبيًا ألمانيًا صالحًا",
+              "gr": "أدخل رقم ضريبة القيمة المضافة اليوناني الصحيح",
+              "hu": "أدخل رقم ضريبة القيمة المضافة المجري الصحيح",
+              "ie": "أدخل رقم ضريبة القيمة المضافة الأيرلندي الصحيح",
+              "it": "أدخل رقم ضريبة القيمة المضافة (VAT) الإيطالي صالحًا",
+              "lv": "أدخل رقم تعريف ضريبة القيمة المضافة اللاتفي الصحيح",
+              "lt": "أدخل رقم VAT ليتوانيا صالحًا",
+              "lu": "أدخل رقم ضريبة القيمة المضافة اللوكسمبورغي الصحيح",
+              "mt": "أدخل رقم ضريبة قيمة مضافة (VAT) مالطي صالح",
+              "nl": "أدخل رقم ضريبة قيمة مضافة هولندي صالح",
+              "pl": "أدخل رقم ضريبة قيمة مضافة بولندي صالحًا",
+              "pt": "أدخل رقم ضريبة القيمة المضافة (VAT) البرتغالي الصحيح",
+              "ro": "أدخل رقم ضريبة القيمة المضافة الروماني الصحيح",
+              "sk": "أدخل رقم ضريبة القيمة المضافة (VAT) سلوفاكيًا صحيحًا",
+              "si": "أدخل رقم VAT سلوفيني صالح",
+              "es": "أدخل رقم ضريبة قيمة مضافة إسباني صالحًا",
+              "se": "أدخل رقم ضريبة القيمة المضافة السويدي (VAT) الصحيح",
+              "gb": "أدخل رقم تعريف ضريبة القيمة المضافة (VAT) صالح في المملكة المتحدة"
+            },
+            "service_unavailable": "خدمة التحقق غير متاحة",
+            "service_error": "خدمة التحقق غير متاحة"
+          },
+          "accessibility": {
+            "status": {
+              "validating": "التحقق من رقم ضريبة القيمة المضافة قيد التنفيذ",
+              "valid": "الرقم الضريبي صحيح",
+              "applied": "تم تطبيق إعفاء ضريبة القيمة المضافة",
+              "domestic": "لم يتم تطبيق الإعفاء من ضريبة القيمة المضافة",
+              "invalid_number": "فشل الإعفاء من ضريبة القيمة المضافة",
+              "service_unavailable": "تعذر التحقق من الإعفاء من ضريبة القيمة المضافة",
+              "service_error": "تعذر التحقق من الإعفاء من ضريبة القيمة المضافة"
+            }
+          }
+        }
+      },
+      "address_management": {
+        "saved_with_store": "تم الحفظ مع هذا المتجر"
+      },
+      "thank_you": {
+        "thank_you_confirmed_order_with_phone_pick_up": "سوف تتلقى رسالة نصية عندما يصبح طلبك جاهزًا للاستلام.",
+        "thank_you_confirmed_order_with_email_and_phone_pick_up": "سوف تتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
+        "thank_you_confirmed_order_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_confirmed_order_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_confirmed_order_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_confirmed_order_with_draft": "سنخبرك إذا احتجنا إلى المزيد من المعلومات أو عند تأكيد طلبك.",
+        "thank_you_confirmed_order_with_draft_payment": "سنخبرك إذا احتجنا إلى المزيد من المعلومات أو عند تأكيد طلبك.",
+        "thank_you_confirmed_order_with_draft_pick_up": "سنخبرك إذا احتجنا إلى المزيد من المعلومات أو عند تأكيد طلبك.",
+        "thank_you_unconfirmed_items_heading": {
+          "one": "لم يتم تأكيد عنصر واحد",
+          "other": "لم يتم تأكيد بعض العناصر"
+        },
+        "thank_you_unconfirmed_items_description": {
+          "one": "لم يتم تحصيل أي رسوم منك مقابل هذا",
+          "other": "لم تتم محاسبتك على هذه."
+        },
+        "thank_you_item_label": {
+          "one": "%{count} بند",
+          "other": "%{count} بند"
+        },
+        "thank_you_from_shop": "من %{shop_name}",
+        "thank_you_from_other_store": "من متجر آخر",
+        "thank_you_payments_app_failed_pending_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
+        "thank_you_payments_app_failed_pending_payment_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
+        "thank_you_payments_app_failed_pending_payment_pick_up": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_payment": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
+        "thank_you_payments_app_pending_payment_description_default_with_email": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_payment": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_pick_up": "سوف تتلقى رسالة تأكيد بالبريد الإلكتروني تحتوي على رقم طلبك قريبًا.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_payment": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_pick_up": "ستتلقى رسالة نصية لتأكيد الطلب مع رقم طلبك بعد قليل.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني تتضمن رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد نصية تحتوي على رقم طلبك.",
+        "thank_you_payments_app_pending_payment_description_provider_action_required_default": "تتم معالجة دفعتك. ستتلقى رسالة بريد إلكتروني عند تأكيد دفعتك.",
+        "track_your_order_link_text": "تتبع طلبك",
+        "checkout_again": "تسجيل الخروج مرة أخرى",
+        "checkout_on_remote_shop_link_text": "تحقق من %{remoteShopName}",
+        "checkout_on_another_store": "اطلع على متجر آخر",
+        "order_status_confirmed_order_with_email": "ستتلقى بريدًا إلكترونيًا عندما يكون طلبك جاهزًا.",
+        "order_status_confirmed_order_with_phone": "قد تتلقى رسالة نصية عندما يكون طلبك جاهزًا.",
+        "order_status_confirmed_order_with_email_and_phone": "ستتلقى بريدًا إلكترونيًا عندما يكون طلبك جاهزًا.",
+        "order_status_confirmed_order_with_email_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
+        "order_status_confirmed_order_with_phone_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
+        "order_status_confirmed_order_with_email_and_phone_payment": "لقد سددت دفعة لطلبك بتاريخ %{date}.",
+        "order_status_confirmed_order_with_email_pick_up": "سوف تتلقى رسالة بريد إلكتروني عندما يكون طلبك جاهزًا للاستلام.",
+        "order_status_confirmed_order_with_phone_pick_up": "سوف تتلقى رسالة نصية عندما يصبح طلبك جاهزًا للاستلام.",
+        "order_status_confirmed_order_with_email_and_phone_pick_up": "ستتلقى رسالة بريد إلكتروني ورسالة نصية عندما يصبح طلبك جاهزاً للاستلام.",
+        "order_status_payments_app_pending_payment_description_default_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_default_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_default_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_payment": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email_payment": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_email_pick_up": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني قريبًا. تتبّع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_phone": "ستتلقى رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_phone_payment": "ستتلقى رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_default_with_phone_pick_up": "ستتلقى رسالة تأكيد نصية قريبًا. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "تواصل معنا عبر البريد الإلكتروني أو الهاتف لتلقي تأكيد الطلب.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "بعد إتمام عملية الدفع، ستتلقى رسالة تأكيد عبر البريد الإلكتروني. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد نصية. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد نصية. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "بعد إتمام عملية الدفع، ستصلك رسالة تأكيد نصية. تتبع طلبك باستخدام تطبيق Shop.",
+        "order_status_payments_app_failed_pending_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
+        "order_status_payments_app_failed_pending_payment_payment": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
+        "order_status_payments_app_failed_pending_payment_pick_up": "لم يتم محاسبتك على طلبك. ارجع إلى سلة التسوق الخاصة بك لمراجعة طلبك وإعادة الدفع.",
+        "order_status_confirmed_order_local": "نحن نجهز طلبك للتسليم.",
+        "order_status_confirmed_order_local_pick_up": "نحن نجهز طلبك.",
+        "order_status_confirmed_order_local_payment": "نحن نُجهز طلبك.",
+        "order_status_updates_with_email": "ستتلقى تحديثات الشحن والتسليم عبر البريد الإلكتروني.",
+        "order_status_updates_with_phone": "يمكنك الحصول على تحديثات الشحن والتسليم عبر الرسائل النصية.",
+        "order_status_updates_with_email_and_phone": "ستتلقى تحديثات الشحن والتسليم عبر البريد الإلكتروني.",
+        "order_status_updates_with_missing": "اختر الطريقة التي تريد تلقي تحديثات الشحن بها.",
+        "order_status_confirmed_with_installments_payment_return": "أعد انتباهك إلى موظف المبيعات.",
+        "order_status_confirmed_with_installments_payment_confirm": "ستتلقى رسالة تأكيد عبر البريد الإلكتروني تحتوي على رقم طلبك وتفاصيل جدول أقساطك قريبًا.",
+        "confirmed_title": "تم تأكيد طلبك",
+        "confirmed_description": "لقد قبلنا طلبك، ونحن نعمل على تجهيزه. يُرجى العودة إلى هذه الصفحة للحصول على تحديثات حول حالة شحنتك.",
+        "confirmed_orders_title": "تم تأكيد طلباتك.",
+        "ready_for_pickup_title": "طلبك جاهز للاستلام",
+        "ready_for_pickup_description": "طلبك جاهز للاستلام. يرجى إحضار تأكيد الطلب عند الاستلام.",
+        "ready_for_delivery_title": "طلبك جاهز للتسليم",
+        "ready_for_delivery_description": "لقد قمنا بتجهيز طلبك."
+      }
+    },
+    "pagination": {
+      "previous": "السابق",
+      "next": "التالي"
+    },
+    "links": {
+      "powered_by_shopify": "مدعوم بواسطة Shopify",
+      "learn_more": "تعرف على المزيد"
+    },
+    "feed": {
+      "more": "المزيد"
+    },
+    "attributes": {
+      "email": "بريد إلكتروني",
+      "password": "كلمة المرور",
+      "password_confirmation": "تأكيد كلمة المرور",
+      "first_name": "الاسم الأول",
+      "last_name": "اسم العائلة",
+      "body": "الجسم",
+      "signature": "العنوان"
+    },
+    "addresses": {
+      "zip_code": "الرمز البريدي",
+      "postal_code": "الرمز البريدي",
+      "postcode": "الرمز البريدي",
+      "pincode": "الرمز البريدي",
+      "region": "المنطقة",
+      "prefecture": "محافظة",
+      "province": "مقاطعة",
+      "state": "ولاية",
+      "state_and_territory": "الولاية/الإقليم",
+      "county": "مقاطعة",
+      "emirate": "إمارة",
+      "governorate": "محافظة",
+      "confirm": "هل أنت متأكد من أنك ترغب في حذف هذا العنوان؟"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "مميز",
+        "best_selling": "الأكثر مبيعاً",
+        "az": "أبجديًا، أ-ي",
+        "za": "أبجدياً، من ي-أ",
+        "price_ascending": "السعر، من الأقل للأعلى",
+        "price_descending": "السعر، من الأعلى إلى الأقل",
+        "date_ascending": "التاريخ، من الأقدم إلى الأحدث",
+        "date_descending": "تاريخ، من الأحدث إلى الأقدم",
+        "most_relevant": "الأكثر صلة"
+      }
+    },
+    "errors": {
+      "blank": "لا يمكن أن يكون فارغًا",
+      "blocked_address": "هذا الموقع غير مدعوم",
+      "credit_card_session_expired": "انتهت صلاحية تفويض بطاقة الائتمان، يرجى إعادة إدخال معلومات الدفع الخاصة بك. لم يتم خصم أي مبلغ من بطاقتك.",
+      "empty": "لا يمكن أن يكون فارغاً",
+      "invalid_email": "يجب أن يكون عنوان بريد إلكتروني صالحًا",
+      "discount_disabled": "تم تعطيل هذا الخصم",
+      "discount_expired": "هذا الخصم لم يعد صالحًا.",
+      "discount_limit_reached": "لقد وصل هذا الخصم إلى حد الاستخدام الأقصى",
+      "discount_not_found": "تعذر العثور على خصم صالح يطابق الرمز الذي أدخلته",
+      "customer_already_used_once_per_customer_discount_notice": "لقد وصل هذا الخصم إلى حد الاستخدام الأقصى",
+      "gift_card_already_applied": "تم تطبيق الرمز بالفعل على سلة مشترياتك",
+      "gift_card_code_invalid": "الرمز غير صالح",
+      "gift_card_currency_mismatch": "لا يمكن استخدام بطاقة الهدايا هذه لإتمام عملية الشراء. يُرجى الاتصال بـ %{shop_name} لإعادة إصدارها.",
+      "gift_card_depleted": "لا توجد أموال متبقية على بطاقة الهدايا هذه",
+      "gift_card_disabled": "بطاقة الهدايا معطلة",
+      "gift_card_expired": "البطاقة هدية منتهية الصلاحية"
+    }
   }
 }
