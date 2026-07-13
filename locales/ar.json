@@ -2423,7 +2423,9 @@
       "failed_payment": {
         "payment_not_processed_title": "تعذر إتمام عملية الدفع الخاصة بك",
         "payment_not_processed_text": "لم يتم تحصيل المبلغ منك. عُد إلى سلة التسوق لإتمام عملية الشراء.",
-        "return_to_cart_button_label": "العودة إلى عربة التسوق"
+        "return_to_cart_button_label": "العودة إلى عربة التسوق",
+        "page_title": "تعذر إتمام عملية الدفع",
+        "title": "تعذر إتمام عملية الدفع"
       },
       "payment_gateway": {
         "credit_card_label": "بطاقة ائتمان",
@@ -2739,7 +2741,8 @@
           "refresh_this_page": "حدِّث هذه الصفحة"
         },
         "redirecting_page_title": "جارٍ إعادة التوجيه...",
-        "redirecting_title": "جارٍ إعادة التوجيه..."
+        "redirecting_title": "جارٍ إعادة التوجيه...",
+        "remote_checkout_count": "%{current} من %{total}"
       },
       "customer_payment_methods": {
         "page_title": "طرق الدفع",
@@ -2848,6 +2851,22 @@
         "decision_rule_block": "حدثت مشكلة في معالجة دفعتك. يُرجى الاتصال بمالك المتجر.",
         "cancelled_payment": "تم إلغاء دفعتك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة.",
         "pick_up_card": "تم رفض بطاقتك. حاول مرة أخرى أو استخدم طريقة دفع مختلفة."
+      },
+      "payment_challenge_modal": {
+        "instructions": "أكمل عملية الشراء باستخدام الرمز الخاص بك {{paymentMethod}}",
+        "timer_message": "لديك {{timeLeft}} للدفع",
+        "copy_text": "انسخ رمز {{paymentMethod}}",
+        "open_app_text": "افتح تطبيق {{paymentMethod}}",
+        "header": "ادفع باستخدام {{paymentMethod}}",
+        "qr_code": {
+          "instructions": "أكمل عملية الشراء باستخدام الرمز الخاص بك {{paymentMethod}}",
+          "wechat_instructions": "امسح رمز الاستجابة السريعة (QR) هذا باستخدام تطبيق وي تشات (WeChat) على هاتفك لإتمام عملية الشراء باليوان الصيني.",
+          "wechat_instructions_mobile": "امسح رمز الاستجابة السريعة (QR) هذا باستخدام تطبيق وي تشات (WeChat) على جهاز آخر لإتمام عملية الشراء باليوان الصيني."
+        },
+        "external": {
+          "instructions": "أكد الدفع على تطبيقك لإتمام عملية الشراء هذه"
+        },
+        "close": "أغلِق التحدي"
       }
     },
     "pagination": {
