@@ -495,7 +495,7 @@
       ],
       "name": "Testimonial: Marquee",
       "settings": {
-        "heading_richtext": "<p>تقييماتكم التي نفتخر بها</p>",
+        "heading_richtext": "<p>The reviews we are proud of</p>",
         "text_style": "body",
         "disable_auto_scroll": false,
         "animation_direction": "left",
