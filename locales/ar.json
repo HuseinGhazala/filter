@@ -1097,7 +1097,11 @@
         "alternative_payment_currency_total": "المبلغ المستحق %{amount_due}",
         "alternative_payment_currency_chinese_yuan": "يرجى تأكيد المبلغ الإجمالي باليوان الصيني في تطبيق %{wallet}.",
         "pay_merchant_label": "دفع إلى %{merchant_name}",
-        "discount_applies_to_subscription_items_only": "هذا الخصم ينطبق فقط على عناصر الاشتراك"
+        "discount_applies_to_subscription_items_only": "هذا الخصم ينطبق فقط على عناصر الاشتراك",
+        "alternative_payment_currency_total_disclosure": "يعالج %{shop_name} المدفوعات بعملة %{shop_currency} (%{amount_due}).",
+        "settlement_currency_note": "يعالج %{shop_name} المدفوعات بعملة %{processing_currency}. لقد تسوقت بعملة %{original_currency}.",
+        "settlement_currency_note_wallet": "يقوم %{shop_name} بمعالجة الدفعات بالعملة %{processing_currency}. لقد تسوّقت بالعملة %{original_currency} ودفعت باستخدام %{wallet} باليوان الصيني. تحقق من تطبيق %{wallet_app} الخاص بك للاطلاع على المبلغ النهائي.",
+        "settlement_currency_note_wallet_no_conversion": "لقد دفعت باستخدام %{wallet} باليوان الصيني. تحقق من تطبيق %{wallet_app} الخاص بك للاطلاع على المبلغ النهائي."
       },
       "billing": {
         "address_edit": "تعديل العنوان",
@@ -1562,7 +1566,10 @@
         },
         "saved_credit_cards_modal": {
           "done": "تم"
-        }
+        },
+        "wechat_app_label": "وي شات",
+        "alternative_payment_currency_total_notice_disclosure": "يعالج %{shop_name} المدفوعات بعملة %{shop_currency} (%{amount_due}).",
+        "alternative_payment_currency_total_manual_payment_notice_disclosure": "تدفع %{shop_name} بـ %{shop_currency} (%{amount_due})."
       },
       "local_pickup": {
         "all_stores_far_away": {
