@@ -75,12 +75,16 @@
       "next_slide": "انزلق يمينًا",
       "previous_slide": "انزلق إلى اليسار",
       "name": "الشريط المتحرك"
-    }
+    },
+    "copy": "نسخة",
+    "copied": "تم النسخ"
   },
   "newsletter": {
     "label": "البريد الإلكتروني",
     "success": "شكرًا لاشتراكك",
-    "button_label": "اشترك"
+    "button_label": "اشترك",
+    "close": "إغلاق النافذة المنبثقة",
+    "consent_checkbox_label": "أرغب في الاشتراك في النشرة الإخبارية (معلومات حول العروض الترويجية والخصومات والعروض الأولى والمسابقات)."
   },
   "shoppable_image": {
     "brand": "علامة تجارية",
@@ -105,7 +109,8 @@
     "star_reviews_info": "{{ rating_value }} من أصل {{ rating_max }} نجوم",
     "collapsible_content_title": "محتوى قابل للطي",
     "complementary_products": "منتجات مكملة",
-    "searching": "جاري البحث..."
+    "searching": "جاري البحث...",
+    "subscription_widget__selling_plan_select": "تكرار التسليم لـ {{ plan_group }}"
   },
   "blogs": {
     "article": {
@@ -181,7 +186,8 @@
         "from_price_html": "من {{ price }}",
         "regular_price": "السعر العادي",
         "sale_price": "سعر البيع",
-        "unit_price": "سعر الوحدة"
+        "unit_price": "سعر الوحدة",
+        "free": "مجاني"
       },
       "share": "شارك هذا المنتج",
       "sold_out": "نفذت الكمية",
@@ -323,7 +329,21 @@
         "paragraph_html": "<a href=\"{{ link }}\" tabindex=\"-1\" class=\"link underlined-link\">تسجيل الدخول</a> لإتمام عملية الشراء بشكل أسرع."
       },
       "view_cart": "عرض السلة",
-      "checkbox": "لف كهدية"
+      "checkbox": "لف كهدية",
+      "features": {
+        "discount_placeholder": "الرجاء إدخال رمز الخصم",
+        "shipping_select_country_zip": "الرجاء اختيار بلد وإدخال رمز بريدي.",
+        "shipping_calculating": "جاري الحساب...",
+        "shipping_no_rate": "لا يوجد سعر شحن لهذه الوجهة. حاول التحقق من العنوان.",
+        "shipping_one_rate": "يوجد سعر شحن واحد لهذه الوجهة:",
+        "shipping_n_rates": "يوجد {{ count }} معدل شحن لهذه الوجهة:",
+        "shipping_free": "مجاني",
+        "discount_enter_code": "الرجاء إدخال رمز الخصم.",
+        "discount_applying": "جارٍ التقديم…",
+        "discount_applied": "تم تطبيق الخصم!",
+        "discount_invalid": "رمز الخصم غير صالح أو لا ينطبق على سلة التسوق الحالية.",
+        "discount_error": "حدث خطأ ما. الرجاء المحاولة مرة أخرى."
+      }
     },
     "footer": {
       "payment": "طرق الدفع",
@@ -398,6 +418,27 @@
       "search_location": {
         "label": "ابحث عن الموقع",
         "placeholder": "ابحث عن موقع..."
+      }
+    },
+    "blog_posts": {
+      "tags_all": "كل المنشورات"
+    },
+    "compare_products": {
+      "name": "مقارنة المنتجات",
+      "badge": {
+        "compare": "ضد"
+      },
+      "placeholders": {
+        "left_text": "يسار",
+        "right_text": "صحيح"
+      },
+      "aria": {
+        "table": "جدول مقارنة"
+      },
+      "blocks": {
+        "table_row": {
+          "center_text_default": "اكتب بعض النصوص..."
+        }
       }
     }
   },
@@ -589,7 +630,8 @@
     "price-to": "السعر إلى",
     "remove-price-range": "إزالة فلتر نطاق الأسعار",
     "sort-options": "خيارات الفرز",
-    "lookbook-button": "اطلع على التفاصيل"
+    "lookbook-button": "اطلع على التفاصيل",
+    "pills-navigation": "التنقل بين الأدوية"
   },
   "placeholder": {
     "select_option": "اختر خيارًا"
