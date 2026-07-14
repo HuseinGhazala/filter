@@ -21,7 +21,7 @@
             "image_width_desktop": 150,
             "image_width_mobile": 120,
             "text": "<p>Because your long shifts deserve the best, these scrubs combine practical elegance, superior comfort, and modesty—giving you confidence that lasts right up to the final moment of your shift.</p>",
-            "color": "{{ settings.colors.background }}"
+            "color": ""
           }
         },
         "menu_TyWCqJ": {

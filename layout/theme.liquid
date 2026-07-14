@@ -97,6 +97,57 @@
       /* custom fontfaces/imports */
       {{ settings.fontfaces }}
 
+      /* DIN Next LT W23 - Arabic font */
+      @font-face {
+        font-family: 'DIN Next LT W23';
+        src: url('{{ "din-next-lt-w23-ultra-light.ttf" | asset_url }}') format('truetype');
+        font-weight: 200;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'DIN Next LT W23';
+        src: url('{{ "din-next-lt-w23-light.ttf" | asset_url }}') format('truetype');
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'DIN Next LT W23';
+        src: url('{{ "din-next-lt-w23-regular.ttf" | asset_url }}') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'DIN Next LT W23';
+        src: url('{{ "din-next-lt-w23-medium.ttf" | asset_url }}') format('truetype');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'DIN Next LT W23';
+        src: url('{{ "din-next-lt-w23-bold.ttf" | asset_url }}') format('truetype');
+        font-weight: 700;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'DIN Next LT W23';
+        src: url('{{ "din-next-lt-w23-heavy.ttf" | asset_url }}') format('truetype');
+        font-weight: 800;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: 'DIN Next LT W23';
+        src: url('{{ "din-next-lt-w23-black.ttf" | asset_url }}') format('truetype');
+        font-weight: 900;
+        font-style: normal;
+        font-display: swap;
+      }
+
       /* default fonts */
       {{ settings.type_body_font | font_face: font_display: 'swap' }}
       {{ body_font_bold | font_face: font_display: 'swap' }}
@@ -156,6 +207,14 @@
           endif
         %}
         --border-radius-button-video: {{ video_btn_radius }}px;
+
+        /* Global DIN Next LT W23 font override (Arabic + English) */
+        --font-base: 'DIN Next LT W23', sans-serif;
+        --font-headline: 'DIN Next LT W23', sans-serif;
+        --font-navigation: 'DIN Next LT W23', sans-serif;
+        --font-button: 'DIN Next LT W23', sans-serif;
+        --font-price: 'DIN Next LT W23', sans-serif;
+        --font-breadcrumbs: 'DIN Next LT W23', sans-serif;
       }
 
     {% endstyle %}

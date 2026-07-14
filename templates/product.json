@@ -778,7 +778,7 @@
       "name": "t:sections.collapsible_menu.presets.name",
       "settings": {
         "heading_richtext": "<p>الأسئلة الشائعة<br/><br/></p>",
-        "color-body-text": "{{ settings.colors.primary }}",
+        "color-body-text": "",
         "background_color": "",
         "compact-size-enabled": true,
         "margin-top": 20,
