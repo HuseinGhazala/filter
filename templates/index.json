@@ -76,8 +76,8 @@
       "name": "Custom Hero Banner",
       "settings": {
         "background_type": "image",
-        "image_desktop": "shopify://shop_images/2346e4c167816351e195300560df163ed8992800.png",
-        "image_mobile": "shopify://shop_images/18361850-746e-4a70-8ce1-66ffb8728daa.png",
+        "image_desktop": "shopify://shop_images/33e8dfa7-e6bf-4f8f-afbf-ae6e1dec228e_1.png",
+        "image_mobile": "shopify://shop_images/image_283.png",
         "video_url": "",
         "desktop_height": 650,
         "mobile_height": 400,
@@ -106,7 +106,7 @@
         "image_EyjGTW": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/26f0fc425039fe480cd26fab8dc388044f281cf3.png",
+            "desktop_image": "shopify://shop_images/Frame_2147208078.png",
             "select_icon": "bag",
             "heading": "Designed by Saudi hands",
             "text": "<p>Designed to suit your taste and your need for modesty and comfort.</p>",
@@ -116,30 +116,30 @@
         "image_jifwM9": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/a06015d099906c5e282efbdc38dba66ead81a213.png",
+            "desktop_image": "shopify://shop_images/Frame_2147208077.png",
             "select_icon": "bag",
             "heading": "Durable, flexible materials",
             "text": "<p>Soft, comfortable fabrics that withstand long hours of work.</p>",
             "link": ""
           }
         },
-        "image_VtCTma": {
-          "type": "image",
-          "settings": {
-            "desktop_image": "shopify://shop_images/3127a580a116077752ff77516bdd7d5f308ca22b.png",
-            "select_icon": "bag",
-            "heading": "Modest, loose-fitting cuts",
-            "text": "<p>Loose cuts that offer you comfort and confidence all day long.</p>",
-            "link": ""
-          }
-        },
         "image_Baj9fw": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/8a24a7b77ae4aa5f7437c938c3e544df63a5d049.png",
+            "desktop_image": "shopify://shop_images/Group_102.png",
             "select_icon": "bag",
             "heading": "Free shipping on orders over 450 Riyals.",
             "text": "<p>Free shipping on orders over 450 Riyals.</p>",
+            "link": ""
+          }
+        },
+        "image_VtCTma": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208331.png",
+            "select_icon": "bag",
+            "heading": "Modest, loose-fitting cuts",
+            "text": "<p>Loose cuts that offer you comfort and confidence all day long.</p>",
             "link": ""
           }
         }
@@ -147,8 +147,8 @@
       "block_order": [
         "image_EyjGTW",
         "image_jifwM9",
-        "image_VtCTma",
-        "image_Baj9fw"
+        "image_Baj9fw",
+        "image_VtCTma"
       ],
       "name": "t:sections.features-banner.settings.presets.name",
       "settings": {
@@ -173,13 +173,85 @@
         "margin-bottom-mobile": 20
       }
     },
+    "featured_collections_tabs_AkkCQ3": {
+      "type": "featured-collections-tabs",
+      "blocks": {
+        "collection_tab_DFDGxV": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "",
+            "products": [
+              "طقم-سكراب-نسائي-سماوي-مريح",
+              "طقم-سكراب-نسائي-عودي-مريح",
+              "طقم-سكراب-نسائي-فضفاض-مريح"
+            ],
+            "products_to_show": 8,
+            "tab_label": "Most Requested"
+          }
+        },
+        "collection_tab_gMLJQX": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "عودي",
+            "products": [],
+            "products_to_show": 8,
+            "tab_label": "New Season"
+          }
+        },
+        "collection_tab_Mm8DAF": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "اسود",
+            "products": [],
+            "products_to_show": 8,
+            "tab_label": "For a warmer feeling"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_DFDGxV",
+        "collection_tab_gMLJQX",
+        "collection_tab_Mm8DAF"
+      ],
+      "name": "t:sections.featured-collections-tab.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Your favorite choices",
+        "heading_richtext": "<h2>Featured Collections: Tabs</h2>",
+        "disable_on_mobile": false,
+        "enable_stack_products": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "number_of_column_desktop": 4,
+        "spacing_desktop": "16",
+        "make_products_full_width": false,
+        "tabs_alignment": "center",
+        "number_of_column_mobile": 2.1,
+        "spacing_mobile": "16",
+        "text_alignment": "left",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "enable_vendor_link": false,
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "hover_desktop",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
     "lookbook_aMkb9Q": {
       "type": "lookbook",
       "blocks": {
         "image_9yVPPH": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/9b59d1e66f880611c9d7fba2d0462c29fcd6cc53.png",
             "heading_image": "Free shipping",
             "button_select": "primary",
             "link": ""
@@ -188,7 +260,6 @@
         "image_6VmNgY": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/829d3b52de5c2df1ee2c5c5aebfd2a34f6f3d92f.png",
             "heading_image": "Free shipping",
             "button_select": "primary",
             "link": ""
@@ -197,7 +268,6 @@
         "image_WAyMUt": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/69c1bd89854ef992978849085563d85ce1c85c02.png",
             "heading_image": "Free shipping",
             "button_select": "primary",
             "link": ""
@@ -206,7 +276,6 @@
         "image_PreHmG": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/c660dd998d5d7d98d31a32ef27673fd0f430a2e4.png",
             "heading_image": "Free shipping",
             "button_select": "primary",
             "link": ""
@@ -233,87 +302,6 @@
         "color-body-text": "#11173d",
         "color-overlay": "",
         "color-overlay-opacity": 100,
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
-    "featured_collections_tabs_AkkCQ3": {
-      "type": "featured-collections-tabs",
-      "blocks": {
-        "collection_tab_DFDGxV": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "ازرق",
-            "products": [
-              "طقم-سكراب-نسائي-سماوي-مريح",
-              "طقم-سكراب-نسائي-عودي-مريح",
-              "طقم-سكراب-نسائي-فضفاض-مريح"
-            ],
-            "products_to_show": 8,
-            "tab_label": "Most Requested"
-          }
-        },
-        "collection_tab_gMLJQX": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "عودي",
-            "products": [
-              "طقم-سكراب-نسائي-سماوي-مريح",
-              "طقم-سكراب-نسائي-عودي-مريح",
-              "طقم-سكراب-نسائي-فضفاض-مريح"
-            ],
-            "products_to_show": 8,
-            "tab_label": "New Season"
-          }
-        },
-        "collection_tab_Mm8DAF": {
-          "type": "collection_tab",
-          "settings": {
-            "collection": "اسود",
-            "products": [
-              "طقم-سكراب-نسائي-سماوي-مريح",
-              "طقم-سكراب-نسائي-عودي-مريح",
-              "طقم-سكراب-نسائي-فضفاض-مريح"
-            ],
-            "products_to_show": 8,
-            "tab_label": "For a warmer feeling"
-          }
-        }
-      },
-      "block_order": [
-        "collection_tab_DFDGxV",
-        "collection_tab_gMLJQX",
-        "collection_tab_Mm8DAF"
-      ],
-      "name": "t:sections.featured-collections-tab.presets.name",
-      "settings": {
-        "advanced_heading": false,
-        "title": "Featured Collections: Tabs",
-        "heading_richtext": "<h2>Featured Collections: Tabs</h2>",
-        "disable_on_mobile": false,
-        "enable_stack_products": false,
-        "show_view_all": true,
-        "button_select": "primary",
-        "number_of_column_desktop": 4,
-        "spacing_desktop": "16",
-        "make_products_full_width": false,
-        "tabs_alignment": "center",
-        "number_of_column_mobile": 2.1,
-        "spacing_mobile": "16",
-        "text_alignment": "left",
-        "image_ratio": "square",
-        "show_video": false,
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "enable_vendor_link": false,
-        "show_product_rating": false,
-        "enable_quick_add_button": true,
-        "quick_add_mode": "hover_desktop",
-        "color-body-text": "",
-        "background_color": "",
         "margin-top": 20,
         "margin-bottom": 20,
         "show_mobile_spacing": false,
@@ -385,8 +373,6 @@
       "name": "Custom Hero Banner",
       "settings": {
         "background_type": "image",
-        "image_desktop": "shopify://shop_images/Group_101.png",
-        "image_mobile": "shopify://shop_images/0a46f89d85537d7105305796b250cb85ddbf5686.png",
         "video_url": "",
         "desktop_height": 600,
         "mobile_height": 400,
@@ -418,7 +404,6 @@
           "عودي",
           "كحلي"
         ],
-        "feature_image": "shopify://shop_images/1692d522534e23d43d7a0191df3ce3bfea848236-removebg-preview.png",
         "text_alignment": "right",
         "show_title": true,
         "title": "Discover loose-fittin",
@@ -445,7 +430,6 @@
             "heading": "Dr. Manar Hamed",
             "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
             "author": "Dr. Manar Hamed",
-            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -457,7 +441,6 @@
             "heading": "Dr. Manar Hamed",
             "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
             "author": "Dr. Manar Hamed",
-            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -469,7 +452,6 @@
             "heading": "Dr. Manar Hamed",
             "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
             "author": "Dr. Manar Hamed",
-            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -481,7 +463,6 @@
             "heading": "Dr. Manar Hamed",
             "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
             "author": "Dr. Manar Hamed",
-            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -549,7 +530,6 @@
         "heading_richtext": "<h2>Video hero</h2>",
         "full-width-enabled": true,
         "container_max_width": 0,
-        "video_hosted": "",
         "autoplay": true,
         "video_controls": false,
         "video_custom_play_controls": false,
@@ -579,9 +559,6 @@
         "image_4KGQd7": {
           "type": "image",
           "settings": {
-            "show_bottom": true,
-            "subheading_bottom": "Smart ventilation that keeps you refreshed.",
-            "logo": "shopify://shop_images/image_314.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
@@ -604,10 +581,8 @@
             "color-body-text": "#ffffff",
             "color-overlay": "",
             "color-overlay-opacity": 0,
-            "desktop_image": "shopify://shop_images/3c50248569b6da8bd0c4271b5129642146f3b148.png",
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/3c50248569b6da8bd0c4271b5129642146f3b148.png",
             "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "center"
           }
@@ -615,9 +590,6 @@
         "image_xB7TVK": {
           "type": "image",
           "settings": {
-            "show_bottom": true,
-            "subheading_bottom": "Smart ventilation that keeps you refreshed.",
-            "logo": "shopify://shop_images/Vector.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
@@ -640,7 +612,6 @@
             "color-body-text": "",
             "color-overlay": "",
             "color-overlay-opacity": 0,
-            "desktop_image": "shopify://shop_images/9e670e5988f04f9d4480faf494b848221150cb66.png",
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
             "mobile_text_vertical_position": "center",
@@ -650,9 +621,6 @@
         "image_pnCLct": {
           "type": "image",
           "settings": {
-            "show_bottom": true,
-            "subheading_bottom": "Smart ventilation that keeps you refreshed.",
-            "logo": "shopify://shop_images/image_316.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
@@ -675,10 +643,8 @@
             "color-body-text": "",
             "color-overlay": "",
             "color-overlay-opacity": 0,
-            "desktop_image": "shopify://shop_images/9182c18621cf28d1a86543590c3825112bdea07d.png",
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/9182c18621cf28d1a86543590c3825112bdea07d.png",
             "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "center"
           }
@@ -686,9 +652,6 @@
         "image_6W9Ed3": {
           "type": "image",
           "settings": {
-            "show_bottom": true,
-            "subheading_bottom": "Smart ventilation that keeps you refreshed.",
-            "logo": "shopify://shop_images/image_318.png",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
@@ -711,10 +674,8 @@
             "color-body-text": "",
             "color-overlay": "",
             "color-overlay-opacity": 0,
-            "desktop_image": "shopify://shop_images/63656f5a8c1c9b64c815d87d6e95d54e19ea2b47.png",
             "desktop_text_vertical_position": "center",
             "desktop_text_horizontal_position": "center",
-            "mobile_image": "shopify://shop_images/63656f5a8c1c9b64c815d87d6e95d54e19ea2b47.png",
             "mobile_text_vertical_position": "center",
             "mobile_text_horizontal_position": "center"
           }
@@ -751,35 +712,30 @@
         "image_nyGcnX": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/27b828f7d99daf9a9354b78ce2b17ae5b6c11bd7.png",
             "link": ""
           }
         },
         "image_tHNJxT": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/fc0946f26d0918785b45a8c9f17a69a75ab0a483.png",
             "link": ""
           }
         },
         "image_gHtwap": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/eee21fba5de9c8a32f0f47989618534e61142bf1.png",
             "link": ""
           }
         },
         "image_mCAWTf": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/ceadef54121cdd87825b29ff3a78833cd5ee9f4b.png",
             "link": ""
           }
         },
         "image_U8XDEe": {
           "type": "image",
           "settings": {
-            "desktop_image": "shopify://shop_images/5add90cf64b40c362b78b737f9afe69d9025a54e.png",
             "link": ""
           }
         }
@@ -816,8 +772,8 @@
     "collection_color_list_97U3xP",
     "main_banner_8gayyA",
     "features_banner_7zpBwP",
-    "lookbook_aMkb9Q",
     "featured_collections_tabs_AkkCQ3",
+    "lookbook_aMkb9Q",
     "rich_text_jVraEH",
     "main_banner_DWiP3x",
     "color_category_CfH83j",
