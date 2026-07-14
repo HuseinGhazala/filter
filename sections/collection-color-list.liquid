@@ -1,6 +1,6 @@
 <div class="color-collections-section page-width wt-slider__container--featured " id="section-{{ section.id }}">
   {% if section.settings.title != blank %}
-    <div class="section-header text-right">
+    <div class="section-header">
       <h2 class="color-collections-title">{{ section.settings.title | escape }}</h2>
     </div>
   {% endif %}
@@ -56,9 +56,16 @@
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 
-  .section-header.text-right {
-    text-align: right;
+  .color-collections-section .section-header {
     margin-bottom: 25px;
+  }
+
+  html[dir="rtl"] .color-collections-section .section-header {
+    text-align: right;
+  }
+
+  html[dir="ltr"] .color-collections-section .section-header {
+    text-align: left;
   }
 
   .color-collections-title {
