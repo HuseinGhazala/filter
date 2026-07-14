@@ -291,9 +291,9 @@
       "name": "t:sections.lookbook.presets.name",
       "settings": {
         "advanced_heading": false,
-        "heading": "Free shipping on orders over 450 Riyals.",
+        "heading": "Everything you need for work",
         "heading_richtext": "<h2>Lookbook</h2>",
-        "heading_alignment": "right",
+        "heading_alignment": "left",
         "show_icons": true,
         "heading_disable_on_mobile": false,
         "full-width-enabled": false,
