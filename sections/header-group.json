@@ -14,19 +14,19 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
-        "announcement_YnK6g6": {
+        "announcement_6D384w": {
           "type": "announcement",
           "settings": {
-            "text": "Free Shipping Over $50! Returns are always on us.",
+            "text": "15% discount on the applicable reduction.",
             "link": "",
             "icon_image": "shopify://shop_images/Group_2.png",
-            "image_width": 24,
-            "image_height": 24
+            "image_width": 20,
+            "image_height": 20
           }
         }
       },
       "block_order": [
-        "announcement_YnK6g6"
+        "announcement_6D384w"
       ],
       "settings": {
         "marquee": false,
