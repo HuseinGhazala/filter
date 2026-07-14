@@ -536,14 +536,15 @@
         "heading_richtext": "<h2>Video hero</h2>",
         "full-width-enabled": true,
         "container_max_width": 0,
+        "video_hosted": "shopify://files/videos/5fd16bf9d6bf49daa3117e19907acac0hd-720p-16mbps-53423753_WOcMKolK.mp4",
         "autoplay": true,
         "video_controls": false,
         "video_custom_play_controls": false,
         "video_custom_mute_controls": false,
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "original_ratio": "fixed_height",
-        "desktop_fixed_height": 580,
-        "mobile_fixed_height": 460,
+        "desktop_fixed_height": 680,
+        "mobile_fixed_height": 600,
         "color-body-heading": "",
         "color-overlay": "",
         "color-overlay-opacity": 100,
@@ -718,30 +719,28 @@
         "image_nyGcnX": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/fc0946f26d0918785b45a8c9f17a69a75ab0a483_1.png",
             "link": ""
           }
         },
         "image_tHNJxT": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/image_256.png",
             "link": ""
           }
         },
         "image_gHtwap": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/image_258.png",
             "link": ""
           }
         },
         "image_mCAWTf": {
           "type": "image",
           "settings": {
-            "link": ""
-          }
-        },
-        "image_U8XDEe": {
-          "type": "image",
-          "settings": {
+            "desktop_image": "shopify://shop_images/image_257.png",
             "link": ""
           }
         }
@@ -750,8 +749,7 @@
         "image_nyGcnX",
         "image_tHNJxT",
         "image_gHtwap",
-        "image_mCAWTf",
-        "image_U8XDEe"
+        "image_mCAWTf"
       ],
       "name": "t:sections.marquee_images.name",
       "settings": {
