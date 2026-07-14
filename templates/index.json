@@ -252,7 +252,8 @@
         "image_9yVPPH": {
           "type": "image",
           "settings": {
-            "heading_image": "Free shipping",
+            "desktop_image": "shopify://shop_images/66791f86-4a81-4a9d-b2be-bc42978d9eac_1.png",
+            "heading_image": "Scrubs pants",
             "button_select": "primary",
             "link": ""
           }
@@ -260,7 +261,8 @@
         "image_6VmNgY": {
           "type": "image",
           "settings": {
-            "heading_image": "Free shipping",
+            "desktop_image": "shopify://shop_images/8d1e221e-bb75-402a-b5b7-f6109f445237_1.png",
+            "heading_image": "Modest tops",
             "button_select": "primary",
             "link": ""
           }
@@ -268,7 +270,8 @@
         "image_WAyMUt": {
           "type": "image",
           "settings": {
-            "heading_image": "Free shipping",
+            "desktop_image": "shopify://shop_images/b38120d2-fe34-40f2-ba5e-555c1ae62332_1.png",
+            "heading_image": "Scrubs jackets",
             "button_select": "primary",
             "link": ""
           }
@@ -276,7 +279,8 @@
         "image_PreHmG": {
           "type": "image",
           "settings": {
-            "heading_image": "Free shipping",
+            "desktop_image": "shopify://shop_images/3e787130-c4f0-484c-9783-c3865fd4c018_1.png",
+            "heading_image": "Loose-fitting sets",
             "button_select": "primary",
             "link": ""
           }
@@ -316,7 +320,7 @@
           "type": "heading",
           "settings": {
             "advanced_heading": false,
-            "heading": "Free shipping on orders over 450 Riyals.",
+            "heading": "Discover more about our philosophy of everyday comfort and elegance.",
             "heading_richtext": "<h2>Your headline here</h2>",
             "disable_on_mobile": false,
             "size_heading": 200,
@@ -356,7 +360,7 @@
       "settings": {
         "section_width": "regular",
         "desktop_text_horizontal_position": "center",
-        "full-width-enabled": false,
+        "full-width-enabled": true,
         "color-body-text": "",
         "background_color": "",
         "background_gradient": "",
@@ -373,16 +377,18 @@
       "name": "Custom Hero Banner",
       "settings": {
         "background_type": "image",
+        "image_desktop": "shopify://shop_images/Group_101.png",
+        "image_mobile": "shopify://shop_images/Group_98.png",
         "video_url": "",
         "desktop_height": 600,
         "mobile_height": 400,
         "stack_content_mobile": true,
         "mobile_content_bg": "#ffffff",
         "mobile_content_color": "#121212",
-        "main_title": "About Us",
+        "main_title": "Approved colors suitable for the Saudi healthcare sector.",
         "subtitle_full_width": false,
-        "sub_title": "About Us",
-        "remove_btn_background": true,
+        "sub_title": "A professional color palette compliant with Health Holding standards, giving you a uniform and elegant look all day long.",
+        "remove_btn_background": false,
         "heading_scale_desktop": 28,
         "sub_heading_scale_desktop": 24,
         "heading_scale_mobile": 20,
@@ -390,7 +396,7 @@
         "btn_text": "About Us",
         "btn_url": "shopify://collections/كحلي",
         "text_alignment": "flex-end",
-        "mobile_vertical_alignment": "center",
+        "mobile_vertical_alignment": "flex-end",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -406,7 +412,7 @@
         ],
         "text_alignment": "right",
         "show_title": true,
-        "title": "Discover loose-fittin",
+        "title": "Shop complete sets",
         "show_description": true,
         "highlight_first_words": true,
         "description": "<p>Discover loose-fitting, modest scrub sets featuring practical designs and comfortable fabrics that give you a professional look throughout your shift.</p>",
