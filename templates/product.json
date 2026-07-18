@@ -647,9 +647,10 @@
           "type": "image",
           "settings": {
             "icon_select": "100",
-            "heading": "راحة لا مثيل لها",
-            "text": "<p>“الصراحة ما توقعت يكون مريح لهالدرجة، خصوصًا إني جربت كثير قبل وما ارتحت فيها. لكن هذا أول سكراب أحسه مرتب وعملي فعلًا، وحتى بعد ساعات الدوام الطويلة ما حسيت إنه ضايقني.”<br/><br/></p>",
-            "author": "د.منار حامد",
+            "heading": "Unmatched Comfort",
+            "text": "<p>\"I didn't expect it to be this comfortable. I've tried many scrubs before, but this is the first one that truly feels polished, practical, and comfortable.\"</p>",
+            "author": "Dr. Manar Hamed",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f_1.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -658,9 +659,10 @@
           "type": "image",
           "settings": {
             "icon_select": "100",
-            "heading": "مقاسات مناسبة للكل",
-            "text": "<p>“كنت محتارة بالمقاس بالبداية وخايفة يطلع ضيق أو قصير، لكن يوم لبسته انبسطت جدًا من التناسب والخامة. حسيت إنه معمول فعلًا للبنات اللي دوامهم طويل”<br/><br/></p>",
-            "author": "د.علا أحمد",
+            "heading": "Unmatched Comfort",
+            "text": "<p>\"I didn't expect it to be this comfortable. I've tried many scrubs before, but this is the first one that truly feels polished, practical, and comfortable.\"</p>",
+            "author": "Dr. Manar Hamed",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f_1.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -669,9 +671,10 @@
           "type": "image",
           "settings": {
             "icon_select": "100",
-            "heading": "خامة تتحمل يومك الطويل",
-            "text": "<p>“أكثر شيء شدّني فيه إن شكله مرتب بدون ما يكون رسمي زيادة أو متعب باللبس. الخامة خفيفة والحركة فيه سهلة جدًا، وفعليًا فرق معي كثير خصوصًا بعد ساعات الدوام الطويلة.”<br/><br/></p>",
-            "author": "د.سلمى القحطاني",
+            "heading": "Unmatched Comfort",
+            "text": "<p>\"I didn't expect it to be this comfortable. I've tried many scrubs before, but this is the first one that truly feels polished, practical, and comfortable.\"</p>",
+            "author": "Dr. Manar Hamed",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f_1.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -684,7 +687,7 @@
       ],
       "name": "Testimonial: Marquee",
       "settings": {
-        "heading_richtext": "<p>تقييماتكم اللي نفتخر فيها</p>",
+        "heading_richtext": "<p>All-Day Comfort. Trusted by Professionals.</p>",
         "text_style": "body",
         "disable_auto_scroll": true,
         "animation_direction": "left",
