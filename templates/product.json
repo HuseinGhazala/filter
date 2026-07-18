@@ -449,7 +449,6 @@
         "benefit_NHJhhT": {
           "type": "benefit",
           "settings": {
-            "image": "shopify://shop_images/carbon_close-filled.png",
             "item_heading": "قد يبين تفاصيل الجسم",
             "text": ""
           }
@@ -457,7 +456,6 @@
         "benefit_WpTbd9": {
           "type": "benefit",
           "settings": {
-            "image": "shopify://shop_images/Vector_1.png",
             "item_heading": "ساتر مع الحركة لا يبين تفاصيل الجسم",
             "text": ""
           }
@@ -465,7 +463,6 @@
         "benefit_TxDR8i": {
           "type": "benefit",
           "settings": {
-            "image": "shopify://shop_images/carbon_close-filled.png",
             "item_heading": "قد يحتاج تيشيرت داخلي",
             "text": ""
           }
@@ -473,7 +470,6 @@
         "benefit_rRagEV": {
           "type": "benefit",
           "settings": {
-            "image": "shopify://shop_images/Vector_1.png",
             "item_heading": "لا يشف لا يحتاج تيشيرت داخلي",
             "text": ""
           }
@@ -481,7 +477,6 @@
         "benefit_iY6k6j": {
           "type": "benefit",
           "settings": {
-            "image": "shopify://shop_images/carbon_close-filled.png",
             "item_heading": "مقاس غير مريح",
             "text": ""
           }
@@ -489,7 +484,6 @@
         "benefit_EE4gW8": {
           "type": "benefit",
           "settings": {
-            "image": "shopify://shop_images/Vector_1.png",
             "item_heading": "مقاسات مريحة و مضبوطة",
             "text": ""
           }
@@ -509,7 +503,6 @@
         "heading": "",
         "heading_richtext": "<h2>Your headline here</h2>",
         "full-width-enabled": false,
-        "desktop_image": "shopify://shop_images/image_343.png",
         "section_height_mode": "fixed_height",
         "desktop_section_height": 74,
         "desktop_section_max_height": 920,
@@ -657,7 +650,6 @@
             "heading": "راحة لا مثيل لها",
             "text": "<p>“الصراحة ما توقعت يكون مريح لهالدرجة، خصوصًا إني جربت كثير قبل وما ارتحت فيها. لكن هذا أول سكراب أحسه مرتب وعملي فعلًا، وحتى بعد ساعات الدوام الطويلة ما حسيت إنه ضايقني.”<br/><br/></p>",
             "author": "د.منار حامد",
-            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -669,7 +661,6 @@
             "heading": "مقاسات مناسبة للكل",
             "text": "<p>“كنت محتارة بالمقاس بالبداية وخايفة يطلع ضيق أو قصير، لكن يوم لبسته انبسطت جدًا من التناسب والخامة. حسيت إنه معمول فعلًا للبنات اللي دوامهم طويل”<br/><br/></p>",
             "author": "د.علا أحمد",
-            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -681,7 +672,6 @@
             "heading": "خامة تتحمل يومك الطويل",
             "text": "<p>“أكثر شيء شدّني فيه إن شكله مرتب بدون ما يكون رسمي زيادة أو متعب باللبس. الخامة خفيفة والحركة فيه سهلة جدًا، وفعليًا فرق معي كثير خصوصًا بعد ساعات الدوام الطويلة.”<br/><br/></p>",
             "author": "د.سلمى القحطاني",
-            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f.png",
             "icon_image_height_desk": 50,
             "icon_image_height": 40
           }
@@ -727,8 +717,8 @@
         "collapsible_tab_BHRFnT": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "هل الخامة مناسبة للعمل لساعات طويلة؟ وهل توفر راحة وتهوية طوال اليوم؟",
-            "content": "<p><strong>نعم، بكل تأكيد.</strong> تم اختيار الأقمشة بعناية فائقة لتناسب الاستخدام اليومي الشاق والعمل لساعات طويلة. الخامات تتميز بمرونة عالية وخفة في الوزن، بالإضافة إلى جزيئات نسيج تسمح بـ <strong>التهوية الكاملة وتمرير الهواء</strong> لمنع التعرق والشعور بالحرارة، مما يضمن لكِ الراحة والانتعاش طوال اليوم.</p>",
+            "heading": "Are the sizes true to size?",
+            "content": "<p>Yes, our items are true to size. We recommend checking our detailed size chart before purchasing to find your perfect fit.</p>",
             "page": "",
             "icon": "none",
             "icon_advanced_settings": false,
@@ -742,8 +732,8 @@
         "collapsible_tab_mg8QdP": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "هل الأقمشة تحتاج كوي وهل تحافظ على مظهرها المرتب بعد الغسيل والارتداء؟؟",
-            "content": "<p><strong>لا تحتاج إلى كوي مستمر.</strong> الأقمشة مصنوعة من خامات مقاومة للتجعد والانكماش بفضل تقنية نسيج متطورة، مما يضمن لكِ الحفاظ على مظهر مرتب، أنيق، وانسيابي حتى بعد ساعات طويلة من الارتداء أو بعد الغسيل المتكرر. كل ما تحتاجينه هو تعليقها مباشرة بعد الغسيل لتبقى جاهزة للارتداء فوراً دون أي عناء.</p>",
+            "heading": "Is the fabric suitable for long shifts?",
+            "content": "<p>Absolutely! The fabric is lightweight, breathable, and features 4-way stretch, making it incredibly comfortable and perfect for long, demanding shifts.</p>",
             "page": "",
             "icon": "none",
             "icon_advanced_settings": false,
@@ -757,7 +747,7 @@
         "collapsible_tab_miUEad": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "هل المقاسات مطابقة للحجم الحقيقي وكيف يمكنني اختيار المقاس المناسب لي؟",
+            "heading": "Is the fabric wrinkle-resistant?",
             "content": "<p><strong>نعم، مقاساتنا مطابقة تماماً للمقاسات العالمية القياسية (True to size).</strong> وننصحكِ دائماً باختيار مقاسكِ المعتاد الذي ترتدينه في أغلب ملابسكِ.وذا كنتِ محتارة بين مقاسين أو ترغبين في دقة متناهية، يمكنكِ الإطلاع على <strong>\"جدول المقاسات\"</strong> المتواجد في صفحة المنتج، والذي يوضح بالـ (سم) مقاسات الصدر، الخصر، والطول لتسهيل الاختيار الأمثل لكِ.</p>",
             "page": "",
             "icon": "none",
@@ -777,7 +767,7 @@
       ],
       "name": "t:sections.collapsible_menu.presets.name",
       "settings": {
-        "heading_richtext": "<p>الأسئلة الشائعة<br/><br/></p>",
+        "heading_richtext": "<p>Frequently Asked Questions</p>",
         "color-body-text": "",
         "background_color": "",
         "compact-size-enabled": true,
