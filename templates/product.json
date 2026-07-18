@@ -449,42 +449,48 @@
         "benefit_NHJhhT": {
           "type": "benefit",
           "settings": {
-            "item_heading": "قد يبين تفاصيل الجسم",
+            "image": "shopify://shop_images/carbon_close-filled.png",
+            "item_heading": "Modest Coverage Doesn't Reveal Body Shape",
             "text": ""
           }
         },
         "benefit_WpTbd9": {
           "type": "benefit",
           "settings": {
-            "item_heading": "ساتر مع الحركة لا يبين تفاصيل الجسم",
+            "image": "shopify://shop_images/Vector_1.png",
+            "item_heading": "Modest Coverage Conceals Body Contours",
             "text": ""
           }
         },
         "benefit_TxDR8i": {
           "type": "benefit",
           "settings": {
-            "item_heading": "قد يحتاج تيشيرت داخلي",
+            "image": "shopify://shop_images/carbon_close-filled.png",
+            "item_heading": "Opaque Fabric No Undershirt Needed",
             "text": ""
           }
         },
         "benefit_rRagEV": {
           "type": "benefit",
           "settings": {
-            "item_heading": "لا يشف لا يحتاج تيشيرت داخلي",
+            "image": "shopify://shop_images/Vector_1.png",
+            "item_heading": "Opaque Fabric No Undershirt Needed",
             "text": ""
           }
         },
         "benefit_iY6k6j": {
           "type": "benefit",
           "settings": {
-            "item_heading": "مقاس غير مريح",
+            "image": "shopify://shop_images/carbon_close-filled.png",
+            "item_heading": "Comfortable Fit True to Size",
             "text": ""
           }
         },
         "benefit_EE4gW8": {
           "type": "benefit",
           "settings": {
-            "item_heading": "مقاسات مريحة و مضبوطة",
+            "image": "shopify://shop_images/Vector_1.png",
+            "item_heading": "Perfect Fit / True to Size",
             "text": ""
           }
         }
@@ -503,6 +509,7 @@
         "heading": "",
         "heading_richtext": "<h2>Your headline here</h2>",
         "full-width-enabled": false,
+        "desktop_image": "shopify://shop_images/3676c80941f6f9afa2d29bc9d7ae6a1873de57de.png",
         "section_height_mode": "fixed_height",
         "desktop_section_height": 74,
         "desktop_section_max_height": 920,
