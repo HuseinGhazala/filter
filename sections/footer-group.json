@@ -17,7 +17,6 @@
         "image_with_text_NzEdwd": {
           "type": "image_with_text",
           "settings": {
-            "image": "shopify://shop_images/Scrubs_Stitches_1.png",
             "image_width_desktop": 150,
             "image_width_mobile": 120,
             "text": "<p>Because your long shifts deserve the best, these scrubs combine practical elegance, superior comfort, and modesty—giving you confidence that lasts right up to the final moment of your shift.</p>",
@@ -54,15 +53,13 @@
       ],
       "settings": {
         "badge_show_1": true,
-        "badge_img_1": "shopify://shop_images/Group_50.png",
-        "badge_title_1": "E-commerce Verification",
-        "badge_subtext_1": "Verified on the Business Platform",
+        "badge_img_1": "shopify://shop_images/Component_1.png",
+        "badge_title_1": "Tax Number",
+        "badge_subtext_1": "310756505900003",
         "badge_show_2": true,
-        "badge_img_2": "shopify://shop_images/Component_1.png",
         "badge_title_2": "Tax Number",
         "badge_subtext_2": "310756505900003",
         "badge_show_3": true,
-        "badge_img_3": "shopify://shop_images/73fefe161a006a2abf1abaa10745c0403fc76990.png",
         "badge_title_3": "commercial register",
         "badge_subtext_3": "1010654321",
         "show-scroll-effect": false,
