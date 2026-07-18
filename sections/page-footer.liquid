@@ -29,6 +29,28 @@ html[dir="ltr"] .footer-badge-item {
   text-align: left;
   flex-direction: row-reverse;
 }
+
+/* الكود الأساسي للشاشات الكبيرة */
+.footer-custom-badges {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: center; 
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  
+  html[dir="rtl"] .footer-custom-badges {
+    justify-content: flex-start; 
+  }
+
+  html[dir="ltr"] .footer-custom-badges {
+    justify-content: flex-end; 
+  }
+  
+}
 </style>
 
 {% if section.settings.show-scroll-effect %}
@@ -287,9 +309,8 @@ html[dir="ltr"] .footer-badge-item {
   <div class="wt-footer__aside">
     <div class="wt-footer__aside__wrapper">
     
-      <div class="footer-custom-badges" style="display: flex; gap: 25px; align-items: center; justify-content: center; flex-wrap: wrap; margin-bottom: 20px; direction: rtl;">
+      <div class="footer-custom-badges" style=" direction: rtl;">
         
-        {%- comment -%} العنصر الأول: شهادة التوثيق {%- endcomment -%}
         {%- if section.settings.badge_show_1 -%}
           <div class="footer-badge-item">
              {%- if section.settings.badge_img_1 != blank -%}
@@ -305,7 +326,6 @@ html[dir="ltr"] .footer-badge-item {
           </div>
         {%- endif -%}
 
-        {%- comment -%} العنصر الثاني: السجل التجاري {%- endcomment -%}
         {%- if section.settings.badge_show_2 -%}
           <div class="footer-badge-item">
                {%- if section.settings.badge_img_2 != blank -%}
@@ -321,7 +341,6 @@ html[dir="ltr"] .footer-badge-item {
           </div>
         {%- endif -%}
 
-        {%- comment -%} العنصر الثالث: الرقم الضريبي {%- endcomment -%}
         {%- if section.settings.badge_show_3 -%}
           <div class="footer-badge-item">
              {%- if section.settings.badge_img_3 != blank -%}
