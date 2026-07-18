@@ -182,7 +182,7 @@
             "collection": "light-blue",
             "products": [],
             "products_to_show": 5,
-            "tab_label": ""
+            "tab_label": "Best Sellers"
           }
         },
         "collection_tab_DFDGxV": {
@@ -191,7 +191,7 @@
             "collection": "burgundy",
             "products": [],
             "products_to_show": 8,
-            "tab_label": "Most Requested"
+            "tab_label": "New Season"
           }
         },
         "collection_tab_gMLJQX": {
@@ -200,7 +200,7 @@
             "collection": "black",
             "products": [],
             "products_to_show": 8,
-            "tab_label": "New Season"
+            "tab_label": "For Cozy Comfort"
           }
         },
         "collection_tab_Mm8DAF": {
@@ -209,7 +209,7 @@
             "collection": "navy",
             "products": [],
             "products_to_show": 8,
-            "tab_label": "For a warmer feeling"
+            "tab_label": "For Warm Days"
           }
         }
       },
