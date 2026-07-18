@@ -176,15 +176,20 @@
     "featured_collections_tabs_AkkCQ3": {
       "type": "featured-collections-tabs",
       "blocks": {
+        "collection_tab_6VKYig": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "light-blue",
+            "products": [],
+            "products_to_show": 5,
+            "tab_label": ""
+          }
+        },
         "collection_tab_DFDGxV": {
           "type": "collection_tab",
           "settings": {
-            "collection": "",
-            "products": [
-              "طقم-سكراب-نسائي-سماوي-مريح",
-              "طقم-سكراب-نسائي-عودي-مريح",
-              "طقم-سكراب-نسائي-فضفاض-مريح"
-            ],
+            "collection": "burgundy",
+            "products": [],
             "products_to_show": 8,
             "tab_label": "Most Requested"
           }
@@ -192,7 +197,7 @@
         "collection_tab_gMLJQX": {
           "type": "collection_tab",
           "settings": {
-            "collection": "عودي",
+            "collection": "black",
             "products": [],
             "products_to_show": 8,
             "tab_label": "New Season"
@@ -201,7 +206,7 @@
         "collection_tab_Mm8DAF": {
           "type": "collection_tab",
           "settings": {
-            "collection": "اسود",
+            "collection": "navy",
             "products": [],
             "products_to_show": 8,
             "tab_label": "For a warmer feeling"
@@ -209,6 +214,7 @@
         }
       },
       "block_order": [
+        "collection_tab_6VKYig",
         "collection_tab_DFDGxV",
         "collection_tab_gMLJQX",
         "collection_tab_Mm8DAF"
@@ -216,7 +222,7 @@
       "name": "t:sections.featured-collections-tab.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "Your favorite choices",
+        "title": "Curated for Your Day",
         "heading_richtext": "<h2>Featured Collections: Tabs</h2>",
         "disable_on_mobile": false,
         "enable_stack_products": false,
@@ -229,7 +235,7 @@
         "number_of_column_mobile": 2.1,
         "spacing_mobile": "16",
         "text_alignment": "left",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "show_video": false,
         "show_secondary_image": false,
         "show_vendor": false,
