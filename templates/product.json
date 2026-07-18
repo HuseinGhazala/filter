@@ -689,7 +689,7 @@
       "settings": {
         "heading_richtext": "<p>All-Day Comfort. Trusted by Professionals.</p>",
         "text_style": "body",
-        "disable_auto_scroll": true,
+        "disable_auto_scroll": false,
         "animation_direction": "left",
         "animation_speed": "150",
         "card_width_desktop": 450,
