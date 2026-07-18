@@ -17,6 +17,18 @@
       {% endif %}
     }
   {%- endfor -%}
+
+.footer-badge-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: right;
+}
+
+html[dir="ltr"] .footer-badge-item {
+  text-align: left;
+  flex-direction: row-reverse;
+}
 </style>
 
 {% if section.settings.show-scroll-effect %}
@@ -279,7 +291,7 @@
         
         {%- comment -%} العنصر الأول: شهادة التوثيق {%- endcomment -%}
         {%- if section.settings.badge_show_1 -%}
-          <div class="footer-badge-item" style="display: flex; align-items: center; gap: 10px; text-align: right;">
+          <div class="footer-badge-item">
              {%- if section.settings.badge_img_1 != blank -%}
               <div class="badge-img-wrap" style="display: flex; align-items: center;">
                 <img width="120" height="42" src="{{ section.settings.badge_img_1 | image_url: width: 120 }}" alt="" style="max-height: 42px; width: auto; object-fit: contain;" loading="lazy">
@@ -295,7 +307,7 @@
 
         {%- comment -%} العنصر الثاني: السجل التجاري {%- endcomment -%}
         {%- if section.settings.badge_show_2 -%}
-          <div class="footer-badge-item" style="display: flex; align-items: center; gap: 10px; text-align: right;">
+          <div class="footer-badge-item">
                {%- if section.settings.badge_img_2 != blank -%}
               <div class="badge-img-wrap" style="display: flex; align-items: center;">
                 <img width="120" height="42" src="{{ section.settings.badge_img_2 | image_url: width: 120 }}" alt="" style="max-height: 42px; width: auto; object-fit: contain;" loading="lazy">
@@ -311,7 +323,7 @@
 
         {%- comment -%} العنصر الثالث: الرقم الضريبي {%- endcomment -%}
         {%- if section.settings.badge_show_3 -%}
-          <div class="footer-badge-item" style="display: flex; align-items: center; gap: 10px; text-align: right;">
+          <div class="footer-badge-item">
              {%- if section.settings.badge_img_3 != blank -%}
               <div class="badge-img-wrap" style="display: flex; align-items: center;">
                 <img width="120" height="42" src="{{ section.settings.badge_img_3 | image_url: width: 120 }}" alt="" style="max-height: 42px; width: auto; object-fit: contain;" loading="lazy">
