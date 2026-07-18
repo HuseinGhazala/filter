@@ -17,6 +17,7 @@
         "image_with_text_NzEdwd": {
           "type": "image_with_text",
           "settings": {
+            "image": "shopify://shop_images/Scrubs_Stitches_2.png",
             "image_width_desktop": 150,
             "image_width_mobile": 120,
             "text": "<p>Because your long shifts deserve the best, these scrubs combine practical elegance, superior comfort, and modesty—giving you confidence that lasts right up to the final moment of your shift.</p>",
