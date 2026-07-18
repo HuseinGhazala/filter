@@ -422,7 +422,7 @@
         "show_title": true,
         "title": "Shop Complete Scrub Sets",
         "show_description": true,
-        "highlight_first_words": true,
+        "highlight_first_words": false,
         "description": "<p>Relaxed-fit scrub sets with modest designs and premium comfort for every shift.</p>",
         "Preview": "3",
         "image_ratio": "portrait",
