@@ -326,7 +326,7 @@
           "type": "heading",
           "settings": {
             "advanced_heading": false,
-            "heading": "Discover more about our philosophy of everyday comfort and elegance.",
+            "heading": "Discover Everyday Comfort & Style",
             "heading_richtext": "<h2>Your headline here</h2>",
             "disable_on_mobile": false,
             "size_heading": 200,
@@ -338,7 +338,7 @@
         "text_jJKi98": {
           "type": "text",
           "settings": {
-            "text": "<p>We design scrubs using carefully selected fabrics and practical details that give you a sense of comfort, confidence, and elegance throughout your shift. Experience a blend of modest coverage, softness, and quality, with a relaxed fit designed to keep you comfortable and confident all day long, wherever you are.</p>",
+            "text": "<p>We create premium scrubs with carefully selected fabrics and thoughtful details, delivering all-day comfort, confidence, and modest coverage in every shift.<br/></p>",
             "text_style": "body",
             "disable_on_mobile": false
           }
