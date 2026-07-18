@@ -259,7 +259,7 @@
           "type": "image",
           "settings": {
             "desktop_image": "shopify://shop_images/66791f86-4a81-4a9d-b2be-bc42978d9eac_1.png",
-            "heading_image": "Scrubs pants",
+            "heading_image": "Comfort Pants",
             "button_select": "primary",
             "link": ""
           }
@@ -277,7 +277,7 @@
           "type": "image",
           "settings": {
             "desktop_image": "shopify://shop_images/b38120d2-fe34-40f2-ba5e-555c1ae62332_1.png",
-            "heading_image": "Scrubs jackets",
+            "heading_image": "Practical Jackets",
             "button_select": "primary",
             "link": ""
           }
@@ -286,7 +286,7 @@
           "type": "image",
           "settings": {
             "desktop_image": "shopify://shop_images/3e787130-c4f0-484c-9783-c3865fd4c018_1.png",
-            "heading_image": "Loose-fitting sets",
+            "heading_image": "Complete Sets",
             "button_select": "primary",
             "link": ""
           }
