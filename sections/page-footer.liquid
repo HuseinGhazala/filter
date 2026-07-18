@@ -280,45 +280,48 @@
         {%- comment -%} العنصر الأول: شهادة التوثيق {%- endcomment -%}
         {%- if section.settings.badge_show_1 -%}
           <div class="footer-badge-item" style="display: flex; align-items: center; gap: 10px; text-align: right;">
-            <div class="badge-texts" style="display: flex; flex-direction: column; justify-content: center;">
-              <span class="badge-title" style="font-size: 13px; font-weight: 500; color: var(--color-background); line-height: 1.2; opacity: 0.9;">{{ section.settings.badge_title_1 }}</span>
-              <span class="badge-subtext" style="font-size: 13px; font-weight: bold; color: var(--color-background); line-height: 1.2; margin-top: 2px;">{{ section.settings.badge_subtext_1 }}</span>
-            </div>
-            {%- if section.settings.badge_img_1 != blank -%}
+             {%- if section.settings.badge_img_1 != blank -%}
               <div class="badge-img-wrap" style="display: flex; align-items: center;">
                 <img width="120" height="42" src="{{ section.settings.badge_img_1 | image_url: width: 120 }}" alt="" style="max-height: 42px; width: auto; object-fit: contain;" loading="lazy">
               </div>
             {%- endif -%}
+            <div class="badge-texts" style="display: flex; flex-direction: column; justify-content: center;">
+              <span class="badge-title" style="font-size: 13px; font-weight: 500; color: var(--color-background); line-height: 1.2; opacity: 0.9;">{{ section.settings.badge_title_1 }}</span>
+              <span class="badge-subtext" style="font-size: 13px; font-weight: bold; color: var(--color-background); line-height: 1.2; margin-top: 2px;">{{ section.settings.badge_subtext_1 }}</span>
+            </div>
+           
           </div>
         {%- endif -%}
 
         {%- comment -%} العنصر الثاني: السجل التجاري {%- endcomment -%}
         {%- if section.settings.badge_show_2 -%}
           <div class="footer-badge-item" style="display: flex; align-items: center; gap: 10px; text-align: right;">
-            <div class="badge-texts" style="display: flex; flex-direction: column; justify-content: center;">
-              <span class="badge-title" style="font-size: 13px; font-weight: 500; color: var(--color-background); line-height: 1.2; opacity: 0.9;">{{ section.settings.badge_title_2 }}</span>
-              <span class="badge-subtext" style="font-size: 13px; font-weight: bold; color: var(--color-background); line-height: 1.2; margin-top: 2px;">{{ section.settings.badge_subtext_2 }}</span>
-            </div>
-            {%- if section.settings.badge_img_2 != blank -%}
+               {%- if section.settings.badge_img_2 != blank -%}
               <div class="badge-img-wrap" style="display: flex; align-items: center;">
                 <img width="120" height="42" src="{{ section.settings.badge_img_2 | image_url: width: 120 }}" alt="" style="max-height: 42px; width: auto; object-fit: contain;" loading="lazy">
               </div>
             {%- endif -%}
+            <div class="badge-texts" style="display: flex; flex-direction: column; justify-content: center;">
+              <span class="badge-title" style="font-size: 13px; font-weight: 500; color: var(--color-background); line-height: 1.2; opacity: 0.9;">{{ section.settings.badge_title_2 }}</span>
+              <span class="badge-subtext" style="font-size: 13px; font-weight: bold; color: var(--color-background); line-height: 1.2; margin-top: 2px;">{{ section.settings.badge_subtext_2 }}</span>
+            </div>
+         
           </div>
         {%- endif -%}
 
         {%- comment -%} العنصر الثالث: الرقم الضريبي {%- endcomment -%}
         {%- if section.settings.badge_show_3 -%}
           <div class="footer-badge-item" style="display: flex; align-items: center; gap: 10px; text-align: right;">
-            <div class="badge-texts" style="display: flex; flex-direction: column; justify-content: center;">
-              <span class="badge-title" style="font-size: 13px; font-weight: 500; color: var(--color-background); line-height: 1.2; opacity: 0.9;">{{ section.settings.badge_title_3 }}</span>
-              <span class="badge-subtext" style="font-size: 13px; font-weight: bold; color: var(--color-background); line-height: 1.2; margin-top: 2px;">{{ section.settings.badge_subtext_3 }}</span>
-            </div>
-            {%- if section.settings.badge_img_3 != blank -%}
+             {%- if section.settings.badge_img_3 != blank -%}
               <div class="badge-img-wrap" style="display: flex; align-items: center;">
                 <img width="120" height="42" src="{{ section.settings.badge_img_3 | image_url: width: 120 }}" alt="" style="max-height: 42px; width: auto; object-fit: contain;" loading="lazy">
               </div>
             {%- endif -%}
+            <div class="badge-texts" style="display: flex; flex-direction: column; justify-content: center;">
+              <span class="badge-title" style="font-size: 13px; font-weight: 500; color: var(--color-background); line-height: 1.2; opacity: 0.9;">{{ section.settings.badge_title_3 }}</span>
+              <span class="badge-subtext" style="font-size: 13px; font-weight: bold; color: var(--color-background); line-height: 1.2; margin-top: 2px;">{{ section.settings.badge_subtext_3 }}</span>
+            </div>
+           
           </div>
         {%- endif -%}
 
