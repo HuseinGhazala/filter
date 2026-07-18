@@ -611,7 +611,7 @@
         "image_xB7TVK": {
           "type": "image",
           "settings": {
-            "show_bottom": false,
+            "show_bottom": true,
             "subheading_bottom": "",
             "subheading": "",
             "subheading_disable_on_mobile": false,
@@ -644,7 +644,7 @@
         "image_pnCLct": {
           "type": "image",
           "settings": {
-            "show_bottom": false,
+            "show_bottom": true,
             "subheading_bottom": "",
             "subheading": "",
             "subheading_disable_on_mobile": false,
@@ -677,7 +677,7 @@
         "image_6W9Ed3": {
           "type": "image",
           "settings": {
-            "show_bottom": false,
+            "show_bottom": true,
             "subheading_bottom": "",
             "subheading": "",
             "subheading_disable_on_mobile": false,
