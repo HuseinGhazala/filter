@@ -1035,7 +1035,63 @@ function getQuickViewModalVariants(modal) {
     return [];
   }
 }
+// 1. تعريف مصفوفة المفضلة وجلب البيانات الحالية من التخزين مباشرة عند تحميل الصفحة
+let wishlist = _loadStorage("wishlist");
 
+function _loadStorage(key) {
+  try { return JSON.parse(localStorage.getItem(key)) || []; }
+  catch { return []; }
+}
+
+function _saveStorage(key, value) {
+  localStorage.setItem(key, JSON.stringify(value));
+}
+
+function initWishlist() {
+  document.addEventListener("click", (e) => {
+    const btn = e.target.closest(".wishlist-btn");
+    if (!btn) return;
+    
+    e.preventDefault(); 
+    e.stopPropagation();
+    
+    const id = btn.dataset.productId;
+    if (id) toggleWishlist(id);
+  });
+
+  window.addEventListener("storage", (e) => {
+    if (e.key !== "wishlist") return;
+    wishlist = JSON.parse(e.newValue) || [];
+    syncWishlistButtons();
+  });
+
+  syncWishlistButtons();
+}
+
+function toggleWishlist(productId) {
+  const idStr = String(productId);
+  const idx = wishlist.indexOf(idStr);
+  
+  if (idx > -1) {
+    wishlist.splice(idx, 1);
+  } else {
+    wishlist.push(idStr);
+  }
+  
+  _saveStorage("wishlist", wishlist);
+  syncWishlistButtons();
+
+  document.dispatchEvent(new CustomEvent('wishlistUpdated'));
+}
+
+function syncWishlistButtons() {
+  document.querySelectorAll(".wishlist-btn").forEach((btn) => {
+    const btnId = String(btn.dataset.productId);
+    btn.classList.toggle("active", wishlist.includes(btnId));
+  });
+}
+
+initWishlist();
 function getSelectedQuickViewOptions(modal) {
   const selected = {};
   modal.querySelectorAll("input.quick-view-modal__variant-input:checked").forEach((input) => {
