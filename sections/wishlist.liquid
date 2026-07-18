@@ -2,7 +2,7 @@
   assign component = section.settings
 -%}
 
-<section class="page-width wt-slider__container--featured">
+<section class="page-width wt-slider__container--featured" style="margin-block: 40px;">
   <div id="wishlist-cards-source" style="display:none">
     {% paginate collections.all.products by 250 %}
       {%- for product in collections.all.products -%}
