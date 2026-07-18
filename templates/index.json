@@ -782,7 +782,7 @@
       "name": "t:sections.marquee_images.name",
       "settings": {
         "advanced_heading": false,
-        "heading": "The scrubs, just as you'll wear them.",
+        "heading": "How It Looks On",
         "heading_richtext": "<h2>Marquee images</h2>",
         "animation_direction": "right",
         "animation_speed": "100",
