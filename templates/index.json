@@ -412,10 +412,12 @@
       "name": "Product Categories",
       "settings": {
         "collection": [
-          "اسود",
-          "عودي",
-          "كحلي"
+          "black",
+          "burgundy",
+          "light-blue",
+          "navy"
         ],
+        "feature_image": "shopify://shop_images/04718991ffe450ed25dca905db5e6444fe219db5.png",
         "text_alignment": "right",
         "show_title": true,
         "title": "Shop complete sets",
