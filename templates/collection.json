@@ -101,6 +101,7 @@
     },
     "separator_qkXpB7": {
       "type": "separator",
+      "disabled": true,
       "settings": {
         "advanced_heading": false,
         "heading": "",
@@ -139,6 +140,7 @@
       "block_order": [
         "heading_xcypf6"
       ],
+      "disabled": true,
       "settings": {
         "section_width": "regular",
         "desktop_text_horizontal_position": "center",
@@ -214,6 +216,7 @@
         "column_kh4Bab",
         "column_qjBE93"
       ],
+      "disabled": true,
       "settings": {
         "advanced_heading": false,
         "heading": "",
@@ -286,6 +289,7 @@
         "column_d7bUHp",
         "column_igNhkc"
       ],
+      "disabled": true,
       "settings": {
         "advanced_heading": false,
         "heading": "Didn't find the product you're looking for?\nCheck out other collections:",
@@ -349,6 +353,7 @@
         "image_VGUkeA",
         "image_McECbz"
       ],
+      "disabled": true,
       "settings": {
         "advanced_heading": false,
         "heading": "",
@@ -406,6 +411,7 @@
         "paragraph_KJ3cj8",
         "email_form_UAcpDk"
       ],
+      "disabled": true,
       "settings": {
         "color-body-text": "",
         "background_color": "#ecf5f4",
