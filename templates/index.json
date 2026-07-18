@@ -578,6 +578,8 @@
         "image_4KGQd7": {
           "type": "image",
           "settings": {
+            "show_bottom": true,
+            "subheading_bottom": "",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
@@ -609,6 +611,8 @@
         "image_xB7TVK": {
           "type": "image",
           "settings": {
+            "show_bottom": false,
+            "subheading_bottom": "",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
@@ -640,6 +644,8 @@
         "image_pnCLct": {
           "type": "image",
           "settings": {
+            "show_bottom": false,
+            "subheading_bottom": "",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
@@ -671,6 +677,8 @@
         "image_6W9Ed3": {
           "type": "image",
           "settings": {
+            "show_bottom": false,
+            "subheading_bottom": "",
             "subheading": "",
             "subheading_disable_on_mobile": false,
             "subheading_advanced_settings": false,
