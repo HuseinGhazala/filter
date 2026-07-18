@@ -303,7 +303,7 @@
         "advanced_heading": false,
         "heading": "Workday Essentials",
         "heading_richtext": "<h2>Lookbook</h2>",
-        "heading_alignment": "left",
+        "heading_alignment": "right",
         "show_icons": true,
         "heading_disable_on_mobile": false,
         "full-width-enabled": false,
