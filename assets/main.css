@@ -12011,7 +12011,7 @@ recipient-form .form__message svg path:nth-child(2n) {
   .wt-lookbook__list {
   list-style: none;
   column-count: 2;
-  column-gap: var(--lookbook-gap, calc(var(--gap, 8px) * 1));
+  column-gap: 14px;
 }
 }
 .wt-lookbook__button {
