@@ -99,8 +99,8 @@
         "btn_url": "shopify://collections/ازرق",
         "text_alignment": "center",
         "mobile_vertical_alignment": "flex-start",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 0,
+        "padding_bottom": 72
       }
     },
     "features_banner_7zpBwP": {
