@@ -93,7 +93,7 @@
         "remove_btn_background": false,
         "heading_scale_desktop": 50,
         "sub_heading_scale_desktop": 28,
-        "heading_scale_mobile": 32,
+        "heading_scale_mobile": 24,
         "sub_heading_scale_mobile": 18,
         "btn_text": "Shop Now",
         "btn_url": "shopify://collections/ازرق",
