@@ -517,11 +517,11 @@
         "testimonial_background_color": "#fdfaf5",
         "card_heading_color": "",
         "card_author_color": "",
-        "margin-top": 20,
-        "margin-bottom": 40,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40
       }
     },
     "background_video_UHjiyi": {
@@ -568,11 +568,11 @@
         "desktop_text_horizontal_position": "center",
         "mobile_text_vertical_position": "center",
         "mobile_text_horizontal_position": "center",
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
+        "margin-top": 0,
+        "margin-bottom": 72,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40
       }
     },
     "grid_view_mKkY8d": {
