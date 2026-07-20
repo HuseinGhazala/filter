@@ -122,7 +122,17 @@
             "desktop_image": "shopify://shop_images/Frame_2147208077.png",
             "select_icon": "bag",
             "heading": "Durable, flexible materials",
-            "text": "<p>Soft, comfortable fabrics </p>",
+            "text": "<p>Soft, comfortable fabrics that withstand long hours of work.</p>",
+            "link": ""
+          }
+        },
+        "image_CVAnef": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208331.png",
+            "select_icon": "bag",
+            "heading": "Free shipping",
+            "text": "<p>Items you love at prices that fit your budget.</p>",
             "link": ""
           }
         },
@@ -132,7 +142,7 @@
             "desktop_image": "shopify://shop_images/Group_102.png",
             "select_icon": "bag",
             "heading": "Free shipping on orders over 450 Riyals.",
-            "text": "<p>Free shipping on .</p>",
+            "text": "<p>Free shipping on orders over 450 Riyals.</p>",
             "link": ""
           }
         },
@@ -142,7 +152,7 @@
             "desktop_image": "shopify://shop_images/Frame_2147208331.png",
             "select_icon": "bag",
             "heading": "Modest, loose-fitting cuts",
-            "text": "<p>Loose cuts that offer</p>",
+            "text": "<p>Loose cuts that offer you comfort and confidence all day long.</p>",
             "link": ""
           }
         }
@@ -150,6 +160,7 @@
       "block_order": [
         "image_EyjGTW",
         "image_jifwM9",
+        "image_CVAnef",
         "image_Baj9fw",
         "image_VtCTma"
       ],
