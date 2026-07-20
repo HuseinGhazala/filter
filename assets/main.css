@@ -11995,7 +11995,7 @@ recipient-form .form__message svg path:nth-child(2n) {
   display: block;
   width: 100%;
   height: 100%;
-  border-radius: var(--border-radius);
+  border-radius: 8px;
   object-fit: cover;
   object-position: top !important;
 }
