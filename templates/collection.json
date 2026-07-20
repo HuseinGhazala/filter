@@ -420,6 +420,75 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
+    },
+    "features_banner_feyCw6": {
+      "type": "features-banner",
+      "blocks": {
+        "image_GcJG8m": {
+          "type": "image",
+          "settings": {
+            "select_icon": "bag",
+            "heading": "Banner title",
+            "text": "<p>Items you love at prices that fit your budget.</p>",
+            "link": ""
+          }
+        },
+        "image_tW4QCB": {
+          "type": "image",
+          "settings": {
+            "select_icon": "bag",
+            "heading": "Banner title",
+            "text": "<p>Items you love at prices that fit your budget.</p>",
+            "link": ""
+          }
+        },
+        "image_VqbAeT": {
+          "type": "image",
+          "settings": {
+            "select_icon": "bag",
+            "heading": "Banner title",
+            "text": "<p>Items you love at prices that fit your budget.</p>",
+            "link": ""
+          }
+        },
+        "image_tj9frr": {
+          "type": "image",
+          "settings": {
+            "select_icon": "bag",
+            "heading": "Banner title",
+            "text": "<p>Items you love at prices that fit your budget.</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_GcJG8m",
+        "image_tW4QCB",
+        "image_VqbAeT",
+        "image_tj9frr"
+      ],
+      "name": "t:sections.features-banner.settings.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "Features banner",
+        "heading_richtext": "<h2>Features banner</h2>",
+        "size_heading_mobile": 80,
+        "size_heading": 80,
+        "icon_width_mobile": 36,
+        "icon_width_desktop": 48,
+        "icon_layout": "center",
+        "columns_desktop": "4",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "",
+        "color_background_icon": "",
+        "color_body_text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
     }
   },
   "order": [
@@ -432,6 +501,7 @@
     "multicolumn_BLNpDn",
     "collection_feature_XmBEar",
     "features_banner_48DfGA",
-    "newsletter_KQitJE"
+    "newsletter_KQitJE",
+    "features_banner_feyCw6"
   ]
 }
