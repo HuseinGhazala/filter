@@ -49,18 +49,9 @@
           data-sal="fade-up" data-sal-duration="800" data-sal-delay="150" data-sal-easing="ease-out" data-sal-repeat="true"
         {% endif %}
       >
-        {%- if section.settings.highlight_first_words -%}
-          {%- assign desc = section.settings.description | strip_html | strip -%}
-          {%- assign words = desc | split: ' ' -%}
-          {%- assign first_two = words | slice: 0, 2 | join: ' ' -%}
-          {%- assign rest = words | slice: 2, words.size | join: ' ' -%}
-          <p>
-            <span class="description__highlight">{{ first_two }}</span>
-            <span class="description__normal">{{ rest }}</span>
-          </p>
-        {%- else -%}
-          <span class="description__normal"> {{ section.settings.description }}</span>
-        {%- endif -%}
+      <div class="description__content">
+  {{ section.settings.description }}
+</div>
       </div>
     {%- endif -%}
 
@@ -624,13 +615,6 @@ font-weight: 400;
       "id": "show_description",
       "label": "Show description",
       "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "highlight_first_words",
-      "label": "Highlight first 2 words",
-      "default": true,
-      "visible_if": "{{ section.settings.show_description == true }}"
     },
     {
       "type": "richtext",
