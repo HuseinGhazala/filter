@@ -1,6 +1,6 @@
 <div class="color-collections-section page-width wt-slider__container--featured " id="section-{{ section.id }}">
   {% if section.settings.title != blank %}
-    <div class="section-header">
+    <div class="section-header text-right">
       <h2 class="color-collections-title">{{ section.settings.title | escape }}</h2>
     </div>
   {% endif %}
@@ -32,8 +32,6 @@
                 width="400"
                 height="400"
               >
-            {% else %}
-              {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
             {% endif %}
           </div>
           <h3 class="card-title">{{ collection.title }}</h3>
@@ -56,25 +54,36 @@
     padding-bottom: {{ section.settings.padding_bottom }}px;
   }
 
-  .color-collections-section .section-header {
-    margin-bottom: 25px;
+  @media screen and (max-width: 749px) {
+    {% if section.settings.show_mobile_spacing %}
+      #section-{{ section.id }} {
+        padding-top: {{ section.settings.margin_top_mobile }}px;
+        padding-bottom: {{ section.settings.margin_bottom_mobile }}px;
+      }
+    {% endif %}
+    
+    .color-collection-card {
+      flex: 0 0 calc(40% - 10px);
+      min-width: 130px;
+    }
   }
 
-  html[dir="rtl"] .color-collections-section .section-header {
-    text-align: right;
-  }
-
-  html[dir="ltr"] .color-collections-section .section-header {
-    text-align: left;
+  .section-header.text-right {
+    text-align: start;
   }
 
   .color-collections-title {
     font-size: 24px;
     font-weight: bold;
     color: var(--color-headings-text);
-    margin: 0;
+    margin-bottom: 40px;
   }
-
+ @media screen and (max-width: 749px) {
+    .color-collections-title {
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+  }
   .color-collections-grid {
     display: flex;
     gap: 16px;
@@ -103,13 +112,6 @@
     }
   }
 
-  @media screen and (max-width: 749px) {
-    .color-collection-card {
-      flex: 0 0 calc(40% - 10px);
-      min-width: 130px;
-    }
-  }
-
   .card-image-wrapper {
     position: relative;
     width: 100%;
@@ -135,12 +137,12 @@
   }
 
   .color-collection-card .card-title {
-    font-size: 16px;
+    font-size: 20px;
     color: var(--color-body-text);
-    margin-top: 12px;
+    margin-top: 16px;
     margin-bottom: 0;
-    font-weight: 500;
-    text-align: center;
+    font-weight: 400;
+    text-align: start;
   }
 {% endstyle %}
 
@@ -174,6 +176,39 @@
       "unit": "px",
       "label": "Padding Bottom",
       "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Mobile Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile_spacing",
+      "label": "Enable mobile custom spacing",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 20,
+      "unit": "px",
+      "label": "Top padding (Mobile)",
+      "visible_if": "{{ section.settings.show_mobile_spacing }}"
+
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 20,
+      "unit": "px",
+      "label": "Bottom padding (Mobile)",  
+        "visible_if": "{{ section.settings.show_mobile_spacing }}"
     }
   ],
   "blocks": [
