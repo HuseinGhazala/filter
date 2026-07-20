@@ -4293,7 +4293,7 @@ body .wt-grid-view-with-drawer__container[data-swiper] {
   flex-direction: column;
   flex-wrap: nowrap;
   width: 100%;
-  gap: calc(var(--gap, 8px) * 3);
+  gap: 40px;
   justify-content: center;
   padding-top: calc(var(--gap, 8px) * 1);
 }
@@ -4547,6 +4547,18 @@ body .wt-grid-view-with-drawer__container[data-swiper] {
 }
 .wt-keys__title.center {
   text-align: center;
+}
+@media (max-width: 899px) {
+  .wt-keys__title{
+    font-size:14px;
+    padding: 0px;
+  }
+  .wt-keys__text{
+     font-size:14px;
+    padding: 0px !important;
+    
+
+  }
 }
 @media (min-width: 900px) {
   .wt-keys__title {
