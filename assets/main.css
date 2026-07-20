@@ -12006,7 +12006,7 @@ recipient-form .form__message svg path:nth-child(2n) {
 }
 @media (max-width: 768px) {
   .wt-lookbook__link {
-    height: 250px;
+    height: 230px;
   }
   .wt-lookbook__list {
   list-style: none;
