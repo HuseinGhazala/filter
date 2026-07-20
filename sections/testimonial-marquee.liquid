@@ -83,6 +83,12 @@
       --author-alignment-mobile: flex-start;
   {% endcase %}
   }
+
+  @media screen and (max-width: 768px) {
+   .wt-testimonials-marquee__container .headline {
+  text-align:right;
+   }
+  }
 </style>
 
 {% case section.settings.animation_speed %}
