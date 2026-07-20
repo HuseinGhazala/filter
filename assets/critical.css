@@ -2354,6 +2354,12 @@ html[lang="ar"] .wt-header__body {
 .wt-header__panel__item:not(:first-child) {
   margin-left: calc(var(--gap, 8px) * 1.5);
 }
+
+@media screen and (max-width: 767px) {
+  .wt-header__panel__item:not(:first-child) {
+    margin-left: 0;
+  }
+}
 [dir=rtl] .wt-header__panel__item:not(:first-child) {
   margin-left: 0;
   margin-right: calc(var(--gap, 8px) * 1.5);
