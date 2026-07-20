@@ -81,6 +81,17 @@ font-size: 1.2rem;
       }
     {%- endif -%}
   {%- endfor -%}
+
+  .custom-nav-item {
+  width: 28px;
+  margin-inline: 5px; 
+}
+
+@media screen and (max-width: 767px) {
+  .custom-nav-item {
+    margin-inline: 0px;
+  }
+}
 </style>
 
 
@@ -665,7 +676,7 @@ font-size: 1.2rem;
           <span class="wt-header__panel__label">{{ 'templates.cart.cart' | t }}</span>
         </a>
       </li>
-       <li style="width: 28px;margin-inline: 5px;">
+       <li class="custom-nav-item">
        <a href="/pages/wishlist" class="wishlist-link" aria-label="Wishlist">
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
