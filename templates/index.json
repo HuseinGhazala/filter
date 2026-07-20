@@ -111,7 +111,7 @@
           "settings": {
             "desktop_image": "shopify://shop_images/Frame_2147208078.png",
             "select_icon": "bag",
-            "heading": "Designed by Saudi hands",
+            "heading": "Designed by Saudi",
             "text": "<p>Designed to suit your</p>",
             "link": ""
           }
@@ -121,7 +121,7 @@
           "settings": {
             "desktop_image": "shopify://shop_images/Frame_2147208077.png",
             "select_icon": "bag",
-            "heading": "Durable, flexible materials",
+            "heading": "Durable, flexible",
             "text": "<p>Soft, comfortable fabrics that withstand long hours of work.</p>",
             "link": ""
           }
@@ -136,23 +136,13 @@
             "link": ""
           }
         },
-        "image_Baj9fw": {
-          "type": "image",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Group_102.png",
-            "select_icon": "bag",
-            "heading": "Free shipping on orders over 450 Riyals.",
-            "text": "<p>Free shipping on orders over 450 Riyals.</p>",
-            "link": ""
-          }
-        },
         "image_VtCTma": {
           "type": "image",
           "settings": {
             "desktop_image": "shopify://shop_images/Frame_2147208331.png",
             "select_icon": "bag",
-            "heading": "Modest, loose-fitting cuts",
-            "text": "<p>Loose cuts that offer you comfort and confidence all day long.</p>",
+            "heading": "Modest, loose-fitting",
+            "text": "<p>Loose cuts that offer you comfort and confidence </p>",
             "link": ""
           }
         }
@@ -161,7 +151,6 @@
         "image_EyjGTW",
         "image_jifwM9",
         "image_CVAnef",
-        "image_Baj9fw",
         "image_VtCTma"
       ],
       "name": "t:sections.features-banner.settings.presets.name",
