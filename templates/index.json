@@ -373,11 +373,11 @@
         "color-body-text": "",
         "background_color": "",
         "background_gradient": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20,
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40,
         "compact_size": false
       }
     },
