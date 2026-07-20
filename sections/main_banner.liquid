@@ -1,23 +1,31 @@
 {{ 'main_banner.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
+  
+     .section-{{ section.id }}-padding.banner-main {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .section-{{ section.id }}-padding.banner-main {
+        padding-top:0px;
+        padding-bottom:40px;
+      }
+  }
 
     .banner-{{ section.id }} {
       height: {{ section.settings.desktop_height }}px;
     }
-
-    /* Dynamic Large Screen Title & Subtitle Sizing */
-    .banner-{{ section.id }} .banner-title {
+    
+ .banner-{{ section.id }} .banner-title {
       font-size: {{ section.settings.heading_scale_desktop }}px;
       line-height: 1;
     }
+   
     
     .banner-{{ section.id }} .banner-subtitle {
-      font-size: {{ section.settings.sub_heading_scale_desktop }}px;
+       font-size: {{ section.settings.sub_heading_scale_desktop }}px;
       /* Dynamic Width Option */
       {%- if section.settings.subtitle_full_width -%}
         width: 100%;
@@ -53,18 +61,17 @@
         padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round }}px;
       }
       
-      /* Dynamic Mobile Title & Subtitle Sizing */
-      .banner-{{ section.id }} .banner-title {
+  .banner-{{ section.id }} .banner-title {
         font-size: {{ section.settings.heading_scale_mobile }}px;
       }
       .banner-{{ section.id }} .banner-subtitle {
-        font-size: {{ section.settings.sub_heading_scale_mobile }}px;
-        width: 100%;
+ font-size: {{ section.settings.sub_heading_scale_mobile }}px;
+         width: 100%;
       }
     }
 {%- endstyle -%}
 
-<div class="section-{{ section.id }}-padding">
+<div class="section-{{ section.id }}-padding banner-main">
   <div class="custom-hero-banner banner-{{ section.id }} text-align-{{ section.settings.text_alignment }} {% if section.settings.stack_content_mobile %}banner-stacked-mobile{% endif %}">
     {%- if section.settings.background_type == 'image' -%}
       {%- if section.settings.image_desktop != blank -%}
@@ -336,6 +343,7 @@
       "label": "Distance from the bottom",
       "default": 36
     }
+    
   ],
   "presets": [
     {
