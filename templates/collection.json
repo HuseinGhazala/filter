@@ -40,14 +40,38 @@
         "desktop_text_vertical_position": "center",
         "desktop_text_horizontal_position": "center",
         "mobile_text_horizontal_position": "center",
-        "color-body-text": "#FFFFFF",
+        "color-body-text": "#ffffff",
         "color-overlay": "#e3f2e6",
         "color-overlay-opacity": 100,
         "margin-top": 72,
         "margin-bottom": 60,
         "show_mobile_spacing": true,
         "margin-top-mobile": 24,
-        "margin-bottom-mobile": 20
+        "margin-bottom-mobile": 24
+      }
+    },
+    "subcategory_8mx8jQ": {
+      "type": "subcategory",
+      "name": " Sub Category Collections",
+      "settings": {
+        "title": "كل السكرابات",
+        "title_color": "#11173D",
+        "sub_title": "سكرابات متنوعة بكل الألوان و القصات و الستايلات التي تحتاجينها في يومك",
+        "subtitle_color": "#11173D",
+        "card_title_color": "#11173D",
+        "image_height_desktop": 190,
+        "image_height_mobile": 85,
+        "padding_top": 0,
+        "padding_bottom": 68,
+        "show_mobile_spacing": true,
+        "margin_top_mobile": 0,
+        "margin_bottom_mobile": 24,
+        "collection": [
+          "black",
+          "burgundy",
+          "light-blue",
+          "navy"
+        ]
       }
     },
     "title": {
@@ -94,214 +118,6 @@
         "open_first_filter": false,
         "margin-top": 16,
         "margin-bottom": 0,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
-    "separator_qkXpB7": {
-      "type": "separator",
-      "disabled": true,
-      "settings": {
-        "advanced_heading": false,
-        "heading": "",
-        "heading_richtext": "<h2>Separator</h2>",
-        "size_heading": 100,
-        "size_heading_mobile": 100,
-        "show-separator-line": true,
-        "full-width-line": false,
-        "color-background": "#dfdfdf",
-        "color-body-text": "",
-        "color-section-background": "",
-        "margin-top": 20,
-        "margin-bottom": 16,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
-    "rich_text_fr3Ftz": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_xcypf6": {
-          "type": "heading",
-          "settings": {
-            "advanced_heading": false,
-            "heading": "Top Beauty Products",
-            "heading_richtext": "<h2>Your headline here</h2>",
-            "disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "heading_richtext_color": "",
-            "heading_richtext_gradient": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_xcypf6"
-      ],
-      "disabled": true,
-      "settings": {
-        "section_width": "regular",
-        "desktop_text_horizontal_position": "center",
-        "full-width-enabled": false,
-        "color-body-text": "",
-        "background_color": "",
-        "background_gradient": "",
-        "margin-top": 0,
-        "margin-bottom": 8,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20,
-        "compact_size": false
-      }
-    },
-    "multicolumn_BLNpDn": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_4Rxaze": {
-          "type": "column",
-          "settings": {
-            "heading": "BKIND Conditioner bar",
-            "heading_disable_on_mobile": false,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "text_style": "body",
-            "button_select": "link",
-            "button_label": "Check now",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "button_link_in_new_window": false,
-            "out-background-color": "",
-            "out-text-color": ""
-          }
-        },
-        "column_kh4Bab": {
-          "type": "column",
-          "settings": {
-            "heading": "Lapis Facial Oil",
-            "heading_disable_on_mobile": false,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "text_style": "body",
-            "button_select": "link",
-            "button_label": "Check now",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "button_link_in_new_window": false,
-            "out-background-color": "",
-            "out-text-color": ""
-          }
-        },
-        "column_qjBE93": {
-          "type": "column",
-          "settings": {
-            "heading": "Moisturizing Body Lotion",
-            "heading_disable_on_mobile": false,
-            "text": "",
-            "text_disable_on_mobile": false,
-            "text_style": "body",
-            "button_select": "link",
-            "button_label": "Check now",
-            "button_disable_on_mobile": false,
-            "button_link": "",
-            "button_link_in_new_window": false,
-            "out-background-color": "",
-            "out-text-color": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_4Rxaze",
-        "column_kh4Bab",
-        "column_qjBE93"
-      ],
-      "disabled": true,
-      "settings": {
-        "advanced_heading": false,
-        "heading": "",
-        "heading_richtext": "<h2>Your headline here</h2>",
-        "enable_stack_products": false,
-        "full-width-enabled": false,
-        "video_controls": false,
-        "video_custom_play_controls": false,
-        "video_custom_mute_controls": false,
-        "number_of_column_desktop": 4,
-        "spacing_desktop": "16",
-        "number_of_column_mobile": "1",
-        "spacing_mobile": "16",
-        "image_ratio": "square",
-        "column_alignment": "center",
-        "size_heading": 80,
-        "size_heading_mobile": 80,
-        "color-body-text": "",
-        "background_color": "",
-        "margin-top": 0,
-        "margin-bottom": 48,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
-    "collection_feature_XmBEar": {
-      "type": "collection-feature",
-      "blocks": {
-        "column_xc8mrj": {
-          "type": "column",
-          "settings": {
-            "collection": "",
-            "heading": "",
-            "color-body-text": "",
-            "background_color": "#faece6"
-          }
-        },
-        "column_nkp8dz": {
-          "type": "column",
-          "settings": {
-            "collection": "",
-            "heading": "",
-            "color-body-text": "",
-            "background_color": "#ebf4fa"
-          }
-        },
-        "column_d7bUHp": {
-          "type": "column",
-          "settings": {
-            "collection": "",
-            "heading": "",
-            "color-body-text": "",
-            "background_color": "#ecf7ee"
-          }
-        },
-        "column_igNhkc": {
-          "type": "column",
-          "settings": {
-            "collection": "",
-            "heading": "Essential Oils",
-            "color-body-text": "",
-            "background_color": "#fcfbe8"
-          }
-        }
-      },
-      "block_order": [
-        "column_xc8mrj",
-        "column_nkp8dz",
-        "column_d7bUHp",
-        "column_igNhkc"
-      ],
-      "disabled": true,
-      "settings": {
-        "advanced_heading": false,
-        "heading": "Didn't find the product you're looking for?\nCheck out other collections:",
-        "heading_richtext": "<h2>Your headline here</h2>",
-        "size_heading": 250,
-        "line_height": 1.4,
-        "size_heading_mobile": 150,
-        "line_height_mobile": 1.8,
-        "color-body-text": "",
-        "background_color": "#ecf7ee",
-        "margin-top": 64,
-        "margin-bottom": 72,
         "show_mobile_spacing": false,
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
@@ -375,134 +191,14 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
-    },
-    "newsletter_KQitJE": {
-      "type": "newsletter",
-      "blocks": {
-        "heading_KhxnCQ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Get 20% off your first order",
-            "heading_disable_on_mobile": false,
-            "size_heading": 200,
-            "size_heading_mobile": 160
-          }
-        },
-        "paragraph_KJ3cj8": {
-          "type": "paragraph",
-          "settings": {
-            "paragraph": "<p>Be the first to know about new collections and exclusive offers.</p>",
-            "text_disable_on_mobile": false
-          }
-        },
-        "email_form_UAcpDk": {
-          "type": "email_form",
-          "settings": {
-            "button_select": "primary",
-            "button_label": "",
-            "show_consent_checkbox": false,
-            "consent_checkbox_label": "<p>I want to sign up for the Newsletter (information about promotions, discounts, premieres, contests).</p>",
-            "consent_validation_message": "Please check this box to proceed."
-          }
-        }
-      },
-      "block_order": [
-        "heading_KhxnCQ",
-        "paragraph_KJ3cj8",
-        "email_form_UAcpDk"
-      ],
-      "disabled": true,
-      "settings": {
-        "color-body-text": "",
-        "background_color": "#ecf5f4",
-        "margin-top": 100,
-        "margin-bottom": 100,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
-    "features_banner_feyCw6": {
-      "type": "features-banner",
-      "blocks": {
-        "image_GcJG8m": {
-          "type": "image",
-          "settings": {
-            "select_icon": "bag",
-            "heading": "Banner title",
-            "text": "<p>Items you love at prices that fit your budget.</p>",
-            "link": ""
-          }
-        },
-        "image_tW4QCB": {
-          "type": "image",
-          "settings": {
-            "select_icon": "bag",
-            "heading": "Banner title",
-            "text": "<p>Items you love at prices that fit your budget.</p>",
-            "link": ""
-          }
-        },
-        "image_VqbAeT": {
-          "type": "image",
-          "settings": {
-            "select_icon": "bag",
-            "heading": "Banner title",
-            "text": "<p>Items you love at prices that fit your budget.</p>",
-            "link": ""
-          }
-        },
-        "image_tj9frr": {
-          "type": "image",
-          "settings": {
-            "select_icon": "bag",
-            "heading": "Banner title",
-            "text": "<p>Items you love at prices that fit your budget.</p>",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_GcJG8m",
-        "image_tW4QCB",
-        "image_VqbAeT",
-        "image_tj9frr"
-      ],
-      "name": "t:sections.features-banner.settings.presets.name",
-      "settings": {
-        "advanced_heading": false,
-        "heading": "Features banner",
-        "heading_richtext": "<h2>Features banner</h2>",
-        "size_heading_mobile": 80,
-        "size_heading": 80,
-        "icon_width_mobile": 36,
-        "icon_width_desktop": 48,
-        "icon_layout": "center",
-        "columns_desktop": "4",
-        "icon_layout_mobile": "grid",
-        "color_body_icon": "",
-        "color_background_icon": "",
-        "color_body_text": "",
-        "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
     }
   },
   "order": [
     "breadcrumbs",
     "banner",
+    "subcategory_8mx8jQ",
     "title",
     "product-grid",
-    "separator_qkXpB7",
-    "rich_text_fr3Ftz",
-    "multicolumn_BLNpDn",
-    "collection_feature_XmBEar",
-    "features_banner_48DfGA",
-    "newsletter_KQitJE",
-    "features_banner_feyCw6"
+    "features_banner_48DfGA"
   ]
 }
