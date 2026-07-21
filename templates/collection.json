@@ -55,10 +55,10 @@
       "name": " Sub Category Collections",
       "settings": {
         "title": "كل السكرابات",
-        "title_color": "#11173D",
+        "title_color": "#11173d",
         "sub_title": "سكرابات متنوعة بكل الألوان و القصات و الستايلات التي تحتاجينها في يومك",
-        "subtitle_color": "#11173D",
-        "card_title_color": "#11173D",
+        "subtitle_color": "#11173d",
+        "card_title_color": "#11173d",
         "image_height_desktop": 190,
         "image_height_mobile": 85,
         "padding_top": 0,
@@ -191,6 +191,69 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
+    },
+    "store_features_WtnNxA": {
+      "type": "store_features",
+      "blocks": {
+        "feature_EX8qyc": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Frame_2147208078.png",
+            "title": "Made in Saudi Arabia",
+            "link": ""
+          }
+        },
+        "feature_7GgwtG": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/8e50be51605abdb42a39e66c34e6d0152212fc0d.png",
+            "title": "Crease-resistant",
+            "link": ""
+          }
+        },
+        "feature_cHkmwQ": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/Group_102.png",
+            "title": "Wide and loose-fitting",
+            "link": ""
+          }
+        },
+        "feature_NpQ8C6": {
+          "type": "feature",
+          "settings": {
+            "image": "shopify://shop_images/6f6fa20a3cbb2b9638a194c22406464a055afbbb.png",
+            "title": "Superior comfort",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature_EX8qyc",
+        "feature_7GgwtG",
+        "feature_cHkmwQ",
+        "feature_NpQ8C6"
+      ],
+      "name": "Store Features",
+      "settings": {
+        "heading": "",
+        "columns_desktop": 4,
+        "image_width_desktop": 120,
+        "image_height_desktop": 120,
+        "title_font_size": 18,
+        "mobile_layout": "grid",
+        "columns_mobile": 2,
+        "image_width_mobile": 90,
+        "image_height_mobile": 90,
+        "title_font_size_mobile": 15,
+        "image_border_radius": 50,
+        "text_color": "#111827",
+        "background_color": "",
+        "margin_top": 20,
+        "margin_bottom": 20,
+        "margin_top_mobile": 16,
+        "margin_bottom_mobile": 16
+      }
     }
   },
   "order": [
@@ -199,6 +262,7 @@
     "subcategory_8mx8jQ",
     "title",
     "product-grid",
-    "features_banner_48DfGA"
+    "features_banner_48DfGA",
+    "store_features_WtnNxA"
   ]
 }
