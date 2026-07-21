@@ -1,0 +1,338 @@
+<div class="color-collections-section page-width wt-slider__container--featured" id="section-{{ section.id }}">
+  <div class="section-header text-center">
+    {% if section.settings.title != blank %}
+      <h2 class="color-collections-title">{{ section.settings.title | escape }}</h2>
+    {% endif %}
+    {% if section.settings.sub_title != blank %}
+      <p class="color-collections-subtitle">{{ section.settings.sub_title | escape }}</p>
+    {% endif %}
+  </div>
+
+  <div class="swiper color-collections-swiper-{{ section.id }}">
+    <div class="swiper-wrapper">
+      {% if section.settings.collection != blank %}
+        {% for collection in section.settings.collection %}
+          {%- capture filter_param -%}
+            ?filter.v.option.color={{ collection.title | url_encode }}
+          {%- endcapture -%}
+
+          <div class="swiper-slide">
+            <a href="{{ collection.url }}{{ filter_param }}" class="color-collection-card">
+              <div class="card-image-wrapper">
+                {% if collection.image != blank %}
+                  {{
+                    collection.image
+                    | image_url: width: 1200
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '400, 600, 800, 1000, 1200',
+                      sizes: '(min-width: 990px) 34vw, 100vw',
+                      alt: collection.title
+                  }}
+                {% elsif collection.products.first.featured_image != blank %}
+                  {{
+                    collection.products.first.featured_image
+                    | image_url: width: 1200
+                    | image_tag:
+                      loading: 'lazy',
+                      widths: '400, 600, 800, 1000, 1200',
+                      sizes: '(min-width: 990px) 34vw, 100vw',
+                      alt: collection.products.first.featured_image.alt
+                  }}
+                {% else %}
+                  {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+                {% endif %}
+              </div>
+              <h3 class="card-title">{{ collection.title }}</h3>
+            </a>
+          </div>
+        {% endfor %}
+      {% else %}
+        {% for i in (1..6) %}
+          <div class="swiper-slide">
+            <div class="color-collection-card dummy-card">
+              <div class="card-image-wrapper">
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              </div>
+              <h3 class="card-title">اسم الكوليكشن</h3>
+            </div>
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% style %}
+  #section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+  }
+
+  /* Separate Text Colors */
+  #section-{{ section.id }} .color-collections-title {
+    color: {{ section.settings.title_color }};
+  }
+
+  #section-{{ section.id }} .color-collections-subtitle {
+    color: {{ section.settings.subtitle_color }};
+  }
+
+  #section-{{ section.id }} .color-collection-card .card-title {
+    color: {{ section.settings.card_title_color }};
+  }
+
+  /* Desktop Image Height */
+  #section-{{ section.id }} .card-image-wrapper {
+    height: {{ section.settings.image_height_desktop }}px;
+  }
+
+  /* Section Header */
+  .section-header.text-center {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+
+  .color-collections-title {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+  }
+
+  .color-collections-subtitle {
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 650px;
+    line-height: 1.6;
+  }
+
+  /* Swiper Container Fixes */
+  .color-collections-swiper-{{ section.id }} {
+    padding-bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .color-collection-card {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  /* Rectangle Image Wrapper */
+  .card-image-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f3f4f6;
+  }
+
+  .card-image-wrapper img,
+  .card-image-wrapper svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+
+  .color-collection-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+  }
+
+  .color-collection-card .card-title {
+    font-size: 18px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  /* Mobile Responsive Controls */
+  @media screen and (max-width: 749px) {
+    #section-{{ section.id }} .card-image-wrapper {
+      height: {{ section.settings.image_height_mobile }}px;
+    }
+
+    {% if section.settings.show_mobile_spacing %}
+      #section-{{ section.id }} {
+        padding-top: {{ section.settings.margin_top_mobile }}px;
+        padding-bottom: {{ section.settings.margin_bottom_mobile }}px;
+      }
+    {% endif %}
+
+    .color-collections-title {
+      font-size: 22px;
+    }
+
+    .color-collections-subtitle {
+      font-size: 14px;
+    }
+
+    .color-collection-card .card-title {
+      font-size: 15px;
+    }
+  }
+{% endstyle %}
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiperContainer = document.querySelector('.color-collections-swiper-{{ section.id }}');
+
+    if (swiperContainer) {
+      new Swiper(swiperContainer, {
+        slidesPerView: 2.2,
+        spaceBetween: 16,
+        grabCursor: true,
+        // هذه الإعدادات تمنع المشاكل عند تغيير حجم الشاشة (Responsive Glitches)
+        observer: true,
+        observeParents: true,
+        resizeObserver: true,
+        breakpoints: {
+          480: {
+            slidesPerView: 2.5,
+            spaceBetween: 16,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 24,
+          },
+        },
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Sub Category Collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Main Heading",
+      "default": "كل السكرابات"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Main Heading Color",
+      "default": "#11173D"
+    },
+    {
+      "type": "text",
+      "id": "sub_title",
+      "label": "Sub Heading",
+      "default": "سكرابات متنوعة بكل الألوان و القصات و الستايلات التي تحتاجينها في يومك"
+    },
+    {
+      "type": "color",
+      "id": "subtitle_color",
+      "label": "Sub Heading Color",
+      "default": "#11173D"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Cards Title Color",
+      "default": "#11173D"
+    },
+    {
+      "type": "header",
+      "content": "Image Height Settings"
+    },
+    {
+      "type": "range",
+      "id": "image_height_desktop",
+      "min": 50,
+      "max": 250,
+      "step": 10,
+      "unit": "px",
+      "label": "Image Height (Desktop)",
+      "default": 190
+    },
+    {
+      "type": "range",
+      "id": "image_height_mobile",
+      "min": 30,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Image Height (Mobile)",
+      "default": 85
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 36
+    },
+    {
+      "type": "header",
+      "content": "Mobile Spacing"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile_spacing",
+      "label": "Enable mobile custom spacing",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "margin_top_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 20,
+      "unit": "px",
+      "label": "Top padding (Mobile)"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom_mobile",
+      "min": 0,
+      "max": 100,
+      "step": 2,
+      "default": 20,
+      "unit": "px",
+      "label": "Bottom padding (Mobile)"
+    },
+    {
+      "type": "collection_list",
+      "id": "collection",
+      "limit": 10,
+      "label": "Collections"
+    }
+  ],
+  "presets": [
+    {
+      "name": " Sub Category Collections"
+    }
+  ]
+}
+{% endschema %}
