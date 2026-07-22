@@ -425,7 +425,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/carbon_close-filled.png",
-            "item_heading": "Modest Coverage ",
+            "item_heading": "Modest Coverage Doesn't Reveal Body Shape",
             "text": ""
           }
         },
@@ -433,7 +433,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/Vector_1.png",
-            "item_heading": " Conceals Body Contours",
+            "item_heading": "Modest Coverage Conceals Body Contours",
             "text": ""
           }
         },
@@ -441,7 +441,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/carbon_close-filled.png",
-            "item_heading": " No Undershirt Needed",
+            "item_heading": "Opaque Fabric No Undershirt Needed",
             "text": ""
           }
         },
@@ -449,7 +449,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/Vector_1.png",
-            "item_heading": "Opaque Fabric No",
+            "item_heading": "Opaque Fabric No Undershirt Needed",
             "text": ""
           }
         },
@@ -457,7 +457,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/carbon_close-filled.png",
-            "item_heading": "Comfortable Fit True",
+            "item_heading": "Comfortable Fit True to Size",
             "text": ""
           }
         },
