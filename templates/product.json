@@ -289,42 +289,6 @@
             "margin-bottom": 0
           }
         },
-        "video_reels_fUDDgA": {
-          "type": "video_reels",
-          "settings": {
-            "heading": "Complete your beauty ritual",
-            "show_play_pause": true,
-            "show_unmute": true,
-            "auto_advanced": false,
-            "enable_quick_add": true,
-            "hide_brand": false,
-            "video_reels_1": "shopify://files/videos/5fd16bf9d6bf49daa3117e19907acac0hd-720p-16mbps-53423753_WOcMKolK.mp4",
-            "video_reels_1_product": "womens-loose-fit",
-            "video_reels_2_product": "",
-            "video_reels_3_product": "",
-            "video_reels_4_product": "",
-            "video_reels_5_product": "",
-            "video_reels_6_product": ""
-          }
-        },
-        "separator_BNyJGF": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": false,
-            "color-background": "#e0dedb",
-            "margin-top": 16,
-            "margin-bottom": 8
-          }
-        },
-        "78809992-2318-4893-9402-6cfd49f50b6a": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": true,
-            "color-background": "#e0dedb",
-            "margin-top": 0,
-            "margin-bottom": 0
-          }
-        },
         "d162f900-ee92-4311-b27d-d5f312fa73f2": {
           "type": "collapsible_tab",
           "settings": {
@@ -341,8 +305,35 @@
             "icon_margin": 0
           }
         },
+        "78809992-2318-4893-9402-6cfd49f50b6a": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#e0dedb",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
+        "video_reels_fUDDgA": {
+          "type": "video_reels",
+          "settings": {
+            "heading": "Complete your beauty ritual",
+            "show_play_pause": true,
+            "show_unmute": true,
+            "auto_advanced": false,
+            "enable_quick_add": true,
+            "hide_brand": false,
+            "video_reels_1_product": "womens-loose-fit",
+            "video_reels_2_product": "",
+            "video_reels_3_product": "",
+            "video_reels_4_product": "",
+            "video_reels_5_product": "",
+            "video_reels_6_product": ""
+          }
+        },
         "separator_M9U6NC": {
           "type": "separator",
+          "disabled": true,
           "settings": {
             "show-separator-line": true,
             "color-background": "#e0dedb",
@@ -352,6 +343,7 @@
         },
         "upsell_Fzh866": {
           "type": "upsell",
+          "disabled": true,
           "settings": {
             "heading": "Frequently paired with",
             "product_upsell": [],
@@ -383,10 +375,9 @@
         "2ce0b4b1-3440-40cd-92c2-15d46e61dfca",
         "5fed6e0f-fb7e-4874-8ba9-3321623fc828",
         "separator_jY8GV3",
-        "video_reels_fUDDgA",
-        "separator_BNyJGF",
-        "78809992-2318-4893-9402-6cfd49f50b6a",
         "d162f900-ee92-4311-b27d-d5f312fa73f2",
+        "78809992-2318-4893-9402-6cfd49f50b6a",
+        "video_reels_fUDDgA",
         "separator_M9U6NC",
         "upsell_Fzh866"
       ],
