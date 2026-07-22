@@ -389,7 +389,7 @@
         "image_desktop": "shopify://shop_images/Group_101.png",
         "image_mobile": "shopify://shop_images/Group_98.png",
         "video_url": "",
-        "desktop_height": 600,
+        "desktop_height": 650,
         "mobile_height": 250,
         "stack_content_mobile": true,
         "mobile_content_bg": "#ffffff",
