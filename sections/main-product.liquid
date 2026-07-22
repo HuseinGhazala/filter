@@ -462,6 +462,23 @@
         {% endif %}
     {%- endcase -%}
     {%- endfor -%}
+
+
+    .wt-product-mobile{
+    display: none;
+    }
+        @media (max-width: 749px) {
+          [data-block-id="title"] .wt-product__name, .wt-product__price{
+          display: none;
+          }
+      .wt-product-mobile{
+        display: block;
+        margin-bottom: 22px;
+      }
+        .wt-product-mobile [data-block-id="title"] .wt-product__name,  .wt-product-mobile .wt-product__price{
+          display: block !important;
+          }
+    }
 </style>
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
@@ -596,6 +613,52 @@
   <div class="wt-product wt-product--{{ desktop_layout }}">
     {% render 'product-head' %}
 
+    <div class="wt-product-mobile">
+          {%- for block in section.blocks -%}
+  {%- case block.type -%}
+    {%- when '@app' -%}
+      {% render block %}
+    {%- when 'custom_liquid' -%}
+      {{ block.settings.custom_liquid }}
+    {%- when 'title' -%}
+      <div
+        data-block-id="{{ block.id }}"
+        class="product-block--title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+      >
+        <div class="wt-product__brand ">
+          {% if block.settings.enable_vendor_link %}
+            <a class="vendor-link" href="/collections/vendors?q={{ product.vendor }}">
+          {% endif %}
+          <span class="wt-product__brand__name">
+            {{ block.settings.brand }}
+          </span>
+          {% if block.settings.enable_vendor_link %}
+            </a>
+          {% endif %}
+        </div>
+        <h1 class="wt-product__name">{{ product.title }}</h1>
+      </div>
+
+    {%- when 'price' -%}
+      <div
+        class="wt-product__price product-block--price no-js-hidden {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+        data-block-id="{{ block.id }}"
+        id="price-{{ section.id }}"
+        role="status"
+        {{ block.shopify_attributes }}
+      >
+        {%- render 'price',
+          product: product,
+          use_variant: true,
+          show_badges: true,
+          price_class: 'price--large',
+          selling_plan_price: initial_sp_price,
+          selling_plan_compare_at_price: initial_sp_compare_at_price
+        -%}
+      </div>
+  {%- endcase -%}
+{%- endfor -%}
+      </div>
     <gallery-section
       id="MediaGallery-{{ section.id }}"
       class="
