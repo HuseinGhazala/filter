@@ -94,7 +94,7 @@
             "margin-bottom": 8,
             "size_icon": "check_mark",
             "size_link": "",
-            "variant_name": "",
+            "variant_name": "Size",
             "size_content": "",
             "metafield": "",
             "enable-striped-rows": true
@@ -106,7 +106,7 @@
             "content": "<p>Fast shipping to your doorstep across the Kingdom.<br/>A convenient and secure shopping experience with easy returns.</p>",
             "text_alignment": "center",
             "color-body-text": "{{ settings.colors.primary }}",
-            "background_color": "#F8F5EF"
+            "background_color": "#f8f5ef"
           }
         },
         "buy_buttons": {
