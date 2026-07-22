@@ -1,1 +1,373 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"compact-size-enabled":true,"size_heading":140,"size_heading_mobile":100,"color-overlay-opacity":100,"margin-top":40,"margin-bottom":0}},"b0118af0-7eaf-42de-8ebe-2bacbdcdac45":{"type":"background-video","blocks":{"template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1":{"type":"subheading","disabled":true,"settings":{"subheading":"Tell your story","subheading_disable_on_mobile":false,"subheading_advanced_settings":false,"text_style":"subtitle","text_uppercase":false,"letter_spacing":1,"size_text_desktop":100,"size_text_mobile":100}},"template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1":{"type":"heading","settings":{"heading":"About Us","disable_on_mobile":false,"size_heading":200,"size_heading_mobile":180}},"template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1":{"type":"text","settings":{"text":"<p>Discover Our Story<\/p>","text_style":"body","disable_on_mobile":false}},"template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1":{"type":"button","settings":{"button_select":"primary","button_label":"Button label","disable_on_mobile":false,"button_link":"","second_button_select":"primary","second_button_label":"Button label","second_disable_on_mobile":false,"second_button_link":""}}},"block_order":["template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1","template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1","template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1","template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1"],"settings":{"advanced_heading":false,"heading":"","heading_richtext":"<h2>Video hero<\/h2>","full-width-enabled":true,"autoplay":true,"video_controls":false,"video_custom_play_controls":false,"video_custom_mute_controls":false,"video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","original_ratio":"fixed_height","desktop_fixed_height":520,"mobile_fixed_height":380,"color-overlay-opacity":100,"color-body-text":"#ffffff","desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_vertical_position":"center","mobile_text_horizontal_position":"center","margin-top":0,"margin-bottom":0}},"rich_text_with_image_t6WctF":{"type":"rich-text-with-image","blocks":{"text_6hjmRi":{"type":"text","settings":{"text":"Beauty begins here PICTURE1 with passion for you and  PICTURE2  your skin.","font_uppercase":"none","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100,"line_height":1.8,"picture1":"","button_link1":"","picture2":"","button_link2":"","button_link3":""}},"heading_iPwg69":{"type":"heading","settings":{"subheading":"<p>We could not have created this demo without the help of an amazing source of content and products. We extend our sincere appreciation to Mokosh, Bkind, and Herbivore for generously allowing us to showcase their product images on our demo store. Their collaboration has been instrumental in creating a visually engaging and informative experience for our visitors. We are proud to align with brands that share our commitment to quality and innovation. Thank you for the opportunity to feature your exceptional products and contribute to a more vibrant online shopping experience.<\/p>","font_uppercase":"none","disable_on_mobile":false}}},"block_order":["text_6hjmRi","heading_iPwg69"],"name":"t:sections.rich-text-with-image.presets.name","settings":{"desktop_text_horizontal_position":"center","margin-top":36,"margin-bottom":36}},"image_with_scrolling_text_gARQbt":{"type":"image-with-scrolling-text","blocks":{"image_hjrGcK":{"type":"image","settings":{"desktop_image":"","heading":"Mokosh","size_heading":100,"size_heading_mobile":100,"text":"Mokosh Cosmetics produces exceptional natural cosmetics that captivate with their quality and selection of raw materials, texture and fragrance. The recipes of Mokosh products are the result of joint work of technologists and cosmetologists, which is why they respond so well to the real needs of customers.","button_select":"secondary","button_label":"Check products","button_link":"https:\/\/wonder-theme-beauty.myshopify.com\/collections\/vendors?q=MOKOSH","disable_on_mobile":false,"second_button_select":"primary","second_button_label":"Button label","second_disable_on_mobile":false,"second_button_link":""}},"image_V4nKUB":{"type":"image","settings":{"desktop_image":"","heading":"BKIND","size_heading":100,"size_heading_mobile":100,"text":"At BKIND, we offer all-natural, plant-based, vegan, eco-friendly beauty and skin care products made in Quebec. Each product is carefully developed. From ingredients to packaging, we choose the best options for you, your skin and the environment.","button_select":"secondary","button_label":"Check products","button_link":"https:\/\/wonder-theme-beauty.myshopify.com\/collections\/vendors?q=BKIND","disable_on_mobile":false,"second_button_select":"primary","second_button_label":"Button label","second_disable_on_mobile":false,"second_button_link":""}},"image_D7fjpr":{"type":"image","settings":{"desktop_image":"","heading":"Herbivore","size_heading":100,"size_heading_mobile":100,"text":"Herbivore believes in the power of nature to bring tangible results you can see and feel. We make our products, ingredients, and packaging as gentle on the planet as they are on our bodies.","button_select":"secondary","button_label":"Check products","button_link":"https:\/\/wonder-theme-beauty.myshopify.com\/collections\/vendors?q=Herbivore","disable_on_mobile":false,"second_button_select":"primary","second_button_label":"Button label","second_disable_on_mobile":false,"second_button_link":""}}},"block_order":["image_hjrGcK","image_V4nKUB","image_D7fjpr"],"name":"t:sections.image_with_scrolling_text.name","settings":{"layout":"image_first","full-width-enabled":false,"image_ratio":"adapt","desktop_text_horizontal_position":"left","mobile_text_horizontal_position":"center","background_color":"#ecf5e9","margin-top":0,"margin-bottom":0}},"features_banner_WQqnjf":{"type":"features-banner","blocks":{"image_kiCQk4":{"type":"image","settings":{"desktop_image":"","select_icon":"plant","heading":"Vegan","text":"<p>Our entire collection is vegan and cruelty free.<\/p>","link":""}},"image_9GVzRF":{"type":"image","settings":{"desktop_image":"","select_icon":"truck","heading":"Fast & Free Shipping","text":"<p>Doorstep delivery to most of the US.<\/p>","link":""}},"image_ikQXq8":{"type":"image","settings":{"desktop_image":"","select_icon":"leaf","heading":"Natural","text":"<p>We only use the finest natural ingredients.<\/p>","link":""}},"image_ah99zQ":{"type":"image","settings":{"desktop_image":"","select_icon":"recycle","heading":"Recyclable","text":"<p>All packaging is recyclable and eco conscious.<\/p>","link":""}}},"block_order":["image_kiCQk4","image_9GVzRF","image_ikQXq8","image_ah99zQ"],"settings":{"advanced_heading":false,"heading":"","heading_richtext":"<h2>Your headline here<\/h2>","size_heading_mobile":80,"size_heading":70,"icon_width_mobile":52,"icon_width_desktop":64,"icon_layout":"center","columns_desktop":"4","icon_layout_mobile":"grid","margin-top":44,"margin-bottom":64}},"map_address_CgFhaF":{"type":"map-address","blocks":{"address_header_kBNy3U":{"type":"address_header","settings":{"address_title":"Our Store","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":100}},"map_address_ynyAMX":{"type":"map_address","settings":{"address_to_display":"<p>151 O'Connor Street, Ground floor, Ottawa, ON, K2P 2L8.<\/p>"}},"button_jtWi7h":{"type":"button","settings":{"button_style":"secondary","button_label":"Get Direction","button_link":"https:\/\/www.google.com\/maps\/place\/Shopify\/@45.419181,-75.7016012,17z\/data=!3m1!4b1!4m6!3m5!1s0x4cce05468ce3bf21:0x4dfbad2ddac86336!8m2!3d45.4191773!4d-75.6967303!16s%2Fg%2F11wxj_z427?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"}}},"block_order":["address_header_kBNy3U","map_address_ynyAMX","button_jtWi7h"],"settings":{"advanced_heading":false,"heading":"","heading_richtext":"<h2>Map with Address<\/h2>","address":"1600 Amphitheatre Parkway, Mountain View, CA 94043, United States","api_key":"","initial_map_zoom":14,"map_style":"default","image":"","image_desktop":"","full-width-enabled":true,"slide_height":"adapt_to_first_image","desktop_fixed_height":320,"mobile_fixed_height":460,"content_alignment":"left","content_alignment_desktop":"left","content_position":"top_left","section-color-overlay-opacity":100,"background_color":"#ffffff","background_color_opacity":85,"background_blur":0,"margin-top":0,"margin-bottom":0}}},"order":["main","b0118af0-7eaf-42de-8ebe-2bacbdcdac45","rich_text_with_image_t6WctF","image_with_scrolling_text_gARQbt","features_banner_WQqnjf","map_address_CgFhaF"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "",
+        "color-bg-overlay": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "b0118af0-7eaf-42de-8ebe-2bacbdcdac45": {
+      "type": "background-video",
+      "blocks": {
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Tell your story",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "About Us",
+            "disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 180
+          }
+        },
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Discover Our Story</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_select": "primary",
+            "button_label": "Button label",
+            "disable_on_mobile": false,
+            "button_link": "",
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1",
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1",
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1",
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Video hero</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "video_hosted": "shopify://files/videos/5fd16bf9d6bf49daa3117e19907acac0hd-720p-16mbps-53423753_WOcMKolK.mp4",
+        "autoplay": true,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "original_ratio": "fixed_height",
+        "desktop_fixed_height": 680,
+        "mobile_fixed_height": 600,
+        "color-body-heading": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "color-body-text": "#ffffff",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 72,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40
+      }
+    },
+    "rich_text_with_image_t6WctF": {
+      "type": "rich-text-with-image",
+      "blocks": {
+        "text_6hjmRi": {
+          "type": "text",
+          "settings": {
+            "text": "Beauty begins here PICTURE1 with passion for you and  PICTURE2  your skin.",
+            "font_uppercase": "none",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "line_height": 1.8,
+            "button_link1": "",
+            "button_link2": "",
+            "button_link3": "",
+            "button_link4": ""
+          }
+        },
+        "heading_iPwg69": {
+          "type": "heading",
+          "settings": {
+            "subheading": "<p>We could not have created this demo without the help of an amazing source of content and products. We extend our sincere appreciation to Mokosh, Bkind, and Herbivore for generously allowing us to showcase their product images on our demo store. Their collaboration has been instrumental in creating a visually engaging and informative experience for our visitors. We are proud to align with brands that share our commitment to quality and innovation. Thank you for the opportunity to feature your exceptional products and contribute to a more vibrant online shopping experience.</p>",
+            "font_uppercase": "none",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "text_6hjmRi",
+        "heading_iPwg69"
+      ],
+      "name": "t:sections.rich-text-with-image.presets.name",
+      "settings": {
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 36,
+        "margin-bottom": 36,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "image_with_scrolling_text_gARQbt": {
+      "type": "image-with-scrolling-text",
+      "blocks": {
+        "image_hjrGcK": {
+          "type": "image",
+          "settings": {
+            "heading": "Mokosh",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Mokosh Cosmetics produces exceptional natural cosmetics that captivate with their quality and selection of raw materials, texture and fragrance. The recipes of Mokosh products are the result of joint work of technologists and cosmetologists, which is why they respond so well to the real needs of customers.",
+            "button_select": "secondary",
+            "button_label": "Check products",
+            "button_link": "https://wonder-theme-beauty.myshopify.com/collections/vendors?q=MOKOSH",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        },
+        "image_V4nKUB": {
+          "type": "image",
+          "settings": {
+            "heading": "BKIND",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "At BKIND, we offer all-natural, plant-based, vegan, eco-friendly beauty and skin care products made in Quebec. Each product is carefully developed. From ingredients to packaging, we choose the best options for you, your skin and the environment.",
+            "button_select": "secondary",
+            "button_label": "Check products",
+            "button_link": "https://wonder-theme-beauty.myshopify.com/collections/vendors?q=BKIND",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        },
+        "image_D7fjpr": {
+          "type": "image",
+          "settings": {
+            "heading": "Herbivore",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Herbivore believes in the power of nature to bring tangible results you can see and feel. We make our products, ingredients, and packaging as gentle on the planet as they are on our bodies.",
+            "button_select": "secondary",
+            "button_label": "Check products",
+            "button_link": "https://wonder-theme-beauty.myshopify.com/collections/vendors?q=Herbivore",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_hjrGcK",
+        "image_V4nKUB",
+        "image_D7fjpr"
+      ],
+      "name": "t:sections.image_with_scrolling_text.name",
+      "settings": {
+        "layout": "image_first",
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "color-body-text": "",
+        "background_color": "#ecf5e9",
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "features_banner_WQqnjf": {
+      "type": "features-banner",
+      "blocks": {
+        "image_kiCQk4": {
+          "type": "image",
+          "settings": {
+            "select_icon": "plant",
+            "heading": "Vegan",
+            "text": "<p>Our entire collection is vegan and cruelty free.</p>",
+            "link": ""
+          }
+        },
+        "image_9GVzRF": {
+          "type": "image",
+          "settings": {
+            "select_icon": "truck",
+            "heading": "Fast & Free Shipping",
+            "text": "<p>Doorstep delivery to most of the US.</p>",
+            "link": ""
+          }
+        },
+        "image_ikQXq8": {
+          "type": "image",
+          "settings": {
+            "select_icon": "leaf",
+            "heading": "Natural",
+            "text": "<p>We only use the finest natural ingredients.</p>",
+            "link": ""
+          }
+        },
+        "image_ah99zQ": {
+          "type": "image",
+          "settings": {
+            "select_icon": "recycle",
+            "heading": "Recyclable",
+            "text": "<p>All packaging is recyclable and eco conscious.</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_kiCQk4",
+        "image_9GVzRF",
+        "image_ikQXq8",
+        "image_ah99zQ"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "size_heading_mobile": 80,
+        "size_heading": 70,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 64,
+        "icon_layout": "center",
+        "columns_desktop": "4",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "",
+        "color_background_icon": "",
+        "color_body_text": "",
+        "background_color": "",
+        "margin-top": 44,
+        "margin-bottom": 64,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "map_address_CgFhaF": {
+      "type": "map-address",
+      "blocks": {
+        "address_header_kBNy3U": {
+          "type": "address_header",
+          "settings": {
+            "address_title": "Our Store",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100
+          }
+        },
+        "map_address_ynyAMX": {
+          "type": "map_address",
+          "settings": {
+            "address_to_display": "<p>151 O'Connor Street, Ground floor, Ottawa, ON, K2P 2L8.</p>"
+          }
+        },
+        "button_jtWi7h": {
+          "type": "button",
+          "settings": {
+            "button_style": "secondary",
+            "button_label": "Get Direction",
+            "button_link": "https://www.google.com/maps/place/Shopify/@45.419181,-75.7016012,17z/data=!3m1!4b1!4m6!3m5!1s0x4cce05468ce3bf21:0x4dfbad2ddac86336!8m2!3d45.4191773!4d-75.6967303!16s%2Fg%2F11wxj_z427?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
+          }
+        }
+      },
+      "block_order": [
+        "address_header_kBNy3U",
+        "map_address_ynyAMX",
+        "button_jtWi7h"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Map with Address</h2>",
+        "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
+        "api_key": "",
+        "initial_map_zoom": 14,
+        "map_style": "default",
+        "full-width-enabled": true,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 460,
+        "content_alignment": "left",
+        "content_alignment_desktop": "left",
+        "content_position": "top_left",
+        "section-color-body-text": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "",
+        "background_color": "#ffffff",
+        "background_color_opacity": 85,
+        "background_blur": 0,
+        "margin-top": 0,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b0118af0-7eaf-42de-8ebe-2bacbdcdac45",
+    "rich_text_with_image_t6WctF",
+    "image_with_scrolling_text_gARQbt",
+    "features_banner_WQqnjf",
+    "map_address_CgFhaF"
+  ]
+}
