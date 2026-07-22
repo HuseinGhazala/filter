@@ -216,27 +216,30 @@
         "image_9GVzRF": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208077.png",
             "select_icon": "truck",
-            "heading": "Fast & Free Shipping",
-            "text": "<p>Doorstep delivery to most of the US.</p>",
+            "heading": "Durable, flexible",
+            "text": "<p>Soft, comfortable</p>",
             "link": ""
           }
         },
         "image_ikQXq8": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208331.png",
             "select_icon": "leaf",
-            "heading": "Natural",
-            "text": "<p>We only use the finest natural ingredients.</p>",
+            "heading": "Free shipping",
+            "text": "<p>Items you love </p>",
             "link": ""
           }
         },
         "image_ah99zQ": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/Group_102.png",
             "select_icon": "recycle",
-            "heading": "Recyclable",
-            "text": "<p>All packaging is recyclable and eco conscious.</p>",
+            "heading": "Modest, loose-fitting",
+            "text": "<p>Loose cuts that offer </p>",
             "link": ""
           }
         }
