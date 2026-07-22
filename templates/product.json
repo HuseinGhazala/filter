@@ -425,7 +425,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/carbon_close-filled.png",
-            "item_heading": "Modest Coverage Doesn't Reveal Body Shape",
+            "item_heading": "Modest Coverage ",
             "text": ""
           }
         },
@@ -433,7 +433,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/Vector_1.png",
-            "item_heading": "Modest Coverage Conceals Body Contours",
+            "item_heading": " Conceals Body Contours",
             "text": ""
           }
         },
@@ -441,7 +441,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/carbon_close-filled.png",
-            "item_heading": "Opaque Fabric No Undershirt Needed",
+            "item_heading": " No Undershirt Needed",
             "text": ""
           }
         },
@@ -449,7 +449,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/Vector_1.png",
-            "item_heading": "Opaque Fabric No Undershirt Needed",
+            "item_heading": "Opaque Fabric No",
             "text": ""
           }
         },
@@ -457,7 +457,7 @@
           "type": "benefit",
           "settings": {
             "image": "shopify://shop_images/carbon_close-filled.png",
-            "item_heading": "Comfortable Fit True to Size",
+            "item_heading": "Comfortable Fit True",
             "text": ""
           }
         },
@@ -480,6 +480,12 @@
       ],
       "name": "t:sections.benefits_product.name",
       "settings": {
+        "left_badge_text": "Regular Scrub",
+        "left_badge_bg": "#cccccc",
+        "left_badge_color": "#333333",
+        "right_badge_text": "Our Scrub",
+        "right_badge_bg": "#0d1b3e",
+        "right_badge_color": "#ffffff",
         "advanced_heading": false,
         "heading": "",
         "heading_richtext": "<h2>Your headline here</h2>",
