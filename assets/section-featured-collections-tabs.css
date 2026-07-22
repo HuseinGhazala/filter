@@ -59,6 +59,7 @@
   font-family: var(--font-base);
   font-style: var(--font-base-style);
   font-weight: var(--font-base-weight);
+  opacity:0.7;
   color: var(--color-custom-text, var(--color-headings-text, var(--color-text)));
 }
 .wt-tabs__tab[role=tab] span {
@@ -73,6 +74,7 @@
 }
 .wt-tabs__tab[role=tab]:hover, .wt-tabs__tab[role=tab]:active {
   color: #11173D;
+  opacity:1;
 }
 .wt-tabs__tab[role=tab]:hover span, .wt-tabs__tab[role=tab]:active span {
   background-image: linear-gradient(var(--color-links-active, var(--color-links-active, var(--color-links-active))));
