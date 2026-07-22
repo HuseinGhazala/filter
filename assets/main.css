@@ -8509,6 +8509,9 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
 .wt-product__main--featured-product {
   z-index: initial;
 }
+  .wt-product-mobile{
+    display: none;
+    }
 @media (min-width: 900px) {
   .wt-product__main {
     width: 36%;
