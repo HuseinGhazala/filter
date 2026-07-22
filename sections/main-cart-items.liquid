@@ -169,8 +169,8 @@
                     {%- for block in trust_badges -%}
                       <div class="trust-badge-item" style="flex: 1; min-width: 120px; max-width: 200px;" {{ block.shopify_attributes }}>
                         {%- if block.settings.image != blank -%}
-                          <div class="trust-badge-image" style="margin-bottom: 10px;">
-                            <img src="{{ block.settings.image | image_url: width: 150 }}" alt="{{ block.settings.title }}" style="max-width: 80px; height: auto; object-fit: contain;" loading="lazy">
+                          <div class="trust-badge-image" style="margin-bottom: 10px; ">
+                            <img src="{{ block.settings.image | image_url: width: 150 }}" alt="{{ block.settings.title }}" style="max-width: 80px; height: 60px; object-fit: contain;" loading="lazy">
                           </div>
                         {%- endif -%}
                         {%- if block.settings.title != blank -%}
