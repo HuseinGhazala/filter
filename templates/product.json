@@ -1035,6 +1035,7 @@
     },
     "separator_LcU8ix": {
       "type": "separator",
+      "disabled": true,
       "name": "t:sections.separator.presets.name",
       "settings": {
         "advanced_heading": false,
@@ -1168,6 +1169,57 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
+    },
+    "benefits_video_xQy6pe": {
+      "type": "benefits-video",
+      "blocks": {
+        "video_qjbdUJ": {
+          "type": "video",
+          "settings": {
+            "text": ""
+          }
+        },
+        "video_74HCe8": {
+          "type": "video",
+          "settings": {
+            "text": ""
+          }
+        },
+        "video_dY7CN3": {
+          "type": "video",
+          "settings": {
+            "text": ""
+          }
+        },
+        "video_gaCyEH": {
+          "type": "video",
+          "settings": {
+            "text": ""
+          }
+        }
+      },
+      "block_order": [
+        "video_qjbdUJ",
+        "video_74HCe8",
+        "video_dY7CN3",
+        "video_gaCyEH"
+      ],
+      "name": "t:sections.benefits-video.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "A Saudi brand—by women, for women.",
+        "heading_richtext": "<h2>Benefits video reels</h2>",
+        "video_button": false,
+        "text_alignment": "center",
+        "text_style": "body",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
     }
   },
   "order": [
@@ -1184,6 +1236,7 @@
     "video_reels_dqWnMm",
     "separator_LcU8ix",
     "features_banner_4mRcTR",
-    "newsletter_dznx9H"
+    "newsletter_dznx9H",
+    "benefits_video_xQy6pe"
   ]
 }
