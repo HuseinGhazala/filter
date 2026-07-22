@@ -177,7 +177,7 @@
                     {%- endfor -%}
                   </div>
                 {%- endif -%}
-    {%- if section.settings.enable_loyalty_points -%}
+    {% comment %} {%- if section.settings.enable_loyalty_points -%}
   <div class="wt-cart__loyalty">
     <div class="wt-cart__loyalty__row">
       <span class="wt-cart__loyalty__label">
@@ -194,7 +194,10 @@
       </a>
     {%- endunless -%}
   </div>
-{%- endif -%}
+{%- endif -%} {% endcomment %}
+
+
+{{ 'templates.search.no_pages_results' | t: terms: search.terms }}
                 {%- render 'cart-payment-badge' -%} 
                 <div id="cart-errors"></div>
               </div>
