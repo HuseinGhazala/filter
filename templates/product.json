@@ -60,15 +60,6 @@
             "icon_margin": 4
           }
         },
-        "separator_Qt7zAY": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": false,
-            "color-background": "#000000",
-            "margin-top": 8,
-            "margin-bottom": 8
-          }
-        },
         "price": {
           "type": "price",
           "settings": {
@@ -76,6 +67,15 @@
             "show_shipping_policy": true,
             "size_text": 120,
             "size_text_mobile": 140
+          }
+        },
+        "separator_Qt7zAY": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#C8C8C8",
+            "margin-top": 16,
+            "margin-bottom": 16
           }
         },
         "variant_picker": {
@@ -155,7 +155,7 @@
           "type": "separator",
           "settings": {
             "show-separator-line": true,
-            "color-background": "#000000",
+            "color-background": "#C8C8C8",
             "margin-top": 16,
             "margin-bottom": 16
           }
@@ -361,8 +361,8 @@
         "rating",
         "feature_tags_44iTGm",
         "e23830b4-3ca6-452f-a7d1-cb245a3e9282",
-        "separator_Qt7zAY",
         "price",
+        "separator_Qt7zAY",
         "variant_picker",
         "promo_67ttgj",
         "buy_buttons",
