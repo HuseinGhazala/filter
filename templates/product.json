@@ -733,7 +733,7 @@
         "gap_desk": 20,
         "testimonial_text_size_desktop": 100,
         "text_alignment_desktop": "right",
-        "card_width_mobile": 280,
+        "card_width_mobile": 320,
         "number_of_column_mobile": 1.1,
         "gap": 12,
         "testimonial_text_size": 100,
