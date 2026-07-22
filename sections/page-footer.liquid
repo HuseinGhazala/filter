@@ -51,6 +51,28 @@ html[dir="ltr"] .footer-badge-item {
   }
   
 }
+@media (max-width: 768px) {
+  .wt-footer__body {
+    display: flex;
+    flex-direction: column;
+  }
+.wt-footer__block--menu:first-of-type,
+  .wt-footer__block:first-child {
+    border-top: 0 !important;
+  }
+  .wt-footer__block--text {
+    order: 99;
+    border-top: 1px solid rgba(var(--color-footer-text-rgb), .2);
+  }
+
+  html[dir="rtl"] .footer-custom-badges {
+    justify-content: flex-start; 
+  }
+
+  html[dir="ltr"] .footer-custom-badges {
+    justify-content: flex-end; 
+  }
+}
 </style>
 
 {% if section.settings.show-scroll-effect %}
