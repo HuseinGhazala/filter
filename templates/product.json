@@ -403,7 +403,7 @@
         "enable-preselected-variant": true,
         "enable-image-zoom": true,
         "mobile-image": "small",
-        "show-thumbnails-mobile": false,
+        "show-thumbnails-mobile": true,
         "text_color": "",
         "background_color": "",
         "pdp_nav_icon_bg_color": "#ffffff",
