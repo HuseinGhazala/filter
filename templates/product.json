@@ -1139,7 +1139,8 @@
         "product_list": [
           "women-fit-scrub",
           "womens-loose-fit",
-          "womens-loose-fit-scrub"
+          "womens-loose-fit-scrub",
+          "women-fit"
         ],
         "products_to_show": 4,
         "enable_stack_products": false,
