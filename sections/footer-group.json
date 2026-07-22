@@ -41,8 +41,8 @@
         "menu_9YUhCX": {
           "type": "menu",
           "settings": {
-            "heading_links": "Information",
-            "links": "footer"
+            "heading_links": "Contact us",
+            "links": "contact-us"
           }
         }
       },
