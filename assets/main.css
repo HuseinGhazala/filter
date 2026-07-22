@@ -9093,6 +9093,17 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
   border-color: transparent;
   flex-grow: 2;
   width: auto;
+  padding-block: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+[data-button-animations=fill_on_hover] .js-add-to-cart{
+clip-path: unset;}
+[data-button-animations=fill_on_hover] .js-add-to-cart:after{
+  display: none;
 }
 @media (hover: hover) {
   .wt-product__add-to-cart_form .js-add-to-cart:hover {
