@@ -135,23 +135,25 @@
                           </button>
                         </noscript>
 
-                        <button aria-label="{{ 'sections.cart.checkout' | t }}" type="submit" class="wt-cart__cta cart__checkout" name="checkout" {% if cart == empty %} disabled {% endif %} form="cart">
+                        {% comment %} <button aria-label="{{ 'sections.cart.checkout' | t }}" type="submit" class="wt-cart__cta cart__checkout" name="checkout" {% if cart == empty %} disabled {% endif %} form="cart">
                           {% if settings.enable-lock-icon %}
                             {% render 'icon-lock' %}
                           {% endif %}
                           {{ 'sections.cart.checkout' | t }}
-                        </button>
+                        </button> {% endcomment %}
 
                         <a href="{{ routes.all_products_collection_url }}" class="wt-button wt-button--secondary wt-button--full-width wt-cart__back-link">
                           {{ 'general.continue_shopping' | t }}
                         </a>
                       </div>
 
-                      {%- if additional_checkout_buttons -%}
+                      {% comment %} {%- if additional_checkout_buttons -%}
                         <div class="cart__dynamic-checkout-buttons additional-checkout-buttons">
                           {{ content_for_additional_checkout_buttons }}
                         </div>
-                      {%- endif -%}
+                      {%- endif -%} {% endcomment %}
+
+
                   {%- endcase -%}
                 {% endfor %}
 
@@ -175,7 +177,7 @@
                     {%- endfor -%}
                   </div>
                 {%- endif -%}
-
+    
                 {%- render 'cart-payment-badge' -%} 
                 <div id="cart-errors"></div>
               </div>
@@ -185,7 +187,7 @@
         </div>
 
    
-          </div>
+     </div>
 
       </div>
       <p class="visually-hidden" id="cart-live-region-text" aria-live="polite" role="status"></p>
