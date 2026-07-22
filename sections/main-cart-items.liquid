@@ -68,9 +68,8 @@
                {%- if cart != empty -%}
           <div class="wt-cart__footer-container" id="main-cart-footer" data-id="{{ section.id }}">
         {% render 'free-shipping-bar',
-            enable: true,
-            amount: "USD:1000",
-            you_are_close:{{ 'templates.cart.you_are_close' | t }},
+            enable: settings.enable_free_shipping_bar,
+            amount: settings.free_shipping_bar_amount,
             text: settings.free_shipping_bar_text,
             text_success: settings.free_shipping_bar_text_success
         %}
