@@ -201,7 +201,12 @@
     {%- endunless -%}
   </div>
 {%- endif -%} {% endcomment %}
-
+       {% render 'free-shipping-bar',
+            enable: settings.enable_free_shipping_bar,
+            amount: settings.free_shipping_bar_amount,
+            text: settings.free_shipping_bar_text,
+            text_success: settings.free_shipping_bar_text_success
+        %}
                 {%- render 'cart-payment-badge' -%} 
                 <div id="cart-errors"></div>
               </div>

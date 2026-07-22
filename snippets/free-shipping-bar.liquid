@@ -1,0 +1,122 @@
+{%- if enable -%}
+  {%- assign fs_parts = amount | split: ':' -%}
+  {%- assign fs_currency = fs_parts[0] | default: 'USD' -%}
+  {%- assign fs_threshold = fs_parts[1] | default: 100 | times: 100 -%}
+  {%- comment -%} fs_threshold بالسنت عشان نقارنه بـ cart.total_price {%- endcomment -%}
+
+  {%- assign fs_remaining = fs_threshold | minus: cart.total_price -%}
+  {%- if fs_remaining < 0 -%}
+    {%- assign fs_remaining = 0 -%}
+  {%- endif -%}
+
+  {%- assign fs_progress = cart.total_price | times: 100.0 | divided_by: fs_threshold -%}
+  {%- if fs_progress > 100 -%}
+    {%- assign fs_progress = 100 -%}
+  {%- endif -%}
+
+  {%- assign fs_success = false -%}
+  {%- if cart.total_price >= fs_threshold -%}
+    {%- assign fs_success = true -%}
+  {%- endif -%}
+
+  {%- assign fs_remaining_money = fs_remaining | money -%}
+
+  <div class="free-shipping-bar" data-free-shipping-bar data-threshold="{{ fs_threshold }}" dir="rtl">
+    <div class="free-shipping-bar__icon">
+      {%- render 'icon-truck' -%}
+    </div>
+    <div class="free-shipping-bar__content">
+      <p class="free-shipping-bar__text" data-free-shipping-text>
+        {%- if fs_success -%}
+          {{ text_success }}
+        {%- else -%}
+          {{ text | replace: '||amount||', fs_remaining_money }}
+        {%- endif -%}
+      </p>
+      <div class="free-shipping-bar__track">
+        <div
+          class="free-shipping-bar__progress"
+          data-free-shipping-progress
+          style="width: {{ fs_progress }}%;"
+        ></div>
+      </div>
+    </div>
+  </div>
+{%- endif -%}
+
+<style>
+  .free-shipping-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--color-background-subtle, #f7f4ea);
+    border: 1px solid var(--color-border, #e5e1d3);
+    border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .free-shipping-bar__icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .free-shipping-bar__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  .free-shipping-bar__content {
+    flex: 1;
+    min-width: 0;
+  }
+  .free-shipping-bar__text {
+    margin: 0 0 8px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+  .free-shipping-bar__text strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 2px;
+  }
+  .free-shipping-bar__track {
+    height: 6px;
+    width: 100%;
+    background: #e5e1d3;
+    border-radius: 999px;
+    overflow: hidden;
+  }
+  .free-shipping-bar__progress {
+    height: 100%;
+    background: linear-gradient(90deg, #1a1a4b, #2d2d7a);
+    border-radius: 999px;
+    transition: width 0.4s ease;
+  }
+</style>
+
+<script>
+  // تحديث الشريط تلقائي بعد أي تعديل على الكارت (إضافة/حذف منتج)
+  document.addEventListener('cart:updated', function (event) {
+    var bar = document.querySelector('[data-free-shipping-bar]');
+    if (!bar) return;
+
+    var threshold = parseInt(bar.dataset.threshold, 10);
+    var cartTotal = event.detail && event.detail.cart ? event.detail.cart.total_price : null;
+    if (cartTotal === null) return;
+
+    var remaining = Math.max(threshold - cartTotal, 0);
+    var progress = Math.min((cartTotal / threshold) * 100, 100);
+
+    var progressEl = bar.querySelector('[data-free-shipping-progress]');
+    if (progressEl) progressEl.style.width = progress + '%';
+
+    var textEl = bar.querySelector('[data-free-shipping-text]');
+    if (textEl && remaining === 0) {
+      // استبدل بالنص الناجح لو متاح كـ data attribute أو خليه يتحدث من السيرفر
+      bar.classList.add('is-success');
+    }
+  });
+</script>
