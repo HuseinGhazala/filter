@@ -857,8 +857,8 @@
         "gap": 24,
         "color-body-text": "",
         "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 40,
+        "margin-top": 0,
+        "margin-bottom": 100,
         "show_mobile_spacing": true,
         "margin-top-mobile": 0,
         "margin-bottom-mobile": 24
