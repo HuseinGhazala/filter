@@ -9769,6 +9769,8 @@ clip-path: unset;}
   color: var(--block-color-text);
   text-align: var(--block-text-alignment);
   border-radius: var(--border-radius);
+  margin-block: 24px;
+
 }
 .wt__quick-buy .wt-product__promo {
   display: none;
