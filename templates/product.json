@@ -481,7 +481,7 @@
       "name": "t:sections.benefits_product.name",
       "settings": {
         "advanced_heading": false,
-        "heading": "",
+        "heading": "Scrubna",
         "heading_richtext": "<h2>Your headline here</h2>",
         "full-width-enabled": false,
         "desktop_image": "shopify://shop_images/3676c80941f6f9afa2d29bc9d7ae6a1873de57de.png",
