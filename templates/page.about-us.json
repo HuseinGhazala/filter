@@ -110,7 +110,7 @@
         "margin-bottom": 72,
         "show_mobile_spacing": true,
         "margin-top-mobile": 0,
-        "margin-bottom-mobile": 40
+        "margin-bottom-mobile": 24
       }
     },
     "rich_text_with_image_t6WctF": {
@@ -261,10 +261,10 @@
         "color_background_icon": "",
         "color_body_text": "",
         "background_color": "",
-        "margin-top": 44,
-        "margin-bottom": 64,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
+        "margin-top": 0,
+        "margin-bottom": 68,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
         "margin-bottom-mobile": 20
       }
     }
