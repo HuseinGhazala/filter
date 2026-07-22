@@ -74,7 +74,7 @@
 }
 .wt-tabs__tab[role=tab]:hover, .wt-tabs__tab[role=tab]:active {
   color: #11173D;
-  opacity:1;
+  opacity: 1 !important;
 }
 .wt-tabs__tab[role=tab]:hover span, .wt-tabs__tab[role=tab]:active span {
   background-image: linear-gradient(var(--color-links-active, var(--color-links-active, var(--color-links-active))));
