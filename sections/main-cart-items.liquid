@@ -141,7 +141,9 @@
                           {% endif %} {% endcomment %}
 
                             {{ 'templates.cart.btn_cart' | t: terms: search.terms }}
-                            {{ cart.total_price | money_with_currency }}
+                            <span>
+                              {{ cart.total_price | money_with_currency }}
+                          </span>
 
                           {% comment %} {{ 'sections.cart.checkout' | t }} {% endcomment %}
                         </button>
