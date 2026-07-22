@@ -59,6 +59,7 @@
         },
         "e23830b4-3ca6-452f-a7d1-cb245a3e9282": {
           "type": "bulletpoints",
+          "disabled": true,
           "settings": {
             "metafield": "",
             "default_text": "20% discount at checkout",
