@@ -156,7 +156,24 @@
 
                   {%- endcase -%}
                 {% endfor %}
-
+{%- if section.settings.enable_loyalty_points -%}
+  <div class="wt-cart__loyalty">
+    <div class="wt-cart__loyalty__row">
+      <span class="wt-cart__loyalty__label">
+        <i class="ti ti-award"></i> نقاط الولاء
+      </span>
+      {%- if customer -%}
+        {%- assign earned_points = cart.total_price | divide: 100.0 | times: section.settings.points_per_currency_unit | round -%}
+        <span class="wt-cart__loyalty__points">+ {{ earned_points }} points</span>
+      {%- endif -%}
+    </div>
+    {%- unless customer -%}
+      <a href="{{ routes.account_login_url }}" class="wt-cart__loyalty__link">
+        يرجى تسجيل الدخول لعرض نقاطك والاستفادة منها ←
+      </a>
+    {%- endunless -%}
+  </div>
+{%- endif -%}
                 {%- assign trust_badges = section.blocks | where: "type", "trust_badge" -%}
                 {%- if trust_badges.size > 0 -%}
                   <div class="cart-trust-badges" style="display: flex; justify-content: space-around; gap: 15px; margin: 20px 0; flex-wrap: wrap; text-align: center;">
