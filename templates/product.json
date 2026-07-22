@@ -417,62 +417,6 @@
         "margin-bottom-mobile": 20
       }
     },
-    "background_video_axipNV": {
-      "type": "background-video",
-      "blocks": {
-        "text_EeTEnd": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Created In Harmony with Nature</p>",
-            "text_style": "body",
-            "disable_on_mobile": false
-          }
-        },
-        "heading_6nnq9e": {
-          "type": "heading",
-          "settings": {
-            "heading": "100% Natural Ingredients",
-            "disable_on_mobile": false,
-            "size_heading": 260,
-            "size_heading_mobile": 160
-          }
-        }
-      },
-      "block_order": [
-        "text_EeTEnd",
-        "heading_6nnq9e"
-      ],
-      "disabled": true,
-      "name": "t:sections.background-video.presets.name",
-      "settings": {
-        "advanced_heading": false,
-        "heading": "",
-        "heading_richtext": "<h2>Your headline here</h2>",
-        "full-width-enabled": true,
-        "container_max_width": 0,
-        "autoplay": true,
-        "video_controls": false,
-        "video_custom_play_controls": true,
-        "video_custom_mute_controls": false,
-        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "original_ratio": "fixed_height",
-        "desktop_fixed_height": 500,
-        "mobile_fixed_height": 320,
-        "color-body-heading": "#ffffff",
-        "color-overlay": "",
-        "color-overlay-opacity": 100,
-        "color-body-text": "#ffffff",
-        "desktop_text_vertical_position": "center",
-        "desktop_text_horizontal_position": "center",
-        "mobile_text_vertical_position": "center",
-        "mobile_text_horizontal_position": "center",
-        "margin-top": 0,
-        "margin-bottom": 4,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
-    },
     "benefits_product_fbMnEC": {
       "type": "benefits-product",
       "blocks": {
@@ -1174,7 +1118,6 @@
   "order": [
     "breadcrumbs",
     "main",
-    "background_video_axipNV",
     "benefits_product_fbMnEC",
     "before_and_after_AFCUre",
     "rich_text_JQdA3g",
