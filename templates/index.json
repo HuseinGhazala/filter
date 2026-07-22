@@ -351,7 +351,7 @@
           "settings": {
             "button_select": "primary",
             "button_label": "About Us",
-            "button_link": "/",
+            "button_link": "shopify://pages/about-us",
             "disable_on_mobile": false,
             "second_button_select": "primary",
             "second_button_label": "Button label",
@@ -800,63 +800,6 @@
         "margin-top-mobile": 0,
         "margin-bottom-mobile": 44
       }
-    },
-    "parallax_XnrxxV": {
-      "type": "parallax",
-      "blocks": {
-        "heading_KpYdVJ": {
-          "type": "heading",
-          "settings": {
-            "heading": "Discover Everyday Comfort & Style",
-            "disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100
-          }
-        },
-        "text_YhMrnf": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We create premium scrubs with carefully selected fabrics and thoughtful details, delivering all-day comfort, confidence, and modest coverage in every shift.</p>",
-            "text_style": "body",
-            "disable_on_mobile": false
-          }
-        },
-        "button_ENRT49": {
-          "type": "button",
-          "settings": {
-            "button_select": "primary",
-            "button_label": "About us",
-            "button_link": "shopify://pages/about-us",
-            "disable_on_mobile": false,
-            "second_button_select": "primary",
-            "second_button_label": "Button label",
-            "second_disable_on_mobile": false,
-            "second_button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_KpYdVJ",
-        "text_YhMrnf",
-        "button_ENRT49"
-      ],
-      "name": "t:sections.parallax-section.settings.presets.name",
-      "settings": {
-        "desktop_text_horizontal_position": "center",
-        "image_count": "2",
-        "rotation": 5,
-        "button_link1": "",
-        "button_link2": "",
-        "button_link3": "",
-        "button_link4": "",
-        "color-body-text": "",
-        "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
     }
   },
   "order": [
@@ -871,7 +814,6 @@
     "testimonial_marquee_VHcPTa",
     "background_video_UHjiyi",
     "grid_view_mKkY8d",
-    "marquee_images_Bp3tmm",
-    "parallax_XnrxxV"
+    "marquee_images_Bp3tmm"
   ]
 }
