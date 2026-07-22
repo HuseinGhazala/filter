@@ -6,48 +6,86 @@
 {% assign text_rgb = section.settings['color-body-text'] | color_to_rgb %}
 
 <style>
-  section[id="shopify-section-{{ section.id }}"]{
-      --desktop-width: {{ section.settings.desktop_width }}%;
-      --desktop-max-width: {{ section.settings.desktop_max_width }}px;
-      --desktop-section-height: {{ section.settings.desktop_section_height }}vh;
-      --desktop-section-max-height: {{ section.settings.desktop_section_max_height }}px;
-      --font-icon-headline-scale-desk: {{ section.settings.size_heading | divided_by: 100.0 }};
-      --font-icon-headline-scale: {{ section.settings.size_heading_mobile | divided_by: 100.0 }};
+  section[id="shopify-section-{{ section.id }}"] {
+    --desktop-width: {{ section.settings.desktop_width }}%;
+    --desktop-max-width: {{ section.settings.desktop_max_width }}px;
+    --desktop-section-height: {{ section.settings.desktop_section_height }}vh;
+    --desktop-section-max-height: {{ section.settings.desktop_section_max_height }}px;
+    --font-icon-headline-scale-desk: {{ section.settings.size_heading | divided_by: 100.0 }};
+    --font-icon-headline-scale: {{ section.settings.size_heading_mobile | divided_by: 100.0 }};
 
-      {% if section.settings.margin-top %}
-          --section-gap-top: {{ section.settings.margin-top }}px;
-      {% endif %}
+    {% if section.settings.margin-top %}
+      --section-gap-top: {{ section.settings.margin-top }}px;
+    {% endif %}
 
-      {% if section.settings.margin-bottom %}
-          --section-gap-bottom: {{ section.settings.margin-bottom }}px;
-      {% endif %}
+    {% if section.settings.margin-bottom %}
+      --section-gap-bottom: {{ section.settings.margin-bottom }}px;
+    {% endif %}
 
-      {%- if section.settings.show_mobile_spacing -%}
-          --section-gap-top-mobile: {{ section.settings.margin-top-mobile }}px;
-      {%- endif -%}
+    {%- if section.settings.show_mobile_spacing -%}
+      --section-gap-top-mobile: {{ section.settings.margin-top-mobile }}px;
+    {%- endif -%}
 
-      {%- if section.settings.show_mobile_spacing -%}
-          --section-gap-bottom-mobile: {{ section.settings.margin-bottom-mobile }}px;
-      {%- endif -%}
+    {%- if section.settings.show_mobile_spacing -%}
+      --section-gap-bottom-mobile: {{ section.settings.margin-bottom-mobile }}px;
+    {%- endif -%}
 
-      {% if section.settings['color-overlay'] != blank and section.settings['color-overlay'] != 'transparent' and background_rgb != 'rgba(0, 0, 0, 0.0)' %}
-        --color-overlay-rgb: {{ section.settings.color-overlay | color_to_rgb | remove: 'rgb(' | remove: ')' }};
-          --color-overlay-opacity: {{ section.settings.color-overlay-opacity | divided_by: 100.0 }};
-      {% endif %}
-
-    }
+    {% if section.settings['color-overlay'] != blank and section.settings['color-overlay'] != 'transparent' and background_rgb != 'rgba(0, 0, 0, 0.0)' %}
+      --color-overlay-rgb: {{ section.settings.color-overlay | color_to_rgb | remove: 'rgb(' | remove: ')' }};
+      --color-overlay-opacity: {{ section.settings.color-overlay-opacity | divided_by: 100.0 }};
+    {% endif %}
+  }
 
   {% if section.settings['color-body-heading'] != blank and section.settings['color-body-heading'] != 'transparent' and heading_rgb != 'rgba(0, 0, 0, 0.0)' %}
-    section[id="shopify-section-{{ section.id }}"] .headline__title{
+    section[id="shopify-section-{{ section.id }}"] .headline__title {
       --color-custom-text: {{ section.settings.color-body-heading }};
     }
   {% endif %}
 
-  [data-section-id="{{ section.id }}"]
-  {
-      {% if section.settings['color-body-text'] != blank and section.settings['color-body-text'] != 'transparent' and text_rgb != 'rgba(0, 0, 0, 0.0)' %}
-          --color-custom-text: {{ section.settings.color-body-text }};
-      {% endif %}
+  [data-section-id="{{ section.id }}"] {
+    {% if section.settings['color-body-text'] != blank and section.settings['color-body-text'] != 'transparent' and text_rgb != 'rgba(0, 0, 0, 0.0)' %}
+      --color-custom-text: {{ section.settings.color-body-text }};
+    {% endif %}
+  }
+
+  /* الحاوية الرئيسية للعناوين لضمان محاذاة أفقية متطابقة */
+  .wt-benefits-comparison__badges-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  .wt-benefits-comparison__badge {
+    width: 100%;
+    max-width: 240px;
+    text-align: center;
+    padding: 10px 16px;
+    font-weight: bold;
+    font-size: 24px;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+
+  .wt-benefits-comparison__badge--left {
+    background-color: {{ section.settings.left_badge_bg | default: '#cccccc' }};
+    color: {{ section.settings.left_badge_color | default: '#333333' }};
+  }
+
+  .wt-benefits-comparison__badge--right {
+    background-color: {{ section.settings.right_badge_bg | default: '#0d1b3e' }};
+    color: {{ section.settings.right_badge_color | default: '#ffffff' }};
+  }
+
+  @media (max-width: 768px) {
+    .wt-benefits-comparison__badges-row {
+      flex-direction: column;
+      gap: 10px;
+    }
+    .wt-benefits-comparison__badge {
+      max-width: 100%;
+    }
   }
 </style>
 
@@ -61,24 +99,37 @@
 {% assign button_label = section.settings.button_label %}
 
 <div
-    data-section-height-mode="{{ section.settings.section_height_mode }}"
-    data-section-id="{{ section.id }}"
-    class="{{ width_line }} wt-benefits-product"
-    >
+  data-section-height-mode="{{ section.settings.section_height_mode }}"
+  data-section-id="{{ section.id }}"
+  class="{{ width_line }} wt-benefits-product"
+>
   <div>
     {% if section.settings.advanced_heading %}
       {% if section.settings.heading_richtext != blank %}
-          <div class="headline headline--rich {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
-              {{ section.settings.heading_richtext }}
-          </div>
+        <div class="headline headline--rich {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
+          {{ section.settings.heading_richtext }}
+        </div>
       {% endif %}
     {% else %}
       {% if section.settings.heading != blank %}
-          {% render 'headline', title: section.settings.heading %}
+        {% render 'headline', title: section.settings.heading %}
       {% endif %}
     {% endif %}
 
+    {% comment %} صف العناوين الرئيسي المقارن المحاذي أفقيًا {% endcomment %}
+    {% if section.settings.left_badge_text != blank or section.settings.right_badge_text != blank %}
+      <div class="wt-benefits-comparison__badges-row">
+        <div class="wt-benefits-comparison__badge wt-benefits-comparison__badge--left">
+          {{ section.settings.left_badge_text }}
+        </div>
+        <div class="wt-benefits-comparison__badge wt-benefits-comparison__badge--right">
+          {{ section.settings.right_badge_text }}
+        </div>
+      </div>
+    {% endif %}
+
     <div class="wt-benefits-product__wrapper {% if settings.animations %}scroll-trigger animate--slide-in {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}{% endif %}">
+
       <div class="wt-benefits-product__img{% if section.settings.video_hosted %} wt-benefits-product__img--video{% endif %}">
         {% assign desktop_image = section.settings.desktop_image %}
         {% assign mobile_image = section.settings.desktop_image %}
@@ -98,7 +149,6 @@
               image_size: '600x',
               class: video_class
           }}
-
         {% else %}
           {% if mobile_image or desktop_image %}
             {{
@@ -153,6 +203,7 @@
           </div>
         {% endif %}
       </div>
+
       <div class="wt-benefits-product__icons-container">
         <div class="wt-benefits-product__icon-list wt-benefits-product__icon-list--column">
           {% for block in section.blocks %}
@@ -229,6 +280,46 @@
       "content": "t:sections.benefits_product.settings.important_information.content",
       "info": "t:sections.benefits_product.settings.important_information.info"
     },
+   {
+  "type": "header",
+  "content": "Comparison Badges"
+},
+{
+  "type": "text",
+  "id": "left_badge_text",
+  "label": "Left badge text (e.g. Regular Scrub)",
+  "default": "Regular Scrub"
+},
+{
+  "type": "color",
+  "id": "left_badge_bg",
+  "label": "Left badge background color",
+  "default": "#cccccc"
+},
+{
+  "type": "color",
+  "id": "left_badge_color",
+  "label": "Left badge text color",
+  "default": "#333333"
+},
+{
+  "type": "text",
+  "id": "right_badge_text",
+  "label": "Right badge text (e.g. Our Scrub)",
+  "default": "Our Scrub"
+},
+{
+  "type": "color",
+  "id": "right_badge_bg",
+  "label": "Right badge background color",
+  "default": "#0d1b3e"
+},
+{
+  "type": "color",
+  "id": "right_badge_color",
+  "label": "Right badge text color",
+  "default": "#ffffff"
+},
     {
       "type": "header",
       "content": "t:sections.global.general"
@@ -281,16 +372,16 @@
       "info": "t:sections.benefits_product.settings.section_height_mode.info",
       "label": "t:sections.benefits_product.settings.section_height_mode.label",
       "default": "auto",
-        "options": [
-          {
-            "value": "auto",
-            "label": "t:sections.benefits_product.settings.section_height_mode.options.auto.label"
-          },
-          {
-            "value": "fixed_height",
-            "label": "t:sections.benefits_product.settings.section_height_mode.options.fixed_height.label"
-          }
-        ]
+      "options": [
+        {
+          "value": "auto",
+          "label": "t:sections.benefits_product.settings.section_height_mode.options.auto.label"
+        },
+        {
+          "value": "fixed_height",
+          "label": "t:sections.benefits_product.settings.section_height_mode.options.fixed_height.label"
+        }
+      ]
     },
     {
       "type": "range",
