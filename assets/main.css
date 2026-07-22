@@ -8519,7 +8519,7 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
     margin-bottom: calc(var(--gap, 8px) * 5);
   }
   [desktop-media-size=normal] .wt-product__main {
-    width: 42%;
+    width: 36%;
     max-width: initial;
   }
 }
