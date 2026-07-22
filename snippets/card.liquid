@@ -50,18 +50,7 @@
   <div class="card__container" style="--aspect-ratio: {{ aspect_ratio }};">
     <div class="card__picture-container" style="position: relative;">
       <div class="popup-model-btn">
-        <modal-opener
-          class="quick-view-opener no-js-hidden"
-          data-modal="#QuickViewModal-{{ product.id }}"
-        >
-          <button
-            type="button"
-            class="quick-view-button"
-          >
-            {% render 'icons', id: 'eye' %}
-          </button>
-        </modal-opener>
-        <div class="product-action-wrapper"   >
+          <div class="product-action-wrapper"   >
  
    <div class="wishlist-btn" data-product-id="{{ product.id }}">
      <svg 
@@ -80,6 +69,18 @@
     </svg>
    </div>
 </div>
+        <modal-opener
+          class="quick-view-opener no-js-hidden"
+          data-modal="#QuickViewModal-{{ product.id }}"
+        >
+          <button
+            type="button"
+            class="quick-view-button"
+          >
+            {% render 'icons', id: 'eye' %}
+          </button>
+        </modal-opener>
+      
       </div>
 
       <div class="swiper card-product-swiper" style="width: 100%; height: 100%; position: relative; overflow: hidden;">
