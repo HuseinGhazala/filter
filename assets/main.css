@@ -8959,6 +8959,19 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
 }
 .wt-product__option__body--tiles label {
   padding-inline: calc(var(--gap, 8px) * 2);
+  border-radius: 4px !important;
+  -webkit-border-radius: 4px !important;
+  -moz-border-radius: 4px !important;
+  -ms-border-radius: 4px !important;
+  -o-border-radius: 4px !important;
+  background-color: #F6F1E4;
+}
+ .wt-product__option__body--tiles label:before{
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
 }
 .wt-product__option__body--thumbs label {
   overflow: visible;
