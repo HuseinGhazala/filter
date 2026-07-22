@@ -27,7 +27,7 @@
     </div>
     <div class="free-shipping-bar__content">
         {% unless fs_success %}
-            {{ 'templates.cart.you_are_close' | t }}
+            <h2>{{ 'templates.cart.you_are_close' | t }}</h2>
         {%- endunless -%}
 
       <p class="free-shipping-bar__text" data-free-shipping-text>
