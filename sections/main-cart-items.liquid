@@ -197,7 +197,8 @@
 {%- endif -%} {% endcomment %}
 
 
-{{ 'templates.cart.btn_cart' | t: terms: search.terms }}
+    {{ 'cart.btn_cart' | t: terms: search.terms }}
+
                 {%- render 'cart-payment-badge' -%} 
                 <div id="cart-errors"></div>
               </div>
