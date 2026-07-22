@@ -1573,7 +1573,7 @@ color: var(--color-headings-text);
     display: block;
     transform: translateY(125%);
     opacity: 0;
-    pointer-events: none;
+    pointer-events: auto;
   }
 }
 .card__quick-add-container--desktop .wt-product__add-to-cart {
