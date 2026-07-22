@@ -1113,6 +1113,64 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
+    },
+    "marquee_images_6939h4": {
+      "type": "marquee-images",
+      "blocks": {
+        "image_aE3rE7": {
+          "type": "image",
+          "settings": {
+            "video": "shopify://files/videos/202605201244 (1).mp4",
+            "link": ""
+          }
+        },
+        "image_tM8aEH": {
+          "type": "image",
+          "settings": {
+            "video": "shopify://files/videos/202605201254 (1).mp4",
+            "link": ""
+          }
+        },
+        "image_GydWMi": {
+          "type": "image",
+          "settings": {
+            "video": "shopify://files/videos/202605201145.mp4",
+            "link": ""
+          }
+        },
+        "image_NKYAMk": {
+          "type": "image",
+          "settings": {
+            "video": "shopify://files/videos/202605201244 (1).mp4",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_aE3rE7",
+        "image_tM8aEH",
+        "image_GydWMi",
+        "image_NKYAMk"
+      ],
+      "name": "t:sections.marquee_images.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "A Saudi brand—by women, for women.",
+        "heading_richtext": "<h2>Marquee images</h2>",
+        "animation_direction": "left",
+        "animation_speed": "100",
+        "desktop_fixed_height": 620,
+        "gap_desk": 24,
+        "mobile_fixed_height": 280,
+        "gap": 24,
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 40,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
     }
   },
   "order": [
@@ -1128,6 +1186,7 @@
     "video_reels_dqWnMm",
     "separator_LcU8ix",
     "features_banner_4mRcTR",
-    "newsletter_dznx9H"
+    "newsletter_dznx9H",
+    "marquee_images_6939h4"
   ]
 }
