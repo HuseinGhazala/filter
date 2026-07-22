@@ -145,7 +145,7 @@
                               {{ cart.total_price | money_with_currency }}
                               {{ 515.20 | money }}
                           </span>
-
+<span class="riyal-symbol">&#xE900;</span> {{ cart.total_price | money_without_currency }}
                           {% comment %} {{ 'sections.cart.checkout' | t }} {% endcomment %}
                         </button>
 
