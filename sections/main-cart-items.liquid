@@ -67,7 +67,7 @@
           {%- endif -%}
                {%- if cart != empty -%}
           <div class="wt-cart__footer-container" id="main-cart-footer" data-id="{{ section.id }}">
-                   {% render 'free-shipping-bar',
+        {% render 'free-shipping-bar',
             enable: true,
             amount: "USD:1000",
             text: settings.free_shipping_bar_text,
