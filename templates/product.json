@@ -36,7 +36,6 @@
         },
         "rating": {
           "type": "rating",
-          "disabled": true,
           "settings": {}
         },
         "feature_tags_44iTGm": {
@@ -101,10 +100,19 @@
             "enable-striped-rows": true
           }
         },
+        "promo_67ttgj": {
+          "type": "promo",
+          "settings": {
+            "content": "<p>Fast shipping to your doorstep across the Kingdom.<br/>A convenient and secure shopping experience with easy returns.</p>",
+            "text_alignment": "center",
+            "color-body-text": "{{ settings.colors.primary }}",
+            "background_color": "#F8F5EF"
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_dynamic_checkout": false,
+            "show_dynamic_checkout": true,
             "show_gift_card_recipient": true,
             "show_qty_selector": true,
             "full_width_add_to_cart": false,
@@ -115,49 +123,44 @@
             "background_color_hover": ""
           }
         },
-        "promo_67ttgj": {
-          "type": "promo",
-          "settings": {
-            "content": "<p>🎟️ Use code \"Beauty\" for 10% OFF!</p>",
-            "text_alignment": "center",
-            "color-body-text": "#a04848",
-            "background_color": "#f6f2ea"
-          }
-        },
         "separator_xMAHGH": {
           "type": "separator",
           "settings": {
-            "show-separator-line": false,
+            "show-separator-line": true,
             "color-background": "#000000",
-            "margin-top": 8,
-            "margin-bottom": 8
+            "margin-top": 16,
+            "margin-bottom": 16
           }
         },
         "feature_icons_6jdFLm": {
           "type": "feature_icons",
           "settings": {
             "layout_select": "row-left",
-            "show_icons_label": false,
+            "show_icons_label": true,
             "icon_1_select": "none",
-            "icon_1_text": "",
+            "icon_1_image": "shopify://shop_images/6f6fa20a3cbb2b9638a194c22406464a055afbbb.png",
+            "icon_1_text": "<p>Superior comfort</p>",
             "icon_2_select": "none",
-            "icon_2_text": "",
+            "icon_2_image": "shopify://shop_images/8e50be51605abdb42a39e66c34e6d0152212fc0d.png",
+            "icon_2_text": "<p>Wide and loose</p>",
             "icon_3_select": "none",
-            "icon_3_text": "",
+            "icon_3_image": "shopify://shop_images/Group_102.png",
+            "icon_3_text": "<p>Crease-resistant</p>",
             "icon_4_select": "none",
-            "icon_4_text": "",
+            "icon_4_image": "shopify://shop_images/Frame_2147208078.png",
+            "icon_4_text": "<p>Made in Saudi </p>",
             "metafield": "",
             "items_per_row_desktop": 2,
-            "icon_size_desktop": 74,
-            "size_text": 100,
+            "icon_size_desktop": 70,
+            "size_text": 70,
             "show_advanced_settings_desktop": true,
             "icons_container_gap_desktop": 32,
-            "icon_container_width_desktop": 80,
+            "icon_container_width_desktop": 90,
             "icon_margin_top_desktop": 0,
             "icon_margin_bottom_desktop": 0,
             "items_per_row": 2,
             "icon_size_mobile": 60,
-            "size_text_mobile": 100,
+            "size_text_mobile": 80,
             "show_advanced_settings_mobile": false,
             "icons_container_gap_mobile": 0,
             "icon_container_width_mobile": 0,
@@ -333,8 +336,8 @@
         "separator_Qt7zAY",
         "price",
         "variant_picker",
-        "buy_buttons",
         "promo_67ttgj",
+        "buy_buttons",
         "separator_xMAHGH",
         "feature_icons_6jdFLm",
         "separator_DwMham",
