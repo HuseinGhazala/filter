@@ -831,10 +831,7 @@
   align-items: center;
   gap: calc(var(--gap, 8px) * 0.5);
 }
-.wt-cart__payment-icons .icon {
-  height: 32px  !important;
-  width: auto;
-}
+
 .wt-cart__back-link {
   width: 100%;
   justify-content: center;
