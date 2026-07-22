@@ -59,7 +59,7 @@
   font-family: var(--font-base);
   font-style: var(--font-base-style);
   font-weight: var(--font-base-weight);
-  color: var(--color-custom-text, var(--color-headings-text, var(--color-text)));
+  color: #11173D;
 }
 .wt-tabs__tab[role=tab] span {
   display: inline-block;
