@@ -147,7 +147,7 @@
                             {% render 'icon-lock' %}
                           {% endif %} {% endcomment %}
 
-                            {{ 'templates.cart.btn_cart' | t: terms: search.terms }}
+                            {{ 'templates.cart.btn_cart' | t }}
                             <span>
                               {{ cart.total_price | money_with_currency }}
                           </span>
