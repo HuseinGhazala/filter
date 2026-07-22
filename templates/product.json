@@ -1131,7 +1131,7 @@
       "name": "t:sections.featured-collection.presets.name",
       "settings": {
         "advanced_heading": false,
-        "title": "Featured collection",
+        "title": "You might also like",
         "heading_richtext": "<h2>Featured collection</h2>",
         "disable_on_mobile": false,
         "hide_empty_section": false,
