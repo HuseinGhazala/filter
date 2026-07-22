@@ -155,7 +155,7 @@
         "margin-bottom": 72,
         "show_mobile_spacing": true,
         "margin-top-mobile": 0,
-        "margin-bottom-mobile": 20
+        "margin-bottom-mobile": 40
       }
     },
     "image_with_scrolling_text_gARQbt": {
@@ -164,47 +164,15 @@
         "image_hjrGcK": {
           "type": "image",
           "settings": {
-            "heading": "Mokosh",
+            "desktop_image": "shopify://shop_images/eee21fba5de9c8a32f0f47989618534e61142bf1_1.png",
+            "mobile_image": "shopify://shop_images/eee21fba5de9c8a32f0f47989618534e61142bf1_1.png",
+            "heading": "Loose and roomy",
             "size_heading": 100,
             "size_heading_mobile": 100,
-            "text": "Mokosh Cosmetics produces exceptional natural cosmetics that captivate with their quality and selection of raw materials, texture and fragrance. The recipes of Mokosh products are the result of joint work of technologists and cosmetologists, which is why they respond so well to the real needs of customers.",
+            "text": "These scrubs feature a loose cut that offers comfortable freedom of movement throughout the day—whether you are standing, moving around, or working long shifts. This relaxed fit isn't just about style; it provides genuine comfort, allowing you to go about your day with confidence, free from any tightness or feeling of restriction.",
             "button_select": "secondary",
-            "button_label": "Check products",
-            "button_link": "https://wonder-theme-beauty.myshopify.com/collections/vendors?q=MOKOSH",
-            "disable_on_mobile": false,
-            "second_button_select": "primary",
-            "second_button_label": "Button label",
-            "second_disable_on_mobile": false,
-            "second_button_link": ""
-          }
-        },
-        "image_V4nKUB": {
-          "type": "image",
-          "settings": {
-            "heading": "BKIND",
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "At BKIND, we offer all-natural, plant-based, vegan, eco-friendly beauty and skin care products made in Quebec. Each product is carefully developed. From ingredients to packaging, we choose the best options for you, your skin and the environment.",
-            "button_select": "secondary",
-            "button_label": "Check products",
-            "button_link": "https://wonder-theme-beauty.myshopify.com/collections/vendors?q=BKIND",
-            "disable_on_mobile": false,
-            "second_button_select": "primary",
-            "second_button_label": "Button label",
-            "second_disable_on_mobile": false,
-            "second_button_link": ""
-          }
-        },
-        "image_D7fjpr": {
-          "type": "image",
-          "settings": {
-            "heading": "Herbivore",
-            "size_heading": 100,
-            "size_heading_mobile": 100,
-            "text": "Herbivore believes in the power of nature to bring tangible results you can see and feel. We make our products, ingredients, and packaging as gentle on the planet as they are on our bodies.",
-            "button_select": "secondary",
-            "button_label": "Check products",
-            "button_link": "https://wonder-theme-beauty.myshopify.com/collections/vendors?q=Herbivore",
+            "button_label": "Shop the products",
+            "button_link": "shopify://collections",
             "disable_on_mobile": false,
             "second_button_select": "primary",
             "second_button_label": "Button label",
@@ -214,9 +182,7 @@
         }
       },
       "block_order": [
-        "image_hjrGcK",
-        "image_V4nKUB",
-        "image_D7fjpr"
+        "image_hjrGcK"
       ],
       "name": "t:sections.image_with_scrolling_text.name",
       "settings": {
@@ -225,8 +191,8 @@
         "image_ratio": "adapt",
         "desktop_text_horizontal_position": "left",
         "mobile_text_horizontal_position": "center",
-        "color-body-text": "",
-        "background_color": "#ecf5e9",
+        "color-body-text": "#11173D",
+        "background_color": "#F6F1E4",
         "margin-top": 0,
         "margin-bottom": 0,
         "show_mobile_spacing": false,
