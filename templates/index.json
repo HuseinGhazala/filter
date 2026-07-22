@@ -238,7 +238,7 @@
         "number_of_column_mobile": 2.1,
         "spacing_mobile": "16",
         "text_alignment": "left",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "show_video": false,
         "show_secondary_image": false,
         "show_vendor": false,
