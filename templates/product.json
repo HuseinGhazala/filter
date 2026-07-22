@@ -798,8 +798,8 @@
         "color-body-text": "",
         "background_color": "",
         "compact-size-enabled": true,
-        "margin-top": 20,
-        "margin-bottom": 20,
+        "margin-top": 0,
+        "margin-bottom": 80,
         "show_mobile_spacing": true,
         "margin-top-mobile": 0,
         "margin-bottom-mobile": 32
