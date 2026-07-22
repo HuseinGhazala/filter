@@ -427,7 +427,7 @@
         "show_description": true,
         "description": "<p>Relaxed-fit scrub sets with modest designs and premium comfort for every shift.</p>",
         "Preview": "3",
-        "image_ratio": "portrait",
+        "image_ratio": "square",
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add_button": true,
