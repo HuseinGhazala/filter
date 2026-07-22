@@ -48,22 +48,23 @@
     {% endif %}
   }
 
-  /* الحاوية الرئيسية للعناوين لضمان محاذاة أفقية متطابقة */
+  /* الحاوية الرئيسية للعناوين */
   .wt-benefits-comparison__badges-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
     width: 100%;
     margin-bottom: 25px;
   }
 
   .wt-benefits-comparison__badge {
-    width: 100%;
+    flex: 1;
     max-width: 240px;
     text-align: center;
     padding: 10px 16px;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     border-radius: 6px;
     box-sizing: border-box;
   }
@@ -78,13 +79,35 @@
     color: {{ section.settings.right_badge_color | default: '#ffffff' }};
   }
 
+  /* ترتيب العناصر في الموبايل */
   @media (max-width: 768px) {
-    .wt-benefits-comparison__badges-row {
+    .wt-benefits-product__wrapper {
+      display: flex;
       flex-direction: column;
-      gap: 10px;
     }
+
+    .wt-benefits-product__img {
+      order: 1; /* الصورة أولاً */
+      margin-bottom: 20px;
+    }
+
+    .wt-benefits-comparison__badges-row {
+      order: 2; /* العناوين تحت الصورة */
+      margin-bottom: 20px;
+    }
+
+    .wt-benefits-product__icons-container {
+      order: 3; /* قائمة المميزات تحت العناوين */
+    }
+
+    .wt-benefits-product__btn-wrapper--mobile {
+      order: 4; /* زر الشراء في الأسفل */
+      margin-top: 20px;
+    }
+
     .wt-benefits-comparison__badge {
-      max-width: 100%;
+      font-size: 16px;
+      padding: 8px 10px;
     }
   }
 </style>
@@ -114,18 +137,6 @@
       {% if section.settings.heading != blank %}
         {% render 'headline', title: section.settings.heading %}
       {% endif %}
-    {% endif %}
-
-    {% comment %} صف العناوين الرئيسي المقارن المحاذي أفقيًا {% endcomment %}
-    {% if section.settings.left_badge_text != blank or section.settings.right_badge_text != blank %}
-      <div class="wt-benefits-comparison__badges-row">
-        <div class="wt-benefits-comparison__badge wt-benefits-comparison__badge--left">
-          {{ section.settings.left_badge_text }}
-        </div>
-        <div class="wt-benefits-comparison__badge wt-benefits-comparison__badge--right">
-          {{ section.settings.right_badge_text }}
-        </div>
-      </div>
     {% endif %}
 
     <div class="wt-benefits-product__wrapper {% if settings.animations %}scroll-trigger animate--slide-in {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}{% endif %}">
@@ -204,6 +215,18 @@
         {% endif %}
       </div>
 
+      {% comment %} صف العناوين الرئيسي المقارن {% endcomment %}
+      {% if section.settings.left_badge_text != blank or section.settings.right_badge_text != blank %}
+        <div class="wt-benefits-comparison__badges-row">
+          <div class="wt-benefits-comparison__badge wt-benefits-comparison__badge--left">
+            {{ section.settings.left_badge_text }}
+          </div>
+          <div class="wt-benefits-comparison__badge wt-benefits-comparison__badge--right">
+            {{ section.settings.right_badge_text }}
+          </div>
+        </div>
+      {% endif %}
+
       <div class="wt-benefits-product__icons-container">
         <div class="wt-benefits-product__icon-list wt-benefits-product__icon-list--column">
           {% for block in section.blocks %}
@@ -280,46 +303,46 @@
       "content": "t:sections.benefits_product.settings.important_information.content",
       "info": "t:sections.benefits_product.settings.important_information.info"
     },
-   {
-  "type": "header",
-  "content": "Comparison Badges"
-},
-{
-  "type": "text",
-  "id": "left_badge_text",
-  "label": "Left badge text (e.g. Regular Scrub)",
-  "default": "Regular Scrub"
-},
-{
-  "type": "color",
-  "id": "left_badge_bg",
-  "label": "Left badge background color",
-  "default": "#cccccc"
-},
-{
-  "type": "color",
-  "id": "left_badge_color",
-  "label": "Left badge text color",
-  "default": "#333333"
-},
-{
-  "type": "text",
-  "id": "right_badge_text",
-  "label": "Right badge text (e.g. Our Scrub)",
-  "default": "Our Scrub"
-},
-{
-  "type": "color",
-  "id": "right_badge_bg",
-  "label": "Right badge background color",
-  "default": "#0d1b3e"
-},
-{
-  "type": "color",
-  "id": "right_badge_color",
-  "label": "Right badge text color",
-  "default": "#ffffff"
-},
+    {
+      "type": "header",
+      "content": "Comparison Badges"
+    },
+    {
+      "type": "text",
+      "id": "left_badge_text",
+      "label": "Left badge text (e.g. Regular Scrub)",
+      "default": "Regular Scrub"
+    },
+    {
+      "type": "color",
+      "id": "left_badge_bg",
+      "label": "Left badge background color",
+      "default": "#cccccc"
+    },
+    {
+      "type": "color",
+      "id": "left_badge_color",
+      "label": "Left badge text color",
+      "default": "#333333"
+    },
+    {
+      "type": "text",
+      "id": "right_badge_text",
+      "label": "Right badge text (e.g. Our Scrub)",
+      "default": "Our Scrub"
+    },
+    {
+      "type": "color",
+      "id": "right_badge_bg",
+      "label": "Right badge background color",
+      "default": "#0d1b3e"
+    },
+    {
+      "type": "color",
+      "id": "right_badge_color",
+      "label": "Right badge text color",
+      "default": "#ffffff"
+    },
     {
       "type": "header",
       "content": "t:sections.global.general"
