@@ -555,11 +555,11 @@
         "color-overlay": "",
         "color-overlay-opacity": 100,
         "color-body-text": "#11173d",
-        "margin-top": 20,
-        "margin-bottom": 60,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
+        "margin-top": 100,
+        "margin-bottom": 80,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 32,
+        "margin-bottom-mobile": 32
       }
     },
     "before_and_after_AFCUre": {
@@ -745,9 +745,9 @@
         "card_heading_color": "",
         "card_author_color": "",
         "margin-top": 0,
-        "margin-bottom": 100,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
+        "margin-bottom": 80,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
         "margin-bottom-mobile": 20
       }
     },
