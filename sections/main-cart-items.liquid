@@ -139,7 +139,7 @@
                           {% comment %} {% if settings.enable-lock-icon %}
                             {% render 'icon-lock' %}
                           {% endif %} {% endcomment %}
-                           
+
                             {{ 'templates.cart.btn_cart' | t: terms: search.terms }}
                             {{ cart.total_price | money_with_currency }}
 
@@ -222,6 +222,13 @@
   </cart-items>
 </div>
 
+<style>
+  .wt-cart__cta cart__checkout{
+      font-family: 'Merriweather';
+    text-transform: capitalize;
+    font-size: 12px;
+  }
+</style>
 {% schema %}
 {
   "name": "Main Cart",
