@@ -751,6 +751,49 @@
         "margin-bottom-mobile": 20
       }
     },
+    "featured_collection_gByn8F": {
+      "type": "featured-collection",
+      "name": "t:sections.featured-collection.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "You might also like",
+        "heading_richtext": "<h2>Featured collection</h2>",
+        "disable_on_mobile": false,
+        "hide_empty_section": false,
+        "collection": "",
+        "product_list": [
+          "women-fit-scrub",
+          "womens-loose-fit",
+          "womens-loose-fit-scrub",
+          "women-fit"
+        ],
+        "products_to_show": 4,
+        "enable_stack_products": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "number_of_column_desktop": 4,
+        "spacing_desktop": "16",
+        "make_products_full_width": true,
+        "number_of_column_mobile": 2.1,
+        "spacing_mobile": "16",
+        "text_alignment": "left",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "enable_vendor_link": false,
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "hover_desktop",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
     "collapsible_menu_NTLwXP": {
       "type": "collapsible_menu",
       "blocks": {
@@ -1125,49 +1168,6 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
-    },
-    "featured_collection_gByn8F": {
-      "type": "featured-collection",
-      "name": "t:sections.featured-collection.presets.name",
-      "settings": {
-        "advanced_heading": false,
-        "title": "You might also like",
-        "heading_richtext": "<h2>Featured collection</h2>",
-        "disable_on_mobile": false,
-        "hide_empty_section": false,
-        "collection": "",
-        "product_list": [
-          "women-fit-scrub",
-          "womens-loose-fit",
-          "womens-loose-fit-scrub",
-          "women-fit"
-        ],
-        "products_to_show": 4,
-        "enable_stack_products": false,
-        "show_view_all": true,
-        "button_select": "primary",
-        "number_of_column_desktop": 4,
-        "spacing_desktop": "16",
-        "make_products_full_width": true,
-        "number_of_column_mobile": 2.1,
-        "spacing_mobile": "16",
-        "text_alignment": "left",
-        "image_ratio": "square",
-        "show_video": false,
-        "show_secondary_image": false,
-        "show_vendor": false,
-        "enable_vendor_link": false,
-        "show_product_rating": false,
-        "enable_quick_add_button": true,
-        "quick_add_mode": "hover_desktop",
-        "color-body-text": "",
-        "background_color": "",
-        "margin-top": 20,
-        "margin-bottom": 20,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
     }
   },
   "order": [
@@ -1178,12 +1178,12 @@
     "before_and_after_AFCUre",
     "rich_text_JQdA3g",
     "testimonial_marquee_HMVjcJ",
+    "featured_collection_gByn8F",
     "collapsible_menu_NTLwXP",
     "image_with_text_jUtNrr",
     "video_reels_dqWnMm",
     "separator_LcU8ix",
     "features_banner_4mRcTR",
-    "newsletter_dznx9H",
-    "featured_collection_gByn8F"
+    "newsletter_dznx9H"
   ]
 }
