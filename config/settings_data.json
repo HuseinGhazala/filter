@@ -79,7 +79,7 @@
     "cart_features_enable_icons": false,
     "cart_features_enable_estimate_shipping": true,
     "cart_features_enable_discount_code": true,
-    "cart_show_additional_service": false,
+    "cart_show_additional_service": true,
     "cart_additional_service_name": "Wrap as a gift 🎁",
     "enable_cross_sells": true,
     "cross_sells_collapsed": true,
