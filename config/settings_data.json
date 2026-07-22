@@ -77,6 +77,7 @@
     "cart_show_savings": true,
     "cart_show_payment_badge": true,
     "cart_features_enable_icons": false,
+    "cart_show_order_note": false,
     "cart_features_enable_estimate_shipping": true,
     "cart_features_enable_discount_code": true,
     "cart_show_additional_service": false,
