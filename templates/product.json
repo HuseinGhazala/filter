@@ -106,7 +106,7 @@
         "promo_67ttgj": {
           "type": "promo",
           "settings": {
-            "content": "<p>Fast shipping to your doorstep across the Kingdom.<br/>A convenient and secure shopping experience with easy returns.</p>",
+            "content": "<p>Suitable for a weight of 80–90 kg.<br/>The size may vary depending on body shape.</p>",
             "text_alignment": "center",
             "color-body-text": "{{ settings.colors.primary }}",
             "background_color": "#f8f5ef"
