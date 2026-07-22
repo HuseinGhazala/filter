@@ -206,9 +206,10 @@
         "image_kiCQk4": {
           "type": "image",
           "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208078.png",
             "select_icon": "plant",
-            "heading": "Vegan",
-            "text": "<p>Our entire collection is vegan and cruelty free.</p>",
+            "heading": "Designed by Saudi",
+            "text": "<p>Designed to suit your</p>",
             "link": ""
           }
         },
@@ -250,10 +251,10 @@
         "advanced_heading": false,
         "heading": "",
         "heading_richtext": "<h2>Your headline here</h2>",
-        "size_heading_mobile": 80,
-        "size_heading": 70,
-        "icon_width_mobile": 52,
-        "icon_width_desktop": 64,
+        "size_heading_mobile": 50,
+        "size_heading": 80,
+        "icon_width_mobile": 84,
+        "icon_width_desktop": 100,
         "icon_layout": "center",
         "columns_desktop": "4",
         "icon_layout_mobile": "grid",
