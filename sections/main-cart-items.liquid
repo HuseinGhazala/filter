@@ -145,7 +145,8 @@
                               {{ cart.total_price | money_with_currency }}
                               {{ 515.20 | money }}
                           </span>
-<span class="riyal-symbol">&#xE900;</span> {{ cart.total_price | money_without_currency }}
+  <img src="{{ 'sar-symbol.svg' | asset_url }}" class="riyal-icon" alt="ريال" width="14">
+{{ cart.total_price | money_without_currency }}
                           {% comment %} {{ 'sections.cart.checkout' | t }} {% endcomment %}
                         </button>
 
@@ -240,13 +241,7 @@
 
 
 
-  @font-face {
-  font-family: 'saudi_riyal';
-  src: url('{{ "saudi_riyal.woff2" | asset_url }}') format('woff2');
-}
-.riyal-symbol {
-  font-family: 'saudi_riyal', sans-serif;
-}
+  
 </style>
 {% schema %}
 {
