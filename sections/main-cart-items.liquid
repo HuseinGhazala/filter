@@ -175,9 +175,7 @@
                     {%- endfor -%}
                   </div>
                 {%- endif -%}
-                     {% for type in shop.enabled_payment_types %}
-          {{ type | payment_type_svg_tag }}
-        {% endfor %}
+
                 {%- render 'cart-payment-badge' -%} 
                 <div id="cart-errors"></div>
               </div>
