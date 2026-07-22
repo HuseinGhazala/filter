@@ -202,7 +202,8 @@
   </div>
 {%- endif -%} {% endcomment %}
        {% render 'free-shipping-bar',
-            enable: settings.enable_free_shipping_bar,
+            
+            enable: true,
             amount: settings.free_shipping_bar_amount,
             text: settings.free_shipping_bar_text,
             text_success: settings.free_shipping_bar_text_success
