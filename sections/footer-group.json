@@ -27,8 +27,8 @@
         "menu_TyWCqJ": {
           "type": "menu",
           "settings": {
-            "heading_links": "Categories",
-            "links": "footer"
+            "heading_links": "Important Links",
+            "links": "important-links"
           }
         },
         "menu_DzCNd6": {
