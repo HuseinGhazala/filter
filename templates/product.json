@@ -240,6 +240,7 @@
         },
         "collapsible_drawer_tUk8Ar": {
           "type": "collapsible_drawer",
+          "disabled": true,
           "settings": {
             "heading": "How to use",
             "content": "",
@@ -255,6 +256,7 @@
         },
         "2ce0b4b1-3440-40cd-92c2-15d46e61dfca": {
           "type": "separator",
+          "disabled": true,
           "settings": {
             "show-separator-line": true,
             "color-background": "#e0dedb",
@@ -296,7 +298,8 @@
             "auto_advanced": false,
             "enable_quick_add": true,
             "hide_brand": false,
-            "video_reels_1_product": "",
+            "video_reels_1": "shopify://files/videos/5fd16bf9d6bf49daa3117e19907acac0hd-720p-16mbps-53423753_WOcMKolK.mp4",
+            "video_reels_1_product": "womens-loose-fit",
             "video_reels_2_product": "",
             "video_reels_3_product": "",
             "video_reels_4_product": "",
