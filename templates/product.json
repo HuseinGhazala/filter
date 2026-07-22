@@ -123,6 +123,34 @@
             "background_color_hover": ""
           }
         },
+        "image_DJbR6G": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/8deffa9d646cef6733861d626853cbe4cd4e7f80.png",
+            "select_icon": "bag",
+            "heading": "",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "<p>Fast shipping to your doorstep across the Kingdom.</p>",
+            "link": "",
+            "margin-top": 20,
+            "margin-bottom": 20
+          }
+        },
+        "image_rqjDLb": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/f4ed5ee9265e7a309639eae9a07d485d9b7afc2c.png",
+            "select_icon": "bag",
+            "heading": "",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "<p>A convenient and secure shopping experience with easy </p>",
+            "link": "",
+            "margin-top": 20,
+            "margin-bottom": 20
+          }
+        },
         "separator_xMAHGH": {
           "type": "separator",
           "settings": {
@@ -338,6 +366,8 @@
         "variant_picker",
         "promo_67ttgj",
         "buy_buttons",
+        "image_DJbR6G",
+        "image_rqjDLb",
         "separator_xMAHGH",
         "feature_icons_6jdFLm",
         "separator_DwMham",
