@@ -267,67 +267,6 @@
         "margin-top-mobile": 20,
         "margin-bottom-mobile": 20
       }
-    },
-    "map_address_CgFhaF": {
-      "type": "map-address",
-      "blocks": {
-        "address_header_kBNy3U": {
-          "type": "address_header",
-          "settings": {
-            "address_title": "Our Store",
-            "disable_on_mobile": false,
-            "size_heading": 100,
-            "size_heading_mobile": 100
-          }
-        },
-        "map_address_ynyAMX": {
-          "type": "map_address",
-          "settings": {
-            "address_to_display": "<p>151 O'Connor Street, Ground floor, Ottawa, ON, K2P 2L8.</p>"
-          }
-        },
-        "button_jtWi7h": {
-          "type": "button",
-          "settings": {
-            "button_style": "secondary",
-            "button_label": "Get Direction",
-            "button_link": "https://www.google.com/maps/place/Shopify/@45.419181,-75.7016012,17z/data=!3m1!4b1!4m6!3m5!1s0x4cce05468ce3bf21:0x4dfbad2ddac86336!8m2!3d45.4191773!4d-75.6967303!16s%2Fg%2F11wxj_z427?entry=ttu&g_ep=EgoyMDI1MDIyNi4xIKXMDSoASAFQAw%3D%3D"
-          }
-        }
-      },
-      "block_order": [
-        "address_header_kBNy3U",
-        "map_address_ynyAMX",
-        "button_jtWi7h"
-      ],
-      "settings": {
-        "advanced_heading": false,
-        "heading": "",
-        "heading_richtext": "<h2>Map with Address</h2>",
-        "address": "1600 Amphitheatre Parkway, Mountain View, CA 94043, United States",
-        "api_key": "",
-        "initial_map_zoom": 14,
-        "map_style": "default",
-        "full-width-enabled": true,
-        "slide_height": "adapt_to_first_image",
-        "desktop_fixed_height": 320,
-        "mobile_fixed_height": 460,
-        "content_alignment": "left",
-        "content_alignment_desktop": "left",
-        "content_position": "top_left",
-        "section-color-body-text": "",
-        "section-color-overlay": "",
-        "section-color-overlay-opacity": 100,
-        "color-body-text": "",
-        "background_color": "#ffffff",
-        "background_color_opacity": 85,
-        "background_blur": 0,
-        "margin-top": 0,
-        "margin-bottom": 0,
-        "show_mobile_spacing": false,
-        "margin-top-mobile": 20,
-        "margin-bottom-mobile": 20
-      }
     }
   },
   "order": [
@@ -335,7 +274,6 @@
     "b0118af0-7eaf-42de-8ebe-2bacbdcdac45",
     "rich_text_with_image_t6WctF",
     "image_with_scrolling_text_gARQbt",
-    "features_banner_WQqnjf",
-    "map_address_CgFhaF"
+    "features_banner_WQqnjf"
   ]
 }
