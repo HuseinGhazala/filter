@@ -196,8 +196,8 @@
         "margin-top": 60,
         "margin-bottom": 60,
         "show_mobile_spacing": true,
-        "margin-top-mobile": 24,
-        "margin-bottom-mobile": 24
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 0
       }
     },
     "features_banner_WQqnjf": {
