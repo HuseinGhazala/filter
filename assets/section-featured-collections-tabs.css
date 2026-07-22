@@ -60,6 +60,7 @@
   font-style: var(--font-base-style);
   font-weight: var(--font-base-weight);
   color: #11173D;
+  opacity:0.7;
 }
 .wt-tabs__tab[role=tab] span {
   display: inline-block;
@@ -74,6 +75,9 @@
 .wt-tabs__tab[role=tab]:hover, .wt-tabs__tab[role=tab]:active {
   color: #11173D;
   opacity: 1 !important;
+}
+.wt-tabs__tab[role=tab]:hover span, .wt-tabs__tab[role=tab][aria-selected=true]  {
+    opacity: 1 !important;
 }
 .wt-tabs__tab[role=tab]:hover span, .wt-tabs__tab[role=tab]:active span {
   background-image: linear-gradient(var(--color-links-active, var(--color-links-active, var(--color-links-active))));
