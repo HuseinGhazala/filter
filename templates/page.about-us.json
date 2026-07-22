@@ -119,13 +119,15 @@
         "text_6hjmRi": {
           "type": "text",
           "settings": {
-            "text": "Beauty begins here PICTURE1 with passion for you and  PICTURE2  your skin.",
+            "text": "The story began here. PICTURE1 By skilled Saudi hands  PICTURE2 We present to you",
             "font_uppercase": "none",
             "disable_on_mobile": false,
             "size_heading": 100,
             "size_heading_mobile": 100,
             "line_height": 1.8,
+            "picture1": "shopify://shop_images/347da060953f8edb9bff38011cd1adb35ee75943.png",
             "button_link1": "",
+            "picture2": "shopify://shop_images/97f1229aeac44e7da3eaef71713441ba96442d7a.png",
             "button_link2": "",
             "button_link3": "",
             "button_link4": ""
@@ -134,7 +136,7 @@
         "heading_iPwg69": {
           "type": "heading",
           "settings": {
-            "subheading": "<p>We could not have created this demo without the help of an amazing source of content and products. We extend our sincere appreciation to Mokosh, Bkind, and Herbivore for generously allowing us to showcase their product images on our demo store. Their collaboration has been instrumental in creating a visually engaging and informative experience for our visitors. We are proud to align with brands that share our commitment to quality and innovation. Thank you for the opportunity to feature your exceptional products and contribute to a more vibrant online shopping experience.</p>",
+            "subheading": "<p>Our story began with the desire of every woman working in the healthcare sector for a practical uniform that offers all-day comfort without restricting movement or compromising on style. That is why we design women’s scrubs featuring loose, comfortable cuts and fabrics suited for long shifts. Each piece is crafted with care and a Saudi spirit, giving you freedom of movement, confidence in your appearance, and comfort that stays with you through every shift.</p>",
             "font_uppercase": "none",
             "disable_on_mobile": false
           }
