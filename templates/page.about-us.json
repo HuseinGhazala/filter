@@ -193,11 +193,11 @@
         "mobile_text_horizontal_position": "center",
         "color-body-text": "#11173d",
         "background_color": "#f6f1e4",
-        "margin-top": 40,
-        "margin-bottom": 72,
+        "margin-top": 0,
+        "margin-bottom": 0,
         "show_mobile_spacing": true,
         "margin-top-mobile": 0,
-        "margin-bottom-mobile": 24
+        "margin-bottom-mobile": 0
       }
     },
     "features_banner_WQqnjf": {
