@@ -59,7 +59,6 @@
   font-family: var(--font-base);
   font-style: var(--font-base-style);
   font-weight: var(--font-base-weight);
-  opacity:0.7;
   color: var(--color-custom-text, var(--color-headings-text, var(--color-text)));
 }
 .wt-tabs__tab[role=tab] span {
