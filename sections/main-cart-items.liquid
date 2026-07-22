@@ -139,7 +139,11 @@
                           {% if settings.enable-lock-icon %}
                             {% render 'icon-lock' %}
                           {% endif %}
-                          {{ 'sections.cart.checkout' | t }}
+
+                          {{ cart.total_price | money_with_currency }}
+
+                          {% comment %} {{ 'sections.cart.checkout' | t }} {% endcomment %}
+                               {{ 'templates.cart.btn_cart' | t: terms: search.terms }}
                         </button>
 
                         <a href="{{ routes.all_products_collection_url }}" class="wt-button wt-button--secondary wt-button--full-width wt-cart__back-link">
@@ -197,7 +201,6 @@
 {%- endif -%} {% endcomment %}
 
 
-    {{ 'templates.cart.btn_cart' | t: terms: search.terms }}
     
                 {%- render 'cart-payment-badge' -%} 
                 <div id="cart-errors"></div>
