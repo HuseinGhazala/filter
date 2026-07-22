@@ -62,8 +62,7 @@
     },
     "cart": {
       "view": "View my cart ({{ count }})",
-      "item_added": "Item added to your cart",
-      "you_are_close": "You're close to free shipping!"
+      "item_added": "Item added to your cart"
     },
     "copy": "Copy",
     "copied": "Copied",
@@ -278,7 +277,9 @@
     },
     "cart": {
       "cart": "Cart",
-     "btn_cart": "Proceed to complete payment"
+     "btn_cart": "Proceed to complete payment",
+      "you_are_close": "You're close to free shipping!"
+
     },
     "contact": {
       "form": {
