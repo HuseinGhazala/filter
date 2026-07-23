@@ -7085,6 +7085,9 @@ font-weight: 400;
 .wt-free-shipping-bar {
   width: 100%;
   margin: calc(var(--gap, 8px) * 3) 0 calc(var(--gap, 8px) * 1);
+  background-color: #ffd0001c;
+  padding: 12px;
+  border-radius: 8p
 }
 .wt-free-shipping-bar__text {
   font-size: 14px;
