@@ -7092,7 +7092,7 @@ font-weight: 400;
 .icon-text-free-shoping{
   display: flex;
   align-items: center;
-  gap:8px;
+  gap:12px;
   margin-bottom: 14px;
 }
 .icon-text-free-shoping .free-shipping-bar__icon{
