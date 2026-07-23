@@ -7093,10 +7093,14 @@ font-weight: 400;
 .icon-text-free-shoping{
   display: flex;
   align-items: center;
+  margin-bottom: 14px;
 }
 .icon-text-free-shoping .free-shipping-bar__icon{
   width: 40px;
+  height: 40px;
   background-color: var(--color-button-primary-background);
+  padding: 7px;
+  border-radius: 100%;
 }
 .icon-text-free-shoping .free-shipping-bar__icon svg{
   fill:white;
