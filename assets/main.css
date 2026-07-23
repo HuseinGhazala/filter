@@ -7123,10 +7123,14 @@ font-weight: 400;
   position: relative;
 }
 .wt-progress-bar__fill {
-  width: 0%;
-  height: 100%;
-  background-color: var(--color-action-background);
-  transition: width 0.5s ease-in-out;
+width: 0%;
+height: 100%;
+background: linear-gradient(
+  90deg,
+  var(--color-action-background),
+  var(--color-button-primary-background-hover)
+);
+transition: width 0.5s ease-in-out;
 }
 
 .cart__items--disabled {
