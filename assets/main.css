@@ -7108,7 +7108,7 @@ font-weight: 400;
   flex-direction: column;
   gap:4px;
 }
-.free-shipping-text{
+.free-shipping-text h3{
   margin:0
 }
 .icon-text-free-shoping .free-shipping-bar__icon svg{
