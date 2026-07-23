@@ -7127,8 +7127,9 @@ width: 0%;
 height: 100%;
 background: linear-gradient(
   90deg,
-  var(--color-button-primary-background),
-  var(--color-button-primary-background-hover)
+  90deg,
+  #11173D 0%,
+  #6E8ECD 100%
 );
 transition: width 0.5s ease-in-out;
 }
