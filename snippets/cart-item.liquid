@@ -70,6 +70,7 @@
         <span class="card__subtitle">{{ item.product.vendor | escape }}</span>
       {% endif %}
       <h2 class="wt-cart__item__name cart-item__name">
+        <p class="wt-cart__item__category">{{ item.product.vendor | escape }}</p>
         <a href="{{ item.product.url }}" tabindex="{{ tab_index }}" class="wt-cart__item__link">{{ item.product.title | escape }}</a>
       </h2>
          {%- if show_qty_remove_controls -%}
