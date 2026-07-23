@@ -7106,7 +7106,7 @@ font-weight: 400;
 .free-shipping-text{
   display: flex;
   flex-direction: column;
-  
+  gap:4px;
 }
 .free-shipping-text{
   margin:0
