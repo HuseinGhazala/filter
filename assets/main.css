@@ -7090,7 +7090,9 @@ font-weight: 400;
   font-size: 14px;
   margin-bottom: calc(var(--gap, 8px) * 1);
 }
-
+.icon-text-free-shoping{
+ 
+}
 .wt-progress-bar {
   width: 100%;
   background-color: rgba(var(--color-action-background-rgb), 0.2);
