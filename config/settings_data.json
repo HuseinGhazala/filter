@@ -72,7 +72,7 @@
     "type_headings_font_size_desk": 30,
     "type_navigation_font_size_desk": 16,
     "type_button_font_size_desk": 14,
-    "cart_type": "page",
+    "cart_type": "drawer",
     "show_view_cart": true,
     "cart_show_savings": true,
     "cart_show_payment_badge": true,
