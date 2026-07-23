@@ -1,5 +1,5 @@
 {% comment %}Parse the free shipping threshold based on currency{% endcomment %}
-{% assign free_shipping_setting = settings.free_shipping_bar_amount | default: '1000' %}
+{% assign free_shipping_setting = settings.free_shipping_bar_amoun | default: '1000' %}
 {% assign free_shipping_threshold = free_shipping_setting | split: '|' | first | strip %}
 
 {% comment %}Check if we have currency-specific thresholds{% endcomment %}
