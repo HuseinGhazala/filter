@@ -56,9 +56,7 @@
           {% render 'icons', id: 'close', icon_class: 'wt-cart__drawer__close' %}
         </a>
       </header>
-              {% if settings.enable_free_shipping_bar %}
-                    {% render 'cart-free-shipping-bar' %}
-              {% endif %}
+      
       <div class="wt-cart__drawer__body">
         {% if settings.enable_free_shipping_bar and cart != empty %}
           {% render 'cart-free-shipping-bar' %}
