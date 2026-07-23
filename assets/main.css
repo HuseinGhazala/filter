@@ -7092,7 +7092,7 @@ font-weight: 400;
 .icon-text-free-shoping{
   display: flex;
   align-items: center;
-  gap:4px;
+  gap:8px;
   margin-bottom: 14px;
 }
 .icon-text-free-shoping .free-shipping-bar__icon{
@@ -7285,6 +7285,9 @@ display:none;}
   }
   .cart-page .wt-free-shipping-bar {
     margin: 0;
+    padding: 10px;
+    background-color: #ffc40024;
+    border-radius: 8px;
   }
 }
 
