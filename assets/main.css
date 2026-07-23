@@ -7104,9 +7104,12 @@ font-weight: 400;
 }
 
 .free-shipping-text{
-    display: flex;
-    flex-direction: column;
-
+  display: flex;
+  flex-direction: column;
+  
+}
+.free-shipping-text{
+  margin:0
 }
 .icon-text-free-shoping .free-shipping-bar__icon svg{
   fill:white;
