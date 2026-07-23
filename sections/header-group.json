@@ -20,8 +20,8 @@
             "text": "15% discount on the applicable reduction.",
             "link": "",
             "icon_image": "shopify://shop_images/Group_2.png",
-            "image_width": 30,
-            "image_height": 30
+            "image_width": 40,
+            "image_height": 36
           }
         }
       },
@@ -33,7 +33,7 @@
         "animation_speed": "150",
         "checkbox_close_announcement": true,
         "color-body-text": "#151515",
-        "background_color": "#FEFFCD",
+        "background_color": "#feffcd",
         "size_text_desktop": 100,
         "size_text_mobile": 100
       }
