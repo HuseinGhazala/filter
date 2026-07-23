@@ -6438,7 +6438,7 @@ font-weight: 400;
 @media (min-width: 900px) {
   .wt-cart__item__thumb img,
   .wt-cart__item__thumb svg {
-    max-width: 9rem;
+    max-width: 20rem;
   }
 }
 .wt-cart__drawer .wt-cart__item__thumb {
