@@ -7088,7 +7088,6 @@ font-weight: 400;
 }
 .wt-free-shipping-bar__text {
   font-size: 14px;
-  margin-bottom: calc(var(--gap, 8px) * 1);
 }
 .icon-text-free-shoping{
   display: flex;
