@@ -2756,6 +2756,7 @@ html[lang="ar"] .wt-header__body {
     overflow: hidden;
     display: block;
     text-wrap: nowrap;
+    padding:0;
     --clr-underline: var(--highlight-color, var(--color-header-text));
   }
   .wt-header--fashion .wt-header__nav-teaser--full-menu {
