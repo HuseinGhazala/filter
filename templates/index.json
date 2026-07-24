@@ -415,9 +415,9 @@
       "name": "Product Categories",
       "settings": {
         "collection": [
-          "black",
-          "burgundy",
           "light-blue",
+          "burgundy",
+          "black",
           "navy"
         ],
         "feature_image": "shopify://shop_images/04718991ffe450ed25dca905db5e6444fe219db5.png",
