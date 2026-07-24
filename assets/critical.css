@@ -1287,6 +1287,7 @@ textarea:focus-visible:focus-visible {
 .rte p {
   margin-block: 1em;
 }
+
 .rte > *:first-child {
   margin-block-start: 0;
 }

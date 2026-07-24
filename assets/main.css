@@ -9844,6 +9844,10 @@ clip-path: unset;}
   margin: 0;
   border: none;
 }
+
+.description__content p {
+  margin:0
+}
 .wt-product .wt-collapse__target {
   overflow: hidden;
   display: grid;
