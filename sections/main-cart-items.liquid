@@ -38,6 +38,11 @@
 
               {%- if settings.enable_free_shipping_bar or settings.enable_discount_progress_bar -%}
                 <div class="wt-cart__header__progress">
+                  <div class="enable_free_shipping_bar_mobile">
+                    {% if settings.enable_free_shipping_bar %}
+                      {% render 'cart-free-shipping-bar' %}
+                    {% endif %}
+                  </div>
 
                   {% if settings.enable_discount_progress_bar %}
                     {% render 'discount-progress-bar' %}
@@ -65,7 +70,11 @@
                {%- if cart != empty -%}
           <div class="wt-cart__footer-container" id="main-cart-footer" data-id="{{ section.id }}">
 
-             {% render 'cart-free-shipping-bar'%}
+                  <div class="enable_free_shipping_bar_des">
+                    {% if settings.enable_free_shipping_bar %}
+                      {% render 'cart-free-shipping-bar' %}
+                    {% endif %}
+                  </div>
       
             <div class="wt-cart__footer">
 
@@ -236,7 +245,33 @@
     margin-top: 4px;
   }
 
+/* افتراضي: مخفيين لحد ما الميديا كويري يحددهم */
+.enable_free_shipping_bar_mobile {
+  display: none;
+}
+.enable_free_shipping_bar_des {
+  display: none;
+}
 
+/* موبايل: يظهر بس نسخة الموبايل */
+@media screen and (max-width: 749px) {
+  .enable_free_shipping_bar_mobile {
+    display: flex;
+  }
+  .enable_free_shipping_bar_des {
+    display: none;
+  }
+}
+
+/* ديسكتوب: يظهر بس نسخة الديسكتوب */
+@media screen and (min-width: 750px) {
+  .enable_free_shipping_bar_mobile {
+    display: none;
+  }
+  .enable_free_shipping_bar_des {
+    display: flex;
+  }
+}
 
   
 </style>
