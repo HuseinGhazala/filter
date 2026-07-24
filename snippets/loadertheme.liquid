@@ -32,7 +32,7 @@
       height: 48px;
       border-radius: 50%;
       display: inline-block;
-      border-left: 3px solid var(--color-headings-text);
+      border-left: 3px solid #FFF;
       border-right: 3px solid transparent;
       box-sizing: border-box;
       animation: rotation 1s linear infinite;
@@ -63,12 +63,14 @@
   function hideLoader() {
     const loader = document.getElementById('page-loader');
     if (loader) {
+      // Remove immediately without waiting for timeout
       if (loader.parentNode) {
         loader.parentNode.removeChild(loader);
       }
     }
   }
 
+  // Remove loader as soon as DOM is ready
   document.addEventListener('DOMContentLoaded', hideLoader);
   window.addEventListener('load', hideLoader);
   document.addEventListener('shopify:section:load', hideLoader);
