@@ -16,8 +16,7 @@
     transition: opacity 0.4s ease-out, visibility 0.4s ease-out;
     pointer-events: auto;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);  
-
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .blur-loader.hidden {
@@ -25,7 +24,6 @@
     visibility: hidden;
     pointer-events: none;
   }
-
 
   .spinner-hilal {
       width: 48px;
@@ -46,11 +44,6 @@
       transform: rotate(360deg);
     }
   }
-  }
-
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
 
   @media (prefers-reduced-motion: reduce) {
     .blur-loader {
@@ -60,16 +53,52 @@
 </style>
 
 <script>
-  function hideLoader() {
-    const loader = document.getElementById('page-loader');
-    if (loader) {
-      if (loader.parentNode) {
-        loader.parentNode.removeChild(loader);
+  (function () {
+    let loaderRemoved = false;
+
+    function removeLoader() {
+      if (loaderRemoved) return;
+      loaderRemoved = true;
+
+      const loader = document.getElementById('page-loader');
+      if (!loader) return;
+
+      // Wait two animation frames so the browser has actually painted
+      // the fully-styled/laid-out content before we reveal it.
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          loader.classList.add('hidden');
+          loader.addEventListener('transitionend', function () {
+            if (loader.parentNode) loader.parentNode.removeChild(loader);
+          }, { once: true });
+        });
+      });
+    }
+
+    // Wait for fonts too (avoids text reflow flashes after the loader hides)
+    function whenFontsReady(cb) {
+      if (document.fonts && document.fonts.ready) {
+        document.fonts.ready.then(cb).catch(cb);
+      } else {
+        cb();
       }
     }
-  }
 
-  document.addEventListener('DOMContentLoaded', hideLoader);
-  window.addEventListener('load', hideLoader);
-  document.addEventListener('shopify:section:load', hideLoader);
+    // window.load fires only after ALL resources (images, external CSS,
+    // iframes, etc.) have finished loading — unlike DOMContentLoaded,
+    // which fires as soon as the HTML is parsed and can leave the loader
+    // hiding too early, exposing an unstyled/overlapping flash underneath.
+    window.addEventListener('load', function () {
+      whenFontsReady(removeLoader);
+    });
+
+    // Safety net: never trap the user behind the loader forever
+    // (e.g. a slow/broken asset). Force-remove after 6s.
+    setTimeout(removeLoader, 6000);
+
+    // Re-show/hide handling for Shopify section reloads in the editor
+    document.addEventListener('shopify:section:load', function () {
+      loaderRemoved = true; // don't re-block editor interactions
+    });
+  })();
 </script>
