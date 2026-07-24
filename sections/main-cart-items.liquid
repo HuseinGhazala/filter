@@ -38,9 +38,6 @@
 
               {%- if settings.enable_free_shipping_bar or settings.enable_discount_progress_bar -%}
                 <div class="wt-cart__header__progress">
-                  {% if settings.enable_free_shipping_bar %}
-                    {% render 'cart-free-shipping-bar' %}
-                  {% endif %}
 
                   {% if settings.enable_discount_progress_bar %}
                     {% render 'discount-progress-bar' %}
