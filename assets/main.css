@@ -9969,6 +9969,7 @@ clip-path: unset;}
 .wt-product__feature-icons__list {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   gap: var(--icons-container-gap-mobile, calc(var(--gap, 8px) * 2));
 }
 @media (min-width: 900px) {
