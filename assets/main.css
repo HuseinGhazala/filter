@@ -6285,7 +6285,7 @@ font-weight: 400;
   padding: 24px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
   .wt-cart__body-wrapper{
     flex-direction: column;
     
