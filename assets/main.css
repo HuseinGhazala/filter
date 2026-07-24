@@ -9826,7 +9826,7 @@ clip-path: unset;}
 .wt-product__payments-badge__content > *:first-child {
   margin-top: calc(var(--gap, 8px) * 1);
 }
-.wt-header__icon wt-header__menu-trigger wt-icon{
+.wt-header__icon.wt-header__menu-trigger.wt-icon{
   transform: rotate(180deg);
 }
 .wt-product__payments-badge__content > *:last-child {
