@@ -23,6 +23,18 @@
   --swiper-navigation-size: 44px;
 }
 
+.swiper:not(.swiper-initialized) {
+  opacity: 0;
+  pointer-events: none;
+  min-height: 400px;
+}
+
+.swiper.swiper-initialized {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease-in-out;
+}
+
 body .swiper,
 main .swiper,
 shopify-editor .swiper,
