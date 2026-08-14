@@ -1,5 +1,7 @@
 <style>
-  [data-section-id="{{ section.id }}"] {
+  [data-section-id="{{ section.id }}"]
+  {
+
       {% if section.settings.full-width-enabled %}
           --border-radius: 0;
       {% endif %}
@@ -24,13 +26,11 @@
       --grid-gap-mobile: {{ section.settings.spacing_mobile }}px;
   }
 
-  @media (min-width: 768px) {
+   @media (min-width: 768px) {
     .grid-view-tabs {
-      display: none !important;
+      display:none !important;
     }
   }
-
-  /* إعدادات الموبايل */
   @media (max-width: 899px) {
     .collection__grid {
       {% if section.settings.columns_mobile == "1" %}
@@ -42,81 +42,38 @@
   }
 
   #ProductGridContainer .collection__grid .collection__product-card,
-  #ProductGridContainer .collection__grid > * {
-    transition: opacity 0.25s ease, transform 0.25s ease;
-  }
+#ProductGridContainer .collection__grid > * {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
 
-  #ProductGridContainer .collection__grid.is-switching > * {
-    opacity: 0;
-    transform: scale(0.97);
-  }
-  
-  #ProductGridContainer .collection__grid.is-grid-1 {
-    --cols: 1;
-  }
+#ProductGridContainer .collection__grid.is-switching > * {
+  opacity: 0;
+  transform: scale(0.97);
+}
+#ProductGridContainer .collection__grid.is-grid-1 {
+  --cols: 1;
+}
 
-  /* إعدادات الديسكتوب */
-  @media (min-width: 900px) {
-    .collection__grid {
-      grid-template-columns: repeat({{ section.settings.columns_desktop }}, minmax(0, 1fr)) !important;
-    }
-  }
+.grid-view-tabs {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
 
-  .grid-view-tabs {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
+.grid-view-tab {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  color: #B7B7B7;
+  transition: color 0.3s ease;
+}
 
-  .grid-view-tab {
-    background: transparent;
-    border: none;
-    padding: 4px;
-    cursor: pointer;
-    color: #B7B7B7;
-    transition: color 0.3s ease;
-  }
+.grid-view-tab.is-active {
+  color: var(--color-button-primary-background);
+}
 
-  .grid-view-tab.is-active {
-    color: var(--color-button-primary-background);
-  }
-
-  /* --- إصلاح مشكلة التداخل والتخطيط (الملف الرئيسي للحل) --- */
-  .collection__body {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .collection__sticky-header {
-    position: relative;
-    z-index: 2;
-    background-color: var(--gradient-background, #fff);
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-  }
-
-  .collection__toolbar {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-  }
-
-  .collection__counter.mobile {
-    display: none;
-  }
-
-  @media (max-width: 767px) {
-    .collection__counter.mobile {
-      display: block;
-      margin-bottom: 10px;
-    }
-  }
 </style>
 
 {% if section.settings['full-width-enabled'] %}
@@ -308,6 +265,9 @@
           data-cols="{{ section.settings.columns_mobile }}"
           data-cols-desktop="{{ section.settings.columns_desktop }}"
         >
+
+          
+
           {% for product in collection.products %}
             {% assign first_forloop_index = forloop.index %}
             {% assign current_product_index = first_forloop_index | plus: paginate.current_offset %}
@@ -930,7 +890,7 @@
         },
         {
           "type": "header",
-          "content": "t:sections.global.colors"
+          "content": "t:sections.global.colors",
         },
         {
           "type": "color",
@@ -951,7 +911,7 @@
           "unit": "%",
           "default": 100,
           "label": "t:sections.settings.settings.background-opacity.label"
-        }
+        },
       ]
     }
   ],
