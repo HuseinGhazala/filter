@@ -28,10 +28,10 @@ class CollectionSection extends HTMLElement {
     this.breakpoint = 1200;
     this.currentDrawerMode = this.isDrawerMode();
 
-    // ====== إعدادات تابس عرض الجريد ======
+    // ====== إعدادات تابس عرض الجريد (1 عمود / 2 عمود) ======
+    this.defaultColumns = "2";
     this.getGrid = () => this.querySelector(".collection__grid");
     this.getGridViewTabs = () => this.querySelectorAll(".grid-view-tab");
-    this.mobileBreakpoint = 900;
 
     this.init();
   }
@@ -79,118 +79,52 @@ class CollectionSection extends HTMLElement {
     this.initGridViewTabs();
   }
 
-  // ====== منطق تبديل عدد أعمدة الجريد ======
-  initGridViewTabs() {
+  // ====== منطق تبديل عدد أعمدة الجريد عن طريق --cols ======
+initGridViewTabs() {
     const tabs = this.getGridViewTabs();
-    if (!tabs || !tabs.length) return;
+    const grid = this.getGrid();
+    if (!tabs || !tabs.length || !grid) return;
 
-    // استعادة التفضيل المحفوظ
-    const saved = localStorage.getItem("gridColumns");
-    const isMobile = window.innerWidth < this.mobileBreakpoint;
+    // قراءة القيمة الحالية من الـ grid أو localStorage أو الافتراضي
+    const currentCols = grid.style.getPropertyValue("--cols") || this.dataset.cols || "2";
+    const saved = localStorage.getItem("gridColumns") || currentCols;
     
-    // الحصول على القيم الافتراضية من الـ data attributes
-    const defaultCols = isMobile 
-      ? parseInt(this.getGrid()?.dataset.colsMobile || 2, 10)
-      : parseInt(this.getGrid()?.dataset.colsDesktop || 3, 10);
-    
-    const columns = saved || defaultCols;
-    this.applyGridColumns(columns, false);
+    this.applyGridColumns(saved, false);
 
-    // إضافة مستمعات الأحداث للأزرار
     tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
         const columns = tab.getAttribute("data-columns");
-        if (columns) {
-          this.applyGridColumns(columns, true);
-        }
-      });
-
-      // دعم لوحة المفاتيح
-      tab.addEventListener("keydown", (e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          tab.click();
-        }
+        this.applyGridColumns(columns, true);
       });
     });
   }
 
-  applyGridColumns(columns, save) {
-    const grid = this.getGrid();
-    const tabs = this.getGridViewTabs();
-    if (!grid) return;
+applyGridColumns(columns, save) {
+  const grid = this.getGrid();
+  const tabs = this.getGridViewTabs();
+  if (!grid) return;
 
-    const cols = parseInt(columns, 10);
-    if (isNaN(cols) || cols < 1) return;
+  // ابدأ تأثير الفيد أوت
+  grid.classList.add("is-switching");
 
-    const isMobile = window.innerWidth < this.mobileBreakpoint;
+  // بعد ما التأثير يخلص، غيّر عدد الأعمدة وارجع فيد إن
+  setTimeout(() => {
+    grid.style.setProperty("--cols", columns);
 
-    // تحديث عدد الأعمدة في الـ CSS
-    grid.style.setProperty("--cols", cols);
-    
-    // تحديث الـ data attributes
-    if (isMobile) {
-      grid.dataset.colsMobile = cols;
-    } else {
-      grid.dataset.colsDesktop = cols;
-    }
-
-    // تحديث الـ grid-template-columns مباشرة
-    grid.style.gridTemplateColumns = `repeat(${cols}, 1fr)`;
-
-    // تأثير التبديل
-    grid.classList.add("is-switching");
-    setTimeout(() => {
+    // فريم إضافي عشان نضمن إن التغيير اتطبق قبل ما نشيل الكلاس
+    requestAnimationFrame(() => {
       grid.classList.remove("is-switching");
-    }, 300);
-
-    // تحديث الأزرار
-    tabs.forEach((tab) => {
-      const tabCols = tab.getAttribute("data-columns");
-      const isActive = parseInt(tabCols, 10) === cols;
-      tab.classList.toggle("is-active", isActive);
-      tab.setAttribute("aria-pressed", isActive ? "true" : "false");
     });
+  }, 250); // نفس مدة الـ transition في الـ CSS (0.25s)
 
-    // حفظ التفضيل مع نوع الجهاز
-    if (save) {
-      try {
-        localStorage.setItem("gridColumns", cols);
-        localStorage.setItem("gridDeviceType", isMobile ? "mobile" : "desktop");
-      } catch (e) {
-        // تجاهل أخطاء localStorage
-      }
-    }
-  }
+  tabs.forEach((tab) => {
+    const isActive = tab.getAttribute("data-columns") === columns;
+    tab.classList.toggle("is-active", isActive);
+    tab.setAttribute("aria-pressed", isActive ? "true" : "false");
+  });
 
-  // ====== استعادة التفضيل حسب الجهاز ======
-  restoreGridPreference() {
-    const grid = this.getGrid();
-    if (!grid) return;
-
-    const isMobile = window.innerWidth < this.mobileBreakpoint;
-    const defaultCols = isMobile 
-      ? parseInt(grid.dataset.colsMobile || 2, 10)
-      : parseInt(grid.dataset.colsDesktop || 3, 10);
-
-    let savedCols = null;
-    try {
-      const saved = localStorage.getItem("gridColumns");
-      const savedDevice = localStorage.getItem("gridDeviceType");
-      const currentDevice = isMobile ? "mobile" : "desktop";
-      
-      // استخدام التفضيل المحفوظ فقط إذا كان من نفس نوع الجهاز
-      if (saved && savedDevice === currentDevice) {
-        savedCols = parseInt(saved, 10);
-      }
-    } catch (e) {}
-
-    const cols = (savedCols && savedCols >= 1 && savedCols <= 4) 
-      ? savedCols 
-      : defaultCols;
-
-    this.applyGridColumns(cols, false);
-  }
+  if (save) localStorage.setItem("gridColumns", columns);
+}
 
   isDrawerMode() {
     const width = window.innerWidth;
@@ -199,9 +133,6 @@ class CollectionSection extends HTMLElement {
 
   handleResize() {
     const isDrawerMode = this.isDrawerMode();
-
-    // تحديث أعمدة الجريد عند تغيير حجم الشاشة
-    this.restoreGridPreference();
 
     if (isDrawerMode !== this.currentDrawerMode) {
       this.currentDrawerMode = isDrawerMode;
@@ -313,14 +244,6 @@ class CollectionSection extends HTMLElement {
       document.body.appendChild(this.overlay);
     }
   }
-}
-
-// ====== دالة مساعدة لضبط tabindex ======
-function setTabindex(elements, value) {
-  if (!elements) return;
-  elements.forEach((el) => {
-    if (el) el.setAttribute("tabindex", value);
-  });
 }
 
 customElements.define("collection-section", CollectionSection);
