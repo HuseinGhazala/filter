@@ -266,8 +266,6 @@
           data-cols-desktop="{{ section.settings.columns_desktop }}"
         >
 
-          
-
           {% for product in collection.products %}
             {% assign first_forloop_index = forloop.index %}
             {% assign current_product_index = first_forloop_index | plus: paginate.current_offset %}
@@ -297,7 +295,7 @@
               class="collection__grid__item {% if settings.animations %}scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
               {% if settings.animations %}
                 data-cascade
-                style="--animation-order: {{ forloop.index }};"
+                {% comment %} style="--animation-order: {{ forloop.index }};" {% endcomment %}
               {% endif %}
             >
               {% if section.settings.show_secondary_image and product.images[1] %}
