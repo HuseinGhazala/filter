@@ -29,7 +29,7 @@ class CollectionSection extends HTMLElement {
     this.currentDrawerMode = this.isDrawerMode();
 
     // ====== إعدادات تابس عرض الجريد (1 عمود / 2 عمود) ======
-    this.defaultColumns = "2";
+    this.defaultColumns = "4";
     this.getGrid = () => this.querySelector(".collection__grid");
     this.getGridViewTabs = () => this.querySelectorAll(".grid-view-tab");
 
