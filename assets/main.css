@@ -658,6 +658,7 @@ color: var(--color-headings-text);
 .price__sale .price__sale__details-wrapper {
   display: flex;
   flex-wrap: wrap;
+  gap:8px;
   justify-content: flex-start;
   align-items: center;
 }
