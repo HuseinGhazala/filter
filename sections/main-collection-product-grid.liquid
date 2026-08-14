@@ -1,7 +1,7 @@
-
 <style>
   [data-section-id="{{ section.id }}"]
   {
+
       {% if section.settings.full-width-enabled %}
           --border-radius: 0;
       {% endif %}
@@ -26,47 +26,21 @@
       --grid-gap-mobile: {{ section.settings.spacing_mobile }}px;
   }
 
-  /* ===== GRID VIEW TABS - تعمل على جميع الشاشات ===== */
-  .grid-view-tabs {
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-    margin-bottom: 20px;
-    padding: 8px 0;
+   @media (min-width: 768px) {
+    .grid-view-tabs {
+      display:none !important;
+    }
   }
 
-  .grid-view-tab {
-    background: transparent;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    color: #B7B7B7;
-    transition: color 0.3s ease, transform 0.2s ease;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .grid-view-tab:hover {
-    transform: scale(1.05);
-  }
-
-  .grid-view-tab.is-active {
-    color: var(--color-button-primary-background, #000);
-  }
-
-  .grid-view-tab svg {
-    width: 20px;
-    height: 18px;
-  }
-
-  /* ===== PRODUCT GRID ===== */
-  #ProductGridContainer .collection__grid {
-    display: grid;
-    grid-template-columns: repeat(var(--cols, 3), 1fr);
-    gap: var(--grid-gap, 16px);
-    transition: all 0.3s ease;
+  /* إعدادات الموبايل */
+  @media (max-width: 899px) {
+    .collection__grid {
+      {% if section.settings.columns_mobile == "1" %}
+        --cols: 1;
+      {% else %}
+        --cols: 2;
+      {% endif %}
+    }
   }
 
   #ProductGridContainer .collection__grid .collection__product-card,
@@ -78,218 +52,38 @@
     opacity: 0;
     transform: scale(0.97);
   }
+  
+  #ProductGridContainer .collection__grid.is-grid-1 {
+    --cols: 1;
+  }
 
-  /* ===== DESKTOP ===== */
+  /* إعدادات الديسكتوب (تمت إضافة !important لضمان عدم تأثرها بأي جافاسكريبت خارجي) */
   @media (min-width: 900px) {
     .collection__grid {
-      --cols: {{ section.settings.columns_desktop }};
+      grid-template-columns: repeat({{ section.settings.columns_desktop }}, minmax(0, 1fr)) !important;
     }
-
-    /* إخفاء أزرار التبديل على الديسكتوب إذا كان الإعداد مفعلاً */
-    {% if section.settings.hide_grid_tabs_desktop %}
-    .grid-view-tabs {
-      display: none !important;
-    }
-    {% endif %}
   }
 
-  /* ===== MOBILE ===== */
-  @media (max-width: 899px) {
-    .collection__grid {
-      {% if section.settings.columns_mobile == "1" %}
-        --cols: 1;
-      {% else %}
-        --cols: 2;
-      {% endif %}
-    }
-
-    /* إخفاء أزرار التبديل على الموبايل إذا كان الإعداد مفعلاً */
-    {% if section.settings.hide_grid_tabs_mobile %}
-    .grid-view-tabs {
-      display: none !important;
-    }
-    {% endif %}
-  }
-
-  /* ===== OVERRIDE للجافاسكريبت - بدون !important للسماح بالتجاوز ===== */
-  .collection__grid[data-cols] {
-    --cols: attr(data-cols number, var(--cols));
-  }
-
-  .collection__grid[data-cols-desktop] {
-    --cols: attr(data-cols-desktop number, var(--cols));
-  }
-
-  /* ===== TOOLBAR STYLES ===== */
-  .collection__sticky-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: var(--color-background, #fff);
-    padding: 12px 0;
-    transition: box-shadow 0.3s ease;
-  }
-
-  .collection__sticky-header.is-sticky {
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  }
-
-  .collection__subheader {
+  .grid-view-tabs {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 16px;
-  }
-
-  .collection__counter {
-    font-size: 14px;
-    color: var(--color-text, #333);
-  }
-
-  .collection__toolbar {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 8px 16px;
-    flex-wrap: wrap;
-  }
-
-  .collection__toolbar--minimal {
-    justify-content: flex-end;
-  }
-
-  .collection__toolbar--buttons {
-    justify-content: space-between;
-    border-top: 1px solid rgba(0,0,0,0.08);
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-  }
-
-  .collection__mobile-layout-switch {
-    display: flex;
-    align-items: center;
     gap: 8px;
-    cursor: pointer;
-    padding: 4px 8px;
-    border-radius: 4px;
-    transition: background 0.2s ease;
-  }
-
-  .collection__mobile-layout-switch:hover {
-    background: rgba(0,0,0,0.05);
-  }
-
-  .collection__mobile-layout-switch .css-icon {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    border: 2px solid currentColor;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-  }
-
-  .collection__mobile-layout-switch .css-icon--grid {
-    position: relative;
-  }
-
-  .collection__mobile-layout-switch .css-icon--grid::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: currentColor;
-    transform: translateY(-50%);
-  }
-
-  .collection__mobile-layout-switch .css-icon--square {
-    border-radius: 2px;
-  }
-
-  .collection__mobile-layout-checkbox {
-    display: none;
-  }
-
-  .collection__filter-trigger {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-    padding: 6px 12px;
-    border-radius: 4px;
-    transition: background 0.2s ease;
-    font-size: 14px;
-  }
-
-  .collection__filter-trigger:hover {
-    background: rgba(0,0,0,0.05);
-  }
-
-  .wt-filter__trigger__counter {
-    background: var(--color-button-primary-background, #000);
-    color: var(--color-button-primary-text, #fff);
-    border-radius: 50%;
-    padding: 0 6px;
-    font-size: 10px;
-    min-width: 18px;
-    height: 18px;
-    display: inline-flex;
-    align-items: center;
     justify-content: center;
+    margin-bottom: 20px;
   }
 
-  .collection__sort {
-    min-width: 150px;
+  .grid-view-tab {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: #B7B7B7;
+    transition: color 0.3s ease;
   }
 
-  .loading-overlay {
-    display: inline-flex;
-    align-items: center;
+  .grid-view-tab.is-active {
+    color: var(--color-button-primary-background);
   }
 
-  .loading-overlay.hidden {
-    display: none;
-  }
-
-  /* ===== EMPTY COLLECTION ===== */
-  .collection__empty-collection {
-    text-align: center;
-    padding: 60px 20px;
-    font-size: 18px;
-    color: var(--color-text, #666);
-  }
-
-  /* ===== RESPONSIVE ===== */
-  @media (max-width: 768px) {
-    .collection__toolbar {
-      gap: 12px;
-      padding: 8px 12px;
-    }
-
-    .collection__sort {
-      min-width: 120px;
-      font-size: 13px;
-    }
-
-    .collection__filter-trigger {
-      font-size: 13px;
-      padding: 4px 10px;
-    }
-
-    .grid-view-tabs {
-      gap: 4px;
-      margin-bottom: 12px;
-    }
-
-    .grid-view-tab {
-      padding: 6px 10px;
-    }
-
-    .grid-view-tab svg {
-      width: 18px;
-      height: 16px;
-    }
-  }
 </style>
 
 {% if section.settings['full-width-enabled'] %}
@@ -300,6 +94,7 @@
 
 {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
 {%- assign filters_length = collection.filters | size -%}
+
 
 {%- capture filters_json -%}
 {{ collection.filters | json }}
@@ -312,7 +107,6 @@
 {% if section.settings.enable_quick_add_button %}
   <script src="{{ 'variant-dropdown.js' | asset_url }}" defer="defer"></script>
 {% endif %}
-
 {% assign are_filters_active = false %}
 {%- for filter in collection.filters-%}
     {%- for active_filter in filter.active_values -%}
@@ -390,7 +184,6 @@
             checked
           {% endif %}
         >
-
         {% if section.settings.enable_filtering or section.settings.enable_sorting %}
           <div
             class="collection__toolbar collection__toolbar--{{ section.settings.toolbar_style }}"
@@ -459,47 +252,21 @@
           <sticky-filters></sticky-filters>
         {% endif %}
       </div>
+      <div class="grid-view-tabs">
+          <button type="button" class="grid-view-tab" data-columns="1" aria-label="عرض عمود واحد">
+            <svg class="oneCard" xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
+              <rect x="20" width="8" height="20" transform="rotate(90 20 0)" fill="currentColor"/>
+              <rect x="20" y="10" width="8" height="20" transform="rotate(90 20 10)" fill="currentColor"/>
+            </svg>
+          </button>
 
-      <!-- ===== GRID VIEW TABS - تعمل على جميع الشاشات ===== -->
-      {% if section.settings.enable_grid_tabs %}
-      <div class="grid-view-tabs" id="gridViewTabs">
-        <button type="button" class="grid-view-tab" data-columns="1" aria-label="عرض عمود واحد" title="عرض عمود واحد">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="18" viewBox="0 0 20 18" fill="none">
-            <rect x="20" width="8" height="20" transform="rotate(90 20 0)" fill="currentColor"/>
-            <rect x="20" y="10" width="8" height="20" transform="rotate(90 20 10)" fill="currentColor"/>
-          </svg>
-        </button>
-
-        <button type="button" class="grid-view-tab is-active" data-columns="2" aria-label="عرض عمودين" title="عرض عمودين">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-            <rect width="8" height="18" fill="currentColor"/>
-            <rect x="10" width="8" height="18" fill="currentColor"/>
-          </svg>
-        </button>
-
-        {% if section.settings.columns_desktop >= 3 %}
-        <button type="button" class="grid-view-tab" data-columns="3" aria-label="عرض ثلاثة أعمدة" title="عرض ثلاثة أعمدة">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 18" fill="none">
-            <rect width="7" height="18" fill="currentColor"/>
-            <rect x="8.5" width="7" height="18" fill="currentColor"/>
-            <rect x="17" width="7" height="18" fill="currentColor"/>
-          </svg>
-        </button>
-        {% endif %}
-
-        {% if section.settings.columns_desktop >= 4 %}
-        <button type="button" class="grid-view-tab" data-columns="4" aria-label="عرض أربعة أعمدة" title="عرض أربعة أعمدة">
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" fill="none">
-            <rect width="6" height="18" fill="currentColor"/>
-            <rect x="8" width="6" height="18" fill="currentColor"/>
-            <rect x="16" width="6" height="18" fill="currentColor"/>
-            <rect x="24" width="6" height="18" fill="currentColor"/>
-          </svg>
-        </button>
-        {% endif %}
+          <button type="button" class="grid-view-tab is-active" data-columns="2" aria-label="عرض عمودين">
+            <svg class="towCard" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect width="8" height="18" fill="currentColor"/>
+              <rect x="10" width="8" height="18" fill="currentColor"/>
+            </svg>
+          </button>
       </div>
-      {% endif %}
-
       {%- paginate collection.products by section.settings.products_per_page -%}
         <div
           id="product-grid"
@@ -507,7 +274,6 @@
           class="collection__grid"
           data-cols="{{ section.settings.columns_mobile }}"
           data-cols-desktop="{{ section.settings.columns_desktop }}"
-          style="--cols: {{ section.settings.columns_desktop }};"
         >
           {% for product in collection.products %}
             {% assign first_forloop_index = forloop.index %}
@@ -517,6 +283,7 @@
             {% if forloop.index > 3 %}
               {% assign eager_load = false %}
             {% endif %}
+
 
             {% if section.settings.enable_product_url_within_collection %}
               {% assign url = product.url | within: collection %}
@@ -573,171 +340,18 @@
             </div>
           {% endfor %}
         </div>
-
         {% if paginate.pages > 1 %}
           {% render 'pagination', paginate: paginate, anchor: '' %}
         {% endif %}
       {%- endpaginate -%}
     </section>
   </collection-section>
-
   {%- if collection.products.size == 0 -%}
     <div class="collection__counter collection__empty-collection">
       {{ 'sections.collection_template.empty' | t -}}
     </div>
   {% endif %}
 </div>
-
-<!-- ===== جافاسكريبت للتحكم في أزرار تبديل العرض ===== -->
-<script>
-  (function() {
-    'use strict';
-
-    // انتظار تحميل الصفحة بالكامل
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', initGridTabs);
-    } else {
-      initGridTabs();
-    }
-
-    function initGridTabs() {
-      const tabs = document.querySelectorAll('.grid-view-tab');
-      const grid = document.getElementById('product-grid');
-
-      if (!tabs.length || !grid) {
-        console.warn('Grid tabs or product grid not found');
-        return;
-      }
-
-      // تعيين الحالة النشطة بناءً على الأعمدة الحالية
-      function setActiveTab(columns) {
-        tabs.forEach(tab => {
-          const tabColumns = parseInt(tab.dataset.columns, 10);
-          tab.classList.toggle('is-active', tabColumns === columns);
-        });
-      }
-
-      // تحديث الـ grid
-      function updateGridColumns(columns) {
-        const colsNumber = parseInt(columns, 10);
-        if (isNaN(colsNumber) || colsNumber < 1) return;
-
-        // تحديث الـ CSS variables
-        grid.style.setProperty('--cols', colsNumber);
-
-        // تحديث الـ data attributes
-        grid.dataset.cols = colsNumber;
-        grid.dataset.colsDesktop = colsNumber;
-
-        // إضافة كلاس الترانزيشن
-        grid.classList.add('is-switching');
-
-        // إزالة كلاس الترانزيشن بعد الانتهاء
-        setTimeout(() => {
-          grid.classList.remove('is-switching');
-        }, 300);
-
-        // تحديث الحالة النشطة للأزرار
-        setActiveTab(colsNumber);
-
-        // حفظ التفضيل في localStorage
-        try {
-          localStorage.setItem('grid-columns-preference', colsNumber);
-        } catch (e) {
-          // تجاهل أخطاء localStorage
-        }
-      }
-
-      // معالج النقر على الأزرار
-      tabs.forEach(tab => {
-        tab.addEventListener('click', function(e) {
-          const columns = this.dataset.columns;
-          if (!columns) return;
-
-          updateGridColumns(columns);
-        });
-
-        // دعم لوحة المفاتيح
-        tab.addEventListener('keydown', function(e) {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            this.click();
-          }
-        });
-      });
-
-      // استعادة التفضيل المحفوظ
-      try {
-        const savedPreference = localStorage.getItem('grid-columns-preference');
-        if (savedPreference) {
-          const cols = parseInt(savedPreference, 10);
-          const maxCols = parseInt(grid.dataset.colsDesktop, 10) || 4;
-          if (cols >= 1 && cols <= maxCols) {
-            // التحقق من وجود زر لهذا العدد من الأعمدة
-            const tabExists = Array.from(tabs).some(tab => 
-              parseInt(tab.dataset.columns, 10) === cols
-            );
-            if (tabExists) {
-              updateGridColumns(cols);
-            }
-          }
-        }
-      } catch (e) {
-        // تجاهل أخطاء localStorage
-      }
-
-      // تحديث عند تغيير حجم النافذة (للموبايل)
-      let resizeTimeout;
-      window.addEventListener('resize', function() {
-        clearTimeout(resizeTimeout);
-        resizeTimeout = setTimeout(() => {
-          const windowWidth = window.innerWidth;
-          const currentCols = parseInt(grid.style.getPropertyValue('--cols'), 10) || 
-                             parseInt(grid.dataset.cols, 10) || 2;
-
-          // على الموبايل (أقل من 900px) نحدد الأعمدة حسب الإعداد
-          if (windowWidth < 900) {
-            const mobileCols = parseInt(grid.dataset.cols, 10) || 2;
-            // إذا كان currentCols أكبر من 2 على الموبايل، نعدله
-            if (currentCols > 2) {
-              grid.style.setProperty('--cols', mobileCols);
-              setActiveTab(mobileCols);
-            }
-          } else {
-            // على الديسكتوب نستخدم القيمة المحفوظة أو الافتراضية
-            const desktopCols = parseInt(grid.dataset.colsDesktop, 10) || 3;
-            if (currentCols !== desktopCols && currentCols <= 2) {
-              // إذا كان المستخدم على عرض عمود واحد أو اثنين على الديسكتوب
-              // نتحقق من التفضيل المحفوظ
-              const saved = localStorage.getItem('grid-columns-preference');
-              if (saved) {
-                const savedCols = parseInt(saved, 10);
-                if (savedCols >= 1 && savedCols <= 4) {
-                  grid.style.setProperty('--cols', savedCols);
-                  setActiveTab(savedCols);
-                  return;
-                }
-              }
-              grid.style.setProperty('--cols', desktopCols);
-              setActiveTab(desktopCols);
-            }
-          }
-        }, 250);
-      });
-
-      // تصدير الدوال للنطاق العام لاستخدامها من أماكن أخرى
-      window.gridControls = {
-        updateGridColumns: updateGridColumns,
-        setActiveTab: setActiveTab,
-        getCurrentColumns: function() {
-          return parseInt(grid.style.getPropertyValue('--cols'), 10) || 
-                 parseInt(grid.dataset.cols, 10) || 2;
-        }
-      };
-    }
-
-  })();
-</script>
 
 <script src="{{ 'collection-section.js' | asset_url }}" defer="defer"></script>
 
@@ -885,7 +499,7 @@
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.show_vendor.label"
     },
-    {
+        {
       "type": "checkbox",
       "id": "enable_vendor_link",
       "label": "t:sections.global.enable_vendor_link",
@@ -999,31 +613,6 @@
       "id": "open_first_filter",
       "default": false,
       "label": "t:sections.main-collection-product-grid.settings.open_first_filter.label"
-    },
-    {
-      "type": "header",
-      "content": "🔲 Grid View Tabs Settings"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_grid_tabs",
-      "default": true,
-      "label": "Enable Grid View Tabs",
-      "info": "Show/hide the grid column selector buttons"
-    },
-    {
-      "type": "checkbox",
-      "id": "hide_grid_tabs_desktop",
-      "default": false,
-      "label": "Hide on Desktop",
-      "info": "Hide grid tabs on desktop screens"
-    },
-    {
-      "type": "checkbox",
-      "id": "hide_grid_tabs_mobile",
-      "default": false,
-      "label": "Hide on Mobile",
-      "info": "Hide grid tabs on mobile screens"
     },
     {
       "type": "header",
