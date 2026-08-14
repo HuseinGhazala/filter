@@ -5802,7 +5802,7 @@ font-weight: 400;
 }
 @media (min-width: 1800px) {
   .wt-cart__wrapper {
-    max-width: var(--post-max-width);
+    /* max-width: var(--post-max-width); */
   }
 }
 .wt-cart__title {
