@@ -675,11 +675,12 @@ color: var(--color-headings-text);
 }
 .price__sale .price__details .price-item--sale {
   color: var(--color-price);
-      display: flex;
-    align-items: flex-start;
+
 }
 .price__sale .price-item--lower {
   color: var(--color-price);
+        display: flex;
+    align-items: flex-start;
 }
 @media (max-width: 1199px) {
   .price__sale .price-item--lower {
