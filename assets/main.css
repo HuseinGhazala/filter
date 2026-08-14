@@ -543,6 +543,7 @@ color: var(--color-headings-text);
     margin: 0 0 0 0.5rem;
   }
 }
+
 .price__regular .price-item--regular {
   margin-right: 0;
   color: var(--color-price);
@@ -674,6 +675,8 @@ color: var(--color-headings-text);
 }
 .price__sale .price__details .price-item--sale {
   color: var(--color-price);
+      display: flex;
+    align-items: flex-start;
 }
 .price__sale .price-item--lower {
   color: var(--color-price);
