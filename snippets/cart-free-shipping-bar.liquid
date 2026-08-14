@@ -1,0 +1,67 @@
+{% comment %}Parse the free shipping threshold based on currency{% endcomment %}
+{% assign free_shipping_setting = settings.free_shipping_bar_amount | default: '100' %}
+{% assign free_shipping_threshold = free_shipping_setting | split: '|' | first | strip %}
+
+{% comment %}Check if we have currency-specific thresholds{% endcomment %}
+{% assign current_currency = cart.currency.iso_code %}
+{% assign currency_specific_threshold = '' %}
+{% assign setting_parts = free_shipping_setting | split: '|' %}
+{% for part in setting_parts %}
+  {% if part contains ':' %}
+    {% assign currency_amount = part | split: ':' %}
+    {% assign currency_code = currency_amount[0] | strip %}
+    {% if currency_code == current_currency %}
+      {% assign currency_specific_threshold = currency_amount[1] | strip %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% if currency_specific_threshold != '' %}
+  {% assign free_shipping_threshold = currency_specific_threshold %}
+{% endif %}
+{% assign cart_value = cart.total_price | divided_by: 100.0 %}
+
+{% assign remaining_amount = free_shipping_threshold | minus: cart_value %}
+{% assign progress_percentage = cart_value | times: 100 | divided_by: free_shipping_threshold | round %}
+
+{% if remaining_amount < 0 %}
+  {% assign remaining_amount = 0 %}
+  {% assign progress_percentage = 100 %}
+{% endif %}
+
+{% assign remaining_amount_with_currency = remaining_amount | times: 100 | money %}
+
+{% assign custom_text = settings.free_shipping_bar_text | replace: '||amount||', remaining_amount_with_currency %}
+
+<div class="wt-free-shipping-bar">
+    <div class="icon-text-free-shoping">
+      <div class="free-shipping-bar__icon">    
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+          <path d="M0 0V1.125H10.6875V9.5625H7.22475C6.97388 8.59556 6.10425 7.875 5.0625 7.875C4.02075 7.875 3.15113 8.59556 2.90025 9.5625H2.25V6.75H1.125V10.6875H2.90025C3.15113 11.6544 4.02075 12.375 5.0625 12.375C6.10425 12.375 6.97388 11.6544 7.22475 10.6875H11.9003C12.1511 11.6544 13.0208 12.375 14.0625 12.375C15.1042 12.375 15.9739 11.6544 16.2248 10.6875H18V6.09975L17.9646 6.01144L16.8396 2.63644L16.7175 2.25H11.8125V0H0ZM0.5625 2.25V3.375H5.625V2.25H0.5625ZM11.8125 3.375H15.9081L16.875 6.25781V9.5625H16.2248C15.9739 8.59556 15.1042 7.875 14.0625 7.875C13.0208 7.875 12.1511 8.59556 11.9003 9.5625H11.8125V3.375ZM1.125 4.5V5.625H4.5V4.5H1.125ZM5.0625 9C5.69081 9 6.1875 9.49669 6.1875 10.125C6.1875 10.7533 5.69081 11.25 5.0625 11.25C4.43419 11.25 3.9375 10.7533 3.9375 10.125C3.9375 9.49669 4.43419 9 5.0625 9ZM14.0625 9C14.6908 9 15.1875 9.49669 15.1875 10.125C15.1875 10.7533 14.6908 11.25 14.0625 11.25C13.4342 11.25 12.9375 10.7533 12.9375 10.125C12.9375 9.49669 13.4342 9 14.0625 9Z" fill="white"/>
+        </svg>    
+    </div>
+        
+      <div class="free-shipping-text">
+
+        {% if remaining_amount > 0 %}
+              <h3>{{ 'templates.cart.you_are_close' | t }}</h3>
+          {%- endif -%}
+          <p class="wt-free-shipping-bar__text">
+            {% if remaining_amount > 0 %}
+              {{ custom_text }}
+            {% else %}
+              {{ settings.free_shipping_bar_text_success }}
+            {% endif %}
+          </p>
+        </div>
+    </div>
+  <div class="wt-progress-bar">
+    <div
+      class="wt-progress-bar__fill"
+      style="width: {{ progress_percentage }}%;"
+    ></div>
+  </div>
+</div>
+
+

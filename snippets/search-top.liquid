@@ -1,0 +1,228 @@
+{%- liquid
+  assign layout = section.settings.search_suggest_layout | default: 'menu'
+-%}
+
+<div class="search-result-top">
+  <div class="search-result-top__title">{{ section.settings.suggestions_title }}</div>
+
+  {%- case layout -%}
+  {%- when 'results' -%}
+    {%- liquid
+      assign products = section.settings.suggest_products
+      assign collections = section.settings.suggest_collections
+      assign pages_links = section.settings.suggest_pages_menu.links
+      assign terms_raw = section.settings.suggest_search_terms
+      assign terms = terms_raw | newline_to_br | split: '<br />'
+
+      assign products_title = section.settings.suggest_products_title
+      if products_title == blank
+        assign products_title = 'templates.search.titles.products' | t
+      endif
+
+      assign collections_title = section.settings.suggest_collections_title
+      if collections_title == blank
+        assign collections_title = 'templates.search.titles.collections' | t
+      endif
+
+      assign pages_menu_title = section.settings.suggest_pages_menu_title
+      if pages_menu_title == blank
+        assign pages_menu_title = 'templates.search.titles.useful_links' | t
+      endif
+
+      assign search_terms_title = section.settings.suggest_search_terms_title
+      if search_terms_title == blank
+        assign search_terms_title = 'templates.search.titles.popular_searches' | t
+      endif
+    -%}
+
+    <div class="search-result search-result--suggest" {% if settings.animations %}data-cascade{% endif %}>
+      {%- if products.size > 0 -%}
+        <div class="search-result-products">
+          <div class="search-result__title {% if settings.animations %}scroll-trigger animate--slide-in{% endif %} {% if settings.disabled_animations_on_mobile %}disabled-on-mobile{% endif %}">{{ products_title }}</div>
+          <ul class="search-result-list" role="listbox">
+            {%- for product in products -%}
+              <li class="search-result-list__item {% if settings.animations %}scroll-trigger animate--slide-in{% endif %} {% if settings.disabled_animations_on_mobile %}disabled-on-mobile{% endif %}" role="option">
+                {% render 'suggest-product-item',
+                  url: product.url,
+                  name: product.title,
+                  featured_media: product.featured_media,
+                  product: product,
+                  rating: product.metafields.reviews.rating.value
+                %}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+
+      {%- if collections.size > 0 or pages_links.size > 0 or terms.size > 0 -%}
+        <div class="search-result-pages">
+          {%- if terms.size > 0 -%}
+            <div class="search-result__title {% if settings.animations %}scroll-trigger animate--slide-in{% endif %} {% if settings.disabled_animations_on_mobile %}disabled-on-mobile{% endif %}">{{ search_terms_title }}</div>
+            <ul class="search-result-pages__list">
+              {%- for term in terms -%}
+                {%- assign term_clean = term | strip -%}
+                {%- if term_clean != blank -%}
+                  <li class="search-result-pages__item {% if settings.animations %}scroll-trigger animate--slide-in{% endif %} {% if settings.disabled_animations_on_mobile %}disabled-on-mobile{% endif %}">
+                    <a href="{{ routes.search_url }}?q={{ term_clean | url_encode }}&type=product">{{ term_clean }}</a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          {%- if collections.size > 0 -%}
+            <div class="search-result__title {% if settings.animations %}scroll-trigger animate--slide-in{% endif %} {% if settings.disabled_animations_on_mobile %}disabled-on-mobile{% endif %}">{{ collections_title }}</div>
+            <ul class="search-result-pages__list">
+              {%- for collection in collections -%}
+                <li class="search-result-pages__item {% if settings.animations %}scroll-trigger animate--slide-in{% endif %} {% if settings.disabled_animations_on_mobile %}disabled-on-mobile{% endif %}">
+                  <a href="{{ collection.url }}">{{ collection.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+
+          {%- if pages_links.size > 0 -%}
+            <div class="search-result__title {% if settings.animations %}scroll-trigger animate--slide-in{% endif %} {% if settings.disabled_animations_on_mobile %}disabled-on-mobile{% endif %}">{{ pages_menu_title }}</div>
+            <ul class="search-result-pages__list">
+              {%- for link in pages_links -%}
+                <li class="search-result-pages__item {% if settings.animations %}scroll-trigger animate--slide-in{% endif %} {% if settings.disabled_animations_on_mobile %}disabled-on-mobile{% endif %}">
+                  <a href="{{ link.url }}">{{ link.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+  {%- else -%}
+    <ul class="search-result-top__list collection-list" {% if settings.animations %}data-cascade{% endif %}>
+      {%- for link in section.settings.suggestions_menu.links -%}
+        <li class="search-result-top__item {% if link.type == 'collection_link' or link.links.size > 0 %}search-result-top__item--row {% endif %} collection-list__item {% if settings.animations %}scroll-trigger animate--slide-in{% endif %} {% if settings.disabled_animations_on_mobile %}disabled-on-mobile{% endif %}">
+
+          {% if link.type == 'collection_link' %}
+            {%- assign col = link.object -%}
+            <div class="search-result-top__item__header">
+              
+              <div class="search-result-top__item__meta">
+                <span class="search-result-top__item__count">
+                  {{ col.all_products_count }} قطعة
+                </span>
+                <a href="{{ col.url }}" class="search-result-top__item__filter" aria-label="فلتر">
+                  {% render 'icons', id: 'filter' %}
+                  <span>فلتر</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="search-result-top__item__sublinks search-result-top__item__sublinks--grid">
+              {% for product in col.products limit: 6 %}
+                <div class="search-result-top__item__sublink">
+                  {% render 'card',
+                    img: product.featured_image,
+                    url: product.url,
+                    title: product.title,
+                    subtitle: product.vendor,
+                    product: product,
+                    card_product: product,
+                    title_tag: 'div',
+                    rating: product.metafields.reviews.rating.value,
+                    reviews: product.metafields.reviews.rating_count.value,
+                    options: false,
+                    text_alignment: 'center',
+                    enable_quick_add_button: true,
+                    quick_add_mode: 'default'
+                  %}
+                </div>
+              {% endfor %}
+            </div>
+
+          {% elsif link.links.size > 0 %}
+            <a class="headline__title" href="{{ link.url }}"> {{ link.title }}</a>
+            <div class="search-result-top__item__sublinks">
+              {% for sublink in link.links %}
+                <div class="search-result-top__item__sublink">
+                  {% if sublink.type == 'product_link' %}
+                    {% render 'card',
+                      img: sublink.object.featured_image,
+                      url: sublink.object.url,
+                      title: sublink.object.title,
+                      subtitle: sublink.object.vendor,
+                      product: sublink.object,
+                      card_product: sublink.object,
+                      title_tag: 'div',
+                      rating: sublink.object.metafields.reviews.rating.value,
+                      reviews: sublink.object.metafields.reviews.rating_count.value,
+                      options: false,
+                      text_alignment: 'center',
+                      enable_quick_add_button: true,
+                      quick_add_mode: 'default'
+                    %}
+                  {% elsif sublink.type == 'collection_link' %}
+                    {% render 'card',
+                      img: sublink.object.featured_image,
+                      url: sublink.object.url,
+                      title: sublink.object.title,
+                      title_tag: 'div',
+                      product: nil
+                    %}
+                  {% endif %}
+                </div>
+              {% endfor %}
+            </div>
+
+          {% elsif link.type == 'product_link' %}
+            {% render 'card',
+              img: link.object.featured_image,
+              url: link.object.url,
+              title: link.object.title,
+              subtitle: link.object.vendor,
+              product: link.object,
+              card_product: link.object,
+              rating: link.object.metafields.reviews.rating.value,
+              reviews: link.object.metafields.reviews.rating_count.value,
+              options: false,
+              text_alignment: 'center',
+              enable_quick_add_button: true,
+              quick_add_mode: 'default'
+            %}
+          {% endif %}
+        </li>
+      {%- endfor -%}
+    </ul>
+  {%- endcase -%}
+</div>
+
+<style>
+.menu-open .wt-drawer {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+@media (max-width: 768px) {
+  .search-result-top__item__meta{
+  justify-content: space-between !important;
+  }
+}
+.search-result-top__item__meta{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+.search-result-top__item__filter{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.svg-icon--filter {
+    transform: rotate(90deg);
+}
+
+.search-result-top__item__sublinks--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+</style>

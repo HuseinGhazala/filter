@@ -1,0 +1,821 @@
+
+{
+  "sections": {
+    "collection_color_list_97U3xP": {
+      "type": "collection-color-list",
+      "blocks": {
+        "collection_block_f9nXPz": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "olive-green"
+          }
+        },
+        "collection_block_gif7pa": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "gray"
+          }
+        },
+        "collection_block_LBqyRd": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "indigo-blue"
+          }
+        },
+        "collection_block_9VbbJA": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "black"
+          }
+        },
+        "collection_block_CkiAtt": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "navy"
+          }
+        },
+        "collection_block_rALKyh": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "light-blue"
+          }
+        },
+        "collection_block_CamXB3": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "burgundy"
+          }
+        }
+      },
+      "block_order": [
+        "collection_block_f9nXPz",
+        "collection_block_gif7pa",
+        "collection_block_LBqyRd",
+        "collection_block_9VbbJA",
+        "collection_block_CkiAtt",
+        "collection_block_rALKyh",
+        "collection_block_CamXB3"
+      ],
+      "name": "Color Collections",
+      "settings": {
+        "title": "",
+        "padding_top": 40,
+        "padding_bottom": 20,
+        "show_mobile_spacing": true,
+        "margin_top_mobile": 10,
+        "margin_bottom_mobile": 10
+      }
+    },
+    "image_banner_4jbdyQ": {
+      "type": "image-banner",
+      "name": "t:sections.image-banner.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Image banner</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "slide_height": "adapt_to_first_image",
+        "desktop_fixed_height": 320,
+        "mobile_fixed_height": 520,
+        "desktop_image": "shopify://shop_images/Frame_2147208284_1.webp",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_image": "shopify://shop_images/Frame_2147208090_1_1.webp",
+        "mobile_text_vertical_position": "top",
+        "mobile_text_horizontal_position": "center",
+        "out_hero_mobile": false,
+        "out-background-color": "",
+        "out-text-color": "",
+        "color-heading": "",
+        "section-color-overlay": "",
+        "section-color-overlay-opacity": 100,
+        "color-body-text": "",
+        "text-container-color": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 20,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20,
+        "lcp_optimize": false
+      }
+    },
+    "features_banner_7zpBwP": {
+      "type": "features-banner",
+      "blocks": {
+        "image_EyjGTW": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208078.png",
+            "select_icon": "bag",
+            "heading": "Designed by Saudi hands",
+            "text": "<p>Designed by Saudi doctors to suit your need for modesty and comfort</p>",
+            "link": ""
+          }
+        },
+        "image_jifwM9": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208077.png",
+            "select_icon": "bag",
+            "heading": "Flexible materials for long shifts",
+            "text": "<p>Soft and comfortable fabrics that withstand long working hours</p>",
+            "link": ""
+          }
+        },
+        "image_CVAnef": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Group_102.png",
+            "select_icon": "bag",
+            "heading": "Loose and modest cuts",
+            "text": "<p>Loose fits give you comfort and confidence all day long</p>",
+            "link": ""
+          }
+        },
+        "image_VtCTma": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208331.png",
+            "select_icon": "bag",
+            "heading": "Free shipping above 450 SR",
+            "text": "<p>Enjoy fast and free shipping on your order of 450 SR or more</p>",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_EyjGTW",
+        "image_jifwM9",
+        "image_CVAnef",
+        "image_VtCTma"
+      ],
+      "name": "t:sections.features-banner.settings.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Features banner</h2>",
+        "size_heading_mobile": 50,
+        "size_heading": 80,
+        "icon_width_mobile": 52,
+        "icon_width_desktop": 100,
+        "icon_layout": "center",
+        "columns_desktop": "4",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "{{ settings.colors.primary }}",
+        "color_background_icon": "",
+        "color_body_text": "{{ settings.colors.primary }}",
+        "background_color": "",
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40
+      }
+    },
+    "featured_collections_tabs_AkkCQ3": {
+      "type": "featured-collections-tabs",
+      "blocks": {
+        "collection_tab_6VKYig": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "all-scrubs",
+            "products": [],
+            "products_to_show": 5,
+            "tab_label": "Best Sellers"
+          }
+        },
+        "collection_tab_DFDGxV": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "burgundy",
+            "products": [],
+            "products_to_show": 8,
+            "tab_label": "New Season"
+          }
+        },
+        "collection_tab_gMLJQX": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "جاكيتات",
+            "products": [],
+            "products_to_show": 8,
+            "tab_label": "For Cozy Comfort"
+          }
+        },
+        "collection_tab_Mm8DAF": {
+          "type": "collection_tab",
+          "settings": {
+            "collection": "أطقم",
+            "products": [
+              "white-scrub-jacket-ssj14",
+              "ss12-white-scrub-set"
+            ],
+            "products_to_show": 8,
+            "tab_label": "For Warm Days"
+          }
+        }
+      },
+      "block_order": [
+        "collection_tab_6VKYig",
+        "collection_tab_DFDGxV",
+        "collection_tab_gMLJQX",
+        "collection_tab_Mm8DAF"
+      ],
+      "name": "t:sections.featured-collections-tab.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Curated for Your Day",
+        "heading_richtext": "<h2>Featured Collections: Tabs</h2>",
+        "disable_on_mobile": false,
+        "enable_stack_products": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "number_of_column_desktop": 4,
+        "spacing_desktop": "16",
+        "make_products_full_width": false,
+        "tabs_alignment": "center",
+        "number_of_column_mobile": 2.1,
+        "spacing_mobile": "16",
+        "text_alignment": "left",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "enable_vendor_link": false,
+        "show_product_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "hover_desktop",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40
+      }
+    },
+    "lookbook_aMkb9Q": {
+      "type": "lookbook",
+      "blocks": {
+        "image_9yVPPH": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/66791f86-4a81-4a9d-b2be-bc42978d9eac_1.png",
+            "heading_image": "Comfort Pants",
+            "button_select": "primary",
+            "link": "shopify://collections/بنطلونات"
+          }
+        },
+        "image_6VmNgY": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/8d1e221e-bb75-402a-b5b7-f6109f445237_1.png",
+            "heading_image": "Modest tops",
+            "button_select": "primary",
+            "link": "shopify://collections/توبات"
+          }
+        },
+        "image_WAyMUt": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/b38120d2-fe34-40f2-ba5e-555c1ae62332_1.png",
+            "heading_image": "Practical Jackets",
+            "button_select": "primary",
+            "link": "shopify://collections/جاكيتات"
+          }
+        },
+        "image_PreHmG": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/3e787130-c4f0-484c-9783-c3865fd4c018_1.png",
+            "heading_image": "Complete Sets",
+            "button_select": "primary",
+            "link": "shopify://collections/أطقم"
+          }
+        }
+      },
+      "block_order": [
+        "image_9yVPPH",
+        "image_6VmNgY",
+        "image_WAyMUt",
+        "image_PreHmG"
+      ],
+      "name": "t:sections.lookbook.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "أساسيات دوامكِ اليومية",
+        "heading_richtext": "<h2>Lookbook</h2>",
+        "heading_alignment": "right",
+        "show_icons": true,
+        "heading_disable_on_mobile": false,
+        "full-width-enabled": false,
+        "column_gap_desk": 24,
+        "column_gap": 16,
+        "color-body-text": "#11173d",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40
+      }
+    },
+    "rich_text_jVraEH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qYiy73": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Discover Everyday Comfort & Style",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_jJKi98": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We create premium scrubs with carefully selected fabrics and thoughtful details, delivering all-day comfort, confidence, and modest coverage in every shift.<br/></p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "button_VdQpXd": {
+          "type": "button",
+          "settings": {
+            "button_select": "primary",
+            "button_label": "About Us",
+            "button_link": "shopify://pages/about-us",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_qYiy73",
+        "text_jJKi98",
+        "button_VdQpXd"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": true,
+        "color-body-text": "",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40,
+        "compact_size": false
+      }
+    },
+    "main_banner_DWiP3x": {
+      "type": "main_banner",
+      "name": "Custom Hero Banner",
+      "settings": {
+        "background_type": "image",
+        "image_desktop": "shopify://shop_images/Group_101.png",
+        "image_mobile": "shopify://shop_images/Group_98.png",
+        "video_url": "",
+        "desktop_height": 700,
+        "mobile_height": 250,
+        "stack_content_mobile": true,
+        "mobile_content_bg": "#ffffff",
+        "mobile_content_color": "#121212",
+        "main_title": "Approved colors suitable for the Saudi healthcare sector.",
+        "subtitle_full_width": true,
+        "sub_title": "A professional color palette compliant with Health Holding standards, giving you a uniform and elegant look all day long.",
+        "remove_btn_background": true,
+        "heading_scale_desktop": 28,
+        "sub_heading_scale_desktop": 24,
+        "heading_scale_mobile": 18,
+        "sub_heading_scale_mobile": 14,
+        "btn_text": "About Us",
+        "btn_url": "shopify://products/women-fit-scrub",
+        "text_alignment": "flex-end",
+        "mobile_vertical_alignment": "flex-end",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "color_category_CfH83j": {
+      "type": "color-category",
+      "name": "Product Categories",
+      "settings": {
+        "collection": [
+          "light-blue",
+          "black",
+          "burgundy",
+          "navy"
+        ],
+        "feature_image": "shopify://shop_images/04718991ffe450ed25dca905db5e6444fe219db5.png",
+        "text_alignment": "right",
+        "show_title": true,
+        "title": "Shop Complete Scrub Sets",
+        "show_description": true,
+        "description": "<p>Relaxed-fit scrub sets with modest designs and premium comfort for every shift.</p>",
+        "Preview": "3",
+        "Preview_mobile": "2.1",
+        "image_ratio": "square",
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add_button": true,
+        "quick_add_mode": "hover_desktop",
+        "padding_top": 0,
+        "padding_bottom": 100
+      }
+    },
+    "testimonial_marquee_VHcPTa": {
+      "type": "testimonial-marquee",
+      "blocks": {
+        "image_epCTzj": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Dr. Manar Hamed",
+            "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
+            "author": "Dr. Manar Hamed",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f_1.png",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_8PwHgF": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Dr. Manar Hamed",
+            "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
+            "author": "Dr. Manar Hamed",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f_1.png",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_enAA6b": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Dr. Manar Hamed",
+            "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
+            "author": "Dr. Manar Hamed",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f_1.png",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        },
+        "image_LVji7Q": {
+          "type": "image",
+          "settings": {
+            "icon_select": "100",
+            "heading": "Dr. Manar Hamed",
+            "text": "<p>Honestly, I didn’t expect it to be this comfortable, especially since I’ve tried many others before and wasn’t happy with them. But this is the first set of scrubs that feels truly well-made and practical; even after long shifts, it didn’t feel uncomfortable at all.</p>",
+            "author": "Dr. Manar Hamed",
+            "author_image": "shopify://shop_images/140f0f56aadd0b71efab6e8619e6ac6ce138e46f_1.png",
+            "icon_image_height_desk": 50,
+            "icon_image_height": 40
+          }
+        }
+      },
+      "block_order": [
+        "image_epCTzj",
+        "image_8PwHgF",
+        "image_enAA6b",
+        "image_LVji7Q"
+      ],
+      "name": "Testimonial: Marquee",
+      "settings": {
+        "heading_richtext": "<p>The reviews we are proud of</p>",
+        "text_style": "body",
+        "disable_auto_scroll": false,
+        "animation_direction": "left",
+        "animation_speed": "150",
+        "card_width_desktop": 500,
+        "number_of_column_desktop": 2.4,
+        "gap_desk": 16,
+        "testimonial_text_size_desktop": 100,
+        "text_alignment_desktop": "right",
+        "card_width_mobile": 380,
+        "number_of_column_mobile": 1.2,
+        "gap": 8,
+        "testimonial_text_size": 100,
+        "text_alignment_mobile": "right",
+        "color-body-text": "",
+        "background_color": "",
+        "testimonial_background_color": "#fdfaf5",
+        "card_heading_color": "",
+        "card_author_color": "",
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40
+      }
+    },
+    "background_video_UHjiyi": {
+      "type": "background-video",
+      "blocks": {
+        "button_DmkNrJ": {
+          "type": "button",
+          "settings": {
+            "button_select": "primary",
+            "button_label": "Button label",
+            "disable_on_mobile": false,
+            "button_link": "",
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "button_DmkNrJ"
+      ],
+      "name": "t:sections.background-video.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Video hero</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "video_hosted": "shopify://files/videos/5fd16bf9d6bf49daa3117e19907acac0hd-720p-16mbps-53423753_WOcMKolK.mp4",
+        "autoplay": true,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "original_ratio": "fixed_height",
+        "desktop_fixed_height": 680,
+        "mobile_fixed_height": 600,
+        "color-body-heading": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "color-body-text": "",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 72,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40
+      }
+    },
+    "grid_view_mKkY8d": {
+      "type": "grid-view",
+      "blocks": {
+        "image_4KGQd7": {
+          "type": "image",
+          "settings": {
+            "show_bottom": true,
+            "subheading_bottom": "Breathable Fabric",
+            "logo": "shopify://shop_images/image_314.png",
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "Column",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Give customers details about the image or content on the template.",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "Button label",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "#ffffff",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_image": "shopify://shop_images/3c50248569b6da8bd0c4271b5129642146f3b148.png",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_xB7TVK": {
+          "type": "image",
+          "settings": {
+            "show_bottom": true,
+            "subheading_bottom": "Flexible Stretch Moves with You",
+            "logo": "shopify://shop_images/image_316.png",
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "Column",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Give customers details about the image or content on the template.",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "Button label",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "#ffffff",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_image": "shopify://shop_images/9182c18621cf28d1a86543590c3825112bdea07d.png",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_pnCLct": {
+          "type": "image",
+          "settings": {
+            "show_bottom": true,
+            "subheading_bottom": "Confidence in Every Move",
+            "logo": "shopify://shop_images/Vector.png",
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "Column",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Give customers details about the image or content on the template.",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "Button label",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "#ffffff",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_image": "shopify://shop_images/63656f5a8c1c9b64c815d87d6e95d54e19ea2b47.png",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
+          }
+        },
+        "image_6W9Ed3": {
+          "type": "image",
+          "settings": {
+            "show_bottom": true,
+            "subheading_bottom": "No Wrinkles",
+            "logo": "shopify://shop_images/Vector.png",
+            "subheading": "",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "subheading_text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100,
+            "heading": "Column",
+            "heading_disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Give customers details about the image or content on the template.",
+            "text_disable_on_mobile": false,
+            "button_select": "primary",
+            "button_label": "Button label",
+            "button_disable_on_mobile": false,
+            "button_link": "",
+            "button_link_in_new_window": false,
+            "color-body-text": "{{ settings.colors.background }}",
+            "color-overlay": "",
+            "color-overlay-opacity": 0,
+            "desktop_image": "shopify://shop_images/9e670e5988f04f9d4480faf494b848221150cb66.png",
+            "desktop_text_vertical_position": "center",
+            "desktop_text_horizontal_position": "center",
+            "mobile_text_vertical_position": "center",
+            "mobile_text_horizontal_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "image_4KGQd7",
+        "image_xB7TVK",
+        "image_pnCLct",
+        "image_6W9Ed3"
+      ],
+      "name": "t:sections.grid-view.settings.presets.name",
+      "settings": {
+        "advanced_heading": false,
+        "title": "Comfort in Every Detail",
+        "heading_richtext": "<h2>Grid view</h2>",
+        "swipe_on_mobile": false,
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "spacing_desktop": "24",
+        "spacing_mobile": "16",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 0,
+        "margin-bottom": 72,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40
+      }
+    },
+    "marquee_images_Bp3tmm": {
+      "type": "marquee-images",
+      "blocks": {
+        "image_nyGcnX": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/fc0946f26d0918785b45a8c9f17a69a75ab0a483_1.png",
+            "link": ""
+          }
+        },
+        "image_tHNJxT": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/image_256.png",
+            "link": ""
+          }
+        },
+        "image_gHtwap": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/image_258.png",
+            "link": ""
+          }
+        },
+        "image_mCAWTf": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/image_257.png",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_nyGcnX",
+        "image_tHNJxT",
+        "image_gHtwap",
+        "image_mCAWTf"
+      ],
+      "name": "t:sections.marquee_images.name",
+      "settings": {
+        "advanced_heading": false,
+        "heading": "How It Looks On",
+        "heading_richtext": "<h2>Marquee images</h2>",
+        "animation_direction": "right",
+        "animation_speed": "100",
+        "desktop_fixed_height": 400,
+        "gap_desk": 8,
+        "mobile_fixed_height": 260,
+        "gap": 8,
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 44
+      }
+    }
+  },
+  "order": [
+    "collection_color_list_97U3xP",
+    "image_banner_4jbdyQ",
+    "features_banner_7zpBwP",
+    "featured_collections_tabs_AkkCQ3",
+    "lookbook_aMkb9Q",
+    "rich_text_jVraEH",
+    "main_banner_DWiP3x",
+    "color_category_CfH83j",
+    "testimonial_marquee_VHcPTa",
+    "background_video_UHjiyi",
+    "grid_view_mKkY8d",
+    "marquee_images_Bp3tmm"
+  ]
+}

@@ -1,0 +1,91 @@
+{%- assign sold_out_btn = 'products.product.sold_out' | t -%}
+{%- if sold_out_btn contains 'Translation missing' or sold_out_btn == blank -%}
+  {%- if request.locale.iso_code contains 'ar' -%}
+    {%- assign sold_out_btn = 'نفذت الكمية' -%}
+  {%- else -%}
+    {%- assign sold_out_btn = 'Sold Out' -%}
+  {%- endif -%}
+{%- endif -%}
+
+{% if card_product.variants.size > 1 or settings.enable_product_variations == true and product_variations.count > 0 %}
+  <quick-add data-product-handle="{{ card_product.handle }}">
+    <button
+      aria-label="{{ 'products.product.choose_option' | t }} {{ product.title }}"
+      type="button"
+      class="quick-add-icon-button btn-cart form__send__button wt-contact__form__send--{{ block.settings.button_select }}"
+      name="commit"
+      data-product-url="{{ card_product.url }}"
+      tabindex="0"
+      {% if card_product.available == false and settings.enable_product_variations == true and product_variations.count == 0 %}
+        disabled
+      {% elsif card_product.available == false and settings.enable_product_variations == true and product_variations == nil %}
+        disabled
+      {% elsif card_product.available == false and settings.enable_product_variations == false%}
+        disabled
+      {% endif %}
+    >
+      <span>
+        {%- if card_product.available or settings.enable_product_variations == true and product_variations.count > 0 -%}
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 6.30005V20.5001C3 20.7653 3.10536 21.0196 3.29289 21.2072C3.48043 21.3947 3.73478 21.5001 4 21.5001H20C20.2652 21.5001 20.5196 21.3947 20.7071 21.2072C20.8946 21.0196 21 20.7653 21 20.5001V6.30005H3Z" stroke="#F0F0F7" stroke-linejoin="round"/>
+            <path d="M21 6.3L18.1665 2.5H5.8335L3 6.3M15.7775 9.6C15.7775 11.699 14.0865 13.4 12 13.4C9.9135 13.4 8.222 11.699 8.222 9.6" stroke="#F0F0F7" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        {%- else -%}
+          {{ sold_out_btn }}
+        {%- endif -%}
+      </span>
+    </button>
+  </quick-add>
+{% elsif product %}
+  <product-form class="wt-product__add-to-cart" data-hide-errors="{{ gift_card_recipient_feature_active }}">
+    <div class="product-form__error-message-wrapper" role="alert" hidden>
+      <span class="product-form__error-message"></span>
+    </div>
+    {%- form 'product',
+      product,
+      id: product_form_id,
+      class: 'wt-product__add-to-cart_form form',
+      novalidate: 'novalidate',
+      data-type: 'add-to-cart-form'
+    -%}
+      {% if block.settings.show_gift_card_recipient and product.gift_card? %}
+        {%- render 'gift-card-recipient-form', product: product, form: form, section: section -%}
+      {% endif %}
+      <div class="wt-product__add-to-cart_form--wrapper">
+        {% if block.settings.show_qty_selector %}
+          {% render 'component-counter' %}
+        {% endif %}
+        <input type="hidden" name="id" value="{{ card_product.selected_or_first_available_variant.id }}">
+        <button
+          aria-label="
+            {%- if card_product.selected_or_first_available_variant.available -%}
+              {{ 'products.product.add_to_cart' | t }}
+            {%- else -%}
+              {{ sold_out_btn }}
+            {%- endif -%}
+          "
+          id="ProductSubmitButton-{{ section.id }}"
+          type="submit"
+          name="add"
+          class="quick-add-icon-button btn-cart"
+          {% if card_product.selected_or_first_available_variant.available == false %}
+            disabled
+          {% endif %}
+        >
+          <span>
+            {%- if card_product.selected_or_first_available_variant.available -%}
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 6.30005V20.5001C3 20.7653 3.10536 21.0196 3.29289 21.2072C3.48043 21.3947 3.73478 21.5001 4 21.5001H20C20.2652 21.5001 20.5196 21.3947 20.7071 21.2072C20.8946 21.0196 21 20.7653 21 20.5001V6.30005H3Z" stroke="#F0F0F7" stroke-linejoin="round"/>
+                <path d="M21 6.3L18.1665 2.5H5.8335L3 6.3M15.7775 9.6C15.7775 11.699 14.0865 13.4 12 13.4C9.9135 13.4 8.222 11.699 8.222 9.6" stroke="#F0F0F7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            {%- else -%}
+              {{ sold_out_btn }}
+            {%- endif -%}
+          </span>
+
+          {% render 'button-loading-indicator' %}
+        </button>
+      </div>
+    {%- endform -%}
+  </product-form>
+{% endif %}
