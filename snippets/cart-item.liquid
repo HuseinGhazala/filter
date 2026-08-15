@@ -146,12 +146,12 @@
       {%- if is_service_unavailable -%}
         <p class="wt-cart__item__unavailable">{{ 'products.product.unavailable' | t }}</p>
       {%- endif -%}
+      {%- assign discount_percent = item.variant.compare_at_price | minus: item.variant.price | times: 100.0 | divided_by: item.variant.compare_at_price | round -%}
       {%- if cart_page -%}
         {%- if item.final_price == 0 -%}
           <div class="product-option">
             <span class="cart-item__price cart-item__price--free">{{ 'products.product.price.free' | t }}</span>
           </div>
-          {%- assign discount_percent = item.variant.compare_at_price | minus: item.variant.price | times: 100.0 | divided_by: item.variant.compare_at_price | round -%}
         {%- elsif item.original_price != item.final_price -%}
           <div class="cart-item__discounted-prices ">
             <span class="visually-hidden">
