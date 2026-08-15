@@ -66,8 +66,8 @@
       ],
       "name": "Color Collections",
       "settings": {
-        "title": "",
-        "padding_top": 40,
+        "title": "Choose a Color That Matches Your Style",
+        "padding_top": 0,
         "padding_bottom": 20,
         "show_mobile_spacing": true,
         "margin_top_mobile": 10,
@@ -86,7 +86,7 @@
         "slide_height": "adapt_to_first_image",
         "desktop_fixed_height": 320,
         "mobile_fixed_height": 520,
-        "desktop_image": "shopify://shop_images/Frame_2147208284_1.webp",
+        "desktop_image": "shopify://shop_images/33e8dfa7-e6bf-4f8f-afbf-ae6e1dec228e_1_b490f559-c3d6-494c-9c14-3f957a02b474.png",
         "desktop_text_vertical_position": "center",
         "desktop_text_horizontal_position": "center",
         "mobile_image": "shopify://shop_images/Frame_2147208090_1_1.webp",
@@ -117,8 +117,8 @@
           "settings": {
             "desktop_image": "shopify://shop_images/Frame_2147208078.png",
             "select_icon": "bag",
-            "heading": "Designed by Saudi hands",
-            "text": "<p>Designed by Saudi doctors to suit your need for modesty and comfort</p>",
+            "heading": "Designed by Saudi Hands",
+            "text": "<p>Designed to Suit Your Taste</p>",
             "link": ""
           }
         },
@@ -127,8 +127,8 @@
           "settings": {
             "desktop_image": "shopify://shop_images/Frame_2147208077.png",
             "select_icon": "bag",
-            "heading": "Flexible materials for long shifts",
-            "text": "<p>Soft and comfortable fabrics that withstand long working hours</p>",
+            "heading": "Flexible Fabrics for Long Shifts",
+            "text": "<p>Long-Lasting Comfort at Work</p>",
             "link": ""
           }
         },
@@ -137,8 +137,8 @@
           "settings": {
             "desktop_image": "shopify://shop_images/Group_102.png",
             "select_icon": "bag",
-            "heading": "Loose and modest cuts",
-            "text": "<p>Loose fits give you comfort and confidence all day long</p>",
+            "heading": "Modest & Relaxed Fits",
+            "text": "<p>All-Day Comfort and Coverage</p>",
             "link": ""
           }
         },
@@ -147,8 +147,8 @@
           "settings": {
             "desktop_image": "shopify://shop_images/Frame_2147208331.png",
             "select_icon": "bag",
-            "heading": "Free shipping above 450 SR",
-            "text": "<p>Enjoy fast and free shipping on your order of 450 SR or more</p>",
+            "heading": "Free Shipping Over SAR 450",
+            "text": "<p>On orders over SAR 450</p>",
             "link": ""
           }
         }
@@ -238,7 +238,7 @@
         "heading_richtext": "<h2>Featured Collections: Tabs</h2>",
         "disable_on_mobile": false,
         "enable_stack_products": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "button_select": "primary",
         "number_of_column_desktop": 4,
         "spacing_desktop": "16",
@@ -247,7 +247,7 @@
         "number_of_column_mobile": 2.1,
         "spacing_mobile": "16",
         "text_alignment": "left",
-        "image_ratio": "square",
+        "image_ratio": "portrait",
         "show_video": false,
         "show_secondary_image": false,
         "show_vendor": false,
@@ -313,9 +313,9 @@
       "name": "t:sections.lookbook.presets.name",
       "settings": {
         "advanced_heading": false,
-        "heading": "أساسيات دوامكِ اليومية",
+        "heading": "Workday Essentials",
         "heading_richtext": "<h2>Lookbook</h2>",
-        "heading_alignment": "right",
+        "heading_alignment": "left",
         "show_icons": true,
         "heading_disable_on_mobile": false,
         "full-width-enabled": false,
@@ -403,15 +403,15 @@
         "stack_content_mobile": true,
         "mobile_content_bg": "#ffffff",
         "mobile_content_color": "#121212",
-        "main_title": "Approved colors suitable for the Saudi healthcare sector.",
+        "main_title": "Approved Colors for Saudi Healthcare",
         "subtitle_full_width": true,
-        "sub_title": "A professional color palette compliant with Health Holding standards, giving you a uniform and elegant look all day long.",
+        "sub_title": "Professional colors aligned with Saudi Health standards for a polished, uniform look.",
         "remove_btn_background": true,
         "heading_scale_desktop": 28,
         "sub_heading_scale_desktop": 24,
         "heading_scale_mobile": 18,
         "sub_heading_scale_mobile": 14,
-        "btn_text": "About Us",
+        "btn_text": "Explore Colors",
         "btn_url": "shopify://products/scrub-set-12",
         "text_alignment": "flex-end",
         "mobile_vertical_alignment": "flex-end",
@@ -435,6 +435,7 @@
         "title": "Shop Complete Scrub Sets",
         "show_description": true,
         "description": "<p>Relaxed-fit scrub sets with modest designs and premium comfort for every shift.</p>",
+        "products_to_show": 12,
         "Preview": "3",
         "Preview_mobile": "2.1",
         "image_ratio": "square",
@@ -506,7 +507,7 @@
       ],
       "name": "Testimonial: Marquee",
       "settings": {
-        "heading_richtext": "<p>The reviews we are proud of</p>",
+        "heading_richtext": "<p>What They Say About Scrubs & Stitches</p>",
         "text_style": "body",
         "disable_auto_scroll": false,
         "animation_direction": "left",
