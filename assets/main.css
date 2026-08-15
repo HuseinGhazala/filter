@@ -9324,7 +9324,7 @@ clip-path: unset;}
 }
 
 [dir="rtl"] .description__content p {
-  text-align: start;
+  text-align: start !important;
 }
 .description__content p {
   margin:0;
