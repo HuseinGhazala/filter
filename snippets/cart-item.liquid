@@ -109,8 +109,6 @@
               {{ item.final_line_price | money }}
             </span>
           </div>
-    {%- assign discount_percent = item.variant.compare_at_price | minus: item.variant.price | times: 100.0 | divided_by: item.variant.compare_at_price | round -%}
-
         {% elsif item.variant.compare_at_price > item.variant.price %}
           <div class="cart-item__discounted-prices">
             <span class="visually-hidden">
@@ -125,9 +123,6 @@
             <span class="price price--end price--end-sale">
               {{ item.final_line_price | money }}
             </span>
-                  {%- if discount_percent > 0 -%}
-        <span class="cart-item__discount-badge">{{ discount_percent }}% خصم</span>
-      {%- endif -%}
           </div>
         {%- else -%}
           <span class="price price--end">
@@ -171,8 +166,12 @@
               {{ item.final_price | money }}
             </strong>
           </div>
+          {%- assign discount_percent = item.variant.compare_at_price | minus: item.variant.price | times: 100.0 | divided_by: item.variant.compare_at_price | round -%}
+                {%- if discount_percent > 0 -%}
+        <span class="cart-item__discount-badge">{{ discount_percent }}% خصم</span>
+      {%- endif -%}
         {% elsif item.variant.compare_at_price > item.variant.price %}
-    <div class="cart-item__discounted-prices">
+          <div class="cart-item__discounted-prices">
 
       <span class="visually-hidden">
         {{ 'products.product.price.regular_price' | t }}
