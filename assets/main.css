@@ -349,6 +349,7 @@ button[disabled],
     width: 110px;
     padding: 0 6px;
     margin-block: 10px;
+    justify-content: space-around;
 }
 .counter-wrapper {
   position: relative;

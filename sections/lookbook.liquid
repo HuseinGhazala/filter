@@ -48,15 +48,22 @@
 
   }
 
+   {%- assign text_align = section.settings.heading_alignment -%}
+   {%- if text_align == 'left' -%}
+     {%- assign text_align = 'start' -%}
+   {%- elsif text_align == 'right' -%}
+     {%- assign text_align = 'end' -%}
+   {%- endif -%}
+
    .wt-lookbook__section .headline__title, 
     .wt-lookbook__container .headline {
-      text-align: {{ section.settings.heading_alignment }};
+      text-align: {{ text_align }};
       font-weight: 500;
       font-size: 32px;
   color: var(--color-custom-text, var(--color-headings-text, var(--color-text)));
     }
     .wt-lookbook__section .heading-image{
-      text-align: {{ section.settings.heading_alignment }};
+      text-align: {{ text_align }};
       font-weight: 400;
       font-size: 24px;
       margin-top: 14px;
