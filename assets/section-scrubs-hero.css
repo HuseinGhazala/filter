@@ -218,4 +218,10 @@
   transform: translateY(0);
 }
 
+@media (max-width: 989px) {
+  .scrubs-hero__content.scroll-trigger.animate--slide-in {
+    padding-top: 0;
+  }
+}
+
 /*# sourceMappingURL=section-scrubs-hero.css.map */
