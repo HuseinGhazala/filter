@@ -95,9 +95,9 @@
               "prevEl": "#QuickViewModal-{{ product.id }} .swiper-button-prev"
             },
             "breakpoints": {
-              "0": { "slidesPerView": 2, "spaceBetween": 8 },
-              "640": { "slidesPerView": 3, "spaceBetween": 10 },
-              "1024": { "slidesPerView": 4, "spaceBetween": 10 }
+              "0": { "slidesPerView": 2, "spaceBetween": 8, "enabled": true },
+              "640": { "slidesPerView": 3, "spaceBetween": 10, "enabled": true },
+              "750": { "enabled": false }
             }
           }
         </script>
@@ -127,12 +127,6 @@
             </span>
           {% endif %}
         </div>
-        
-        {% if product.description %}
-          <div class="quick-view-modal__description rte">
-            {{ product.description }}
-          </div>
-        {% endif %}
         
         {% if product.available %}
           <form method="post" action="/cart/add" id="quick-view-form-{{ product.id }}" class="quick-view-modal__form">

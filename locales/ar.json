@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 
 {
   "homepage": "الرئيسية",
@@ -264,7 +273,9 @@
     "cart": {
       "cart": "عربة التسوق",
       "btn_cart": "المتابعة لإتمام الدفع",
-      "you_are_close": "أنت قريبة من الشحن المجاني!"
+      "you_are_close": "أنت قريبة من الشحن المجاني!",
+      "free_shipping_progress": "أنفقي {{ amount }} أكتر عشان تحصلي على شحن مجاني!",
+      "free_shipping_success": "لقد حصلت على شحن مجاني!"
     },
     "contact": {
       "form": {

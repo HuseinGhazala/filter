@@ -145,6 +145,10 @@ if (!customElements.get("color-swatch")) {
 
             this.assignWrapperEvents(wrapper, attributes, tooltip);
           });
+
+          if (!this.isCheckedActiveFilter) {
+            this.setFirstOptionActive();
+          }
         }
 
         if (this.color_swatcher_container) {

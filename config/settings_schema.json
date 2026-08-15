@@ -1133,19 +1133,6 @@
         "info": "t:settings_schema.cart.settings.free_shipping_bar_amount.info"
       },
       {
-        "type": "text",
-        "id": "free_shipping_bar_text",
-        "default": "t:settings_schema.cart_addons.settings.free_shipping_bar_text.default",
-        "label": "t:settings_schema.cart.settings.free_shipping_bar_text.label",
-        "info": "t:settings_schema.cart.settings.free_shipping_bar_text.info"
-      },
-      {
-        "type": "text",
-        "id": "free_shipping_bar_text_success",
-        "default": "t:settings_schema.cart_addons.settings.free_shipping_bar_text_success.default",
-        "label": "t:settings_schema.cart.settings.free_shipping_bar_text_success.label"
-      },
-      {
         "type": "header",
         "content": "t:settings_schema.cart_addons.settings.header__discount_progress_bar.content"
       },
