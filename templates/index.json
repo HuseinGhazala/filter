@@ -430,11 +430,11 @@
           "navy"
         ],
         "feature_image": "shopify://shop_images/04718991ffe450ed25dca905db5e6444fe219db5.png",
-        "text_alignment": "right",
+        "text_alignment": "left",
         "show_title": true,
         "title": "Shop Complete Scrub Sets",
         "show_description": true,
-        "description": "<p>Relaxed-fit scrub sets with modest designs and premium comfort for every shift.</p>",
+        "description": "<p>Relaxed-fit scrub sets with modest designs and premium comfort for every shift</p>",
         "products_to_show": 12,
         "Preview": "3",
         "Preview_mobile": "2.1",
