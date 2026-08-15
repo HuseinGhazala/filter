@@ -1,1 +1,96 @@
-{"type":"footer","name":"Footer Group","sections":{"footer":{"type":"page-footer","blocks":{"image_with_text_NzEdwd":{"type":"image_with_text","settings":{"image":"shopify:\/\/shop_images\/Scrubs_Stitches_2.png","image_width_desktop":150,"image_width_mobile":120,"text":"<p>Because your long shifts deserve the best, these scrubs combine practical elegance, superior comfort, and modesty—giving you confidence that lasts right up to the final moment of your shift.<\/p>","color":""}},"menu_TyWCqJ":{"type":"menu","settings":{"heading_links":"Important Links","links":"important-links"}},"menu_DzCNd6":{"type":"menu","settings":{"heading_links":"Store Policies","links":"store-policies"}},"menu_9YUhCX":{"type":"menu","settings":{"heading_links":"Contact us","links":"contact-us"}}},"block_order":["image_with_text_NzEdwd","menu_TyWCqJ","menu_DzCNd6","menu_9YUhCX"],"settings":{"badge_show_1":true,"badge_img_1":"shopify:\/\/shop_images\/Component_1.png","badge_title_1":"Tax Number","badge_subtext_1":"314280917300003","badge_show_2":true,"badge_img_2":"shopify:\/\/shop_images\/Group_50.png","badge_title_2":"Commercial Registration Number","badge_subtext_2":"7041818209","badge_show_3":true,"badge_img_3":"shopify:\/\/shop_images\/73fefe161a006a2abf1abaa10745c0403fc76990.png","badge_title_3":"E-commerce Certification","badge_subtext_3":"0000063465","show-scroll-effect":false,"show-social-media-icons":true,"show_country_selector":true,"show_country_selector_label":false,"show_country_selector_flag":true,"show_language_selector":true,"enable_follow_on_shop":true,"show-payments-icons":true,"payment_icons_monochrome":true,"show-copyright":true,"text":"All rights reserved. Scrubs & Stitches - Ananas Roastery","big-logo-width":100,"margin-top":56,"margin-bottom":8}},"custom_liquid_AyGxYR":{"type":"custom-liquid","name":"t:sections.custom-liquid.presets.name","settings":{"custom_liquid":"<script src=\"\/\/instant.page\/5.2.0\" type=\"module\" integrity=\"sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z\"><\/script>"}}},"order":["footer","custom_liquid_AyGxYR"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer Group",
+  "sections": {
+    "footer": {
+      "type": "page-footer",
+      "blocks": {
+        "image_with_text_NzEdwd": {
+          "type": "image_with_text",
+          "settings": {
+            "image": "shopify://shop_images/Scrubs_Stitches_2.png",
+            "image_width_desktop": 150,
+            "image_width_mobile": 120,
+            "text": "<p>Because your long shifts deserve the best. Scrubs & Stitches combines professional style, exceptional comfort, and modest coverage</p>",
+            "color": ""
+          }
+        },
+        "menu_TyWCqJ": {
+          "type": "menu",
+          "settings": {
+            "heading_links": "Important Links",
+            "links": "important-links"
+          }
+        },
+        "menu_DzCNd6": {
+          "type": "menu",
+          "settings": {
+            "heading_links": "Store Policies",
+            "links": "store-policies"
+          }
+        },
+        "menu_9YUhCX": {
+          "type": "menu",
+          "settings": {
+            "heading_links": "Contact us",
+            "links": "contact-us"
+          }
+        }
+      },
+      "block_order": [
+        "image_with_text_NzEdwd",
+        "menu_TyWCqJ",
+        "menu_DzCNd6",
+        "menu_9YUhCX"
+      ],
+      "settings": {
+        "badge_show_1": true,
+        "badge_img_1": "shopify://shop_images/img-vat.svg_fill.png",
+        "badge_title_1": "Tax Number",
+        "badge_subtext_1": "314280917300003",
+        "badge_show_2": true,
+        "badge_img_2": "shopify://shop_images/Group_50_4e80c13a-efc7-47ec-bfa8-a3d6d3fe6dcc.png",
+        "badge_title_2": "Commercial Registration Number",
+        "badge_subtext_2": "7041818209",
+        "badge_show_3": true,
+        "badge_img_3": "shopify://shop_images/73fefe161a006a2abf1abaa10745c0403fc76990.png",
+        "badge_title_3": "E-commerce Certification",
+        "badge_subtext_3": "0000063465",
+        "show-scroll-effect": false,
+        "show-social-media-icons": true,
+        "show_country_selector": true,
+        "show_country_selector_label": false,
+        "show_country_selector_flag": true,
+        "show_language_selector": true,
+        "enable_follow_on_shop": true,
+        "show-payments-icons": true,
+        "payment_icons_monochrome": true,
+        "show-copyright": true,
+        "text": "All rights reserved. Scrubs & Stitches - Ananas Roastery",
+        "big-logo-width": 100,
+        "margin-top": 56,
+        "margin-bottom": 8
+      }
+    },
+    "custom_liquid_AyGxYR": {
+      "type": "custom-liquid",
+      "name": "t:sections.custom-liquid.presets.name",
+      "settings": {
+        "custom_liquid": "<script src=\"//instant.page/5.2.0\" type=\"module\" integrity=\"sha384-jnZyxPjiipYXnSU0ygqeac2q7CVYMbh84q0uHVRRxEtvFPiQYbXWUorga2aqZJ0z\"></script>"
+      }
+    }
+  },
+  "order": [
+    "footer",
+    "custom_liquid_AyGxYR"
+  ]
+}

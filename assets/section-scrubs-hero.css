@@ -1,0 +1,227 @@
+/* ============================================================
+   Scrubs Hero Banner Section — Background Image + Overlay
+   ============================================================ */
+
+.scrubs-hero {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--sh-bg-color, #EDE8E0);
+  min-height: var(--sh-height-mobile, 560px);
+}
+
+@media (min-width: 990px) {
+  .scrubs-hero {
+    min-height: var(--sh-height-desktop, 420px);
+  }
+}
+
+/* ============================================================
+   Background Image
+   ============================================================ */
+
+.scrubs-hero__bg-img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Mobile: show mobile image, hide desktop */
+.scrubs-hero__bg-img--desktop {
+  display: none;
+}
+
+.scrubs-hero__bg-img--mobile {
+  display: block;
+}
+
+/* Desktop: show desktop image, hide mobile */
+@media (min-width: 990px) {
+  .scrubs-hero__bg-img--desktop {
+    display: block;
+  }
+  .scrubs-hero__bg-img--mobile {
+    display: none;
+  }
+}
+
+/* Fallback when no image is uploaded */
+.scrubs-hero__bg-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--sh-bg-color, #EDE8E0);
+  display: block;
+}
+
+@media (max-width: 989px) {
+  .scrubs-hero__bg-placeholder {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+/* ============================================================
+   Content Overlay
+   ============================================================ */
+
+.scrubs-hero__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 32px 24px;
+  z-index: 1;
+  direction: rtl;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@media (min-width: 990px) {
+  .scrubs-hero__content {
+    justify-content: center;
+    padding: 48px 40px;
+  }
+}
+
+/* ============================================================
+   Title
+   ============================================================ */
+
+.scrubs-hero__title {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--sh-text-color, #1A2744);
+  margin: 0 0 12px;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 750px) {
+  .scrubs-hero__title {
+    font-size: 38px;
+  }
+}
+
+@media (min-width: 990px) {
+  .scrubs-hero__title {
+    font-size: 48px;
+    margin: 0 0 16px;
+  }
+}
+
+/* ============================================================
+   Subtitle
+   ============================================================ */
+
+.scrubs-hero__subtitle {
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--sh-text-color, #1A2744);
+  margin: 0 0 20px;
+  max-width: 520px;
+}
+
+.scrubs-hero__subtitle p {
+  margin: 0;
+}
+
+@media (min-width: 990px) {
+  .scrubs-hero__subtitle {
+    font-size: 20px;
+    margin-bottom: 28px;
+    max-width: 600px;
+  }
+}
+
+/* ============================================================
+   Button
+   ============================================================ */
+
+.scrubs-hero__button {
+  display: inline-block;
+  background-color: var(--sh-btn-bg, #1A2744);
+  color: var(--sh-btn-text, #FFFFFF);
+  padding: 13px 36px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--sh-btn-bg, #1A2744);
+  border-radius: var(--sh-btn-radius, 0px);
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.scrubs-hero__button:hover {
+  background-color: transparent;
+  color: var(--sh-btn-bg, #1A2744);
+}
+
+@media (min-width: 990px) {
+  .scrubs-hero__button {
+    padding: 14px 44px;
+    font-size: 16px;
+  }
+}
+
+/* ============================================================
+   Badge / Logo
+   ============================================================ */
+
+.scrubs-hero__badge {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (min-width: 990px) {
+  .scrubs-hero__badge {
+    bottom: 24px;
+    right: 40px;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.scrubs-hero__badge-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* ============================================================
+   Animations
+   ============================================================ */
+
+.scrubs-hero__content.scroll-trigger.animate--slide-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scrubs-hero__content.scroll-trigger.animate--slide-in:not(.scroll-trigger--offscreen) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 989px) {
+  .scrubs-hero__content.scroll-trigger.animate--slide-in {
+    padding-top: 0;
+  }
+}
+
+/*# sourceMappingURL=section-scrubs-hero.css.map */

@@ -200,13 +200,20 @@
 {%- liquid
   assign per_page = section.settings.Preview | plus: 0
   assign max_columns_to_show = per_page
+
+  assign text_align_val = section.settings.text_alignment
+  if text_align_val == 'left'
+    assign text_align_val = 'start'
+  elsif text_align_val == 'right'
+    assign text_align_val = 'end'
+  endif
 -%}
 
 <div class="collection-tabs-colors collection-tabs--{{ section.id }} page-width wt-slider__container--featured section-{{ section.id }}-padding" dir="rtl">
   <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
     {%- if section.settings.show_title -%}
       <h2
-        style="text-align: {{ section.settings.text_alignment }};"
+        style="text-align: {{ text_align_val }};"
         {% if settings.enable_animations_on_scroll %}
           data-sal="fade-up" data-sal-duration="800" data-sal-delay="100" data-sal-easing="ease-out" data-sal-repeat="true"
         {% endif %}
@@ -219,7 +226,7 @@
     {%- if section.settings.show_description and section.settings.description != blank -%}
       <div
         class="collection__description rte"
-        style="text-align: {{ section.settings.text_alignment }};"
+        style="text-align: {{ text_align_val }};"
         {% if settings.enable_animations_on_scroll %}
           data-sal="fade-up" data-sal-duration="800" data-sal-delay="150" data-sal-easing="ease-out" data-sal-repeat="true"
         {% endif %}

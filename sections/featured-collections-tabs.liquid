@@ -8,9 +8,9 @@
 {% liquid
   case section.settings.tabs_alignment
     when 'left'
-      assign tabs_alignment_value = 'flex-start'
+      assign tabs_alignment_value = 'start'
     when 'right'
-      assign tabs_alignment_value = 'flex-end'
+      assign tabs_alignment_value = 'end'
     else
       assign tabs_alignment_value = 'center'
   endcase
