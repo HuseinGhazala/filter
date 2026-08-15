@@ -65,7 +65,7 @@
         {% if settings.enable_discount_progress_bar and cart != empty %}
           {% render 'discount-progress-bar' %}
         {% endif %}
-
+ 
         <cart-drawer-items class="wt-cart__drawer__items">
           <form
             action="{{ routes.cart_url }}"
