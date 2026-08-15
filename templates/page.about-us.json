@@ -1,1 +1,283 @@
-{"sections":{"main":{"type":"main-page","disabled":true,"settings":{"compact-size-enabled":true,"size_heading":140,"size_heading_mobile":100,"color-body-text":"","color-bg-overlay":"","color-overlay-opacity":100,"margin-top":40,"margin-bottom":0,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"b0118af0-7eaf-42de-8ebe-2bacbdcdac45":{"type":"background-video","blocks":{"template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1":{"type":"subheading","disabled":true,"settings":{"subheading":"Tell your story","subheading_disable_on_mobile":false,"subheading_advanced_settings":false,"text_style":"subtitle","text_uppercase":false,"letter_spacing":1,"size_text_desktop":100,"size_text_mobile":100}},"template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1":{"type":"heading","disabled":true,"settings":{"heading":"About Us","disable_on_mobile":false,"size_heading":200,"size_heading_mobile":180}},"template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1":{"type":"text","disabled":true,"settings":{"text":"<p>Discover Our Story<\/p>","text_style":"body","disable_on_mobile":false}},"template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1":{"type":"button","disabled":true,"settings":{"button_select":"primary","button_label":"Button label","disable_on_mobile":false,"button_link":"","second_button_select":"primary","second_button_label":"Button label","second_disable_on_mobile":false,"second_button_link":""}}},"block_order":["template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1","template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1","template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1","template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1"],"settings":{"advanced_heading":false,"heading":"","heading_richtext":"<h2>Video hero<\/h2>","full-width-enabled":true,"container_max_width":0,"video_hosted":"shopify:\/\/files\/videos\/5fd16bf9d6bf49daa3117e19907acac0hd-720p-16mbps-53423753_WOcMKolK.mp4","autoplay":true,"video_controls":false,"video_custom_play_controls":false,"video_custom_mute_controls":false,"video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","original_ratio":"fixed_height","desktop_fixed_height":680,"mobile_fixed_height":440,"color-body-heading":"","color-overlay":"","color-overlay-opacity":100,"color-body-text":"#ffffff","desktop_text_vertical_position":"center","desktop_text_horizontal_position":"center","mobile_text_vertical_position":"center","mobile_text_horizontal_position":"center","margin-top":0,"margin-bottom":72,"show_mobile_spacing":true,"margin-top-mobile":0,"margin-bottom-mobile":24}},"rich_text_with_image_t6WctF":{"type":"rich-text-with-image","blocks":{"text_6hjmRi":{"type":"text","settings":{"text":"The story began here. PICTURE1 By skilled Saudi hands  PICTURE2 We present to you","font_uppercase":"none","disable_on_mobile":false,"size_heading":100,"size_heading_mobile":80,"line_height":1.4,"picture1":"shopify:\/\/shop_images\/347da060953f8edb9bff38011cd1adb35ee75943.png","button_link1":"","picture2":"shopify:\/\/shop_images\/97f1229aeac44e7da3eaef71713441ba96442d7a.png","button_link2":"","button_link3":"","button_link4":""}},"heading_iPwg69":{"type":"heading","settings":{"subheading":"<p>Our story began with the desire of every woman working in the healthcare sector for a practical uniform that offers all-day comfort without restricting movement or compromising on style. That is why we design women’s scrubs featuring loose, comfortable cuts and fabrics suited for long shifts. Each piece is crafted with care and a Saudi spirit, giving you freedom of movement, confidence in your appearance, and comfort that stays with you through every shift.<\/p>","font_uppercase":"none","disable_on_mobile":false}}},"block_order":["text_6hjmRi","heading_iPwg69"],"name":"t:sections.rich-text-with-image.presets.name","settings":{"desktop_text_horizontal_position":"center","color-body-text":"#11173d","background_color":"","margin-top":0,"margin-bottom":72,"show_mobile_spacing":true,"margin-top-mobile":0,"margin-bottom-mobile":24}},"image_with_scrolling_text_gARQbt":{"type":"image-with-scrolling-text","blocks":{"image_hjrGcK":{"type":"image","settings":{"desktop_image":"shopify:\/\/shop_images\/eee21fba5de9c8a32f0f47989618534e61142bf1_1.png","mobile_image":"shopify:\/\/shop_images\/eee21fba5de9c8a32f0f47989618534e61142bf1_1.png","heading":"Loose and roomy","size_heading":100,"size_heading_mobile":100,"text":"These scrubs feature a loose cut that offers comfortable freedom of movement throughout the day—whether you are standing, moving around, or working long shifts. This relaxed fit isn't just about style; it provides genuine comfort, allowing you to go about your day with confidence, free from any tightness or feeling of restriction.","button_select":"secondary","button_label":"Shop the products","button_link":"shopify:\/\/collections","disable_on_mobile":false,"second_button_select":"primary","second_button_label":"Button label","second_disable_on_mobile":false,"second_button_link":""}}},"block_order":["image_hjrGcK"],"name":"t:sections.image_with_scrolling_text.name","settings":{"layout":"image_first","full-width-enabled":false,"image_ratio":"adapt","desktop_text_horizontal_position":"left","mobile_text_horizontal_position":"center","color-body-text":"#11173d","background_color":"#f6f1e4","margin-top":60,"margin-bottom":60,"show_mobile_spacing":true,"margin-top-mobile":0,"margin-bottom-mobile":0}},"features_banner_WQqnjf":{"type":"features-banner","blocks":{"image_kiCQk4":{"type":"image","settings":{"desktop_image":"shopify:\/\/shop_images\/Frame_2147208078.png","select_icon":"plant","heading":"Designed by Saudi","text":"<p>Designed to suit your<\/p>","link":""}},"image_9GVzRF":{"type":"image","settings":{"desktop_image":"shopify:\/\/shop_images\/Frame_2147208077.png","select_icon":"truck","heading":"Durable, flexible","text":"<p>Soft, comfortable<\/p>","link":""}},"image_ikQXq8":{"type":"image","settings":{"desktop_image":"shopify:\/\/shop_images\/Frame_2147208331.png","select_icon":"leaf","heading":"Free shipping","text":"<p>Items you love <\/p>","link":""}},"image_ah99zQ":{"type":"image","settings":{"desktop_image":"shopify:\/\/shop_images\/Group_102.png","select_icon":"recycle","heading":"Modest, loose-fitting","text":"<p>Loose cuts that offer <\/p>","link":""}}},"block_order":["image_kiCQk4","image_9GVzRF","image_ikQXq8","image_ah99zQ"],"settings":{"advanced_heading":false,"heading":"","heading_richtext":"<h2>Your headline here<\/h2>","size_heading_mobile":50,"size_heading":80,"icon_width_mobile":84,"icon_width_desktop":100,"icon_layout":"center","columns_desktop":"4","icon_layout_mobile":"grid","color_body_icon":"{{ settings.colors.primary }}","color_background_icon":"","color_body_text":"{{ settings.colors.primary }}","background_color":"","margin-top":72,"margin-bottom":100,"show_mobile_spacing":true,"margin-top-mobile":56,"margin-bottom-mobile":20}}},"order":["main","b0118af0-7eaf-42de-8ebe-2bacbdcdac45","rich_text_with_image_t6WctF","image_with_scrolling_text_gARQbt","features_banner_WQqnjf"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "compact-size-enabled": true,
+        "size_heading": 140,
+        "size_heading_mobile": 100,
+        "color-body-text": "",
+        "color-bg-overlay": "",
+        "color-overlay-opacity": 100,
+        "margin-top": 40,
+        "margin-bottom": 0,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "b0118af0-7eaf-42de-8ebe-2bacbdcdac45": {
+      "type": "background-video",
+      "blocks": {
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1": {
+          "type": "subheading",
+          "disabled": true,
+          "settings": {
+            "subheading": "Tell your story",
+            "subheading_disable_on_mobile": false,
+            "subheading_advanced_settings": false,
+            "text_style": "subtitle",
+            "text_uppercase": false,
+            "letter_spacing": 1,
+            "size_text_desktop": 100,
+            "size_text_mobile": 100
+          }
+        },
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "heading": "About Us",
+            "disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 180
+          }
+        },
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Discover Our Story</p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_select": "primary",
+            "button_label": "Button label",
+            "disable_on_mobile": false,
+            "button_link": "",
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1",
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1",
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-text-1",
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-button-1"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Video hero</h2>",
+        "full-width-enabled": true,
+        "container_max_width": 0,
+        "video_hosted": "shopify://files/videos/5fd16bf9d6bf49daa3117e19907acac0hd-720p-16mbps-53423753_WOcMKolK.mp4",
+        "autoplay": true,
+        "video_controls": false,
+        "video_custom_play_controls": false,
+        "video_custom_mute_controls": false,
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "original_ratio": "original_ratio",
+        "desktop_fixed_height": 680,
+        "mobile_fixed_height": 440,
+        "color-body-heading": "",
+        "color-overlay": "",
+        "color-overlay-opacity": 100,
+        "color-body-text": "#ffffff",
+        "desktop_text_vertical_position": "center",
+        "desktop_text_horizontal_position": "center",
+        "mobile_text_vertical_position": "center",
+        "mobile_text_horizontal_position": "center",
+        "margin-top": 0,
+        "margin-bottom": 72,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 24
+      }
+    },
+    "rich_text_with_image_t6WctF": {
+      "type": "rich-text-with-image",
+      "blocks": {
+        "text_6hjmRi": {
+          "type": "text",
+          "settings": {
+            "text": "By Skilled Saudi Hands. PICTURE1 Where Our Story Begins  PICTURE2 A Carefully Crafted Piece, Made for You",
+            "font_uppercase": "none",
+            "disable_on_mobile": false,
+            "size_heading": 100,
+            "size_heading_mobile": 80,
+            "line_height": 1.4,
+            "picture1": "shopify://shop_images/347da060953f8edb9bff38011cd1adb35ee75943.png",
+            "button_link1": "",
+            "picture2": "shopify://shop_images/97f1229aeac44e7da3eaef71713441ba96442d7a.png",
+            "button_link2": "",
+            "button_link3": "",
+            "button_link4": ""
+          }
+        },
+        "heading_iPwg69": {
+          "type": "heading",
+          "settings": {
+            "subheading": "<p>Our journey began with a vision to provide healthcare professionals with workwear that delivers all-day comfort without compromising style. We design women’s scrubs with relaxed fits, modest cuts, and premium fabrics made for long shifts.<br/>Each piece is crafted with care and a Saudi spirit — giving you freedom of movement, confidence in every look, and comfort throughout every shift.</p>",
+            "font_uppercase": "none",
+            "disable_on_mobile": false
+          }
+        }
+      },
+      "block_order": [
+        "text_6hjmRi",
+        "heading_iPwg69"
+      ],
+      "name": "t:sections.rich-text-with-image.presets.name",
+      "settings": {
+        "desktop_text_horizontal_position": "center",
+        "color-body-text": "#11173d",
+        "background_color": "",
+        "margin-top": 0,
+        "margin-bottom": 72,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 24
+      }
+    },
+    "image_with_scrolling_text_gARQbt": {
+      "type": "image-with-scrolling-text",
+      "blocks": {
+        "image_hjrGcK": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/eee21fba5de9c8a32f0f47989618534e61142bf1_1.png",
+            "mobile_image": "shopify://shop_images/eee21fba5de9c8a32f0f47989618534e61142bf1_1.png",
+            "heading": "Relaxed & Oversized Fit",
+            "size_heading": 100,
+            "size_heading_mobile": 100,
+            "text": "Our scrubs are designed with relaxed silhouettes that give you effortless freedom of movement throughout the day — whether standing, moving, or working long shifts. The roomy fit isn’t just about style; it’s real comfort that lets you move confidently without tightness or restriction.",
+            "button_select": "secondary",
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Shop Now",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_hjrGcK"
+      ],
+      "name": "t:sections.image_with_scrolling_text.name",
+      "settings": {
+        "layout": "image_first",
+        "full-width-enabled": false,
+        "image_ratio": "adapt",
+        "desktop_text_horizontal_position": "left",
+        "mobile_text_horizontal_position": "center",
+        "color-body-text": "#11173d",
+        "background_color": "#f6f1e4",
+        "margin-top": 60,
+        "margin-bottom": 60,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 0
+      }
+    },
+    "features_banner_WQqnjf": {
+      "type": "features-banner",
+      "blocks": {
+        "image_kiCQk4": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208136_289c16eb-1999-4b18-b8a0-b4553b3e18c8.png",
+            "select_icon": "plant",
+            "heading": "Superior Comfort",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_9GVzRF": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208076_be98127c-a8c2-4934-9ab2-c1c43bc69ec0.png",
+            "select_icon": "truck",
+            "heading": "Relaxed Fit",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_ikQXq8": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208135.png",
+            "select_icon": "leaf",
+            "heading": "Wrinkle Resistant",
+            "text": "",
+            "link": ""
+          }
+        },
+        "image_ah99zQ": {
+          "type": "image",
+          "settings": {
+            "desktop_image": "shopify://shop_images/Frame_2147208077_35675679-9433-4810-aad1-ab58ca5c8974.png",
+            "select_icon": "recycle",
+            "heading": "by Saudi Hands",
+            "text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_kiCQk4",
+        "image_9GVzRF",
+        "image_ikQXq8",
+        "image_ah99zQ"
+      ],
+      "settings": {
+        "advanced_heading": false,
+        "heading": "",
+        "heading_richtext": "<h2>Your headline here</h2>",
+        "size_heading_mobile": 50,
+        "size_heading": 80,
+        "icon_width_mobile": 84,
+        "icon_width_desktop": 100,
+        "icon_layout": "center",
+        "columns_desktop": "4",
+        "icon_layout_mobile": "grid",
+        "color_body_icon": "{{ settings.colors.primary }}",
+        "color_background_icon": "",
+        "color_body_text": "{{ settings.colors.primary }}",
+        "background_color": "",
+        "margin-top": 72,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 56,
+        "margin-bottom-mobile": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "b0118af0-7eaf-42de-8ebe-2bacbdcdac45",
+    "rich_text_with_image_t6WctF",
+    "image_with_scrolling_text_gARQbt",
+    "features_banner_WQqnjf"
+  ]
+}

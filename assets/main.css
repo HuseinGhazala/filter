@@ -1586,6 +1586,7 @@ body.no-focus-visible .form-checkbox__input:focus-visible ~ .input-decorator {
   margin-bottom: 0;
   padding-top: calc(var(--gap, 8px) * 1);
   padding-bottom: calc(var(--gap, 8px) * 1.5);
+  text-align: start;
 }
 @media (min-width: 1200px) {
   .headline__title {
