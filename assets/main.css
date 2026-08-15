@@ -345,8 +345,8 @@ button[disabled],
     height: 100%;
     align-items: center;
     border: 1px solid #8080802e;
-    border-radius: 8px;
-    width: fit-content;
+    border-radius: 83px;
+    width: 110px;
     padding: 0 6px;
     margin-block: 10px;
 }
