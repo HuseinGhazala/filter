@@ -1,1 +1,107 @@
-{"sections":{"cart-items":{"type":"main-cart-items","blocks":{"trust_badge_Ct9rfW":{"type":"trust_badge","settings":{"image":"shopify:\/\/shop_images\/99d97d2f-7c1a-4b54-b164-3d261179aae8-removebg-preview_1.png","title":"شحن مجاني","subtext":"لكل طلب فوق 450 ريال"}},"trust_badge_Awf96n":{"type":"trust_badge","settings":{"image":"shopify:\/\/shop_images\/3340ebc4-ca04-457d-8c7a-28fcf040bb24-removebg-preview_1.png","title":"دفع امن","subtext":"خيارات دفع مرنة وآمنة"}},"trust_badge_aewmFY":{"type":"trust_badge","settings":{"image":"shopify:\/\/shop_images\/89c781d6-d33b-4ca7-8df3-a74185b5ae0f-removebg-preview_1.png","title":"جودة مضمونة","subtext":"خامات طبية عالية الجودة"}},"subtotal":{"type":"subtotal","settings":{}},"buttons":{"type":"buttons","settings":{}}},"block_order":["trust_badge_Ct9rfW","trust_badge_Awf96n","trust_badge_aewmFY","subtotal","buttons"],"settings":{"show_vendor":false,"margin-top":40,"margin-bottom":40,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}},"featured-collection":{"type":"featured-collection","disabled":true,"settings":{"advanced_heading":false,"title":"Others also bought","heading_richtext":"<h2>Featured collection<\/h2>","disable_on_mobile":false,"hide_empty_section":false,"collection":"","product_list":[],"products_to_show":9,"enable_stack_products":false,"show_view_all":true,"button_select":"primary","number_of_column_desktop":3,"spacing_desktop":"16","make_products_full_width":false,"number_of_column_mobile":2.1,"spacing_mobile":"16","text_alignment":"left","image_ratio":"square","show_video":false,"show_secondary_image":false,"show_vendor":true,"enable_vendor_link":false,"show_product_rating":true,"enable_quick_add_button":false,"quick_add_mode":"hover_desktop","color-body-text":"","background_color":"","margin-top":0,"margin-bottom":20,"show_mobile_spacing":false,"margin-top-mobile":20,"margin-bottom-mobile":20}}},"order":["cart-items","featured-collection"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "cart-items": {
+      "type": "main-cart-items",
+      "blocks": {
+        "trust_badge_Ct9rfW": {
+          "type": "trust_badge",
+          "settings": {
+            "image": "shopify://shop_images/99d97d2f-7c1a-4b54-b164-3d261179aae8-removebg-preview_1.png",
+            "title": "Free shipping",
+            "subtext": "For every order over 450 Riyals"
+          }
+        },
+        "trust_badge_Awf96n": {
+          "type": "trust_badge",
+          "settings": {
+            "image": "shopify://shop_images/3340ebc4-ca04-457d-8c7a-28fcf040bb24-removebg-preview_1.png",
+            "title": "Secure payment",
+            "subtext": "Flexible and secure payment options"
+          }
+        },
+        "trust_badge_aewmFY": {
+          "type": "trust_badge",
+          "settings": {
+            "image": "shopify://shop_images/89c781d6-d33b-4ca7-8df3-a74185b5ae0f-removebg-preview_1.png",
+            "title": "Guaranteed Quality",
+            "subtext": "Medical-grade raw materials"
+          }
+        },
+        "subtotal": {
+          "type": "subtotal",
+          "settings": {}
+        },
+        "buttons": {
+          "type": "buttons",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "trust_badge_Ct9rfW",
+        "trust_badge_Awf96n",
+        "trust_badge_aewmFY",
+        "subtotal",
+        "buttons"
+      ],
+      "settings": {
+        "show_vendor": false,
+        "margin-top": 40,
+        "margin-bottom": 40,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "disabled": true,
+      "settings": {
+        "advanced_heading": false,
+        "title": "Others also bought",
+        "heading_richtext": "<h2>Featured collection</h2>",
+        "disable_on_mobile": false,
+        "hide_empty_section": false,
+        "collection": "",
+        "product_list": [],
+        "products_to_show": 9,
+        "enable_stack_products": false,
+        "show_view_all": true,
+        "button_select": "primary",
+        "number_of_column_desktop": 3,
+        "spacing_desktop": "16",
+        "make_products_full_width": false,
+        "number_of_column_mobile": 2.1,
+        "spacing_mobile": "16",
+        "text_alignment": "left",
+        "image_ratio": "square",
+        "show_video": false,
+        "show_secondary_image": false,
+        "show_vendor": true,
+        "enable_vendor_link": false,
+        "show_product_rating": true,
+        "enable_quick_add_button": false,
+        "quick_add_mode": "hover_desktop",
+        "color-body-text": "",
+        "background_color": "",
+        "margin-top": 0,
+        "margin-bottom": 20,
+        "show_mobile_spacing": false,
+        "margin-top-mobile": 20,
+        "margin-bottom-mobile": 20
+      }
+    }
+  },
+  "order": [
+    "cart-items",
+    "featured-collection"
+  ]
+}
