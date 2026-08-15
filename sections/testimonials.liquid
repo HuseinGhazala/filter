@@ -12,8 +12,9 @@
   {%- endif -%}
 
   [data-section-id="{{ section.id }}"] .headline__title,
-  [data-section-id="{{ section.id }}"] .headline--rich {
-    text-align: {{ text_align_val }};
+  [data-section-id="{{ section.id }}"] .headline--rich,
+  [data-section-id="{{ section.id }}"] .headline--rich p {
+    text-align: {{ text_align_val }} !important;
   }
 
   [data-section-id="{{ section.id }}"]
