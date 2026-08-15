@@ -9324,11 +9324,13 @@ clip-path: unset;}
 }
 
 [dir="rtl"] .description__content p {
-  text-align: start !important;
+  text-align: start;
+}
+[dir="ltr"] .description__content p {
+  text-align:end;
 }
 .description__content p {
   margin:0;
-  text-align:end;
 }
 .wt-product .wt-collapse__target {
   overflow: hidden;
