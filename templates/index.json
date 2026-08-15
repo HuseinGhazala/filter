@@ -91,8 +91,8 @@
         "text_color": "#1a2744",
         "button_bg_color": "#1a2744",
         "button_text_color": "#ffffff",
-        "margin_top": 0,
-        "margin_bottom": 0,
+        "margin_top": 20,
+        "margin_bottom": 20,
         "show_mobile_spacing": false,
         "margin_top_mobile": 0,
         "margin_bottom_mobile": 0
@@ -100,6 +100,7 @@
     },
     "image_banner_4jbdyQ": {
       "type": "image-banner",
+      "disabled": true,
       "name": "t:sections.image-banner.presets.name",
       "settings": {
         "advanced_heading": false,
