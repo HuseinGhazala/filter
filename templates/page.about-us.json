@@ -233,16 +233,6 @@
             "link": ""
           }
         },
-        "image_ah99zQ": {
-          "type": "image",
-          "settings": {
-            "desktop_image": "shopify://shop_images/Frame_2147208077_35675679-9433-4810-aad1-ab58ca5c8974.png",
-            "select_icon": "recycle",
-            "heading": "by Saudi Hands",
-            "text": "",
-            "link": ""
-          }
-        },
         "image_6jFpE9": {
           "type": "image",
           "settings": {
@@ -258,7 +248,6 @@
         "image_kiCQk4",
         "image_9GVzRF",
         "image_ikQXq8",
-        "image_ah99zQ",
         "image_6jFpE9"
       ],
       "settings": {
