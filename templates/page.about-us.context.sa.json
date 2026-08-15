@@ -1,0 +1,31 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "parent": "page.about-us.json",
+  "context": {
+    "market": "sa"
+  },
+  "sections": {
+    "b0118af0-7eaf-42de-8ebe-2bacbdcdac45": {
+      "blocks": {
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-subheading-1": {
+          "settings": {
+            "subheading": "اكتشفي قصتنا"
+          }
+        },
+        "template--16408320606408__b0118af0-7eaf-42de-8ebe-2bacbdcdac45-heading-1": {
+          "settings": {
+            "heading": "من نحن"
+          }
+        }
+      }
+    }
+  }
+}
