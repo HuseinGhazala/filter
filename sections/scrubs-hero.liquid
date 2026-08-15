@@ -23,6 +23,8 @@
       --sh-btn-text: {{ section.settings.button_text_color }};
     {%- endif -%}
 
+    --sh-btn-radius: {{ section.settings.button_border_radius }}px;
+
     {%- if section.settings.margin_top -%}
       --section-gap-top: {{ section.settings.margin_top }}px;
     {%- endif -%}
@@ -39,60 +41,63 @@
 </style>
 
 <div class="scrubs-hero">
-  <div class="scrubs-hero__container">
-    {%- comment -%} Left Image {%- endcomment -%}
-    <div class="scrubs-hero__image scrubs-hero__image--left {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
-      {%- if section.settings.image_left != blank -%}
-        {{
-          section.settings.image_left
-          | image_url: width: 800
-          | image_tag:
-            loading: 'lazy',
-            widths: '250, 375, 500, 600, 800',
-            sizes: '(min-width: 990px) 30vw, 50vw',
-            class: 'scrubs-hero__img'
-        }}
-      {%- else -%}
-        {{ 'image' | placeholder_svg_tag: 'scrubs-hero__img scrubs-hero__img--placeholder' }}
-      {%- endif -%}
-    </div>
+  {%- comment -%} Background Images {%- endcomment -%}
+  {%- if section.settings.desktop_image != blank -%}
+    {{
+      section.settings.desktop_image
+      | image_url: width: 1920
+      | image_tag:
+        loading: 'lazy',
+        widths: '990, 1200, 1440, 1920',
+        sizes: '100vw',
+        class: 'scrubs-hero__bg-img scrubs-hero__bg-img--desktop'
+    }}
+  {%- endif -%}
 
-    {%- comment -%} Center Content {%- endcomment -%}
-    <div class="scrubs-hero__content {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
-      {%- if section.settings.heading != blank -%}
-        <h2 class="scrubs-hero__title">{{ section.settings.heading }}</h2>
-      {%- endif -%}
+  {%- if section.settings.mobile_image != blank -%}
+    {{
+      section.settings.mobile_image
+      | image_url: width: 900
+      | image_tag:
+        loading: 'lazy',
+        widths: '375, 500, 750, 900',
+        sizes: '100vw',
+        class: 'scrubs-hero__bg-img scrubs-hero__bg-img--mobile'
+    }}
+  {%- elsif section.settings.desktop_image != blank -%}
+    {%- comment -%} Fallback: use desktop image on mobile {%- endcomment -%}
+    {{
+      section.settings.desktop_image
+      | image_url: width: 900
+      | image_tag:
+        loading: 'lazy',
+        widths: '375, 500, 750, 900',
+        sizes: '100vw',
+        class: 'scrubs-hero__bg-img scrubs-hero__bg-img--mobile'
+    }}
+  {%- else -%}
+    {%- comment -%} Placeholder when no images uploaded {%- endcomment -%}
+    <div class="scrubs-hero__bg-placeholder"></div>
+  {%- endif -%}
 
-      {%- if section.settings.subtitle != blank -%}
-        <div class="scrubs-hero__subtitle rte">{{ section.settings.subtitle }}</div>
-      {%- endif -%}
+  {%- comment -%} Content Overlay {%- endcomment -%}
+  <div class="scrubs-hero__content {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
+    {%- if section.settings.heading != blank -%}
+      <h2 class="scrubs-hero__title">{{ section.settings.heading }}</h2>
+    {%- endif -%}
 
-      {%- if section.settings.button_text != blank -%}
-        <a
-          href="{{ section.settings.button_link | default: '#' }}"
-          class="scrubs-hero__button"
-        >
-          {{- section.settings.button_text -}}
-        </a>
-      {%- endif -%}
-    </div>
+    {%- if section.settings.subtitle != blank -%}
+      <div class="scrubs-hero__subtitle rte">{{ section.settings.subtitle }}</div>
+    {%- endif -%}
 
-    {%- comment -%} Right Image {%- endcomment -%}
-    <div class="scrubs-hero__image scrubs-hero__image--right {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
-      {%- if section.settings.image_right != blank -%}
-        {{
-          section.settings.image_right
-          | image_url: width: 800
-          | image_tag:
-            loading: 'lazy',
-            widths: '250, 375, 500, 600, 800',
-            sizes: '(min-width: 990px) 30vw, 50vw',
-            class: 'scrubs-hero__img'
-        }}
-      {%- else -%}
-        {{ 'image' | placeholder_svg_tag: 'scrubs-hero__img scrubs-hero__img--placeholder' }}
-      {%- endif -%}
-    </div>
+    {%- if section.settings.button_text != blank -%}
+      <a
+        href="{{ section.settings.button_link | default: '#' }}"
+        class="scrubs-hero__button"
+      >
+        {{- section.settings.button_text -}}
+      </a>
+    {%- endif -%}
   </div>
 
   {%- comment -%} Badge / Logo (optional) {%- endcomment -%}
@@ -148,20 +153,30 @@
       "label": "Button Link"
     },
     {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "unit": "px",
+      "step": 2,
+      "default": 0,
+      "label": "Button Border Radius"
+    },
+    {
       "type": "header",
       "content": "Images"
     },
     {
       "type": "image_picker",
-      "id": "image_left",
-      "label": "Left Image",
-      "info": "Model or product image for the left side"
+      "id": "desktop_image",
+      "label": "Desktop Background Image",
+      "info": "Recommended: 1440×420px or wider"
     },
     {
       "type": "image_picker",
-      "id": "image_right",
-      "label": "Right Image",
-      "info": "Model or product image for the right side"
+      "id": "mobile_image",
+      "label": "Mobile Background Image",
+      "info": "Recommended: 750×900px. Falls back to desktop image if empty."
     },
     {
       "type": "image_picker",

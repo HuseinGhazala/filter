@@ -1,60 +1,81 @@
 /* ============================================================
-   Scrubs Hero Banner Section
+   Scrubs Hero Banner Section — Background Image + Overlay
    ============================================================ */
 
 .scrubs-hero {
-  background-color: var(--sh-bg-color, #EDE8E0);
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
+  background-color: var(--sh-bg-color, #EDE8E0);
 }
 
 /* ============================================================
-   Main Container — CSS Grid
+   Background Image
    ============================================================ */
 
-.scrubs-hero__container {
-  display: grid;
-  max-width: 1440px;
-  margin: 0 auto;
+.scrubs-hero__bg-img {
   width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
 }
 
-/* Mobile: Text on top, images side-by-side on bottom */
-@media (max-width: 989px) {
-  .scrubs-hero__container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas:
-      "content content"
-      "left right";
+/* Mobile: show mobile image, hide desktop */
+.scrubs-hero__bg-img--desktop {
+  display: none;
+}
+
+.scrubs-hero__bg-img--mobile {
+  display: block;
+}
+
+/* Desktop: show desktop image, hide mobile */
+@media (min-width: 990px) {
+  .scrubs-hero__bg-img--desktop {
+    display: block;
+  }
+  .scrubs-hero__bg-img--mobile {
+    display: none;
   }
 }
 
-/* Desktop: 3 columns — image | text | image */
-@media (min-width: 990px) {
-  .scrubs-hero__container {
-    grid-template-columns: 1fr 1.6fr 1fr;
-    grid-template-areas: "left content right";
-    align-items: end;
-    min-height: 420px;
+/* Fallback when no image is uploaded */
+.scrubs-hero__bg-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--sh-bg-color, #EDE8E0);
+  display: block;
+}
+
+@media (max-width: 989px) {
+  .scrubs-hero__bg-placeholder {
+    aspect-ratio: 3 / 4;
   }
 }
 
 /* ============================================================
-   Content Area
+   Content Overlay
    ============================================================ */
 
 .scrubs-hero__content {
-  grid-area: content;
-  align-self: center;
-  text-align: center;
-  padding: 32px 24px 24px;
-  direction: rtl;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 32px 24px;
   z-index: 1;
+  direction: rtl;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 @media (min-width: 990px) {
   .scrubs-hero__content {
+    justify-content: center;
     padding: 48px 40px;
   }
 }
@@ -96,8 +117,6 @@
   color: var(--sh-text-color, #1A2744);
   margin: 0 0 20px;
   max-width: 520px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .scrubs-hero__subtitle p {
@@ -125,8 +144,9 @@
   font-weight: 600;
   text-decoration: none;
   border: 2px solid var(--sh-btn-bg, #1A2744);
+  border-radius: var(--sh-btn-radius, 0px);
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
   letter-spacing: 0.02em;
 }
 
@@ -143,75 +163,6 @@
 }
 
 /* ============================================================
-   Images
-   ============================================================ */
-
-.scrubs-hero__image {
-  line-height: 0;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.scrubs-hero__image--left {
-  grid-area: left;
-  justify-content: flex-start;
-}
-
-.scrubs-hero__image--right {
-  grid-area: right;
-  justify-content: flex-end;
-}
-
-.scrubs-hero__img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-  object-position: bottom center;
-}
-
-/* Desktop image sizing */
-@media (min-width: 990px) {
-  .scrubs-hero__img {
-    max-height: 420px;
-  }
-
-  .scrubs-hero__image--left {
-    justify-content: flex-end;
-  }
-
-  .scrubs-hero__image--right {
-    justify-content: flex-start;
-  }
-}
-
-/* Mobile image sizing */
-@media (max-width: 989px) {
-  .scrubs-hero__image {
-    min-height: 200px;
-  }
-
-  .scrubs-hero__img {
-    max-height: 340px;
-  }
-}
-
-/* Placeholder */
-.scrubs-hero__img--placeholder {
-  background-color: rgba(0, 0, 0, 0.05);
-  aspect-ratio: 3 / 4;
-  max-height: 340px;
-}
-
-@media (min-width: 990px) {
-  .scrubs-hero__img--placeholder {
-    max-height: 420px;
-  }
-}
-
-/* ============================================================
    Badge / Logo
    ============================================================ */
 
@@ -221,7 +172,7 @@
   right: 16px;
   width: 80px;
   height: 80px;
-  z-index: 3;
+  z-index: 2;
   pointer-events: none;
 }
 
@@ -254,33 +205,6 @@
 .scrubs-hero__content.scroll-trigger.animate--slide-in:not(.scroll-trigger--offscreen) {
   opacity: 1;
   transform: translateY(0);
-}
-
-.scrubs-hero__image.scroll-trigger.animate--slide-in {
-  opacity: 0;
-  transition: opacity 0.7s ease;
-}
-
-.scrubs-hero__image.scroll-trigger.animate--slide-in:not(.scroll-trigger--offscreen) {
-  opacity: 1;
-}
-
-.scrubs-hero__image--left.scroll-trigger.animate--slide-in {
-  transform: translateX(-30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.scrubs-hero__image--left.scroll-trigger.animate--slide-in:not(.scroll-trigger--offscreen) {
-  transform: translateX(0);
-}
-
-.scrubs-hero__image--right.scroll-trigger.animate--slide-in {
-  transform: translateX(30px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-
-.scrubs-hero__image--right.scroll-trigger.animate--slide-in:not(.scroll-trigger--offscreen) {
-  transform: translateX(0);
 }
 
 /*# sourceMappingURL=section-scrubs-hero.css.map */
