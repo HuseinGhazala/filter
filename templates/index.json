@@ -7,7 +7,6 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-
 {
   "sections": {
     "collection_color_list_97U3xP": {
@@ -413,7 +412,7 @@
         "heading_scale_mobile": 18,
         "sub_heading_scale_mobile": 14,
         "btn_text": "About Us",
-        "btn_url": "shopify://products/women-fit-scrub",
+        "btn_url": "shopify://products/scrub-set-12",
         "text_alignment": "flex-end",
         "mobile_vertical_alignment": "flex-end",
         "padding_top": 0,

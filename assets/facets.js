@@ -108,7 +108,9 @@ class FacetFiltersForm extends HTMLElement {
         FacetFiltersForm.renderProductGridContainer(html);
         // FacetFiltersForm.renderProductCount(html);
         if (typeof initializeScrollAnimationTrigger === "function")
-          initializeScrollAnimationTrigger(html.innerHTML);
+          initializeScrollAnimationTrigger(
+            document.getElementById("ProductGridContainer"),
+          );
       })
       .finally(() => FacetFiltersForm.fireCustomEvent());
   }
@@ -121,7 +123,9 @@ class FacetFiltersForm extends HTMLElement {
     FacetFiltersForm.renderProductGridContainer(html);
     // FacetFiltersForm.renderProductCount(html);
     if (typeof initializeScrollAnimationTrigger === "function")
-      initializeScrollAnimationTrigger(html.innerHTML);
+      initializeScrollAnimationTrigger(
+        document.getElementById("ProductGridContainer"),
+      );
   }
 
   static renderProductGridContainer(html) {

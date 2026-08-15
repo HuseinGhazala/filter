@@ -1,3 +1,16 @@
+{%- assign color_collection_handles = 'black,gray,indigo-blue,lavender,navy-blue,olive-green,sky-blue' | split: ',' -%}
+{%- assign is_color_collection = false -%}
+{%- if collection != blank and color_collection_handles contains collection.handle -%}
+  {%- assign is_color_collection = true -%}
+{%- endif -%}
+{%- assign is_all_scrubs_collection = false -%}
+{%- if collection != blank -%}
+  {%- if collection.handle == 'all-scrubs' or collection.handle == 'all' -%}
+    {%- assign is_all_scrubs_collection = true -%}
+  {%- endif -%}
+{%- endif -%}
+
+{%- unless is_color_collection -%}
 <div class="color-collections-section page-width wt-slider__container--featured" id="section-{{ section.id }}">
   <div class="section-header text-center">
     {% if section.settings.title != blank %}
@@ -8,42 +21,48 @@
     {% endif %}
   </div>
 
+  {%- if is_all_scrubs_collection -%}
   <div class="swiper color-collections-swiper-{{ section.id }}">
     <div class="swiper-wrapper">
+      {%- assign current_collection_handle = collection.handle -%}
       {% if section.settings.collection != blank %}
-        {% for collection in section.settings.collection %}
+        {% for sub_collection in section.settings.collection %}
+          {%- if sub_collection.handle == current_collection_handle -%}
+            {%- continue -%}
+          {%- endif -%}
+
           {%- capture filter_param -%}
-            ?filter.v.option.color={{ collection.title | url_encode }}
+            ?filter.v.option.color={{ sub_collection.title | url_encode }}
           {%- endcapture -%}
 
           <div class="swiper-slide">
-            <a href="{{ collection.url }}{{ filter_param }}" class="color-collection-card">
+            <a href="{{ sub_collection.url }}{{ filter_param }}" class="color-collection-card">
               <div class="card-image-wrapper">
-                {% if collection.image != blank %}
+                {% if sub_collection.image != blank %}
                   {{
-                    collection.image
+                    sub_collection.image
                     | image_url: width: 1200
                     | image_tag:
                       loading: 'lazy',
                       widths: '400, 600, 800, 1000, 1200',
                       sizes: '(min-width: 990px) 34vw, 100vw',
-                      alt: collection.title
+                      alt: sub_collection.title
                   }}
-                {% elsif collection.products.first.featured_image != blank %}
+                {% elsif sub_collection.products.first.featured_image != blank %}
                   {{
-                    collection.products.first.featured_image
+                    sub_collection.products.first.featured_image
                     | image_url: width: 1200
                     | image_tag:
                       loading: 'lazy',
                       widths: '400, 600, 800, 1000, 1200',
                       sizes: '(min-width: 990px) 34vw, 100vw',
-                      alt: collection.products.first.featured_image.alt
+                      alt: sub_collection.products.first.featured_image.alt
                   }}
                 {% else %}
                   {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
                 {% endif %}
               </div>
-              <h3 class="card-title">{{ collection.title }}</h3>
+              <h3 class="card-title">{{ sub_collection.title }}</h3>
             </a>
           </div>
         {% endfor %}
@@ -61,7 +80,9 @@
       {% endif %}
     </div>
   </div>
+  {%- endif -%}
 </div>
+{%- endunless -%}
 
 {% style %}
   #section-{{ section.id }} {

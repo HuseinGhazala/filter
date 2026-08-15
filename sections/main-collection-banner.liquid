@@ -136,6 +136,12 @@
   {% assign placeholder_image = null %}
 {% endif %}
 
+{%- assign hide_collection_banner = false -%}
+{%- if collection != blank and collection.handle == 'all' -%}
+  {%- assign hide_collection_banner = true -%}
+{%- endif -%}
+
+{%- unless hide_collection_banner -%}
 <div
   data-section-id="{{ section.id }}"
   class="{{ customwrapperclass }} {% if collection.image == blank and placeholder_image == null %}hero--hidden-placeholder{% endif %}"
@@ -158,6 +164,7 @@
     %}
   </div>
 </div>
+{%- endunless -%}
 
 {% schema %}
 {
