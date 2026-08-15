@@ -24,6 +24,8 @@
     {%- endif -%}
 
     --sh-btn-radius: {{ section.settings.button_border_radius }}px;
+    --sh-height-mobile: {{ section.settings.mobile_height }}px;
+    --sh-height-desktop: {{ section.settings.desktop_height }}px;
 
     {%- if section.settings.margin_top -%}
       --section-gap-top: {{ section.settings.margin_top }}px;
@@ -183,6 +185,30 @@
       "id": "badge_image",
       "label": "Badge / Logo",
       "info": "Optional circular badge shown at the bottom-right corner"
+    },
+    {
+      "type": "header",
+      "content": "Banner Height"
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "min": 200,
+      "max": 800,
+      "unit": "px",
+      "step": 10,
+      "default": 420,
+      "label": "Desktop Height"
+    },
+    {
+      "type": "range",
+      "id": "mobile_height",
+      "min": 200,
+      "max": 800,
+      "unit": "px",
+      "step": 10,
+      "default": 560,
+      "label": "Mobile Height"
     },
     {
       "type": "header",

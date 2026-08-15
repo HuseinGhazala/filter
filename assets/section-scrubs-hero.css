@@ -6,6 +6,13 @@
   position: relative;
   overflow: hidden;
   background-color: var(--sh-bg-color, #EDE8E0);
+  min-height: var(--sh-height-mobile, 560px);
+}
+
+@media (min-width: 990px) {
+  .scrubs-hero {
+    min-height: var(--sh-height-desktop, 420px);
+  }
 }
 
 /* ============================================================
@@ -14,9 +21,13 @@
 
 .scrubs-hero__bg-img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
   object-fit: cover;
+  z-index: 0;
 }
 
 /* Mobile: show mobile image, hide desktop */
