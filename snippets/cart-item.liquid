@@ -109,6 +109,8 @@
               {{ item.final_line_price | money }}
             </span>
           </div>
+    {%- assign discount_percent = item.variant.compare_at_price | minus: item.variant.price | times: 100.0 | divided_by: item.variant.compare_at_price | round -%}
+
         {% elsif item.variant.compare_at_price > item.variant.price %}
           <div class="cart-item__discounted-prices">
             <span class="visually-hidden">
@@ -170,7 +172,6 @@
             </strong>
           </div>
         {% elsif item.variant.compare_at_price > item.variant.price %}
-    {%- assign discount_percent = item.variant.compare_at_price | minus: item.variant.price | times: 100.0 | divided_by: item.variant.compare_at_price | round -%}
     <div class="cart-item__discounted-prices">
 
       <span class="visually-hidden">
