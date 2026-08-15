@@ -122,11 +122,11 @@
    ============================================================ */
 
 .scrubs-hero__subtitle {
-  font-size: 15px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.4;
   font-weight: 400;
   color: var(--sh-text-color, #1A2744);
-  margin: 0 0 20px;
+  margin: 0 0 8px;
   max-width: 520px;
 }
 
