@@ -260,7 +260,7 @@
       
       </div>
 
-      {% comment %} <div class="wt-cart__item__price-wrapper">
+      <div class="wt-cart__item__price-wrapper">
         <div class="loading-overlay hidden">
           {% render 'button-loading-indicator', hidden: false %}
         </div>
@@ -329,7 +329,7 @@
             {{ item.variant.unit_price_measurement.reference_unit }}
           </div>
         {%- endif -%}
-      </div> {% endcomment %}
+      </div>
       {%- if cart_page -%}
         {% render 'cart-item-error', item: item %}
       {%- endif -%}
