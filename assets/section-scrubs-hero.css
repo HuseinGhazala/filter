@@ -150,7 +150,7 @@
   display: inline-block;
   background-color: var(--sh-btn-bg, #1A2744);
   color: var(--sh-btn-text, #FFFFFF);
-  padding: 13px 36px;
+  padding: 8px 36px;
   font-size: 15px;
   font-weight: 600;
   text-decoration: none;
