@@ -13992,3 +13992,7 @@ color: var(--color-custom-text, var(--color-headings-text));
   position: relative !important;
   z-index: 21 !important;
 }
+.headline.scroll-trigger.animate--slide-in {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
