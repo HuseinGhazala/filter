@@ -136,9 +136,10 @@
   {% assign placeholder_image = null %}
 {% endif %}
 
-{%- assign hide_collection_banner = false -%}
-{%- if collection != blank and collection.handle == 'all' -%}
-  {%- assign hide_collection_banner = true -%}
+{%- assign color_collection_handles = 'black,gray,indigo-blue,lavender,navy-blue,olive-green,sky-blue' | split: ',' -%}
+{%- assign hide_collection_banner = true -%}
+{%- if collection != blank and color_collection_handles contains collection.handle -%}
+  {%- assign hide_collection_banner = false -%}
 {%- endif -%}
 
 {%- unless hide_collection_banner -%}
