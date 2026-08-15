@@ -95,7 +95,7 @@
         "video_custom_play_controls": false,
         "video_custom_mute_controls": false,
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-        "original_ratio": "fixed_height",
+        "original_ratio": "original_ratio",
         "desktop_fixed_height": 680,
         "mobile_fixed_height": 440,
         "color-body-heading": "",
