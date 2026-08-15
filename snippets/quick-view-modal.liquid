@@ -256,6 +256,14 @@
         <a href="{{ product.url }}" class="quick-view-modal__view-full link underlined-link">
           {{ 'products.product.view_full_details' | t }}
         </a>
+
+        {% render 'cart-payment-badge' %}
+
+        {% if product.description != blank %}
+          <div class="quick-view-modal__description rte">
+            {{ product.description }}
+          </div>
+        {% endif %}
       </div>
     </div>
   </div>

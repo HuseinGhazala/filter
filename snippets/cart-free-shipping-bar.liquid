@@ -32,7 +32,7 @@
 
 {% assign remaining_amount_with_currency = remaining_amount | times: 100 | money %}
 
-{% assign custom_text = 'templates.cart.free_shipping_progress' | t: amount: remaining_amount_with_currency %}
+{% assign custom_text = 'templates.cart.free_shipping_progress_html' | t: amount: remaining_amount_with_currency %}
 
 <div class="wt-free-shipping-bar">
     <div class="icon-text-free-shoping">

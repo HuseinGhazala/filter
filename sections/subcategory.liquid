@@ -150,15 +150,20 @@
     text-align: center;
   }
 
-  /* Rectangle Image Wrapper */
+  /* Square Image Wrapper */
   .card-image-wrapper {
     position: relative;
     width: 100%;
+    aspect-ratio: 1 / 1;
     border-radius: 12px;
-    height: {{ section.settings.image_height_desktop }}px;
     overflow: hidden;
   }
-
+  
+  .collection-banner .card-image-wrapper{
+    aspect-ratio: 1 / 1;
+    width: 175px !important;
+    height: 175px !important;
+  }
   .card-image-wrapper img,
   .card-image-wrapper svg {
     position: absolute;
@@ -166,7 +171,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
+    object-fit: contain;
     transition: transform 0.4s ease;
   }
 
@@ -184,10 +189,6 @@
 
   /* Mobile Responsive Controls */
   @media screen and (max-width: 749px) {
-    #section-{{ section.id }} .card-image-wrapper {
-      height: {{ section.settings.image_height_mobile }}px;
-    }
-
      .color-collections-section{
     width:100%;
   }
@@ -278,30 +279,6 @@
       "id": "card_title_color",
       "label": "Cards Title Color",
       "default": "#11173D"
-    },
-    {
-      "type": "header",
-      "content": "Image Height Settings"
-    },
-    {
-      "type": "range",
-      "id": "image_height_desktop",
-      "min": 50,
-      "max": 550,
-      "step": 10,
-      "unit": "px",
-      "label": "Image Height (Desktop)",
-      "default": 190
-    },
-    {
-      "type": "range",
-      "id": "image_height_mobile",
-      "min": 30,
-      "max": 350,
-      "step": 5,
-      "unit": "px",
-      "label": "Image Height (Mobile)",
-      "default": 85
     },
     {
       "type": "header",

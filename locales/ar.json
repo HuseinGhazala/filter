@@ -274,7 +274,7 @@
       "cart": "عربة التسوق",
       "btn_cart": "المتابعة لإتمام الدفع",
       "you_are_close": "أنت قريبة من الشحن المجاني!",
-      "free_shipping_progress": "أنفقي {{ amount }} أكتر عشان تحصلي على شحن مجاني!",
+      "free_shipping_progress_html": "أنفقي {{ amount }} أكتر عشان تحصلي على شحن مجاني!",
       "free_shipping_success": "لقد حصلت على شحن مجاني!"
     },
     "contact": {

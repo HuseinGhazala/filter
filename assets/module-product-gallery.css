@@ -32,12 +32,17 @@
 /* ضبط حجم الصور داخل الشرائح */
 .quick-view-modal__image {
   width: 100% !important;
-  height: 440px !important;
+  height: auto ;
   aspect-ratio:2 / 4;
   object-fit: cover;
   border-radius: 4px;
 }
+@media (min-width: 800px) {
+.quick-view-modal__image {
+  height: 440px !important;
+}
 
+}
 /* ترتيب حاوية الصور رأسيًا */
 .quick-view-modal__media {
   display: flex;

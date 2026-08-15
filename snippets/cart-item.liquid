@@ -77,11 +77,11 @@
       {%- if is_service_unavailable -%}
         <p class="wt-cart__item__unavailable">{{ 'products.product.unavailable' | t }}</p>
       {%- endif -%}
-      {%- if item.final_price == 0 and cart_page -%}
+      {%- if item.final_price == 0 -%}
         <div class="product-option">
           <span class="cart-item__price cart-item__price--free">{{ 'products.product.price.free' | t }}</span>
         </div>
-      {%- elsif item.original_price != item.final_price and cart_page -%}
+      {%- elsif item.original_price != item.final_price -%}
         <div class="cart-item__discounted-prices ">
           <span class="visually-hidden">
             {{ 'products.product.price.regular_price' | t }}
@@ -96,7 +96,7 @@
             {{ item.final_price | money }}
           </strong>
         </div>
-      {% elsif item.variant.compare_at_price > item.variant.price and cart_page %}
+      {% elsif item.variant.compare_at_price > item.variant.price %}
   {%- assign discount_percent = item.variant.compare_at_price | minus: item.variant.price | times: 100.0 | divided_by: item.variant.compare_at_price | round -%}
   <div class="cart-item__discounted-prices">
 
@@ -117,7 +117,7 @@
       <span class="cart-item__discount-badge">{{ discount_percent }}% خصم</span>
     {%- endif -%}
   </div>
-      {%- elsif cart_page -%}
+      {%- else -%}
         <div class="product-option">
           <span class="cart-item__price">{{ item.original_price | money }}</span>
         </div>

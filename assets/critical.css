@@ -914,7 +914,10 @@ js-link[data-mobile=true] {
 .wt__quick-buy .product-image a {
   pointer-events: none;
 }
-
+.wt-product__info .product-image{
+    height: 500px;
+    overflow: auto;
+}
 .wt__quick-buy--page-overlay {
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(4px);

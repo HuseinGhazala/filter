@@ -364,6 +364,7 @@
 }
 .wt-cart__item__thumb {
   margin: 0;
+  height: 180px !important;
   position: relative;
 }
 .wt-cart__item__thumb .link-save {
@@ -397,7 +398,8 @@
 }
 .wt-cart__drawer .wt-cart__item__thumb img,
 .wt-cart__drawer .wt-cart__item__thumb svg {
-  max-width: 12rem;
+  width: 100%;
+  max-width: 100%;
 }
 .wt-cart__item__name {
   margin-top: 0;
