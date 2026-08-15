@@ -80,16 +80,28 @@ class CollectionSection extends HTMLElement {
   }
 
   // ====== منطق تبديل عدد أعمدة الجريد عن طريق --cols ======
+  // التابس دي شغالة بس على الموبايل (مخفية على الديسك بـ display:none في الـ CSS عند 768px)،
+  // فلازم الـ JS يحترم نفس نقطة الفصل بدل ما يفرض --cols بشكل دائم على كل المقاسات.
 initGridViewTabs() {
     const tabs = this.getGridViewTabs();
     const grid = this.getGrid();
     if (!tabs || !tabs.length || !grid) return;
 
-    // قراءة القيمة الحالية من الـ grid أو localStorage أو الافتراضي
-    const currentCols = grid.style.getPropertyValue("--cols") || this.dataset.cols || "2";
-    const saved = localStorage.getItem("gridColumns") || currentCols;
-    
-    this.applyGridColumns(saved, false);
+    const GRID_TABS_BREAKPOINT = 768;
+
+    const syncColumnsWithViewport = () => {
+      if (window.innerWidth < GRID_TABS_BREAKPOINT) {
+        // قراءة القيمة الحالية من الـ grid أو localStorage أو الافتراضي
+        const currentCols = grid.style.getPropertyValue("--cols") || this.dataset.cols || "2";
+        const saved = localStorage.getItem("gridColumns") || currentCols;
+        this.applyGridColumns(saved, false);
+      } else if (grid.style.getPropertyValue("--cols")) {
+        grid.style.removeProperty("--cols");
+      }
+    };
+
+    syncColumnsWithViewport();
+    window.addEventListener("resize", syncColumnsWithViewport);
 
     tabs.forEach((tab) => {
       tab.addEventListener("click", () => {

@@ -251,7 +251,10 @@
             role="button"
             tabindex="{{ tab_index }}"
           >
-            {%- render 'icons', id: 'bin' -%}
+            {% comment %} {%- render 'icons', id: 'bin' -%} {% endcomment %}
+             <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none">
+              <path d="M4.5 6.94853H22.5M10.125 3.375H16.875M11.25 18.8603V11.7132M15.75 18.8603V11.7132M17.4375 23.625H9.5625C8.31986 23.625 7.3125 22.5584 7.3125 21.2426L6.79883 8.1893C6.7722 7.51256 7.28316 6.94853 7.92285 6.94853H19.0771C19.7168 6.94853 20.2278 7.51256 20.2012 8.1893L19.6875 21.2426C19.6875 22.5584 18.6801 23.625 17.4375 23.625Z" stroke="#737373" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           </a>
         </cart-remove-button>
       

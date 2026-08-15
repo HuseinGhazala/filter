@@ -35,7 +35,8 @@
     <link rel="preload" href="{{ 'din-next-lt-w23-regular.ttf' | asset_url }}" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="{{ 'din-next-lt-w23-bold.ttf' | asset_url }}" as="font" type="font/ttf" crossorigin>
     <link rel="preload" href="{{ 'din-next-lt-w23-medium.ttf' | asset_url }}" as="font" type="font/ttf" crossorigin>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="{{ 'swiper-bundle.min.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'swiper-bundle.min.css' | asset_url | stylesheet_tag }}</noscript>
 
 
     {%- if settings.favicon != blank -%}
@@ -67,7 +68,8 @@
 
     <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script>
 
-    {{ 'main.css' | asset_url | stylesheet_tag }}
+    <link rel="stylesheet" href="{{ 'main.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'main.css' | asset_url | stylesheet_tag }}</noscript>
     {{ 'custom.css' | asset_url | stylesheet_tag }}
 
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>

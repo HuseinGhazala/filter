@@ -1,3 +1,74 @@
+.scroll-trigger--offscreen {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.scroll-trigger {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+/* Add any zoom-in related styles here */
+@media (prefers-reduced-motion: no-preference) {
+  .scroll-trigger.animate--fade-in,
+  .scroll-trigger.animate--slide-in {
+    opacity: 0.01;
+  }
+  .scroll-trigger.animate--slide-in {
+    transform: translateY(2rem);
+  }
+  .scroll-trigger:not(.scroll-trigger--offscreen).animate--fade-in {
+    opacity: 1;
+    animation: var(--animation-fade-in);
+  }
+  .scroll-trigger:not(.scroll-trigger--offscreen).animate--slide-in {
+    animation: var(--animation-slide-in);
+    animation-delay: calc(var(--animation-order) * 75ms);
+  }
+  .scroll-trigger.scroll-trigger--design-mode.animate--fade-in,
+  .scroll-trigger.scroll-trigger--design-mode.animate--slide-in,
+  .scroll-trigger.scroll-trigger--design-mode .slider,
+  .scroll-trigger:not(.scroll-trigger--offscreen).scroll-trigger--cancel {
+    opacity: 1;
+    animation: none;
+    transition: none;
+  }
+  .scroll-trigger.scroll-trigger--design-mode.animate--slide-in,
+  .scroll-trigger.animate--slide-in.scroll-trigger--cancel {
+    transform: translateY(0);
+  }
+  @keyframes slideIn {
+    from {
+      transform: translateY(2rem);
+      opacity: 0.01;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0.01;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+@media (max-width: 899px) {
+  .disabled-on-mobile.scroll-trigger, .disabled-on-mobile.scroll-trigger--offscreen, .disabled-on-mobile.scroll-trigger.animate--fade-in, .disabled-on-mobile.scroll-trigger.animate--slide-in {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+  .scroll-trigger:not(.scroll-trigger--offscreen).animate--slide-in.disabled-on-mobile {
+    animation: none;
+  }
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */

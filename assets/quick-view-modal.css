@@ -83,7 +83,8 @@
   border-radius: 0.5rem;
   max-width: 1000px;
   width: 100%;
-  max-height: 85vh;
+  max-height: 70vh;
+  height: 100%;
   overflow: hidden;
   position: relative;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -124,11 +125,13 @@
   max-height: 85vh;
   padding: 2rem;
   direction: ltr;
+  gap: 2rem;
 }
 
 .quick-view-modal__info {
   grid-column: 1;
   grid-row: 1;
+  min-height: 0;
   padding: 0px;
   display: flex;
   flex-direction: column;
@@ -141,12 +144,14 @@
 .quick-view-modal__media {
   grid-column: 2;
   grid-row: 1;
+  min-height: 0;
   border-right: 1px solid rgba(var(--color-foreground), 0.08);
   overflow-y: auto;
-  max-height: 560px;
+  /* max-height: 560px; */
+  height: 100%;
   scrollbar-width: none;
   background: var(--color-background, #fff);
-  display: block; 
+  display: block;
   padding: 0;
 }
 
@@ -168,6 +173,33 @@
   width: 100% !important;
   height: 80% !important;
   display: block;
+}
+
+/* الديسك: نجبر الترتيب بالطول (عمودي) ونلغي أي transform أفقي بيحطه Swiper بالـ JS */
+@media screen and (min-width: 750px) {
+  .quick-view-gallery.swiper .swiper-wrapper {
+    display: flex !important;
+    flex-direction: column !important;
+    transform: none !important;
+    gap: 0.5rem;
+  }
+
+  .quick-view-gallery.swiper .swiper-slide {
+    width: 100% !important;
+    height: 368px !important;
+    max-width: none !important;
+    transform: none !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+}
+
+/* الموبايل: نتأكد إن الترتيب فعلاً بالعرض (أفقي) */
+@media screen and (max-width: 749px) {
+  .quick-view-gallery.swiper .swiper-wrapper {
+    display: flex !important;
+    flex-direction: row !important;
+  }
 }
 
 .quick-view-modal__image {

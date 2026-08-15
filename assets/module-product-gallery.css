@@ -32,7 +32,7 @@
 /* ضبط حجم الصور داخل الشرائح */
 .quick-view-modal__image {
   width: 100% !important;
-  height: 100% !important;
+  height: 440px !important;
   aspect-ratio:2 / 4;
   object-fit: cover;
   border-radius: 4px;

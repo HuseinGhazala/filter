@@ -547,8 +547,7 @@
 .wt-cart__footer {
   margin-left: calc(var(--gap, 8px) * -2);
   margin-right: calc(var(--gap, 8px) * -2);
-  padding-left: calc(var(--gap, 8px) * 2);
-  padding-right: calc(var(--gap, 8px) * 2);
+
   display: flex;
   flex-wrap: wrap;
   position: sticky;
@@ -557,6 +556,8 @@
 }
 @media (min-width: 900px) {
   .wt-cart__footer {
+    padding-left: calc(var(--gap, 8px) * 2);
+    padding-right: calc(var(--gap, 8px) * 2);
     justify-content: flex-end;
   }
 }

@@ -148,6 +148,19 @@
 
       
       {%- comment -%}4. Render swatch{%- endcomment -%}
+      {%- capture swatch_bg_style -%}
+        {% if is_variant_picture %}
+          background-image: url({{ featured_media | image_url: width: 48 }});
+        {% else %}
+          {% render 'color-swatch-style', swatches_config: swatches_config, value: color %}
+        {% endif %}
+      {%- endcapture -%}
+      {%- assign swatch_bg_style = swatch_bg_style | strip -%}
+      {%- assign swatch_border_color = nil -%}
+      {%- if swatch_bg_style contains 'background-color:' -%}
+        {%- comment -%} إضافة الإطار بنفس لون الـ swatch الداخلي {%- endcomment -%}
+        {%- assign swatch_border_color = swatch_bg_style | remove: 'background-color:' | remove: ';' | strip -%}
+      {%- endif -%}
       <div
         class="
         {{ active_color }}
@@ -156,6 +169,7 @@
         {% unless color_available %}unavailable{% endunless %}
         {% if settings.enable_round_color_swatches %} rounded {% endif %}
         "
+        {% if swatch_border_color %}style="--sw-color: {{ swatch_border_color }};"{% endif %}
       >
 <div
           class="
@@ -165,8 +179,8 @@
             {% if settings.enable_round_color_swatches %} rounded {% endif %}
           "
           data-color="{{ color }}"
-          {%- if color.variant.matched and is_active_value_selected == false and are_filters_active == true -%} 
-            data-active-swatch 
+          {%- if color.variant.matched and is_active_value_selected == false and are_filters_active == true -%}
+            data-active-swatch
             {% assign is_active_value_selected = true %}
           {%- endif -%}
           data-img="{% if featured_media %}{{ featured_media | image_url: width: 1000 }}{% endif %}"
@@ -181,16 +195,7 @@
           "
           data-href="{{ rep_variant.url }}"
           data-hover="{% if new_hover_image %}{{ new_hover_image | image_url: width: 1000 }}{% endif %}"
-          style="
-            /* إضافة الإطار بنفس لون الـ swatch الداخلي */
-            border: 3px solid {% render 'color-swatch-style', swatches_config: swatches_config, value: color, only_color: true %};
-            
-            {% if is_variant_picture %}
-                background-image: url({{ featured_media | image_url: width: 48 }});
-            {% else %}
-                {% render 'color-swatch-style', swatches_config: swatches_config, value: color %};
-            {% endif %}
-          "
+          style="{{ swatch_bg_style }};"
           tabindex="0"
         ></div>
 
