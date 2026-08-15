@@ -9323,8 +9323,8 @@ clip-path: unset;}
   border: none;
 }
 
-['rtl'] .description__content p {
-  text-align:start;
+[dir="rtl"] .description__content p {
+  text-align: start;
 }
 .description__content p {
   margin:0;
