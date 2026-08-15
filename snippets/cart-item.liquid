@@ -188,9 +188,9 @@
       {%- endif -%}
     </div>
         {%- else -%}
-          <div class="product-option">
+          {% comment %} <div class="product-option">
             <span class="cart-item__price">{{ item.original_price | money }}</span>
-          </div>
+          </div> {% endcomment %}
         {%- endif -%}
       {%- endif -%}
       {%- if show_qty_remove_controls -%}
