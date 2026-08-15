@@ -200,8 +200,8 @@
         "color_background_icon": "",
         "color_body_text": "{{ settings.colors.primary }}",
         "background_color": "",
-        "margin-top": 0,
-        "margin-bottom": 100,
+        "margin-top": 40,
+        "margin-bottom": 64,
         "show_mobile_spacing": true,
         "margin-top-mobile": 0,
         "margin-bottom-mobile": 40
