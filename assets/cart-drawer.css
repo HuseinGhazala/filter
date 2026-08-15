@@ -1194,6 +1194,7 @@
   .cart-page .wt-cart__subtitle__tax {
     padding-top: calc(var(--gap, 8px) * 3);
     padding-bottom: calc(var(--gap, 8px) * 3);
+    width: 100%;
   }
   .cart-page .wt-cart__checkbox .form-checkbox {
     align-items: center;
