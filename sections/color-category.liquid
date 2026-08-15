@@ -300,7 +300,7 @@
                     {% assign skip_card_product_styles = false %}
                     {%- if collection.products.size > 0 -%}
                       {% assign lazy_load = false %}
-                      {%- for product in collection.products -%}
+                      {%- for product in collection.products limit: section.settings.products_to_show -%}
                         {% if lazy_load == false and forloop.index > max_columns_to_show %}
                           {% assign lazy_load = true %}
                         {% endif %}
@@ -666,6 +666,15 @@
     {
       "type": "header",
       "content": "Products"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 24,
+      "step": 1,
+      "default": 12,
+      "label": "Maximum products to show per collection"
     },
     {
       "type": "select",
