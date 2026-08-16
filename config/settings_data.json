@@ -87,7 +87,7 @@
     "product_limit_cross_sells": 6,
     "collection_cross_sells": "homepage-bestseller",
     "enable_free_shipping_bar": true,
-    "free_shipping_bar_amount": "10000",
+    "free_shipping_bar_amount": "0",
     "enable_discount_progress_bar": true,
     "discount_bar_text_color": "#151515",
     "discount_bar_bg_color": "#e3f2e6",
