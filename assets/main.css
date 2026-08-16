@@ -13993,6 +13993,6 @@ color: var(--color-custom-text, var(--color-headings-text));
   z-index: 21 !important;
 }
 .headline.scroll-trigger.animate--slide-in {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
+  padding-left: calc(calc(var(--gap, 8px) * 2) + calc(var(--gap, 8px) * 2)) !important;
+  padding-right: calc(calc(var(--gap, 8px) * 2) + calc(var(--gap, 8px) * 2)) !important;
 }
