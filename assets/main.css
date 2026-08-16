@@ -13996,3 +13996,7 @@ color: var(--color-custom-text, var(--color-headings-text));
   padding-left: calc(calc(var(--gap, 8px) * 2) + calc(var(--gap, 8px) * 2)) !important;
   padding-right: calc(calc(var(--gap, 8px) * 2) + calc(var(--gap, 8px) * 2)) !important;
 }
+
+.headline--rich h1, .headline--rich h2, .headline--rich h3, .headline--rich h4, .headline--rich h5, .headline--rich h6, .headline--rich p{
+text-align: start;
+}
