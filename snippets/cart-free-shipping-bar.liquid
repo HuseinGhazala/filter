@@ -24,7 +24,10 @@
     {% assign free_shipping_threshold = free_shipping_threshold | split: ':' | last | strip %}
   {% endif %}
 {% endif %}
-{% assign free_shipping_threshold = free_shipping_threshold | plus: 0 %}
+{% assign free_shipping_threshold = free_shipping_threshold | replace: ',', '' | replace: ' ', '' | plus: 0 %}
+{% if free_shipping_threshold < 200 %}
+  {% assign free_shipping_threshold = 1000 %}
+{% endif %}
 {% assign cart_value = cart.total_price | divided_by: 100.0 %}
 
 {% assign remaining_amount = free_shipping_threshold | minus: cart_value %}
