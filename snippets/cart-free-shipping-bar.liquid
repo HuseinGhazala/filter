@@ -19,6 +19,10 @@
 
 {% if currency_specific_threshold != '' %}
   {% assign free_shipping_threshold = currency_specific_threshold %}
+{% else %}
+  {% if free_shipping_threshold contains ':' %}
+    {% assign free_shipping_threshold = free_shipping_threshold | split: ':' | last | strip %}
+  {% endif %}
 {% endif %}
 {% assign free_shipping_threshold = free_shipping_threshold | plus: 0 %}
 {% assign cart_value = cart.total_price | divided_by: 100.0 %}
