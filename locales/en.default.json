@@ -278,10 +278,7 @@
     },
     "cart": {
       "cart": "Cart",
-     "btn_cart": "Proceed to complete payment",
-      "you_are_close": "You're close to free shipping!",
-      "free_shipping_progress_html": "Spend {{ amount }} more for FREE shipping!",
-      "free_shipping_success": "You have unlocked free shipping!"
+     "btn_cart": "Proceed to complete payment"
 
     },
     "contact": {
