@@ -14004,3 +14004,8 @@ text-align: start;
 html[dir="rtl"] .wt-header__icon.wt-header__menu-trigger.wt-icon {
     transform: scaleX(1);
 }
+
+.wt-lookbook__container .headline.scroll-trigger.animate--slide-in{
+padding-left: 0;
+    padding-right: 0;
+}
