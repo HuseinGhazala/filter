@@ -14000,3 +14000,7 @@ color: var(--color-custom-text, var(--color-headings-text));
 .headline--rich h1, .headline--rich h2, .headline--rich h3, .headline--rich h4, .headline--rich h5, .headline--rich h6, .headline--rich p{
 text-align: start;
 }
+
+html[dir="rtl"] .wt-header__icon.wt-header__menu-trigger.wt-icon {
+    transform: scaleX(1);
+}
