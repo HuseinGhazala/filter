@@ -348,7 +348,9 @@
           "type": "upsell",
           "settings": {
             "heading": "Complete your beauty ritual",
-            "product_upsell": [],
+            "product_upsell": [
+              "scrub-jacket-ssj14"
+            ],
             "show_vendor": false,
             "image-ratio": "portrait",
             "button_select": "primary"
