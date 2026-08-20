@@ -14046,7 +14046,7 @@ border-radius: 4px;
 
 .collection__grid[style*="--cols: 1"] .card__picture-container {
     aspect-ratio: 9 / 16 !important;
-    height: auto !important;
+    height: 499px !important;
 }
 .collection__grid[style*="--cols: 1"] .card__container {
     height: auto !important;
