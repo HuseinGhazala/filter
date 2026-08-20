@@ -7910,7 +7910,9 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
   height: 16px;
   fill: #ffffff;
 }
-
+.wt-product__thumbnail-video__icon svg path {
+  fill: #ffffff;
+}
 .wt-product__thumbnail-video__gallery-video-icon {
   position: absolute;
   bottom: 16px;
