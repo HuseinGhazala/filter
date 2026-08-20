@@ -14067,8 +14067,6 @@ border-radius: 4px;
     display: flex;
     flex-direction: column;
     gap: 16px;
-    padding: 16px 0;
-    border-top: 1px solid var(--color-border);
 }
 
 .wt-product__upsell__content--inline-variants .wt-product__upsell__top-area {
@@ -14076,6 +14074,7 @@ border-radius: 4px;
     justify-content: space-between;
     align-items: flex-start;
     gap: 16px;
+    width: 100%;
 }
 
 .wt-product__upsell__content--inline-variants .wt-product__upsell__info {
