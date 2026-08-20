@@ -1912,7 +1912,7 @@
                           <button type="submit" name="add" class="wt-product__upsell__submit-btn" {% if product.available == false %}disabled{% endif %}>
                             <span>
                               {%- if product.available -%}
-                                {{ 'aria-label.main-product-add' | t }} • {{ product.price | money }}
+                                {{ 'products.product.add_to_cart' | t }} • {{ product.price | money }}
                               {%- else -%}
                                 {{ 'products.product.sold_out' | t }}
                               {%- endif -%}
@@ -2488,7 +2488,7 @@
                                     <button type="submit" name="add" class="wt-product__upsell__submit-btn" {% if product.available == false %}disabled{% endif %}>
                                       <span>
                                         {%- if product.available -%}
-                                          {{ 'aria-label.main-product-add' | t }} • {{ product.price | money }}
+                                          {{ 'products.product.add_to_cart' | t }} • {{ product.price | money }}
                                         {%- else -%}
                                           {{ 'products.product.sold_out' | t }}
                                         {%- endif -%}
