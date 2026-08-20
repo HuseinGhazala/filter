@@ -7893,20 +7893,24 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
 }
 .wt-product__thumbnail-video__icon {
   position: absolute;
-  bottom: 4px;
-  right: 4px;
-  width: 16px;
-  height: 16px;
-  background-color: var(--color-background);
-  border-radius: var(--border-radius-button);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .wt-product__thumbnail-video__icon svg {
-  width: 8px;
-  height: 8px;
+  width: 16px;
+  height: 16px;
+  fill: #ffffff;
 }
+
 .wt-product__thumbnail-video__gallery-video-icon {
   position: absolute;
   bottom: 16px;
