@@ -14015,3 +14015,19 @@ html[dir="rtl"] .wt-header__icon.wt-header__menu-trigger.wt-icon {
 padding-left: 0;
     padding-right: 0;
 }
+
+@media (max-width: 768px) {
+  .wt-announcement__container {
+    padding: 5px 0;
+  }
+  .wt-announcement__text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 899px) {
+    [mobile-image-size=small] .wt-product__gallery [data-gallery] {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+}
