@@ -28,6 +28,9 @@
       "block_order": [
         "announcement_6D384w"
       ],
+      "custom_css": [
+        "@media (max-width: 768px) {.wt-announcement__container {padding: 5px 0; } .wt-announcement__text {font-size: 12px;}}"
+      ],
       "settings": {
         "marquee": false,
         "animation_speed": "150",
