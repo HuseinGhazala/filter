@@ -14047,10 +14047,14 @@ border-radius: 4px;
 .collection__grid.is-grid-1 .card__img,
 .collection__grid.is-grid-1 .card__video,
 .collection__grid.is-grid-1 .card__img--placeholder {
-    aspect-ratio: 16 / 9 !important;
+    aspect-ratio: 9 / 16 !important;
 }
 
 .collection__grid.is-grid-1 .card__picture-container,
 .collection__grid.is-grid-1 .card__container {
     height: auto !important;
+}
+
+.card__container .card__subtitle {
+    display: none;
 }
