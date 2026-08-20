@@ -7909,6 +7909,7 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
   width: 16px;
   height: 16px;
   fill: #ffffff;
+  color: #ffffff;
 }
 .wt-product__thumbnail-video__icon svg path {
   fill: #ffffff;
