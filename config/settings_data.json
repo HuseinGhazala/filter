@@ -156,7 +156,7 @@
         "type": "shopify://apps/smartsize/blocks/smartsize-sizechart-embed/465a43e0-6a1a-4d30-b82e-fe6118568705",
         "disabled": false,
         "settings": {
-          "button_label": "تفاصيل المقاس",
+          "button_label": "Size details",
           "button_style": "button",
           "button_icon": "hanger",
           "button_color": "#000000",
