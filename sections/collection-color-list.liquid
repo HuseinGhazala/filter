@@ -63,8 +63,8 @@
     {% endif %}
     
     .color-collection-card {
-      flex: 0 0 calc(28% - 8px);
-      min-width: 96px;
+      flex: 0 0 calc(40% - 10px);
+      min-width: 130px;
     }
   }
 
@@ -127,7 +127,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    /* object-fit: cover; */
+    object-fit: cover;
     transition: transform 0.5s ease;
   }
 
@@ -148,7 +148,7 @@
 {% schema %}
 {
   "name": "Color Collections",
-  "max_blocks": 7,
+  "max_blocks": 12,
   "settings": [
     {
       "type": "text",
@@ -227,6 +227,11 @@
     {
       "name": "Color Collections",
       "blocks": [
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" },
+        { "type": "collection_block" },
         { "type": "collection_block" },
         { "type": "collection_block" },
         { "type": "collection_block" },
