@@ -76,6 +76,9 @@
     },
     "scrubs_hero_wygU9m": {
       "type": "scrubs-hero",
+      "custom_css": [
+        ".scrubs-hero__title {font-size: 28px; line-height: 1.2; font-weight: 700; margin: 31px 0 12px; letter-spacing: -.02em;}"
+      ],
       "name": "Scrubs Hero Banner",
       "settings": {
         "heading": "Loose-fitting medical scrubs",
