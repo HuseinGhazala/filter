@@ -12,6 +12,18 @@
     "collection_color_list_97U3xP": {
       "type": "collection-color-list",
       "blocks": {
+        "collection_block_bc7Mwz": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "caribbean-blue"
+          }
+        },
+        "collection_block_9BLckD": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "grass-green"
+          }
+        },
         "collection_block_wdtcRQ": {
           "type": "collection_block",
           "settings": {
@@ -68,6 +80,8 @@
         }
       },
       "block_order": [
+        "collection_block_bc7Mwz",
+        "collection_block_9BLckD",
         "collection_block_wdtcRQ",
         "collection_block_cAt6M4",
         "collection_block_f9nXPz",
