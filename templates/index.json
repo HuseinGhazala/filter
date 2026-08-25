@@ -86,7 +86,7 @@
         "desktop_image": "shopify://shop_images/Hero-banner.jpg",
         "mobile_image": "shopify://shop_images/mop.png",
         "desktop_height": 780,
-        "mobile_height": 530,
+        "mobile_height": 580,
         "background_color": "#ede8e0",
         "text_color": "#1a2744",
         "button_bg_color": "#1a2744",
