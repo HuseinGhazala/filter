@@ -12,54 +12,6 @@
     "collection_color_list_97U3xP": {
       "type": "collection-color-list",
       "blocks": {
-        "collection_block_bc7Mwz": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "caribbean-blue"
-          }
-        },
-        "collection_block_9BLckD": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "grass-green"
-          }
-        },
-        "collection_block_wdtcRQ": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "mauve"
-          }
-        },
-        "collection_block_cAt6M4": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "white"
-          }
-        },
-        "collection_block_f9nXPz": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "olive-green"
-          }
-        },
-        "collection_block_gif7pa": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "gray"
-          }
-        },
-        "collection_block_LBqyRd": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "indigo-blue"
-          }
-        },
-        "collection_block_9VbbJA": {
-          "type": "collection_block",
-          "settings": {
-            "collection": "black"
-          }
-        },
         "collection_block_CkiAtt": {
           "type": "collection_block",
           "settings": {
@@ -72,25 +24,73 @@
             "collection": "light-blue"
           }
         },
+        "collection_block_wdtcRQ": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "mauve"
+          }
+        },
+        "collection_block_f9nXPz": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "olive-green"
+          }
+        },
+        "collection_block_9BLckD": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "grass-green"
+          }
+        },
+        "collection_block_bc7Mwz": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "caribbean-blue"
+          }
+        },
+        "collection_block_LBqyRd": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "indigo-blue"
+          }
+        },
         "collection_block_CamXB3": {
           "type": "collection_block",
           "settings": {
             "collection": "burgundy"
           }
+        },
+        "collection_block_9VbbJA": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "black"
+          }
+        },
+        "collection_block_gif7pa": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "gray"
+          }
+        },
+        "collection_block_cAt6M4": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "white"
+          }
         }
       },
       "block_order": [
-        "collection_block_bc7Mwz",
-        "collection_block_9BLckD",
-        "collection_block_wdtcRQ",
-        "collection_block_cAt6M4",
-        "collection_block_f9nXPz",
-        "collection_block_gif7pa",
-        "collection_block_LBqyRd",
-        "collection_block_9VbbJA",
         "collection_block_CkiAtt",
         "collection_block_rALKyh",
-        "collection_block_CamXB3"
+        "collection_block_wdtcRQ",
+        "collection_block_f9nXPz",
+        "collection_block_9BLckD",
+        "collection_block_bc7Mwz",
+        "collection_block_LBqyRd",
+        "collection_block_CamXB3",
+        "collection_block_9VbbJA",
+        "collection_block_gif7pa",
+        "collection_block_cAt6M4"
       ],
       "name": "Color Collections",
       "settings": {
