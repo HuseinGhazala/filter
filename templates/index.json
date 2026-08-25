@@ -12,6 +12,18 @@
     "collection_color_list_97U3xP": {
       "type": "collection-color-list",
       "blocks": {
+        "collection_block_wdtcRQ": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "mauve"
+          }
+        },
+        "collection_block_cAt6M4": {
+          "type": "collection_block",
+          "settings": {
+            "collection": "white"
+          }
+        },
         "collection_block_f9nXPz": {
           "type": "collection_block",
           "settings": {
@@ -56,6 +68,8 @@
         }
       },
       "block_order": [
+        "collection_block_wdtcRQ",
+        "collection_block_cAt6M4",
         "collection_block_f9nXPz",
         "collection_block_gif7pa",
         "collection_block_LBqyRd",
@@ -77,7 +91,7 @@
     "scrubs_hero_wygU9m": {
       "type": "scrubs-hero",
       "custom_css": [
-        ".scrubs-hero__title {font-size: 28px; line-height: 1.2; font-weight: 700; margin: 31px 0 12px; letter-spacing: -.02em;}"
+        ".scrubs-hero__title {font-size: 28px; line-height: 1.2; font-weight: 700; margin: 31px 0 12px; letter-spacing: -0.02em;}"
       ],
       "name": "Scrubs Hero Banner",
       "settings": {
