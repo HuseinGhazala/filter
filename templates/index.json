@@ -594,7 +594,7 @@
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "original_ratio": "fixed_height",
         "desktop_fixed_height": 680,
-        "mobile_fixed_height": 560,
+        "mobile_fixed_height": 500,
         "color-body-heading": "",
         "color-overlay": "",
         "color-overlay-opacity": 100,
