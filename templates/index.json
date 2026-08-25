@@ -621,7 +621,7 @@
         "mobile_video_hosted": "shopify://files/videos/SIZE 2.mp4",
         "autoplay": true,
         "video_controls": false,
-        "video_custom_play_controls": false,
+        "video_custom_play_controls": true,
         "video_custom_mute_controls": false,
         "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
         "mobile_video_url": "",
