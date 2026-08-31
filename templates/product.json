@@ -675,6 +675,7 @@
         "image_nRRCVH",
         "image_9hH3ei"
       ],
+      "disabled": true,
       "name": "Testimonial: Marquee",
       "settings": {
         "heading_richtext": "<p>All-Day Comfort. Trusted by Professionals.</p>",
@@ -878,10 +879,10 @@
         "judge_me_reviews_review_widget_xNFEGB": {
           "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
           "settings": {
-            "review_data": "sample_data",
+            "review_data": "real_data",
             "max_width": 1200,
             "show_shop_reviews": false,
-            "empty_state": "empty_widget"
+            "empty_state": "other_products_reviews"
           }
         }
       },
