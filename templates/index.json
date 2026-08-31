@@ -220,7 +220,7 @@
         "advanced_heading": false,
         "heading": "",
         "heading_richtext": "<h2>Features banner</h2>",
-        "size_heading_mobile": 50,
+        "size_heading_mobile": 140,
         "size_heading": 80,
         "icon_width_mobile": 52,
         "icon_width_desktop": 100,
@@ -244,8 +244,13 @@
         "collection_tab_6VKYig": {
           "type": "collection_tab",
           "settings": {
-            "collection": "all-scrubs",
-            "products": [],
+            "collection": "navy",
+            "products": [
+              "scrub-jacket-ssj14",
+              "scrub-set-12",
+              "scrub-jacket-ssj01",
+              "sst03-scrub-top"
+            ],
             "products_to_show": 5,
             "tab_label": "Best Sellers"
           }
@@ -254,7 +259,11 @@
           "type": "collection_tab",
           "settings": {
             "collection": "burgundy",
-            "products": [],
+            "products": [
+              "ssj03-scrub-jacket",
+              "white-scrub-jacket-ssj14",
+              "ssp03-scrub-pants"
+            ],
             "products_to_show": 8,
             "tab_label": "New Season"
           }
@@ -263,7 +272,10 @@
           "type": "collection_tab",
           "settings": {
             "collection": "جاكيتات",
-            "products": [],
+            "products": [
+              "scrub-set-12",
+              "scrub-jacket-ssj14"
+            ],
             "products_to_show": 8,
             "tab_label": "For Cozy Comfort"
           }
@@ -895,7 +907,7 @@
             "card_color": "",
             "stars_color": "#274085",
             "arrows_color": "{{ settings.colors.primary }}",
-            "arrows_background_color": "#FDFAF5"
+            "arrows_background_color": "#fdfaf5"
           }
         }
       },
@@ -950,7 +962,7 @@
             "corner_styling": "soft",
             "header_text_color": "#000000",
             "text_color": "#000000",
-            "card_color": "#F9F9F9",
+            "card_color": "#f9f9f9",
             "stars_color": "",
             "arrows_color": "#000000",
             "transition_speed": 5,
