@@ -573,6 +573,7 @@
         "image_enAA6b",
         "image_LVji7Q"
       ],
+      "disabled": true,
       "name": "Testimonial: Marquee",
       "settings": {
         "heading_richtext": "<p>What They Say About Scrubs & Stitches</p>",
