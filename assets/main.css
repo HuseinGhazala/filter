@@ -14064,6 +14064,12 @@ border-radius: 4px;
     font-weight: 500 !important;
 }
 
+@media (max-width: 899px) {
+    .wt-keys__title {
+        font-size: 12px !important;
+    }
+}
+
 html[dir="rtl"] .wt-benefits-product__icon-item-wrapper {
    flex-direction: row !important;
 }

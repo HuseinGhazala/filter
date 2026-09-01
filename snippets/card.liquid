@@ -242,6 +242,10 @@
 
       {% if rating and reviews %}
         {% render 'rating', reviews: reviews, text_alignment: text_alignment %}
+      {% elsif product.metafields.reviews.rating.value != blank %}
+        {% render 'rating', reviews: product.metafields.reviews, text_alignment: text_alignment %}
+      {% elsif card_product.metafields.reviews.rating.value != blank %}
+        {% render 'rating', reviews: card_product.metafields.reviews, text_alignment: text_alignment %}
       {% endif %}
     </div>
 
