@@ -14214,3 +14214,18 @@ html[dir="rtl"] .wt-product__upsell__content--inline-variants .wt-product__upsel
     height: 20px;
     margin-left: 8px;
 }
+
+.card__rating-custom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    margin-top: 8px;
+}
+.card__rating-custom svg {
+    width: 20px;
+    height: 20px;
+}

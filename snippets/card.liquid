@@ -223,6 +223,23 @@
         <p class="card__subtitle">{{ subtitle }}</p>
       {% endif %}
 
+      {%- liquid
+        assign card_rating_value = blank
+        if product.metafields.reviews.rating.value != blank
+          assign card_rating_value = product.metafields.reviews.rating.value.rating
+        elsif card_product.metafields.reviews.rating.value != blank
+          assign card_rating_value = card_product.metafields.reviews.rating.value.rating
+        endif
+      -%}
+      {% if card_rating_value != blank %}
+        <div class="card__rating-custom">
+          <span>{{ card_rating_value | round: 1 }}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFD700">
+            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/>
+          </svg>
+        </div>
+      {% endif %}
+
       <{{ title_tag }} class="card__title">
         <a href="{{ url }}" tabindex="-1" data-omit-tabindex>
           {% if title %}{{ title }}{% else %}{{ default_title | default: placeholder_title }}{% endif %}
@@ -240,13 +257,7 @@
         </div>
       {% endif %}
 
-      {% if rating and reviews %}
-        {% render 'rating', reviews: reviews, text_alignment: text_alignment %}
-      {% elsif product.metafields.reviews.rating.value != blank %}
-        {% render 'rating', reviews: product.metafields.reviews, text_alignment: text_alignment %}
-      {% elsif card_product.metafields.reviews.rating.value != blank %}
-        {% render 'rating', reviews: card_product.metafields.reviews, text_alignment: text_alignment %}
-      {% endif %}
+
     </div>
 
     {% if settings.enable_product_variations %}
