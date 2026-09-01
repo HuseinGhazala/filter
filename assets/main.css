@@ -781,6 +781,7 @@ color: var(--color-headings-text);
   line-height: var(--font-base-line-height, normal);
   /* margin-top: calc(var(--gap, 8px) * 2); */
   margin-bottom: 0;
+  margin-top: 0 !important;
   color: var(--color-custom-text);
   overflow-wrap: break-word; /* Ensures that the words can be broken at arbitrary points if necessary */
   hyphens: auto; /* Enables automatic hyphenation */
