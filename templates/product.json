@@ -25,6 +25,10 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "rating": {
+          "type": "rating",
+          "settings": {}
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -33,11 +37,6 @@
             "size_text": 180,
             "size_text_mobile": 160
           }
-        },
-        "rating": {
-          "type": "rating",
-          "disabled": true,
-          "settings": {}
         },
         "feature_tags_44iTGm": {
           "type": "feature_tags",
@@ -358,8 +357,8 @@
         }
       },
       "block_order": [
-        "title",
         "rating",
+        "title",
         "feature_tags_44iTGm",
         "price",
         "e23830b4-3ca6-452f-a7d1-cb245a3e9282",
