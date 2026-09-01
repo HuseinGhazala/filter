@@ -14058,6 +14058,19 @@ border-radius: 4px;
     height: 100% !important;
 }
 
+[data-section-id="template--27598094008637__features_banner_7zpBwP"] .wt-keys__title {
+    font-weight: 500 !important;
+}
+
+html[dir="rtl"] .wt-benefits-product__icon-item-wrapper {
+   flex-direction: row !important;
+}
+
+.hero__wrapper.wt-benefits-product {
+    background: #fdfaf5;
+    padding-bottom: 0 !important;
+}
+
 .card__container .card__subtitle {
     display: none;
 }
