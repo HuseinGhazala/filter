@@ -494,7 +494,7 @@
         "full-width-enabled": false,
         "desktop_image": "shopify://shop_images/3676c80941f6f9afa2d29bc9d7ae6a1873de57de.png",
         "section_height_mode": "fixed_height",
-        "desktop_section_height": 74,
+        "desktop_section_height": 50,
         "desktop_section_max_height": 920,
         "desktop_width": 60,
         "desktop_max_width": 680,
