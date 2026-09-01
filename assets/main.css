@@ -8089,8 +8089,17 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
 }
 .wt-product__price {
   line-height: normal;
-  margin-top: calc(var(--gap, 8px) * 1.5);
+  /* margin-top: calc(var(--gap, 8px) * 1.5); */
   color: var(--color-price);
+}
+@media (min-width: 900px) {
+    .wt-product__price__final, .wt-product__price__compare {
+        flex-direction: row-reverse !important;
+    }
+}
+.jdgm-rev-snippet-widget-v2__arrow{
+  width: 60px !important;
+  height: 47px !important;
 }
 .wt-product__price__final, .wt-product__price__compare {
   font-size: var(--font-price-size);
