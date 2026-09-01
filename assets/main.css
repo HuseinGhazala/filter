@@ -9455,6 +9455,7 @@ clip-path: unset;}
   margin-bottom: 0;
 }
 .wt-product__feature-icons__list {
+          flex-wrap: nowrap !important;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -9462,6 +9463,7 @@ clip-path: unset;}
 }
 @media (min-width: 900px) {
   .wt-product__feature-icons__list {
+            flex-wrap: nowrap !important;
     gap: var(--icons-container-gap-desktop, calc(var(--gap, 8px) * 2));
   }
 }
