@@ -14230,3 +14230,11 @@ html[dir="rtl"] .wt-product__upsell__content--inline-variants .wt-product__upsel
     width: 20px;
     height: 20px;
 }
+
+.product-price-and-rating .wt-rating {
+    color: #FFC107 !important;
+}
+.product-price-and-rating .wt-rating__stars {
+    color: #FFC107 !important;
+}
+
