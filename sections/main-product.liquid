@@ -651,21 +651,26 @@
       </div>
 
     {%- when 'price' -%}
-      <div
-        class="wt-product__price product-block--price no-js-hidden {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
-        data-block-id="{{ block.id }}"
-        id="price-{{ section.id }}"
-        role="status"
-        {{ block.shopify_attributes }}
-      >
-        {%- render 'price',
-          product: product,
-          use_variant: true,
-          show_badges: true,
-          price_class: 'price--large',
-          selling_plan_price: initial_sp_price,
-          selling_plan_compare_at_price: initial_sp_compare_at_price
-        -%}
+      <div class="product-price-and-rating" style="display: flex; align-items: center; justify-content: flex-start; gap: 16px; flex-direction: row-reverse;">
+        <div
+          class="wt-product__price product-block--price no-js-hidden {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+          data-block-id="{{ block.id }}"
+          id="price-{{ section.id }}"
+          role="status"
+          {{ block.shopify_attributes }}
+        >
+          {%- render 'price',
+            product: product,
+            use_variant: true,
+            show_badges: true,
+            price_class: 'price--large',
+            selling_plan_price: initial_sp_price,
+            selling_plan_compare_at_price: initial_sp_compare_at_price
+          -%}
+        </div>
+        {% if product.metafields.reviews.rating.value != blank %}
+          {% render 'rating', reviews: product.metafields.reviews, main_product: true %}
+        {% endif %}
       </div>
   {%- endcase -%}
 {%- endfor -%}
@@ -1314,21 +1319,26 @@
                 <h1 class="wt-product__name">{{ product.title }}</h1>
               </div>
             {%- when 'price' -%}
-              <div
-                class="wt-product__price no-js-hidden {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
-                data-block-id="{{ block.id }}"
-                id="price-{{ section.id }}"
-                role="status"
-                {{ block.shopify_attributes }}
-              >
-                {%- render 'price',
-                  product: product,
-                  use_variant: true,
-                  show_badges: true,
-                  price_class: 'price--large',
-                  selling_plan_price: initial_sp_price,
-                  selling_plan_compare_at_price: initial_sp_compare_at_price
-                -%}
+              <div class="product-price-and-rating" style="display: flex; align-items: center; justify-content: flex-start; gap: 16px; flex-direction: row-reverse;">
+                <div
+                  class="wt-product__price no-js-hidden {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+                  data-block-id="{{ block.id }}"
+                  id="price-{{ section.id }}"
+                  role="status"
+                  {{ block.shopify_attributes }}
+                >
+                  {%- render 'price',
+                    product: product,
+                    use_variant: true,
+                    show_badges: true,
+                    price_class: 'price--large',
+                    selling_plan_price: initial_sp_price,
+                    selling_plan_compare_at_price: initial_sp_compare_at_price
+                  -%}
+                </div>
+                {% if product.metafields.reviews.rating.value != blank %}
+                  {% render 'rating', reviews: product.metafields.reviews, main_product: true %}
+                {% endif %}
               </div>
               {%- if product.quantity_price_breaks_configured? -%}
                 <div class="volume-pricing-note {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
