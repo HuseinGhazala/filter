@@ -779,7 +779,7 @@ color: var(--color-headings-text);
   text-transform: var(--font-base-transform, none);
   letter-spacing: var(--font-base-letter-spacing, normal);
   line-height: var(--font-base-line-height, normal);
-  margin-top: calc(var(--gap, 8px) * 2);
+  /* margin-top: calc(var(--gap, 8px) * 2); */
   margin-bottom: 0;
   color: var(--color-custom-text);
   overflow-wrap: break-word; /* Ensures that the words can be broken at arbitrary points if necessary */
@@ -14218,7 +14218,8 @@ html[dir="rtl"] .wt-product__upsell__content--inline-variants .wt-product__upsel
 .card__rating-custom {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
     gap: 4px;
     font-size: 16px;
     font-weight: 500;
