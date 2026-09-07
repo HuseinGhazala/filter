@@ -848,6 +848,7 @@
         "image_GydWMi",
         "image_NKYAMk"
       ],
+      "disabled": true,
       "name": "t:sections.marquee_images.name",
       "settings": {
         "advanced_heading": false,
