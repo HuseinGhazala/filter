@@ -863,6 +863,7 @@
         "image_gHtwap",
         "image_mCAWTf"
       ],
+      "disabled": true,
       "name": "t:sections.marquee_images.name",
       "settings": {
         "advanced_heading": false,
