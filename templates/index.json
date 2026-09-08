@@ -399,65 +399,6 @@
         "margin-bottom-mobile": 40
       }
     },
-    "rich_text_jVraEH": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_qYiy73": {
-          "type": "heading",
-          "settings": {
-            "advanced_heading": false,
-            "heading": "Discover Everyday Comfort & Style",
-            "heading_richtext": "<h2>Your headline here</h2>",
-            "disable_on_mobile": false,
-            "size_heading": 200,
-            "size_heading_mobile": 100,
-            "heading_richtext_color": "",
-            "heading_richtext_gradient": ""
-          }
-        },
-        "text_jJKi98": {
-          "type": "text",
-          "settings": {
-            "text": "<p>We create premium scrubs with carefully selected fabrics and thoughtful details, delivering all-day comfort, confidence, and modest coverage in every shift.<br/></p>",
-            "text_style": "body",
-            "disable_on_mobile": false
-          }
-        },
-        "button_VdQpXd": {
-          "type": "button",
-          "settings": {
-            "button_select": "primary",
-            "button_label": "About Us",
-            "button_link": "shopify://pages/about-us",
-            "disable_on_mobile": false,
-            "second_button_select": "primary",
-            "second_button_label": "Button label",
-            "second_disable_on_mobile": false,
-            "second_button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_qYiy73",
-        "text_jJKi98",
-        "button_VdQpXd"
-      ],
-      "name": "t:sections.rich-text.presets.name",
-      "settings": {
-        "section_width": "regular",
-        "desktop_text_horizontal_position": "center",
-        "full-width-enabled": true,
-        "color-body-text": "",
-        "background_color": "",
-        "background_gradient": "",
-        "margin-top": 0,
-        "margin-bottom": 100,
-        "show_mobile_spacing": true,
-        "margin-top-mobile": 0,
-        "margin-bottom-mobile": 40,
-        "compact_size": false
-      }
-    },
     "main_banner_DWiP3x": {
       "type": "main_banner",
       "name": "Custom Hero Banner",
@@ -654,6 +595,65 @@
         "show_mobile_spacing": true,
         "margin-top-mobile": 0,
         "margin-bottom-mobile": 40
+      }
+    },
+    "rich_text_jVraEH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_qYiy73": {
+          "type": "heading",
+          "settings": {
+            "advanced_heading": false,
+            "heading": "Discover Everyday Comfort & Style",
+            "heading_richtext": "<h2>Your headline here</h2>",
+            "disable_on_mobile": false,
+            "size_heading": 200,
+            "size_heading_mobile": 100,
+            "heading_richtext_color": "",
+            "heading_richtext_gradient": ""
+          }
+        },
+        "text_jJKi98": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We create premium scrubs with carefully selected fabrics and thoughtful details, delivering all-day comfort, confidence, and modest coverage in every shift.<br/></p>",
+            "text_style": "body",
+            "disable_on_mobile": false
+          }
+        },
+        "button_VdQpXd": {
+          "type": "button",
+          "settings": {
+            "button_select": "primary",
+            "button_label": "About Us",
+            "button_link": "shopify://pages/about-us",
+            "disable_on_mobile": false,
+            "second_button_select": "primary",
+            "second_button_label": "Button label",
+            "second_disable_on_mobile": false,
+            "second_button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading_qYiy73",
+        "text_jJKi98",
+        "button_VdQpXd"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "section_width": "regular",
+        "desktop_text_horizontal_position": "center",
+        "full-width-enabled": true,
+        "color-body-text": "",
+        "background_color": "",
+        "background_gradient": "",
+        "margin-top": 0,
+        "margin-bottom": 100,
+        "show_mobile_spacing": true,
+        "margin-top-mobile": 0,
+        "margin-bottom-mobile": 40,
+        "compact_size": false
       }
     },
     "grid_view_mKkY8d": {
@@ -989,11 +989,11 @@
     "features_banner_7zpBwP",
     "featured_collections_tabs_AkkCQ3",
     "lookbook_aMkb9Q",
-    "rich_text_jVraEH",
     "main_banner_DWiP3x",
     "color_category_CfH83j",
     "testimonial_marquee_VHcPTa",
     "background_video_UHjiyi",
+    "rich_text_jVraEH",
     "grid_view_mKkY8d",
     "marquee_images_Bp3tmm",
     "17881878056d5b353c",
