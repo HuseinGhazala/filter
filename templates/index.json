@@ -480,7 +480,7 @@
         "heading_scale_mobile": 18,
         "sub_heading_scale_mobile": 14,
         "btn_text": "Explore Colors",
-        "btn_url": "shopify://products/scrub-set-12",
+        "btn_url": "shopify://pages/medical-scrub-color-guide",
         "text_alignment": "flex-end",
         "mobile_vertical_alignment": "flex-end",
         "padding_top": 0,
