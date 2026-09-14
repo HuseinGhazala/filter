@@ -3590,7 +3590,7 @@ body .wt-grid-box__container--full[data-swiper] .wt-grid-box__item {
   }
 }
 .wt-grid-box [data-swiper]:not(.swiper-initialized) .wt-grid-box__li {
-  flex-basis: 100%;
+  flex-basis: auto;
   width: 100%;
 }
 .wt-grid-box [data-swiper]:not(.swiper-initialized) .wt-grid-box__li div:not(.hero__button--gap) {
@@ -8101,6 +8101,220 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
 .jdgm-rev-snippet-widget-v2__arrow{
   width: 60px !important;
   height: 47px !important;
+}
+
+/* Homepage Judge.me cards carousel */
+.wt-apps__wrapper--with-heading .wt-apps__heading {
+  color: var(--color-headings-text);
+  font-family: var(--font-headline);
+  font-size: clamp(2.4rem, 2.5vw, 3.3rem);
+  font-style: var(--font-headline-style);
+  font-weight: var(--font-headline-weight);
+  letter-spacing: var(--font-headline-letter-spacing);
+  line-height: 1.25;
+  margin: 0 0 calc(var(--gap, 8px) * 3);
+  text-align: center;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel {
+  --card-color: #fdfaf5 !important;
+  --border-radius: 16px !important;
+  --width-xs: 320px !important;
+  --width-sm: 300px !important;
+  --width-md: 320px !important;
+  --width-lg: 350px !important;
+  --width-xl: 360px !important;
+  padding-block: 0;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-header {
+  display: none;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-content {
+  gap: 16px;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-videos-container {
+  gap: 16px;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-card {
+  background: #fdfaf5;
+  border-radius: 16px;
+  box-sizing: border-box;
+  flex-direction: column !important;
+  height: 326px !important;
+  min-height: 326px;
+  text-align: start;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-text {
+  align-content: start;
+  flex: 1 1 auto !important;
+  font-size: 1.65rem !important;
+  line-height: 1.6 !important;
+  min-height: 0;
+  padding: 26px 28px 0 !important;
+  text-align: right;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-text p {
+  line-height: inherit !important;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-rating-section {
+  align-items: flex-end;
+  direction: ltr;
+  flex: 0 0 auto !important;
+  flex-direction: column;
+  flex-wrap: wrap;
+  column-gap: 6px !important;
+  justify-content: flex-start;
+  row-gap: 4px !important;
+  margin-top: auto !important;
+  padding: 10px 28px 18px !important;
+  text-align: start;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-reviewer-info,
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-product-name {
+  text-align: start;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-rating-section .jdgm-reviewer-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-rating-section .jdgm-stars {
+  display: flex !important;
+  gap: 2px;
+  margin: 0;
+  order: -2;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-rating-section .jdgm-star {
+  font-size: 1.8rem;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-reviewer-info {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 8px;
+  justify-content: flex-start !important;
+  min-height: 42px;
+  order: -1;
+  width: auto !important;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-reviewer-info::before {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 28 28'%3E%3Ccircle cx='14' cy='14' r='14' fill='%23f1eee8'/%3E%3Cpath fill='%237b7973' d='M11.23 8a11.23 11.23 0 1 0 11.23 11.23A11.228 11.228 0 0 0 11.23 8Zm5.8 19.092a9.709 9.709 0 0 1-11.593 0v-.616a2.9 2.9 0 0 1 2.9-2.9h5.8a2.9 2.9 0 0 1 2.9 2.9Zm1.386-1.245a4.333 4.333 0 0 0-4.284-3.718h-5.8a4.333 4.333 0 0 0-4.284 3.718 9.781 9.781 0 1 1 14.364 0ZM11.23 13.072a3.985 3.985 0 1 0 3.985 3.985A3.985 3.985 0 0 0 11.23 13.072Zm0 6.521a2.536 2.536 0 1 1 2.536-2.536 2.538 2.538 0 0 1-2.536 2.536Z' transform='translate(2.738 -5.362)'/%3E%3C/svg%3E");
+  background-size: contain;
+  block-size: 42px;
+  content: '';
+  flex: 0 0 42px;
+  inline-size: 42px;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-product-name,
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-product-name a {
+  color: var(--color-body-text-light);
+  font-size: 1.3rem;
+  line-height: 1.35;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-product-name {
+  align-self: stretch;
+  flex: 0 0 auto;
+  margin-top: 0;
+  text-align: right;
+  width: auto !important;
+}
+
+.wt-apps__wrapper .jdgm-cards-carousel .jdgm-arrow {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+}
+
+/*
+  Judge.me repositions the prev/next arrows for RTL (next moves to the leading/left
+  edge, previous to the trailing/right edge) but does not mirror the arrow icons to
+  match their new position, so each one visually points away from the direction it
+  actually moves. Mirroring only the icon (not the button) fixes this without
+  touching Judge.me's own positioning/movement logic.
+*/
+[dir='rtl'] .wt-apps__wrapper .jdgm-cards-carousel .jdgm-arrow svg {
+  transform: scaleX(-1);
+}
+
+.wt-apps:has(.jdgm-all-reviews-text) .wt-apps__wrapper {
+  margin-top: calc(var(--gap, 8px) * -3);
+}
+
+.wt-apps:has(.jdgm-all-reviews-text) .jdgm-all-reviews-text a {
+  align-items: center;
+  color: var(--color-body-text-light);
+  justify-content: center;
+  text-align: center;
+}
+
+[dir='rtl'] .wt-apps__wrapper .jdgm-cards-carousel .jdgm-card,
+[dir='rtl'] .wt-apps__wrapper .jdgm-cards-carousel .jdgm-text,
+[dir='rtl'] .wt-apps__wrapper .jdgm-cards-carousel .jdgm-rating-section,
+[dir='rtl'] .wt-apps__wrapper .jdgm-cards-carousel .jdgm-reviewer-info {
+  text-align: start;
+}
+
+@media (max-width: 767px) {
+  .wt-apps__wrapper .jdgm-cards-carousel {
+    --width-xs: calc(100vw - 118px) !important;
+    --visible-cards: 1.3 !important;
+  }
+
+  .wt-apps__wrapper--with-heading .wt-apps__heading {
+    margin-bottom: calc(var(--gap, 8px) * 3);
+  }
+
+  .wt-apps__wrapper .jdgm-cards-carousel .jdgm-card {
+    height: 312px !important;
+    min-height: 312px;
+  }
+
+  .wt-apps__wrapper .jdgm-cards-carousel .jdgm-text {
+    padding: 22px 24px 0 !important;
+  }
+
+  .wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-rating-section {
+    padding: 10px 24px 18px !important;
+  }
+
+  .wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-rating-section {
+    column-gap: 6px !important;
+  }
+
+  .wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-reviewer-info {
+    gap: 6px;
+    min-height: 38px;
+  }
+
+  .wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-reviewer-info::before {
+    block-size: 38px;
+    flex-basis: 38px;
+    inline-size: 38px;
+  }
+
+  .wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-rating-section .jdgm-star {
+    font-size: 1.5rem;
+  }
+
+  .wt-apps__wrapper .jdgm-cards-carousel .jdgm-media-card .jdgm-rating-section .jdgm-reviewer-name {
+    font-size: 1.4rem;
+  }
 }
 .wt-product__price__final, .wt-product__price__compare {
   font-size: var(--font-price-size);
@@ -14078,6 +14292,10 @@ border-radius: 4px;
     .wt-keys__title {
         font-size: 12px !important;
     }
+
+    [data-section-id*="features_banner_7zpBwP"] .wt-keys__title {
+        font-size: 16px !important;
+    }
 }
 
 html[dir="rtl"] .wt-benefits-product__icon-item-wrapper {
@@ -14247,4 +14465,3 @@ html[dir="rtl"] .wt-product__upsell__content--inline-variants .wt-product__upsel
 .product-price-and-rating .wt-rating__stars {
     color: #FFC107 !important;
 }
-

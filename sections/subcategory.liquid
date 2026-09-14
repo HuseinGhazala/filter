@@ -13,11 +13,11 @@
 {%- unless is_color_collection -%}
 <div class="color-collections-section page-width wt-slider__container--featured" id="section-{{ section.id }}">
   <div class="section-header text-center">
-    {% if section.settings.title != blank %}
-      <h2 class="color-collections-title">{{ section.settings.title | escape }}</h2>
+    {% if collection.title != blank %}
+      <h2 class="color-collections-title">{{ collection.title | escape }}</h2>
     {% endif %}
-    {% if section.settings.sub_title != blank %}
-      <p class="color-collections-subtitle">{{ section.settings.sub_title | escape }}</p>
+    {% if collection.description != blank %}
+      <div class="color-collections-subtitle">{{ collection.description }}</div>
     {% endif %}
   </div>
 

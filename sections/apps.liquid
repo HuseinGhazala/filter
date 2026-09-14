@@ -1,6 +1,9 @@
 {{ 'section-apps.css' | asset_url | stylesheet_tag }}
 
-<div class="{% if section.settings.include_margins %}{% else %}wt-apps__wrapper--compact {% endif %} {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %} wt-apps__wrapper">
+<div class="{% if section.settings.include_margins %}{% else %}wt-apps__wrapper--compact {% endif %} {% if section.settings.heading != blank %}wt-apps__wrapper--with-heading {% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}{% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %} wt-apps__wrapper">
+  {% if section.settings.heading != blank %}
+    <h2 class="wt-apps__heading">{{ section.settings.heading | escape }}</h2>
+  {% endif %}
   {%- for block in section.blocks -%}
     {% render block %}
   {%- endfor -%}
@@ -17,6 +20,11 @@
       "id": "include_margins",
       "default": true,
       "label": "t:sections.apps.settings.include_margins.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
     }
   ],
   "blocks": [

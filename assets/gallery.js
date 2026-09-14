@@ -167,12 +167,37 @@ if (!customElements.get("gallery-section")) {
           ),
         };
 
-        this.elements.gallerySlides = Array.from(
-          this.elements.gallery.querySelectorAll("[data-swiper-slide]"),
-        ).map((e) => e.cloneNode(true));
-        this.elements.thumbsSlides = Array.from(
-          this.elements.thumbs.querySelectorAll("[data-swiper-slide]"),
-        ).map((e) => e.cloneNode(true));
+        // Phase 3: when Liquid only server-renders the initial color's slides (for
+        // performance), the complete/unfiltered slide set lives in a <template> so it
+        // never triggers image downloads until a slide is actually restored into the
+        // live DOM. That template is the canonical "all slides" source when present;
+        // otherwise fall back to whatever is live (pre-Phase-3 / no color option).
+        const allGallerySlidesTemplate = this.elements.gallery.querySelector(
+          "[data-all-slides-template]",
+        );
+        const allThumbsSlidesTemplate = this.elements.thumbs.querySelector(
+          "[data-all-slides-template]",
+        );
+
+        this.elements.gallerySlides = allGallerySlidesTemplate
+          ? Array.from(
+              allGallerySlidesTemplate.content.querySelectorAll(
+                "[data-swiper-slide]",
+              ),
+            ).map((e) => e.cloneNode(true))
+          : Array.from(
+              this.elements.gallery.querySelectorAll("[data-swiper-slide]"),
+            ).map((e) => e.cloneNode(true));
+
+        this.elements.thumbsSlides = allThumbsSlidesTemplate
+          ? Array.from(
+              allThumbsSlidesTemplate.content.querySelectorAll(
+                "[data-swiper-slide]",
+              ),
+            ).map((e) => e.cloneNode(true))
+          : Array.from(
+              this.elements.thumbs.querySelectorAll("[data-swiper-slide]"),
+            ).map((e) => e.cloneNode(true));
 
         const default_configuration = {
           sliderEnabledBreakpoint: 900,
@@ -560,6 +585,7 @@ if (!customElements.get("gallery-section")) {
         options,
         featured_media_id,
         matchAll = true,
+        allowedMediaIds = null,
       ) {
         const lowercaseOptions = options.map((option) =>
           option.toLowerCase().replace(/\s/g, ""),
@@ -571,8 +597,26 @@ if (!customElements.get("gallery-section")) {
           const alt = media ? media.getAttribute("alt") : "";
           const mediaId = media ? media.getAttribute("data-media-id") : "";
 
-          if (mediaId === featured_media_id) return true;
+          // Always keep whatever media is currently the active variant's own featured media.
+          if (
+            featured_media_id != null &&
+            mediaId &&
+            String(mediaId) === String(featured_media_id)
+          )
+            return true;
 
+          if (Array.isArray(allowedMediaIds)) {
+            // Native color -> media mapping (Phase 1/2): authoritative for image media.
+            // Video / external video / 3D model slides stay universal for every color
+            // until the store introduces an explicit per-color mapping for them.
+            const mediaType = slide.dataset?.mediaType;
+            if (mediaType && mediaType !== "image") return true;
+            if (!mediaId) return true;
+            return allowedMediaIds.some((id) => String(id) === String(mediaId));
+          }
+
+          // Legacy fallback: no color mapping detected for this product (e.g. no
+          // Color-like option). Unchanged alt-text hashtag matching.
           const altHashtags = (alt?.match(/#[^\s#]+/g) || []).map((hashtag) =>
             hashtag.slice(1).toLowerCase(),
           );
@@ -610,7 +654,13 @@ if (!customElements.get("gallery-section")) {
         document.dispatchEvent(galleryEvent);
       }
 
-      filterSlides(options, featured_media_id, matchAll = true, callback) {
+      filterSlides(
+        options,
+        featured_media_id,
+        matchAll = true,
+        callback,
+        allowedMediaIds = null,
+      ) {
         if (!this.elements) return;
         const originalGallerySlides = Array.from(
           this.elements.gallerySlides,
@@ -628,12 +678,14 @@ if (!customElements.get("gallery-section")) {
           options,
           featured_media_id,
           matchAll,
+          allowedMediaIds,
         );
         let filteredThumbsSlides = this.filterSlidesByOptions(
           originalThumbsSlides,
           options,
           featured_media_id,
           matchAll,
+          allowedMediaIds,
         );
 
         if (filteredGallerySlides.length === 0) {

@@ -210,9 +210,46 @@ if (!customElements.get("variant-options")) {
           media_id = this.currentVariant.featured_media.id;
         }
 
+        const allowedMediaIds = this.getAllowedMediaIdsForSelectedColor();
+
         try{
-          mediaGallery?.filterSlides(this.options, media_id, true);
+          mediaGallery?.filterSlides(
+            this.options,
+            media_id,
+            true,
+            undefined,
+            allowedMediaIds,
+          );
         } catch (error) {}
+      }
+
+      /**
+       * Resolves the native color -> media map (Phase 1) for the color value that is
+       * currently selected, using data-color-option-position (set server-side from the
+       * same detection heuristic as the swatch renderer) so the color option is never
+       * assumed to be option1. Returns null when this product has no detected color
+       * option or no mapping data, so callers fall back to legacy behavior.
+       */
+      getAllowedMediaIdsForSelectedColor() {
+        const colorPosition = parseInt(this.dataset.colorOptionPosition, 10);
+        if (!colorPosition || colorPosition < 1) return null;
+
+        const colorValue = this.options?.[colorPosition - 1];
+        if (!colorValue) return null;
+
+        if (this._variantMediaMap === undefined) {
+          const mapScript = this.querySelector("[data-variant-media-map]");
+          try {
+            this._variantMediaMap = mapScript
+              ? JSON.parse(mapScript.textContent)
+              : null;
+          } catch (error) {
+            this._variantMediaMap = null;
+          }
+        }
+
+        const ids = this._variantMediaMap ? this._variantMediaMap[colorValue] : null;
+        return Array.isArray(ids) ? ids : null;
       }
 
       updateDropdownButtons(){
