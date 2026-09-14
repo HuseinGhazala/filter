@@ -436,7 +436,9 @@
           "light-blue",
           "black",
           "burgundy",
-          "navy"
+          "navy",
+          "caribbean-blue",
+          "grass-green"
         ],
         "feature_image": "shopify://shop_images/04718991ffe450ed25dca905db5e6444fe219db5.png",
         "text_alignment": "left",
