@@ -433,12 +433,12 @@
       "name": "Product Categories",
       "settings": {
         "collection": [
+          "caribbean-blue",
           "light-blue",
-          "black",
+          "grass-green",
           "burgundy",
           "navy",
-          "caribbean-blue",
-          "grass-green"
+          "black"
         ],
         "feature_image": "shopify://shop_images/04718991ffe450ed25dca905db5e6444fe219db5.png",
         "text_alignment": "left",
@@ -920,22 +920,8 @@
         "judge_me_reviews_review_snippet_widget_GRcTRM"
       ],
       "settings": {
-        "include_margins": true
-      }
-    },
-    "1788188153d595c4a2": {
-      "type": "apps",
-      "blocks": {
-        "judge_me_reviews_all_reviews_text_aY9Ukr": {
-          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "judge_me_reviews_all_reviews_text_aY9Ukr"
-      ],
-      "settings": {
-        "include_margins": true
+        "include_margins": true,
+        "heading": ""
       }
     },
     "1788188250120994fd": {
@@ -983,6 +969,22 @@
       "settings": {
         "include_margins": true,
         "heading": "Reviews We're Proud Of"
+      }
+    },
+    "1788188153d595c4a2": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_all_reviews_text_aY9Ukr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/all_reviews_text/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_all_reviews_text_aY9Ukr"
+      ],
+      "settings": {
+        "include_margins": true,
+        "heading": ""
       }
     }
   },
