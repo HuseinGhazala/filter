@@ -136,6 +136,15 @@
   {% assign placeholder_image = null %}
 {% endif %}
 
+{%- assign banner_media = collection.metafields.custom.banner_image.value -%}
+{%- if banner_media != blank and banner_media.media_type == 'image' -%}
+  {%- assign banner_image = banner_media.preview_image -%}
+{%- else -%}
+  {%- assign banner_image = collection.image -%}
+{%- endif -%}
+
+{%- assign banner_subtitle = collection.metafields.custom.banner_subtitle.value | escape -%}
+
 {%- assign color_collection_handles = 'black,gray,indigo-blue,lavender,navy-blue,olive-green,sky-blue' | split: ',' -%}
 {%- assign hide_collection_banner = true -%}
 {%- if collection != blank and color_collection_handles contains collection.handle -%}
@@ -145,7 +154,7 @@
 {%- unless hide_collection_banner -%}
 <div
   data-section-id="{{ section.id }}"
-  class="{{ customwrapperclass }} {% if collection.image == blank and placeholder_image == null %}hero--hidden-placeholder{% endif %}"
+  class="{{ customwrapperclass }} {% if banner_image == blank and placeholder_image == null %}hero--hidden-placeholder{% endif %}"
   data-adapt="{% if section.settings.slide_height == 'adapt_to_first_image' %}image{% else %}fixed{% endif %}"
 >
   <div class="{% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
@@ -155,10 +164,11 @@
       desktop_text_horizontal_position: section.settings.desktop_text_horizontal_position,
       desktop_text_vertical_position: section.settings.desktop_text_vertical_position,
       mobile_text_horizontal_position: section.settings.mobile_text_horizontal_position,
-      desktop_image: collection.image,
-      mobile_image: collection.image,
+      desktop_image: banner_image,
+      mobile_image: banner_image,
       placeholder: placeholder_image,
       heading_h1: collection.title,
+      heading: banner_subtitle,
       text: collection.description,
       loader: true,
       show_collection_description: section.settings.show_collection_description

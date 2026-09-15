@@ -19,4 +19,13 @@
 .collection-banner .hero__wrapper--full[data-section-id] {
   padding-top: 0;
 }
+.collection-banner h2.hero__title {
+  font-size: max(1rem, calc(var(--font-base-size) * var(--font-subheading-scale, 1) - 2px));
+  margin-top: 4px;
+}
+@media (min-width: 1200px) {
+  .collection-banner h2.hero__title {
+    font-size: max(1rem, calc(var(--font-base-size) * var(--font-subheading-scale-desk, 1) - 2px));
+  }
+}
 /*# sourceMappingURL=collection-banner.css.map */
