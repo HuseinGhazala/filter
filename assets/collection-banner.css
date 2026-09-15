@@ -16,4 +16,7 @@
   width: 100%;
   position: absolute;
 }
+.collection-banner .hero__wrapper--full[data-section-id] {
+  padding-top: 0;
+}
 /*# sourceMappingURL=collection-banner.css.map */
