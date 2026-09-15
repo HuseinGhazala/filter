@@ -66,13 +66,13 @@
             "collection": "black"
           }
         },
-        "collection_block_gif7pa": {
+        "collection_block_cAt6M4": {
           "type": "collection_block",
           "settings": {
             "collection": "gray"
           }
         },
-        "collection_block_cAt6M4": {
+        "collection_block_bdWJXe": {
           "type": "collection_block",
           "settings": {
             "collection": "white"
@@ -89,8 +89,8 @@
         "collection_block_LBqyRd",
         "collection_block_CamXB3",
         "collection_block_9VbbJA",
-        "collection_block_gif7pa",
-        "collection_block_cAt6M4"
+        "collection_block_cAt6M4",
+        "collection_block_bdWJXe"
       ],
       "name": "Color Collections",
       "settings": {
