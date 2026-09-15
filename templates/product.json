@@ -408,7 +408,7 @@
         "full-width-enabled": false,
         "desktop-media-size": "normal",
         "desktop-layout": "carousel-vertical",
-        "desktop-image-ratio": "square",
+        "desktop-image-ratio": "original",
         "enable_video_looping": false,
         "video_controls": false,
         "video_custom_play_controls": false,
