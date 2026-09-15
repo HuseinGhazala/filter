@@ -8401,6 +8401,15 @@ input.disabled + .f-swatch__list__link .f-swatch__list__link__content {
 .wt-select .wt-product__option__title:has(.form-checkbox) {
   margin-top: calc(var(--gap, 8px) * 1);
 }
+.wt-product__option .wt-product__option__group-heading {
+  width: 100%;
+  font-size: calc(var(--font-base-size) - 2px);
+  color: var(--color-text-secondary, var(--color-text));
+  margin: calc(var(--gap, 8px) * 1) 0 calc(var(--gap, 8px) * 0.5);
+}
+.wt-product__option .wt-product__option__group-heading:first-child {
+  margin-top: 0;
+}
 .wt-product__option .f-swatch__list__item {
   max-width: 40%;
   width: auto;

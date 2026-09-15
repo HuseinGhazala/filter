@@ -514,6 +514,63 @@
   {% assign enabled_preselect = true %}
 {% endif %}
 
+{%- comment -%}
+  Phase 3 (variant gallery): detect the color option's position using the same
+  heuristic as the swatch renderer / Phase 1-2 mapping (computed once, here, so the
+  gallery markup below and the <variant-options> tag further down both reuse this
+  single value instead of re-detecting it).
+{%- endcomment -%}
+{%- assign variant_picker_block = section.blocks | where: 'type', 'variant_picker' | first -%}
+{%- assign color_swatch_names = settings.color_swatch_names
+  | downcase
+  | newline_to_br
+  | strip_newlines
+  | split: '<br />'
+  | uniq
+-%}
+{%- if variant_picker_block.settings.color_swatch_names != blank -%}
+  {%- assign color_swatch_names = variant_picker_block.settings.color_swatch_names
+    | downcase
+    | newline_to_br
+    | strip_newlines
+    | split: '<br />'
+    | uniq
+  -%}
+{%- endif -%}
+{%- assign color_option_position = 0 -%}
+{%- for vm_option in product.options_with_values -%}
+  {%- assign vm_option_name_downcase = vm_option.name | downcase -%}
+  {%- if color_swatch_names contains vm_option_name_downcase or vm_option_name_downcase == 'color' or vm_option_name_downcase == 'colour' or vm_option_name_downcase == 'اللون' or vm_option_name_downcase == 'لون' -%}
+    {%- assign color_option_position = vm_option.position -%}
+    {%- break -%}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- comment -%}
+  Phase 3: resolve the initial selected variant's color value and its mapped image
+  media ids, so the gallery/thumbnails render only that color's images on first paint.
+  initial_allowed_media_ids stays blank (falls back to rendering everything, exactly
+  as before Phase 3) when there's no detected color option or no selected_variant.
+{%- endcomment -%}
+{%- assign initial_allowed_media_ids = '' -%}
+{%- if color_option_position > 0 and selected_variant != null -%}
+  {%- assign color_option_index = color_option_position | minus: 1 -%}
+  {%- assign initial_color_value = selected_variant.options[color_option_index] -%}
+  {%- assign initial_media_ids_str = '|' -%}
+  {%- for variant in product.variants -%}
+    {%- assign variant_color_value = variant.options[color_option_index] -%}
+    {%- if variant_color_value == initial_color_value and variant.featured_media != null -%}
+      {%- assign initial_media_needle = '|' | append: variant.featured_media.id | append: '|' -%}
+      {%- unless initial_media_ids_str contains initial_media_needle -%}
+        {%- assign initial_media_ids_str = initial_media_ids_str | append: variant.featured_media.id | append: '|' -%}
+      {%- endunless -%}
+    {%- endif -%}
+  {%- endfor -%}
+  {%- if initial_media_ids_str != '|' -%}
+    {%- assign initial_allowed_media_ids = initial_media_ids_str -%}
+  {%- endif -%}
+{%- endif -%}
+
 {% assign is_even = product.media.size | modulo: 2 %}
 {% if is_even == 0 %}
   {% assign even_or_odd_class = 'odd' %}
@@ -787,12 +844,14 @@
           class="{% if desktop_layout == 'masonry' %}swiper-wrapper--masonry{% elsif desktop_layout == 'fashion' %}swiper-wrapper--masonry{% else %}swiper-wrapper{% endif %}"
           desktop-layout="{{ desktop_layout }}"
         >
+          {%- assign hoisted_gallery_slide = '' -%}
           {%- if selected_variant.featured_media != null -%}
             {%- assign featured_media = selected_variant.featured_media -%}
-
+            {%- capture hoisted_gallery_slide -%}
             <li
               data-swiper-slide
               data-media-id="{{ featured_media.id }}"
+              data-media-type="{{ featured_media.media_type }}"
               class="swiper-slide"
               style="--slide-ratio: {{ featured_media.preview_image.aspect_ratio }}"
             >
@@ -828,12 +887,23 @@
                 {% if section.settings['enable-image-zoom'] %}</a>{% endif %}
               {%- endif -%}
             </li>
+            {%- endcapture -%}
           {%- endif -%}
+          {%- comment -%}
+            Phase 3: capture every slide's markup once, emit it into the live (filtered)
+            list when it belongs to the initial color or is universal non-image media,
+            and always into all_gallery_slides (the complete backing set consumed by
+            gallery.js for later color switches, via a non-rendered <template>).
+          {%- endcomment -%}
+          {%- assign live_gallery_slides = '' -%}
+          {%- assign all_gallery_slides = '' -%}
           {% for media in product.media %}
             {%- unless media.id == selected_variant.featured_media.id -%}
+              {%- capture this_gallery_slide -%}
               <li
                 data-swiper-slide
                 data-media-id="{{ media.id }}"
+                data-media-type="{{ media.media_type }}"
                 data-model="{% if media.media_type == 'model' %}true{% endif %}"
                 class="swiper-slide"
                 id="image-{{ forloop.index }}"
@@ -1104,9 +1174,28 @@
                   </model-element>
                 {% endif %}
               </li>
+              {%- endcapture -%}
+              {%- assign all_gallery_slides = all_gallery_slides | append: this_gallery_slide -%}
+              {%- assign media_is_universal_gallery = true -%}
+              {%- if media.media_type == 'image' -%}
+                {%- assign media_is_universal_gallery = false -%}
+              {%- endif -%}
+              {%- assign media_in_initial_color = false -%}
+              {%- if initial_allowed_media_ids != '' -%}
+                {%- assign initial_media_check_needle = '|' | append: media.id | append: '|' -%}
+                {%- if initial_allowed_media_ids contains initial_media_check_needle -%}
+                  {%- assign media_in_initial_color = true -%}
+                {%- endif -%}
+              {%- endif -%}
+              {%- if initial_allowed_media_ids == '' or media_is_universal_gallery or media_in_initial_color -%}
+                {%- assign live_gallery_slides = live_gallery_slides | append: this_gallery_slide -%}
+              {%- endif -%}
             {%- endunless -%}
           {% endfor %}
+          {{ hoisted_gallery_slide }}{{ live_gallery_slides }}
         </ul>
+
+        <template data-all-slides-template>{{ hoisted_gallery_slide }}{{ all_gallery_slides }}</template>
 
         {% if product.media.size > 1 %}
           <div class="swiper-button-next wt-slider__nav-btn wt-slider__nav-next wt-slider__nav-next--basic">
@@ -1143,6 +1232,7 @@
 
       <div data-thumbs {% if show_thumbs_on_mobile %}data-thumbs-mobile{% endif %}>
         <ul data-swiper-container class="thumbs-list" aria-live="polite">
+          {%- assign hoisted_thumb_slide = '' -%}
           {%- if selected_variant.featured_media != null -%}
             {%- assign featured_media = selected_variant.featured_media -%}
 
@@ -1155,10 +1245,12 @@
               endif
             %}
 
+            {%- capture hoisted_thumb_slide -%}
             <li
               data-swiper-slide
               class="thumbs-list-item"
               data-slide-media-id="{{ featured_media.id }}"
+              data-media-type="{{ featured_media.media_type }}"
               style="--thumb-ratio: {{ thumb_ratio }};"
               tabindex="-1"
             >
@@ -1173,7 +1265,7 @@
                   loading="lazy"
                   width="300"
                   height="{{ 300 | divided_by: featured_media.preview_image.aspect_ratio | ceil }}"
-                  data-media-id="{{ media.id }}"
+                  data-media-id="{{ featured_media.id }}"
                   class="wt-product__img"
                 >
                 {% if featured_media.media_type == 'video' or featured_media.media_type == 'external_video' %}
@@ -1181,8 +1273,15 @@
                 {% endif %}
               </div>
             </li>
+            {%- endcapture -%}
           {%- endif -%}
 
+          {%- comment -%}
+            Phase 3: same capture-once, emit-live-and-complete pattern as the main
+            gallery loop above.
+          {%- endcomment -%}
+          {%- assign live_thumb_slides = '' -%}
+          {%- assign all_thumb_slides = '' -%}
           {% for media in product.media %}
             {%- unless media.id == selected_variant.featured_media.id -%}
               {%- liquid
@@ -1194,10 +1293,12 @@
                 endif
               %}
 
+              {%- capture this_thumb_slide -%}
               <li
                 data-swiper-slide
                 class="thumbs-list-item"
                 data-slide-media-id="{{ media.id }}"
+                data-media-type="{{ media.media_type }}"
                 style="--thumb-ratio: {{ thumb_ratio }};"
                 tabindex="-1"
               >
@@ -1220,11 +1321,30 @@
                   {% endif %}
                 </div>
               </li>
+              {%- endcapture -%}
+              {%- assign all_thumb_slides = all_thumb_slides | append: this_thumb_slide -%}
+              {%- assign media_is_universal_thumb = true -%}
+              {%- if media.media_type == 'image' -%}
+                {%- assign media_is_universal_thumb = false -%}
+              {%- endif -%}
+              {%- assign media_in_initial_color_thumb = false -%}
+              {%- if initial_allowed_media_ids != '' -%}
+                {%- assign initial_thumb_check_needle = '|' | append: media.id | append: '|' -%}
+                {%- if initial_allowed_media_ids contains initial_thumb_check_needle -%}
+                  {%- assign media_in_initial_color_thumb = true -%}
+                {%- endif -%}
+              {%- endif -%}
+              {%- if initial_allowed_media_ids == '' or media_is_universal_thumb or media_in_initial_color_thumb -%}
+                {%- assign live_thumb_slides = live_thumb_slides | append: this_thumb_slide -%}
+              {%- endif -%}
 
               {% assign thumbCounter = thumbCounter | plus: 1 %}
             {%- endunless -%}
           {% endfor %}
+          {{ hoisted_thumb_slide }}{{ live_thumb_slides }}
         </ul>
+
+        <template data-all-slides-template>{{ hoisted_thumb_slide }}{{ all_thumb_slides }}</template>
 
         <div class="swiper-button-next wt-slider__nav-btn wt-slider__nav-next wt-slider__nav-next--basic">
           {% render 'icons', id: 'arrow-right' %}
@@ -1443,6 +1563,72 @@
                 </div>
               </div>
             {% endif %}
+            {%- when 'specifications' -%}
+              {%- assign specifications_content = product.metafields.custom.specifications.value -%}
+              {% if specifications_content != blank or request.design_mode %}
+              <collapsible-section
+                class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+                data-toggle-tabindex="button, [href], input, select"
+                not-quick-add
+                data-block-id="{{ block.id }}"
+              >
+                <div
+                  role="button"
+                  tabindex="0"
+                  class="wt-collapse__trigger{% if block.settings.is_open %} wt-collapse__trigger--active{% endif %}"
+                  {% if block.settings.is_open %}
+                    data-open="true"
+                  {% endif %}
+                  aria-expanded="{% if block.settings.is_open %}true{% else %}false{% endif %}"
+                  aria-controls="Specifications-{{ block.id }}"
+                >
+                  <div class="wt-collapse__trigger__text">
+                    <div class="wt-collapse__trigger__title">{{ block.settings.heading }}</div>
+                  </div>
+                  <div class="wt-icon" aria-hidden="true">
+                    {% render 'icons', id: 'plus' %}
+                  </div>
+                </div>
+                <div class="wt-collapse__target" id="Specifications-{{ block.id }}">
+                  <div class="wt-collapse__target--text rte">
+                    {{ product.metafields.custom.specifications | metafield_tag }}
+                  </div>
+                </div>
+              </collapsible-section>
+              {% endif %}
+            {%- when 'fabric_features' -%}
+              {%- assign fabric_features_content = product.metafields.custom.fabric_features.value -%}
+              {% if fabric_features_content != blank or request.design_mode %}
+              <collapsible-section
+                class="wt-collapse wt-collapse--always {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
+                data-toggle-tabindex="button, [href], input, select"
+                not-quick-add
+                data-block-id="{{ block.id }}"
+              >
+                <div
+                  role="button"
+                  tabindex="0"
+                  class="wt-collapse__trigger{% if block.settings.is_open %} wt-collapse__trigger--active{% endif %}"
+                  {% if block.settings.is_open %}
+                    data-open="true"
+                  {% endif %}
+                  aria-expanded="{% if block.settings.is_open %}true{% else %}false{% endif %}"
+                  aria-controls="FabricFeatures-{{ block.id }}"
+                >
+                  <div class="wt-collapse__trigger__text">
+                    <div class="wt-collapse__trigger__title">{{ block.settings.heading }}</div>
+                  </div>
+                  <div class="wt-icon" aria-hidden="true">
+                    {% render 'icons', id: 'plus' %}
+                  </div>
+                </div>
+                <div class="wt-collapse__target" id="FabricFeatures-{{ block.id }}">
+                  <div class="wt-collapse__target--text rte">
+                    {{ product.metafields.custom.fabric_features | metafield_tag }}
+                  </div>
+                </div>
+              </collapsible-section>
+              {% endif %}
             {%- when 'sku' -%}
               <p
                 class="wt-product__sku  {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
@@ -2006,6 +2192,11 @@
                   {% endif %}
 
 {%- unless product.has_only_default_variant -%}
+                    {%- comment -%}
+                      color_option_position is detected once, near the top of this file
+                      (Phase 3), and reused here so the gallery markup and this tag never
+                      disagree about which option is the color option.
+                    {%- endcomment -%}
                     <variant-options
                       class="no-js-hidden wt-variant-options"
                       data-section="{{ section.id }}"
@@ -2016,6 +2207,9 @@
                       {% endunless %}
                       {% if product.variants_count > 250 %}
                         data-high-variants-product
+                      {% endif %}
+                      {% if color_option_position > 0 %}
+                        data-color-option-position="{{ color_option_position }}"
                       {% endif %}
                       {% if block.settings.hide_unavailable_options %}data-hide-unavailable-options{% endif %}
                       {{ block.shopify_attributes }}
@@ -2102,6 +2296,176 @@
                             <div class="{% if options_body_class == 'drawer' %}drawer__content{% else %}swiper-container{% endif %}">
                               <fieldset class="js product-form__input" aria-labelledby="{{ option.name }}-option-label">
                               <legend class="js product-form__input-title hidden">{{ option.name }}</legend>
+                                {%- if picker_type == 'color_swatch' -%}
+                                  {%- comment -%}
+                                    Color grouping: split values into "Official Colors" (Sky Blue,
+                                    Navy Blue, Grass Green - matched by EN or AR name, since Shopify
+                                    translates option values per-locale) and "Seasonal Colors" (every
+                                    other value). Same native radio inputs, just rendered via two
+                                    passes over option.values into two visually-headed <ul> groups
+                                    within the same fieldset/radiogroup. (A shared {% capture %} for
+                                    the <li> markup hit a known theme-check LiquidHTML parser false
+                                    positive - Shopify/theme-check#757 - so each pass renders its own
+                                    copy of the same <li> markup directly instead.)
+                                  {%- endcomment -%}
+                                  {%- assign official_color_values = 'sky blue,navy blue,grass green,سماوي,كحلي,أخضر عشبي' | split: ',' -%}
+                                  {%- assign has_official_color = false -%}
+                                  {%- assign has_seasonal_color = false -%}
+                                  {%- for value in option.values -%}
+                                    {%- assign value_downcase = value.name | downcase | strip -%}
+                                    {%- if official_color_values contains value_downcase -%}
+                                      {%- assign has_official_color = true -%}
+                                    {%- else -%}
+                                      {%- assign has_seasonal_color = true -%}
+                                    {%- endif -%}
+                                  {%- endfor -%}
+                                  {%- comment -%}
+                                    locales/ar.json is already at Shopify's translation-key limit for
+                                    this store, so these two labels can't be added as proper locale
+                                    keys (locales/en.default.json is kept key-for-key in sync with
+                                    locales/ar.json in this theme, so adding an EN-only key isn't safe
+                                    either). Branch on request.locale directly instead, matching the
+                                    pattern already used elsewhere in this theme for the same reason
+                                    (see snippets/card.liquid, snippets/price.liquid).
+                                  {%- endcomment -%}
+                                  {%- if request.locale.iso_code contains 'ar' -%}
+                                    {%- assign official_colors_heading = 'الألوان الرسمية' -%}
+                                    {%- assign seasonal_colors_heading = 'الألوان الموسمية' -%}
+                                  {%- else -%}
+                                    {%- assign official_colors_heading = 'Official Colors' -%}
+                                    {%- assign seasonal_colors_heading = 'Seasonal Colors' -%}
+                                  {%- endif -%}
+
+                                  {%- if has_official_color -%}
+                                    <div class="wt-product__option__group-heading">{{ official_colors_heading }}</div>
+                                    <ul class="{{ options_container_class }}__list {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
+                                      {%- for value in option.values -%}
+                                        {%- assign value_downcase = value.name | downcase | strip -%}
+                                        {%- unless official_color_values contains value_downcase -%}
+                                          {%- continue -%}
+                                        {%- endunless -%}
+                                        {%- comment -%} Hide only when option value does not exist in any variant (ignore stock); value.available is true only when in-stock, so we must compute from product.variants {%- endcomment -%}
+                                        {%- assign value_exists = true -%}
+                                        {%- if block.settings.hide_unavailable_options and option.position > 1 and selected_variant -%}
+                                          {%- assign value_exists = false -%}
+                                          {%- for v in product.variants -%}
+                                            {%- if option.position == 2 -%}
+                                              {%- if v.option1 == selected_variant.option1 and v.option2 == value.name -%}
+                                                {%- assign value_exists = true -%}
+                                                {%- break -%}
+                                              {%- endif -%}
+                                            {%- elsif option.position == 3 -%}
+                                              {%- if v.option1 == selected_variant.option1 and v.option2 == selected_variant.option2 and v.option3 == value.name -%}
+                                                {%- assign value_exists = true -%}
+                                                {%- break -%}
+                                              {%- endif -%}
+                                            {%- endif -%}
+                                          {%- endfor -%}
+                                        {%- endif -%}
+                                        {%- assign swatches_config = settings.swatches_config
+                                          | newline_to_br
+                                          | split: '<br />'
+                                        -%}
+                                        <li
+                                          class="{{ options_container_class }}__list__item{% if block.settings.hide_unavailable_options and option.position > 1 and value_exists == false %} wt-variant-option--hidden{% endif %}"
+                                        >
+                                          <input
+                                            type="radio"
+                                            tabindex="-1"
+                                            id="{{ section.id }}-{{ option.position }}-{{ value.id }}"
+                                            name="{{ option.name }}"
+                                            value="{{ value | escape }}"
+                                            form="{{ product_form_id }}"
+                                            data-position="{{ option.position }}"
+                                            data-value-id="{{ value.id }}"
+                                            {% if selected_variant and option.selected_value == value %}
+                                              checked
+                                            {% endif %}
+                                            {% comment %} Shopify's option-value availability: disable if this value is unavailable in any variant (top-down model). Applied for all products for consistent behavior. {% endcomment %}
+                                            {% if value.available == false %}
+                                              class="disabled"
+                                            {% endif %}
+                                          >
+                                          <label
+                                            tabindex="0"
+                                            class="{{ options_container_class }}__list__link  {% if settings.enable_round_color_swatches %} rounded {% endif %}{% if block.settings.radius == 'custom' %} custom-radius{% endif %}"
+                                            for="{{ section.id }}-{{ option.position }}-{{ value.id }}"
+                                          >
+                                            <div
+                                              class="{{ options_container_class }}__list__link__content {% if settings.enable_round_color_swatches %} rounded {% endif %}{% if block.settings.radius == 'custom' %} custom-radius{% endif %}"
+                                              style="{% render 'color-swatch-style', swatches_config: swatches_config, value: value %}"
+                                            ></div>
+                                          </label>
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  {%- endif -%}
+
+                                  {%- if has_seasonal_color -%}
+                                    <div class="wt-product__option__group-heading">{{ seasonal_colors_heading }}</div>
+                                    <ul class="{{ options_container_class }}__list {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
+                                      {%- for value in option.values -%}
+                                        {%- assign value_downcase = value.name | downcase | strip -%}
+                                        {%- if official_color_values contains value_downcase -%}
+                                          {%- continue -%}
+                                        {%- endif -%}
+                                        {%- comment -%} Hide only when option value does not exist in any variant (ignore stock); value.available is true only when in-stock, so we must compute from product.variants {%- endcomment -%}
+                                        {%- assign value_exists = true -%}
+                                        {%- if block.settings.hide_unavailable_options and option.position > 1 and selected_variant -%}
+                                          {%- assign value_exists = false -%}
+                                          {%- for v in product.variants -%}
+                                            {%- if option.position == 2 -%}
+                                              {%- if v.option1 == selected_variant.option1 and v.option2 == value.name -%}
+                                                {%- assign value_exists = true -%}
+                                                {%- break -%}
+                                              {%- endif -%}
+                                            {%- elsif option.position == 3 -%}
+                                              {%- if v.option1 == selected_variant.option1 and v.option2 == selected_variant.option2 and v.option3 == value.name -%}
+                                                {%- assign value_exists = true -%}
+                                                {%- break -%}
+                                              {%- endif -%}
+                                            {%- endif -%}
+                                          {%- endfor -%}
+                                        {%- endif -%}
+                                        {%- assign swatches_config = settings.swatches_config
+                                          | newline_to_br
+                                          | split: '<br />'
+                                        -%}
+                                        <li
+                                          class="{{ options_container_class }}__list__item{% if block.settings.hide_unavailable_options and option.position > 1 and value_exists == false %} wt-variant-option--hidden{% endif %}"
+                                        >
+                                          <input
+                                            type="radio"
+                                            tabindex="-1"
+                                            id="{{ section.id }}-{{ option.position }}-{{ value.id }}"
+                                            name="{{ option.name }}"
+                                            value="{{ value | escape }}"
+                                            form="{{ product_form_id }}"
+                                            data-position="{{ option.position }}"
+                                            data-value-id="{{ value.id }}"
+                                            {% if selected_variant and option.selected_value == value %}
+                                              checked
+                                            {% endif %}
+                                            {% comment %} Shopify's option-value availability: disable if this value is unavailable in any variant (top-down model). Applied for all products for consistent behavior. {% endcomment %}
+                                            {% if value.available == false %}
+                                              class="disabled"
+                                            {% endif %}
+                                          >
+                                          <label
+                                            tabindex="0"
+                                            class="{{ options_container_class }}__list__link  {% if settings.enable_round_color_swatches %} rounded {% endif %}{% if block.settings.radius == 'custom' %} custom-radius{% endif %}"
+                                            for="{{ section.id }}-{{ option.position }}-{{ value.id }}"
+                                          >
+                                            <div
+                                              class="{{ options_container_class }}__list__link__content {% if settings.enable_round_color_swatches %} rounded {% endif %}{% if block.settings.radius == 'custom' %} custom-radius{% endif %}"
+                                              style="{% render 'color-swatch-style', swatches_config: swatches_config, value: value %}"
+                                            ></div>
+                                          </label>
+                                        </li>
+                                      {%- endfor -%}
+                                    </ul>
+                                  {%- endif -%}
+                                {%- else -%}
                                 <ul class="{{ options_container_class }}__list{% if picker_type == 'button' and block.settings.unavailable_style == 'diagonal_cross' %} {{ options_container_class }}__list--unavailable-diagonal{% endif %} {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
                                   {%- for value in option.values -%}
                                     {%- comment -%} Hide only when option value does not exist in any variant (ignore stock); value.available is true only when in-stock, so we must compute from product.variants {%- endcomment -%}
@@ -2171,25 +2535,11 @@
                                               swatch_search_color: value
                                             %}
                                           </label>
-                                        {%- when 'color_swatch' -%}
-                                          {%- assign swatches_config = settings.swatches_config
-                                            | newline_to_br
-                                            | split: '<br />'
-                                          -%}
-                                          <label
-                                            tabindex="0"
-                                            class="{{ options_container_class }}__list__link  {% if settings.enable_round_color_swatches %} rounded {% endif %}{% if block.settings.radius == 'custom' %} custom-radius{% endif %}"
-                                            for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}"
-                                          >
-                                            <div
-                                              class="{{ options_container_class }}__list__link__content {% if settings.enable_round_color_swatches %} rounded {% endif %}{% if block.settings.radius == 'custom' %} custom-radius{% endif %}"
-                                              style="{% render 'color-swatch-style', swatches_config: swatches_config, value: value %}"
-                                            ></div>
-                                          </label>
                                       {% endcase %}
                                     </li>
                                   {%- endfor -%}
                                 </ul>
+                                {%- endif -%}
                               </fieldset>
                             </div>
                           </div>
@@ -2204,6 +2554,40 @@
                       <script type="application/json" data-selected-variant>
                         {{ product.selected_or_first_available_variant | json }}
                       </script>
+                      {%- comment -%}
+                        Phase 1 (variant gallery audit): color -> media map, derived entirely from
+                        native variant.featured_media grouped by the color option's value.
+                        color_option_position is detected once, above, before <variant-options> opens.
+                      {%- endcomment -%}
+                      {%- if color_option_position > 0 -%}
+                        {%- assign color_option_index = color_option_position | minus: 1 -%}
+                        {%- assign color_option = product.options_with_values[color_option_index] -%}
+                        <script type="application/json" data-variant-media-map>
+                          {
+                            {%- for color_value in color_option.values -%}
+                              {%- assign media_ids_str = '|' -%}
+                              {%- for variant in product.variants -%}
+                                {%- assign variant_color_value = variant.options[color_option_index] -%}
+                                {%- if variant_color_value == color_value.name and variant.featured_media != null -%}
+                                  {%- assign media_needle = '|' | append: variant.featured_media.id | append: '|' -%}
+                                  {%- unless media_ids_str contains media_needle -%}
+                                    {%- assign media_ids_str = media_ids_str | append: variant.featured_media.id | append: '|' -%}
+                                  {%- endunless -%}
+                                {%- endif -%}
+                              {%- endfor -%}
+                              {%- assign media_ids = media_ids_str | split: '|' -%}
+                              {%- assign media_ids_json = '' -%}
+                              {%- for media_id in media_ids -%}
+                                {%- unless media_id == blank -%}
+                                  {%- assign media_ids_json = media_ids_json | append: media_id | append: ',' -%}
+                                {%- endunless -%}
+                              {%- endfor -%}
+                              {%- assign media_ids_json = media_ids_json | remove_last: ',' -%}
+                              {{ color_value.name | json }}: [{{ media_ids_json }}]{% unless forloop.last %},{% endunless %}
+                            {%- endfor -%}
+                          }
+                        </script>
+                      {%- endif -%}
                     </variant-options>
                   {%- endunless -%}
                 </div>
@@ -5449,6 +5833,44 @@
           "default": 0,
           "unit": "px",
           "visible_if": "{{ block.settings.icon_advanced_settings }}"
+        }
+      ]
+    },
+    {
+      "type": "specifications",
+      "name": "t:sections.main-product.blocks.specifications.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Specifications",
+          "label": "t:sections.main-product.blocks.specifications.settings.heading_label"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_open",
+          "label": "t:sections.main-product.blocks.specifications.settings.open_label",
+          "default": false
+        }
+      ]
+    },
+    {
+      "type": "fabric_features",
+      "name": "t:sections.main-product.blocks.fabric_features.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Fabric Features",
+          "label": "t:sections.main-product.blocks.fabric_features.settings.heading_label"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_open",
+          "label": "t:sections.main-product.blocks.fabric_features.settings.open_label",
+          "default": false
         }
       ]
     },
