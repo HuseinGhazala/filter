@@ -230,11 +230,29 @@
             "icon_margin": 0
           }
         },
+        "separator_R6XYmA": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#e0dedb",
+            "margin-top": 0,
+            "margin-bottom": 0
+          }
+        },
         "specifications": {
           "type": "specifications",
           "settings": {
             "heading": "Specifications",
             "is_open": false
+          }
+        },
+        "a8e9c281-a34c-4fe4-94a1-ea9a3880dc33": {
+          "type": "separator",
+          "settings": {
+            "show-separator-line": true,
+            "color-background": "#e0dedb",
+            "margin-top": 0,
+            "margin-bottom": 0
           }
         },
         "fabric_features": {
@@ -244,7 +262,7 @@
             "is_open": false
           }
         },
-        "a8e9c281-a34c-4fe4-94a1-ea9a3880dc33": {
+        "separator_GxkUDi": {
           "type": "separator",
           "settings": {
             "show-separator-line": true,
@@ -388,9 +406,11 @@
         "separator_DwMham",
         "00841757-ace4-48f5-8edb-08c8c579a24f",
         "description",
+        "separator_R6XYmA",
         "specifications",
-        "fabric_features",
         "a8e9c281-a34c-4fe4-94a1-ea9a3880dc33",
+        "fabric_features",
+        "separator_GxkUDi",
         "collapsible_drawer_tUk8Ar",
         "2ce0b4b1-3440-40cd-92c2-15d46e61dfca",
         "5fed6e0f-fb7e-4874-8ba9-3321623fc828",
