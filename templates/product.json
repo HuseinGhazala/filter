@@ -297,31 +297,6 @@
             "margin-bottom": 0
           }
         },
-        "5fed6e0f-fb7e-4874-8ba9-3321623fc828": {
-          "type": "collapsible_tab",
-          "settings": {
-            "heading": "Ingredients ",
-            "content": "",
-            "metafield_variables": "",
-            "page": "",
-            "open_by_default": false,
-            "icon": "none",
-            "icon_advanced_settings": false,
-            "icon_height_desktop": 28,
-            "icon_height": 27,
-            "icon_margin_desktop": 0,
-            "icon_margin": 0
-          }
-        },
-        "separator_jY8GV3": {
-          "type": "separator",
-          "settings": {
-            "show-separator-line": true,
-            "color-background": "#e0dedb",
-            "margin-top": 0,
-            "margin-bottom": 0
-          }
-        },
         "d162f900-ee92-4311-b27d-d5f312fa73f2": {
           "type": "collapsible_tab",
           "settings": {
@@ -413,8 +388,6 @@
         "separator_GxkUDi",
         "collapsible_drawer_tUk8Ar",
         "2ce0b4b1-3440-40cd-92c2-15d46e61dfca",
-        "5fed6e0f-fb7e-4874-8ba9-3321623fc828",
-        "separator_jY8GV3",
         "d162f900-ee92-4311-b27d-d5f312fa73f2",
         "78809992-2318-4893-9402-6cfd49f50b6a",
         "video_reels_fUDDgA",
