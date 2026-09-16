@@ -2140,6 +2140,15 @@
                     height: var(--custom-size, auto);
                     width: fit-content;
                 }
+                .wt-product__option__wrapper--size-chart {
+                    align-items: center;
+                }
+                .wt-product__option__wrapper--size-chart .pify_size_chart_wrapper {
+                    margin-bottom: calc(var(--gap, 8px) * 0.5);
+                }
+                .wt-product__option__wrapper--size-chart .pify_inline_button {
+                    margin-block: 0;
+                }
               </style>
               <div
                 data-block-id="{{ block.id }}"
@@ -2214,20 +2223,26 @@
                       {% if block.settings.hide_unavailable_options %}data-hide-unavailable-options{% endif %}
                       {{ block.shopify_attributes }}
                     >
-                      {%- assign size_chart_slot_position = color_option_position | plus: 1 -%}
+                      {%- comment -%}
+                        Detect the size option once, the same way color_option_position is
+                        detected: by name, matching the block's "variant_name" setting or the
+                        EN/AR size names (Shopify translates option names per-locale).
+                      {%- endcomment -%}
+                      {%- assign size_option_position = 0 -%}
+                      {%- assign size_option_setting_name = block.settings.variant_name | downcase | strip -%}
+                      {%- for size_option in product.options_with_values -%}
+                        {%- assign size_option_name_downcase = size_option.name | downcase | strip -%}
+                        {%- if size_option.position != color_option_position -%}
+                          {%- if size_option_name_downcase == size_option_setting_name or size_option_name_downcase == 'size' or size_option_name_downcase == 'المقاس' or size_option_name_downcase == 'مقاس' -%}
+                            {%- assign size_option_position = size_option.position -%}
+                            {%- break -%}
+                          {%- endif -%}
+                        {%- endif -%}
+                      {%- endfor -%}
                       {%- for option in product.options_with_values -%}
                         {% assign swatch_option_key = 'option' | append: forloop.index %}
-                        {%- comment -%}
-                          Placement hook for the Pify Size Charts app embed: when a
-                          .pify_size_chart_wrapper exists, the app inserts its own inline
-                          "Size Chart" button here instead of its default spot in the buy form.
-                          Rendered directly after the color option (i.e. above the size option).
-                        {%- endcomment -%}
-                        {%- if color_option_position > 0 and forloop.index == size_chart_slot_position -%}
-                          <div class="pify_size_chart_wrapper"></div>
-                        {%- endif -%}
                         <div class="js wt-product__option">
-                          <div class="wt-product__option__wrapper">
+                          <div class="wt-product__option__wrapper{% if option.position == size_option_position %} wt-product__option__wrapper--size-chart{% endif %}">
                             <div id="{{ option.name }}-option-label" class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
                               <span class="label">{{ option.name }}: </span> <strong class="value">{{ option.selected_value }}</strong>
                             </div>
@@ -2238,6 +2253,15 @@
                                 {% render 'popup', product: product, id: block.id, shopify_attributes: block.shopify_attributes, size_icon: block.settings.size_icon, size_link: block.settings.size_link, size_page: block.settings.size_page, size_content: block.settings.size_content, metafield_name: block.settings.metafield, enable-striped-rows: block.settings.enable-striped-rows %}
                               </div>
                             {% endif %}
+                            {%- comment -%}
+                              Placement hook for the Pify Size Charts app embed: when a
+                              .pify_size_chart_wrapper exists, the app inserts its own inline
+                              "Size Chart" button here instead of its default spot in the buy form.
+                              Rendered at the end of the size option's title row.
+                            {%- endcomment -%}
+                            {%- if option.position == size_option_position -%}
+                              <div class="pify_size_chart_wrapper"></div>
+                            {%- endif -%}
                           </div>
                           {% assign options_body_class = 'tiles' %}
                           {% assign option_name_downcase = option.name | downcase %}
