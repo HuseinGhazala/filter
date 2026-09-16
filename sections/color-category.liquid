@@ -118,6 +118,7 @@
      direction: ltr;
   }
   .collection-tabs-colors .collection-tabs__feature { grid-area: feature; height: 100%; }
+  .collection-tabs-colors .collection-tabs__feature-item { height: 100%; }
   .collection-tabs-colors .collection-tabs__panels { grid-area: main; min-width: 0; }
 
   .collection-tabs-colors .collection-tabs__feature img,
@@ -439,7 +440,41 @@
         {%- endif -%}
       </div>
 
-      {%- if section.settings.feature_image != blank -%}
+      {%- if section.settings.collection != blank -%}
+        {%- comment -%}
+          One feature image per selected collection, shown/hidden with the same
+          active/hidden classes as its product panel.
+          Source: collection.image, falling back to the section "Big side image".
+        {%- endcomment -%}
+        <div class="collection-tabs__feature">
+          {%- for collection in section.settings.collection -%}
+            {%- liquid
+              assign feature_image = collection.image
+              if feature_image == blank
+                assign feature_image = section.settings.feature_image
+              endif
+            -%}
+            <div
+              class="collection-tabs__feature-item {% if forloop.first %}collection-tabs__content--active{% else %}collection-tabs__content--hidden{% endif %}"
+              data-tab-panel="CollectionTab-{{ section.id }}-{{ forloop.index }}"
+            >
+              {%- if feature_image != blank -%}
+                {{
+                  feature_image
+                  | image_url: width: 1200
+                  | image_tag:
+                    loading: 'lazy',
+                    widths: '400, 600, 800, 1000, 1200',
+                    sizes: '(min-width: 990px) 34vw, 100vw',
+                    alt: feature_image.alt
+                }}
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- elsif section.settings.feature_image != blank -%}
         <div class="collection-tabs__feature">
           {{
             section.settings.feature_image
@@ -467,6 +502,7 @@
 
     const tabs = container.querySelectorAll('.collection-tabs__tab');
     const contents = container.querySelectorAll('.collection-tabs__content');
+    const featureItems = container.querySelectorAll('.collection-tabs__feature-item');
 
     const normalizeColor = (value) =>
       String(value || '').trim().toLowerCase();
@@ -518,6 +554,12 @@
         contents.forEach((c) => {
           c.classList.add('collection-tabs__content--hidden');
           c.classList.remove('collection-tabs__content--active');
+        });
+
+        featureItems.forEach((item) => {
+          const isActive = item.dataset.tabPanel === targetId;
+          item.classList.toggle('collection-tabs__content--active', isActive);
+          item.classList.toggle('collection-tabs__content--hidden', !isActive);
         });
 
         tab.classList.add('collection-tabs__tab--active');
@@ -621,7 +663,7 @@
     {
       "type": "collection_list",
       "id": "collection",
-      "limit": 6,
+      "limit": 50,
       "label": "Collections (one per color)"
     },
     {
