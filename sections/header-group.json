@@ -17,7 +17,7 @@
         "announcement_6D384w": {
           "type": "announcement",
           "settings": {
-            "text": "15% discount on the applicable reduction.",
+            "text": "National Day offers 40% off",
             "link": "",
             "icon_image": "shopify://shop_images/Group_2.png",
             "image_width": 40,
@@ -29,7 +29,7 @@
         "announcement_6D384w"
       ],
       "custom_css": [
-        "@media (max-width: 768px) {.wt-announcement__container {padding: 5px 0; } .wt-announcement__text {font-size: 12px;}}"
+        "@media (max-width: 768px) {.wt-announcement__container {padding: 5px 0; } .wt-announcement__text {font-size: 12px; }}"
       ],
       "settings": {
         "marquee": false,
