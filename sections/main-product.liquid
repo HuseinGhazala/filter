@@ -2214,8 +2214,18 @@
                       {% if block.settings.hide_unavailable_options %}data-hide-unavailable-options{% endif %}
                       {{ block.shopify_attributes }}
                     >
+                      {%- assign size_chart_slot_position = color_option_position | plus: 1 -%}
                       {%- for option in product.options_with_values -%}
                         {% assign swatch_option_key = 'option' | append: forloop.index %}
+                        {%- comment -%}
+                          Placement hook for the Pify Size Charts app embed: when a
+                          .pify_size_chart_wrapper exists, the app inserts its own inline
+                          "Size Chart" button here instead of its default spot in the buy form.
+                          Rendered directly after the color option (i.e. above the size option).
+                        {%- endcomment -%}
+                        {%- if color_option_position > 0 and forloop.index == size_chart_slot_position -%}
+                          <div class="pify_size_chart_wrapper"></div>
+                        {%- endif -%}
                         <div class="js wt-product__option">
                           <div class="wt-product__option__wrapper">
                             <div id="{{ option.name }}-option-label" class="wt-product__option__title {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}">
