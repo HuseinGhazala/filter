@@ -404,10 +404,10 @@
       "name": "Custom Hero Banner",
       "settings": {
         "background_type": "image",
-        "image_desktop": "shopify://shop_images/Frame_2147208296.png",
-        "image_mobile": "shopify://shop_images/Group_98.png",
+        "image_desktop": "shopify://shop_images/Frame_2147208296_1.jpg",
+        "image_mobile": "shopify://shop_images/Group_98.jpg",
         "video_url": "",
-        "desktop_height": 700,
+        "desktop_height": 650,
         "mobile_height": 250,
         "stack_content_mobile": true,
         "mobile_content_bg": "#ffffff",
