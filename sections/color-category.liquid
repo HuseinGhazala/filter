@@ -444,12 +444,20 @@
         {%- comment -%}
           One feature image per selected collection, shown/hidden with the same
           active/hidden classes as its product panel.
-          Source: collection.image, falling back to the section "Big side image".
+          Source: custom.homepage_color_feature_image metafield, falling back to
+          collection.image, then the section "Big side image".
         {%- endcomment -%}
         <div class="collection-tabs__feature">
           {%- for collection in section.settings.collection -%}
             {%- liquid
-              assign feature_image = collection.image
+              assign feature_image = blank
+              assign feature_media = collection.metafields.custom.homepage_color_feature_image.value
+              if feature_media != blank and feature_media.media_type == 'image'
+                assign feature_image = feature_media.preview_image
+              endif
+              if feature_image == blank
+                assign feature_image = collection.image
+              endif
               if feature_image == blank
                 assign feature_image = section.settings.feature_image
               endif
