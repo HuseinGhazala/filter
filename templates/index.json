@@ -432,6 +432,7 @@
       "type": "color-category",
       "name": "Product Categories",
       "settings": {
+        "color_aliases": "عنابي=عودي",
         "collection": [
           "caribbean-blue",
           "light-blue",

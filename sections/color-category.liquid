@@ -210,7 +210,7 @@
   endif
 -%}
 
-<div class="collection-tabs-colors collection-tabs--{{ section.id }} page-width wt-slider__container--featured section-{{ section.id }}-padding" dir="rtl">
+<div class="collection-tabs-colors collection-tabs--{{ section.id }} page-width wt-slider__container--featured section-{{ section.id }}-padding" dir="rtl" data-color-aliases="{{ section.settings.color_aliases | escape }}">
   <div class="collection__title title-wrapper title-wrapper--no-top-margin page-width">
     {%- if section.settings.show_title -%}
       <h2
@@ -553,8 +553,17 @@
       });
     };
 
+    const colorAliases = {};
+    String(container.dataset.colorAliases || '')
+      .split(/\r?\n/)
+      .forEach((line) => {
+        const [from, to] = line.split('=');
+        if (from && to) colorAliases[normalizeColor(from)] = normalizeColor(to);
+      });
+
     const activateCurrentTabSwatches = (tab, targetContent) => {
-      const selectedColor = normalizeColor(tab.dataset.color || tab.title);
+      const tabColor = normalizeColor(tab.dataset.color || tab.title);
+      const selectedColor = colorAliases[tabColor] || tabColor;
       if (targetContent) activateMatchingSwatch(targetContent, selectedColor);
     };
 
@@ -682,6 +691,12 @@
       "id": "collection",
       "limit": 50,
       "label": "Collections (one per color)"
+    },
+    {
+      "type": "textarea",
+      "id": "color_aliases",
+      "label": "Color name aliases",
+      "info": "Optional. One per line: collection title=product color name (e.g. عنابي=عودي), for when a collection title is spelled differently from the product's color option."
     },
     {
       "type": "image_picker",
