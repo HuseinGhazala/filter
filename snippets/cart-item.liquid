@@ -30,27 +30,54 @@
  if is_service_product
    assign cart_page = false
  endif
+
+ # Variants without their own image fall back to the product's first image
+ # (e.g. Grass Green / L showing a blue photo). Reuse the image of another
+ # variant with the same color instead.
+ assign item_image = item.variant.featured_image
+ if item_image == blank
+   assign color_index = -1
+   for product_option in item.product.options_with_values
+     assign option_name_downcase = product_option.name | downcase
+     if option_name_downcase == 'color' or option_name_downcase == 'colour' or option_name_downcase == 'اللون' or option_name_downcase == 'لون'
+       assign color_index = product_option.position | minus: 1
+       break
+     endif
+   endfor
+   if color_index >= 0
+     assign item_color_value = item.variant.options[color_index]
+     for sibling_variant in item.product.variants
+       if sibling_variant.options[color_index] == item_color_value and sibling_variant.featured_image != blank
+         assign item_image = sibling_variant.featured_image
+         break
+       endif
+     endfor
+   endif
+ endif
+ if item_image == blank
+   assign item_image = item.image
+ endif
 %}
 
 <li id="CartDrawer-Item-{{ item.index | plus: 1 }}" class="cart-item wt-cart__item{% if is_service_unavailable %} wt-cart__item--unavailable{% endif %}">
   <picture class="wt-cart__item__thumb">
     <a href="{{ item.url }}" aria-label="{{ item.title }}" tabindex="{{ tab_index }}" class="wt-cart__item__link">
-      {% if item.image %}
+      {% if item_image %}
         <img
           class="card__img"
           srcset="
-            {% if item.image.width >= 375 %}{{ item.image | image_url: width: 375 }} 375w, {% endif %}
-            {% if item.image.width >= 750 %}{{ item.image | image_url: width: 750 }} 750w, {% endif %}
-            {% if item.image.width >= 1000 %}{{ item.image | image_url: width: 1000 }} 1000w, {% endif %}
-            {% if item.image.width >= 1440 %}{{ item.image | image_url: width: 1440 }} 1440w, {% endif %}
-            {{ item.image | image_url: width: 1000 }} 1000w
+            {% if item_image.width >= 375 %}{{ item_image | image_url: width: 375 }} 375w, {% endif %}
+            {% if item_image.width >= 750 %}{{ item_image | image_url: width: 750 }} 750w, {% endif %}
+            {% if item_image.width >= 1000 %}{{ item_image | image_url: width: 1000 }} 1000w, {% endif %}
+            {% if item_image.width >= 1440 %}{{ item_image | image_url: width: 1440 }} 1440w, {% endif %}
+            {{ item_image | image_url: width: 1000 }} 1000w
           "
           sizes="(min-width: 1000px) 1000px, 100vw"
-          src="{{ item.image | image_url: width: 1000 }}"
+          src="{{ item_image | image_url: width: 1000 }}"
           alt="{{ alt }}"
           loading="lazy"
-          height="{{ item.image.height }}"
-          width="{{ item.image.width }}"
+          height="{{ item_image.height }}"
+          width="{{ item_image.width }}"
         >
       {% else %}
         {{ 'collection-apparel-1' | placeholder_svg_tag: 'card__img--placeholder' }}
