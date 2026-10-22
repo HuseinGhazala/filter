@@ -107,7 +107,7 @@
           "type": "promo",
           "settings": {
             "content": "<p>Suitable for a weight of [weight] kg.<br/>The size may vary depending on body shape.</p>",
-            "size_weight_map": "2XS|XXS=40–48\nXS=45–53\nS=50–60\nM=58–68\nL=65–77\nXL=73–87\n2XL|XXL=83–98\n3XL=95–112\n4XL=108–125",
+            "size_weight_map": "2XS|XXS=40–48\nXS=45–53\nS=50–60\nM=58–68\nL=65–77\nXL=73–87\n2XL|XXL=83–98\n3XL=95–112\n4XL=108–125\n5XL=125+",
             "text_alignment": "center",
             "color-body-text": "{{ settings.colors.primary }}",
             "background_color": "#f8f5ef"
