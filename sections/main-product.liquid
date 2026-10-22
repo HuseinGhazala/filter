@@ -496,6 +496,7 @@
 <script src="{{ 'quick-add.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'subscription-widget.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'variants.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'product-size-weight.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'drawer-select.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'model_element.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'variant-dropdown.js' | asset_url }}" defer="defer"></script>
@@ -3118,9 +3119,51 @@
                 data-block-id="{{ block.id }}"
                 class=" {% if settings.animations %} scroll-trigger animate--slide-in {% endif %} {% if settings.disabled_animations_on_mobile %} disabled-on-mobile {% endif %}"
               >
-                <div class="wt-product__promo rte">
-                  {{ block.settings.content }}
-                </div>
+                {%- comment -%}
+                  Optional size-based text: when "Weight by size" is filled in, [weight] in the
+                  content is replaced by the selected size's weight (see product-size-weight.js).
+                  Sizes missing from the list hide the block.
+                {%- endcomment -%}
+                {%- assign promo_weights = block.settings.size_weight_map | strip -%}
+                {%- if promo_weights != blank -%}
+                  {%- assign promo_size_index = -1 -%}
+                  {%- for promo_option in product.options_with_values -%}
+                    {%- assign promo_option_name = promo_option.name | downcase | strip -%}
+                    {%- if promo_option_name == 'size' or promo_option_name == 'المقاس' or promo_option_name == 'مقاس' -%}
+                      {%- assign promo_size_index = promo_option.position | minus: 1 -%}
+                      {%- break -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                  {%- assign promo_weight = '' -%}
+                  {%- if promo_size_index >= 0 and selected_variant != blank -%}
+                    {%- assign promo_size = selected_variant.options[promo_size_index] | downcase | strip -%}
+                    {%- assign promo_lines = promo_weights | newline_to_br | strip_newlines | split: '<br />' -%}
+                    {%- for promo_line in promo_lines -%}
+                      {%- assign promo_pair = promo_line | split: '=' -%}
+                      {%- assign promo_keys = promo_pair[0] | downcase | split: '|' -%}
+                      {%- for promo_key in promo_keys -%}
+                        {%- assign promo_key_clean = promo_key | strip -%}
+                        {%- if promo_key_clean == promo_size -%}
+                          {%- assign promo_weight = promo_pair[1] | strip -%}
+                        {%- endif -%}
+                      {%- endfor -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+                  <div
+                    class="wt-product__promo rte"
+                    data-size-weight
+                    data-size-weights="{{ promo_weights | escape }}"
+                    data-size-index="{{ promo_size_index }}"
+                    data-template="{{ block.settings.content | escape }}"
+                    {% if promo_weight == blank %}hidden{% endif %}
+                  >
+                    {{ block.settings.content | replace: '[weight]', promo_weight }}
+                  </div>
+                {%- else -%}
+                  <div class="wt-product__promo rte">
+                    {{ block.settings.content }}
+                  </div>
+                {%- endif -%}
               </div>
             {%- when 'product_variations' -%}
               {% assign metafield = block.settings.option_value_metafield | strip | split: '.' %}
@@ -6474,6 +6517,12 @@
           "id": "content",
           "default": "<p>Promo block</p>",
           "label": "t:sections.main-product.blocks.promo.settings.content.label"
+        },
+        {
+          "type": "textarea",
+          "id": "size_weight_map",
+          "label": "Weight by size",
+          "info": "Optional. One line per size, e.g. S=50–60 (use | for aliases: 2XS|XXS=40–48). Put [weight] in the content above. Sizes not listed hide the block."
         },
         {
           "type": "select",
