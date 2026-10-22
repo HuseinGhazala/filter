@@ -28,6 +28,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%- if request.page_type == 'collection' and collection != blank -%}
+      <meta name="collection-color" content="{{ collection.title | escape }}" data-aliases="{{ settings.collection_color_aliases | escape }}">
+    {%- endif -%}
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
     <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>

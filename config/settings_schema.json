@@ -1756,6 +1756,12 @@
       },
       {
         "type": "textarea",
+        "id": "collection_color_aliases",
+        "label": "Collection color aliases",
+        "info": "Optional. On a collection page named after a color, the product cards open on that color. One per line: collection title=product color name (e.g. عنابي=عودي), for when the title is spelled differently from the color option."
+      },
+      {
+        "type": "textarea",
         "id": "variant_picture_swatch_names",
         "label": "t:settings_schema.color-swatch.settings.variant_picture_swatch_names.label",
         "placeholder": "Color\nTop color",

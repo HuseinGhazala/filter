@@ -147,6 +147,10 @@ if (!customElements.get("color-swatch")) {
           });
 
           if (!this.isCheckedActiveFilter) {
+            this.activateCollectionColor();
+          }
+
+          if (!this.isCheckedActiveFilter) {
             this.setFirstOptionActive();
           }
         }
@@ -156,6 +160,43 @@ if (!customElements.get("color-swatch")) {
             this.restoreAttributes(),
           );
         }
+      }
+
+      // On a collection page named after a color (e.g. "Black"), open each card on
+      // that color. Collection title/aliases come from <meta name="collection-color">.
+      activateCollectionColor() {
+        const meta = document.querySelector('meta[name="collection-color"]');
+        if (!meta) return;
+
+        const normalize = (value) =>
+          String(value || "")
+            .trim()
+            .toLowerCase()
+            .replace(/[ً-ٰٟـ]/g, "")
+            .replace(/[آأإٱ]/g, "ا")
+            .replace(/ى/g, "ي")
+            .replace(/ة/g, "ه")
+            .replace(/\s+/g, " ");
+
+        let target = normalize(meta.content);
+        String(meta.dataset.aliases || "")
+          .split(/\r?\n/)
+          .forEach((line) => {
+            const [from, to] = line.split("=");
+            if (from && to && normalize(from) === target) target = normalize(to);
+          });
+
+        const wrapper = Array.from(this.color_swatcher_wrappers).find(
+          (wrap) =>
+            normalize(wrap.querySelector(".color-swatcher")?.dataset.color) === target,
+        );
+        if (!wrapper) return;
+
+        this.handleClickEvent(
+          wrapper,
+          this.getButtonAttributes(wrapper.querySelector(".color-swatcher")),
+        );
+        this.isCheckedActiveFilter = true;
       }
 
       getButtonAttributes(button) {
