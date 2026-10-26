@@ -149,6 +149,7 @@
   },
   "products": {
     "product": {
+      "size_weight_note_html": "<p>Suitable for a weight of [weight] kg.<br/>The size may vary depending on body shape.</p>",
       "select_option": "Select option",
       "select_options": "Select options",
       "add_to_cart": "ADD TO BAG",

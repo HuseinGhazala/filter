@@ -3134,6 +3134,10 @@
                       {%- break -%}
                     {%- endif -%}
                   {%- endfor -%}
+                  {%- assign promo_content = block.settings.content -%}
+                  {%- if promo_content == blank -%}
+                    {%- assign promo_content = 'products.product.size_weight_note_html' | t -%}
+                  {%- endif -%}
                   {%- assign promo_weight = '' -%}
                   {%- if promo_size_index >= 0 and selected_variant != blank -%}
                     {%- assign promo_size = selected_variant.options[promo_size_index] | downcase | strip -%}
@@ -3154,10 +3158,10 @@
                     data-size-weight
                     data-size-weights="{{ promo_weights | escape }}"
                     data-size-index="{{ promo_size_index }}"
-                    data-template="{{ block.settings.content | escape }}"
+                    data-template="{{ promo_content | escape }}"
                     {% if promo_weight == blank %}hidden{% endif %}
                   >
-                    {{ block.settings.content | replace: '[weight]', promo_weight }}
+                    {{ promo_content | replace: '[weight]', promo_weight }}
                   </div>
                 {%- else -%}
                   <div class="wt-product__promo rte">

@@ -144,6 +144,7 @@
   },
   "products": {
     "product": {
+      "size_weight_note_html": "<p>مناسب لوزن [weight] كجم.<br/>قد يختلف المقاس حسب شكل الجسم.</p>",
       "add_to_cart": "أضف إلى الحقيبة",
       "choose_options": "اختر الخيارات",
       "choose_option": "اختر خيارًا",
