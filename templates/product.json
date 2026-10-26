@@ -490,6 +490,9 @@
         "benefit_iY6k6j",
         "benefit_EE4gW8"
       ],
+      "custom_css": [
+        ".wt-benefits-product__img img{direction: ltr !important;}"
+      ],
       "name": "t:sections.benefits_product.name",
       "settings": {
         "left_badge_text": "Regular Scrub",
